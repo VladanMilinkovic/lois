@@ -1,0 +1,510 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Lois - Apartments</title>
+    <!-- UIkit CSS -->
+    <link rel="stylesheet" href="../uikit-3.2.1/css/uikit.min.css" />
+    <!-- UIkit JS -->
+    <script src="../uikit-3.2.1/js/uikit-icons.min.js"></script>
+    <script src="../uikit-3.2.1/js/uikit.min.js"></script>
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="../css/style.css">
+</head>
+<body>
+<!--Navigation start -->
+<div id="mobile" class="lois-navigation__mobile__tabs">
+    <ul class="lois-navigation__mobile__tabs__nav">
+        <li><a href="../index.html">Building</a></li>
+        <li><a href="./residences.html">Apartments</a></li>
+        <li><a href="./neighborhood.html">Neighborhood</a></li>
+        <li><a href="./lottery.html" class="active">Lottery</a></li>
+    </ul>
+    <span class="lois-navigation__mobile__tabs--call">Call</span>
+</div>
+<nav class="lois-navigation">
+        <span class="lois-navigation--address">
+            350 Clarkson Avenue Brooklyn NY 11226
+            <span class="number">(833) 310 3001   info@TheLois.com</span>
+        </span>
+
+    <div class="lois-navigation__mobile">
+        <span><a href="#modal-center" uk-toggle><i class="fa fa-envelope-o" aria-hidden="true"></i></a></span>
+        <span uk-toggle="target: #mobile; cls: show-mobile"><i class="fa fa-bars" aria-hidden="true"></i></span>
+    </div>
+
+    <div class="lois-navigation-tabs">
+        <ul class="lois-navbar-nav">
+            <li class="lois-navbar-nav__tabs"><a href="../index.html">Building</a></li>
+            <li class="lois-navbar-nav__tabs"><a href="./residences.html">Apartments</a></li>
+            <li class="lois-navbar-nav__tabs"><a href="./neighborhood.html">Neighborhood</a></li>
+            <li class="lois-navbar-nav__tabs"><a href="./lottery.html">Lottery</a></li>
+            <li class="lois-navbar-nav__tabs"><a href="#modal-center" uk-toggle>Contact</a></li>
+        </ul>
+    </div>
+</nav>
+<!-- Navigation end -->
+<div class="lois">
+    <!-- Header start -->
+    <div class="lois-header">
+        <div class="lois-header-logo">
+            <svg xmlns="http://www.w3.org/2000/svg" width="22rem" viewBox="0 0 312.461 179.845"><defs><style>.a{fill:#fff;}</style></defs><g transform="translate(-115.344 -69.073)"><path d="M425.494,134.149l.087-2.535c.34-9.883-2-17.277-7.145-22.6-6.613-6.845-17.35-9.9-34.812-9.9-18.275,0-29.176,5.511-34.65,10.289-3.833,3.494-10.037,10.733-9.549,10.174V101.71h-35.7L292.1,116.061h-.211c-8.15-10.736-21.756-16.949-39.023-16.949a56.07,56.07,0,0,0-24.335,5.08l3.6-6.112V69.073H193.247l-5.3,8.9h-.163v-8.9H146.129l-30.785,63.4V246.288h57.231l9.249-12.694c7.879,9.738,20.3,15.321,35.824,15.321,15.825,0,28.412-5.832,36.245-15.96l11.855-15.62v28.953h34.13l6.315-8.488c.31.369.63.731.965,1.082,6.471,6.787,17.377,9.975,34.313,10.033.3,0,.6,0,.893,0,16.372,0,27.573-3.214,34.22-9.814l44.245-61.779c4.629-4.6,6.976-10.829,6.976-18.519,0-9.288-3.485-15.112-8.6-18.879Zm-197.56-29.66v-.1h.2Z"/><path class="a" d="M147.672,104.335h30.449v52.521h28.15v25.426h-58.6Z"/><path class="a" d="M207.89,143.309c0-25.333,17.306-41.572,44.979-41.572,27.58,0,44.887,16.239,44.887,41.572,0,25.24-17.307,41.572-44.887,41.572C225.2,184.881,207.89,168.549,207.89,143.309Zm59.695,0c0-10.393-7.034-15.311-14.716-15.311-7.774,0-14.715,4.918-14.715,15.311,0,10.3,6.941,15.311,14.715,15.311C260.551,158.62,267.585,153.609,267.585,143.309Z"/><path class="a" d="M306.35,104.335H336.8v77.947H306.35Z"/><path class="a" d="M342.717,154.908h27.3c0,3.9,3.425,6.217,13.42,6.31,8.329.185,11.476-1.763,11.476-3.712,0-.556.648-3.155-5.831-3.9l-10.273-1.577c-14.715-2.228-34.428-2.6-34.428-24.5,0-15.868,12.586-25.8,39.241-25.8,23.693,0,40.167,5.568,39.334,29.787H395.84c-.74-3.9-4.35-6.217-12.864-6.217-7.219,0-9.347,1.948-9.347,3.805,0,.556-.185,3.061,4.35,3.618l8.143,1.3c15.827,2.6,39.057,1.669,39.057,24.776,0,18-13.512,26.26-41.74,26.075C354.471,184.788,341.7,176.437,342.717,154.908Z"/><path class="a" d="M174.535,78.476h-9.024V96.33h-9.176V78.476h-9V70.823h27.2Z"/><path class="a" d="M203.633,70.823V96.33h-9.176v-8.9h-8.965v8.9h-9.146V70.823h9.146v8.9h8.965v-8.9Z"/><path class="a" d="M206.433,70.823h23.41v7.318H215.579v2.49H229.3v5.891H215.579v2.46h14.264V96.33h-23.41Z"/></g></svg>
+        </div>
+    </div>
+    <!-- Header end -->
+
+    <!-- Lottery -->
+    <div class="lottery">
+        <div class="lottery-first">
+            <div class="lottery-first-wrapper">
+                <h1 class="lottery-first-wrapper-title-black">IF YOU EARN BETWEEN $55K AND $168K</h1>
+                <h1 class="lottery-first-wrapper-title-white">YOU COULD SAVE UP TO $12,000!</h1>
+                <p class="lottery-first-wrapper-text">
+                    Lorem ipsum dolor sit amet, consectetuer adipiscing elit, s
+                    ed diam nonummy nibh euismod tincidunt ut laoreet dolore magn
+                    a aliquam erat volutpat. Ut wisi enim ad minim veniam, quis nost
+                    rud exerci Lorem ipsum dolor sit amet, consectetuer adipiscing elit,
+                    sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam era
+                    t volutpat. Ut wisi enim ad minim veniam, quis nostrud exerci Lorem ipsum dolo
+                    r sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut
+                    laoreet dolore magna aliquam erat volutpat. Ut wisi enim ad minim veniam, quis nostrud exerci
+                </p>
+                <button class="lottery-first-wrapper-button">Apply now</button>
+            </div>
+        </div>
+
+        <div class="lottery-second">
+            <div class="lottery-second-head">
+                <h1 class="lottery-second-head--black">AVAILABLE UNITS </h1>
+                <h1 class="lottery-second-head--white">AND INCOME REQUIREMENTS</h1>
+            </div>
+
+            <div class="lottery-table">
+                <div class="table-container" role="table" aria-label="Destinations">
+                    <div class="flex-table header" role="rowgroup">
+                        <div class="flex-row first" role="columnheader">Available</div>
+                        <div class="flex-row" role="columnheader">Unit type</div>
+                        <div class="flex-row" role="columnheader">Monthly rent</div>
+                        <div class="flex-row" role="columnheader">Household size</div>
+                        <div class="flex-row" role="columnheader">Annual household income</div>
+                    </div>
+                    <div class="flex-table row custom-color" role="rowgroup">
+                        <div class="flex-row first" role="cell"><span class="flag-icon flag-icon-gb"></span> 5 Units</div>
+                        <div class="flex-row" role="cell">Studio</div>
+                        <div class="flex-row" role="cell">Monthly rent</div>
+                        <div class="flex-row" role="cell">1 Person</div>
+                        <div class="flex-row" role="cell">$30,250 - 55,260</div>
+                    </div>
+                    <div class="flex-table row custom-color" role="rowgroup">
+                        <div class="flex-row first"  role="cell"><span class="flag-icon flag-icon-ca"></span></div>
+                        <div class="flex-row" role="cell"></div>
+                        <div class="flex-row" role="cell"></div>
+                        <div class="flex-row" role="cell">Monthly rent</div>
+                        <div class="flex-row" role="cell">$30,250 - 55,260</div>
+                    </div>
+                    <div class="flex-table row" role="rowgroup">
+                        <div class="flex-row rowspan first"><span class="flag-icon flag-icon-us">10 Units</span></div>
+                        <div class="flex-row rowspan first"><span class="flag-icon flag-icon-us">1 Bedroom</span></div>
+                        <div class="flex-row rowspan first"><span class="flag-icon flag-icon-us">Monthly rent</span></div>
+                        <div class="column">
+                            <div class="flex-row">
+                                <div class="flex-cell" role="cell">1 Person</div>
+                                <div class="flex-cell" role="cell">$30,250 - 55,260</div>
+                            </div>
+                            <div class="flex-row" role="rowgroup">
+                                <div class="flex-cell" role="cell">2 People</div>
+                                <div class="flex-cell" role="cell">$30,250 - 55,260</div>
+                            </div>
+                            <div class="flex-row" role="rowgroup">
+                                <div class="flex-cell" role="cell">3 People</div>
+                                <div class="flex-cell" role="cell">$30,250 - 55,260</div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="flex-table row" role="rowgroup">
+                        <div class="flex-row first" role="cell"><span class="flag-icon flag-icon-gb"></span> 5 Units</div>
+                        <div class="flex-row" role="cell">Studio</div>
+                        <div class="flex-row" role="cell">Monthly rent</div>
+                        <div class="flex-row" role="cell">1 Person</div>
+                        <div class="flex-row" role="cell">$30,250 - 55,260</div>
+                    </div>
+                    <div class="flex-table row custom-color" role="rowgroup">
+                        <div class="flex-row" role="cell"></div>
+                        <div class="flex-row" role="cell"></div>
+                        <div class="flex-row" role="cell"></div>
+                        <div class="column">
+                            <div class="flex-row">
+                                <div class="flex-cell" role="cell">1 Person</div>
+                                <div class="flex-cell" role="cell">$30,250 - 55,260</div>
+                            </div>
+                            <div class="flex-row" role="rowgroup">
+                                <div class="flex-cell" role="cell">2 People</div>
+                                <div class="flex-cell" role="cell">$30,250 - 55,260</div>
+                            </div>
+                            <div class="flex-row" role="rowgroup">
+                                <div class="flex-cell" role="cell">3 People</div>
+                                <div class="flex-cell" role="cell">$30,250 - 55,260</div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="lottery-table-mark">
+                    <ol>
+                        <li>Rent includes gas for cooking. Tenants are responsible for Electricity</li>
+                        <li>Household size includes everyone who will live with you, including parents and children. Subject to occupancy criteria.</li>
+                        <li>Household earnings includes salary, hourly wages, tips, Social Security, child support, and other income. Income guidelines subject to change.</li>
+                        <li>Minimum income listed may not apply to applicants with Section 8 or other qualifying rental subsidies. Asset limits also apply.</li>
+                    </ol>
+                </div>
+            </div>
+            <!-- rent smart -->
+            <div class="rent-smart">
+                <div class="rent-smart-content">
+                    <h2>
+                        <span class="rent-smart-black">rent</span><span class="rent-smart-white">smart</span>
+                    </h2>
+
+                    <p class="rent-smart-text">
+                        Lorem ipsum dolor sit amet, consectetuer adipiscing elit, s
+                        ed diam nonummy nibh euismod tincidunt ut laoreet dolore magna aliq
+                        uam erat volutpat. Ut wisi enim ad minim veniam, quis nostrud exerci Lorem ipsum dolor si
+                        t amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna
+                    </p>
+                </div>
+            </div>
+        </div>
+
+        <div class="lottery-third">
+            <!-- Lottery apartments -->
+            <div class="lottery-apartments">
+                <div class="lottery-apartments-wrapper">
+                    <div class="lottery-apartment" href="#layout" uk-toggle>
+                        <div class="lottery-apartment-head">
+                            <h1 class="lottery-apartment-head--black">Floorplan</h1>
+                            <h1 class="lottery-apartment-head--white">TYPICAL LAYOUTS</h1>
+                        </div>
+                        <div class="lottery-apartment-image">
+                            <div class="building-image--bg building__first--bg" style="background-image: url('../images/thumb@2x.png'); opacity: 1;"></div>
+                            <img class="building-image" src="../images/thumb.png" alt="Build">
+                        </div>
+                    </div>
+                    <div class="lottery-apartment" onclick="location.href='residences.html';">
+                        <div class="lottery-apartment-head">
+                            <h1 class="lottery-apartment-head--black">APARTMENTS </h1>
+                            <h1 class="lottery-apartment-head--white">LEARN MORE</h1>
+                        </div>
+                        <div class="lottery-apartment-image">
+                            <div class="building-image--bg building__first--bg" style="background-image: url('../images/Rectangle 7@2x.png'); opacity: 1;"></div>
+                            <img class="building-image" src="../images/Rectangle%207.png" alt="Build">
+                        </div>
+
+                    </div>
+                    <div class="lottery-apartment" onclick="location.href='../index.html';">
+                        <div class="lottery-apartment-head">
+                            <h1 class="lottery-apartment-head--black">BUILDING FEATURES</h1>
+                            <h1 class="lottery-apartment-head--white">LEARN MORE</h1>
+                        </div>
+                        <div class="lottery-apartment-image">
+                            <div class="building-image--bg building__first--bg" style="background-image: url('../images/350 Clarkson - 3@2x.png'); opacity: 1;"></div>
+                            <img class="building-image" src="../images/350%20Clarkson%20-%203.png" alt="Build">
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!-- end Lottery apartments -->
+
+            <!-- Lottery FAQ -->
+            <div class="lottery-fourth">
+                <div class="lottery-faq">
+                    <div class="lottery-faq-head">
+                        <h1 class="lottery-faq-head--black">FAQ</h1>
+                        <h1 class="lottery-faq-head--white">CLICK FOR an ANSWER</h1>
+                    </div>
+                    <div class="lottery-faq-block">
+                        <h2 class="lottery-faq-block--title" onclick="toggleFaq('faq1')">Tell me more about The Clark What is RentSmart?</h2>
+                        <p class="lottery-faq-block--content" id="faq1" style="display: block">
+                            Yes. This is a new program offered through Mayor Bill de Blasio through NYC Housing Preservation and Development.
+                            Moderate Income families have also been priced out of the market, so this new program was developed to target
+                            moderate income households. As long as your combined income is within the income range and matching household
+                            size stated in the Affordability chart then you have the possibility to qualify. The common rule of thumb
+                            is for housing to be affordable, households should spend no more than one-third of their income on rent and
+                            utilities.
+                        </p>
+                    </div>
+                    <div class="lottery-faq-block">
+                        <h2 class="lottery-faq-block--title" onclick="toggleFaq('faq2')">Who should apply?</h2>
+                        <p class="lottery-faq-block--content" id="faq2" style="display: none">
+                            Yes. This is a new program offered through Mayor Bill de Blasio through NYC Housing Preservation and Development.
+                            Moderate Income families have also been priced out of the market, so this new program was developed to target
+                            moderate income households. As long as your combined income is within the income range and matching household
+                            size stated in the Affordability chart then you have the possibility to qualify. The common rule of thumb
+                            is for housing to be affordable, households should spend no more than one-third of their income on rent and
+                            utilities.
+                        </p>
+                    </div>
+                    <div class="lottery-faq-block">
+                        <h2 class="lottery-faq-block--title" onclick="toggleFaq('faq3')">What is a household?</h2>
+                        <p class="lottery-faq-block--content" id="faq3" style="display: none">
+                            Yes. This is a new program offered through Mayor Bill de Blasio through NYC Housing Preservation and Development.
+                            Moderate Income families have also been priced out of the market, so this new program was developed to target
+                            moderate income households. As long as your combined income is within the income range and matching household
+                            size stated in the Affordability chart then you have the possibility to qualify. The common rule of thumb
+                            is for housing to be affordable, households should spend no more than one-third of their income on rent and
+                            utilities.
+                        </p>
+                    </div>
+                    <div class="lottery-faq-block">
+                        <h2 class="lottery-faq-block--title" onclick="toggleFaq('faq4')">What are the benefits of The Clark Lottery?</h2>
+                        <p class="lottery-faq-block--content" id="faq4" style="display: none">
+                            Yes. This is a new program offered through Mayor Bill de Blasio through NYC Housing Preservation and Development.
+                            Moderate Income families have also been priced out of the market, so this new program was developed to target
+                            moderate income households. As long as your combined income is within the income range and matching household
+                            size stated in the Affordability chart then you have the possibility to qualify. The common rule of thumb
+                            is for housing to be affordable, households should spend no more than one-third of their income on rent and
+                            utilities.
+                        </p>
+                    </div>
+                    <div class="lottery-faq-block">
+                        <h2 class="lottery-faq-block--title" onclick="toggleFaq('faq5')">Can I see an apartment in person?</h2>
+                        <p class="lottery-faq-block--content" id="faq5" style="display: none">
+                            Yes. This is a new program offered through Mayor Bill de Blasio through NYC Housing Preservation and Development.
+                            Moderate Income families have also been priced out of the market, so this new program was developed to target
+                            moderate income households. As long as your combined income is within the income range and matching household
+                            size stated in the Affordability chart then you have the possibility to qualify. The common rule of thumb
+                            is for housing to be affordable, households should spend no more than one-third of their income on rent and
+                            utilities.
+                        </p>
+                    </div>
+                    <div class="lottery-faq-block">
+                        <h2 class="lottery-faq-block--title" onclick="toggleFaq('faq6')">Do I go to the leasing office to see units?</h2>
+                        <p class="lottery-faq-block--content" id="faq6" style="display: none">
+                            Yes. This is a new program offered through Mayor Bill de Blasio through NYC Housing Preservation and Development.
+                            Moderate Income families have also been priced out of the market, so this new program was developed to target
+                            moderate income households. As long as your combined income is within the income range and matching household
+                            size stated in the Affordability chart then you have the possibility to qualify. The common rule of thumb
+                            is for housing to be affordable, households should spend no more than one-third of their income on rent and
+                            utilities.
+                        </p>
+                    </div>
+                    <div class="lottery-faq-block">
+                        <h2 class="lottery-faq-block--title" onclick="toggleFaq('faq7')">Will I have access to all building amenities?</h2>
+                        <p class="lottery-faq-block--content" id="faq7" style="display: none">
+                            Yes. This is a new program offered through Mayor Bill de Blasio through NYC Housing Preservation and Development.
+                            Moderate Income families have also been priced out of the market, so this new program was developed to target
+                            moderate income households. As long as your combined income is within the income range and matching household
+                            size stated in the Affordability chart then you have the possibility to qualify. The common rule of thumb
+                            is for housing to be affordable, households should spend no more than one-third of their income on rent and
+                            utilities.
+                        </p>
+                    </div>
+                    <div class="lottery-faq-block">
+                        <h2 class="lottery-faq-block--title" onclick="toggleFaq('faq8')">Are the apartments different from the market rate apartments?</h2>
+                        <p class="lottery-faq-block--content" id="faq8" style="display: none">
+                            Yes. This is a new program offered through Mayor Bill de Blasio through NYC Housing Preservation and Development.
+                            Moderate Income families have also been priced out of the market, so this new program was developed to target
+                            moderate income households. As long as your combined income is within the income range and matching household
+                            size stated in the Affordability chart then you have the possibility to qualify. The common rule of thumb
+                            is for housing to be affordable, households should spend no more than one-third of their income on rent and
+                            utilities.
+                        </p>
+                    </div>
+                    <div class="lottery-faq-block">
+                        <h2 class="lottery-faq-block--title" onclick="toggleFaq('faq9')">Is the apartment worth the application process?</h2>
+                        <p class="lottery-faq-block--content" id="faq9" style="display: none">
+                            Yes. This is a new program offered through Mayor Bill de Blasio through NYC Housing Preservation and Development.
+                            Moderate Income families have also been priced out of the market, so this new program was developed to target
+                            moderate income households. As long as your combined income is within the income range and matching household
+                            size stated in the Affordability chart then you have the possibility to qualify. The common rule of thumb
+                            is for housing to be affordable, households should spend no more than one-third of their income on rent and
+                            utilities.
+                        </p>
+                    </div>
+                    <div class="lottery-faq-block">
+                        <h2 class="lottery-faq-block--title" onclick="toggleFaq('faq10')">What are my odds of winning?</h2>
+                        <p class="lottery-faq-block--content" id="faq10" style="display: none">
+                            Yes. This is a new program offered through Mayor Bill de Blasio through NYC Housing Preservation and Development.
+                            Moderate Income families have also been priced out of the market, so this new program was developed to target
+                            moderate income households. As long as your combined income is within the income range and matching household
+                            size stated in the Affordability chart then you have the possibility to qualify. The common rule of thumb
+                            is for housing to be affordable, households should spend no more than one-third of their income on rent and
+                            utilities.
+                        </p>
+                    </div>
+                    <div class="lottery-faq-block">
+                        <h2 class="lottery-faq-block--title" onclick="toggleFaq('faq11')">How do I apply?</h2>
+                        <p class="lottery-faq-block--content" id="faq11" style="display: none">
+                            Yes. This is a new program offered through Mayor Bill de Blasio through NYC Housing Preservation and Development.
+                            Moderate Income families have also been priced out of the market, so this new program was developed to target
+                            moderate income households. As long as your combined income is within the income range and matching household
+                            size stated in the Affordability chart then you have the possibility to qualify. The common rule of thumb
+                            is for housing to be affordable, households should spend no more than one-third of their income on rent and
+                            utilities.
+                        </p>
+                    </div>
+                    <div class="lottery-faq-block">
+                        <h2 class="lottery-faq-block--title" onclick="toggleFaq('faq12')">How long does the process take?</h2>
+                        <p class="lottery-faq-block--content" id="faq12" style="display: none">
+                            Yes. This is a new program offered through Mayor Bill de Blasio through NYC Housing Preservation and Development.
+                            Moderate Income families have also been priced out of the market, so this new program was developed to target
+                            moderate income households. As long as your combined income is within the income range and matching household
+                            size stated in the Affordability chart then you have the possibility to qualify. The common rule of thumb
+                            is for housing to be affordable, households should spend no more than one-third of their income on rent and
+                            utilities.
+                        </p>
+                    </div>
+                    <div class="lottery-faq-block">
+                        <h2 class="lottery-faq-block--title" onclick="toggleFaq('faq13')">My partner and I make six figures. Can we really qualify for one of these apartments?</h2>
+                        <p class="lottery-faq-block--content" id="faq13" style="display: none">
+                            Yes. This is a new program offered through Mayor Bill de Blasio through NYC Housing Preservation and Development.
+                            Moderate Income families have also been priced out of the market, so this new program was developed to target
+                            moderate income households. As long as your combined income is within the income range and matching household
+                            size stated in the Affordability chart then you have the possibility to qualify. The common rule of thumb
+                            is for housing to be affordable, households should spend no more than one-third of their income on rent and
+                            utilities.
+                        </p>
+                    </div>
+                    <div class="lottery-faq-block">
+                        <h2 class="lottery-faq-block--title" onclick="toggleFaq('faq14')">How soon can I move in?</h2>
+                        <p class="lottery-faq-block--content" id="faq14" style="display: none">
+                            Yes. This is a new program offered through Mayor Bill de Blasio through NYC Housing Preservation and Development.
+                            Moderate Income families have also been priced out of the market, so this new program was developed to target
+                            moderate income households. As long as your combined income is within the income range and matching household
+                            size stated in the Affordability chart then you have the possibility to qualify. The common rule of thumb
+                            is for housing to be affordable, households should spend no more than one-third of their income on rent and
+                            utilities.
+                        </p>
+                    </div>
+                    <div class="lottery-faq-block">
+                        <h2 class="lottery-faq-block--title" onclick="toggleFaq('faq15')">How do I calculate my income?</h2>
+                        <p class="lottery-faq-block--content" id="faq15" style="display: none">
+                            Yes. This is a new program offered through Mayor Bill de Blasio through NYC Housing Preservation and Development.
+                            Moderate Income families have also been priced out of the market, so this new program was developed to target
+                            moderate income households. As long as your combined income is within the income range and matching household
+                            size stated in the Affordability chart then you have the possibility to qualify. The common rule of thumb
+                            is for housing to be affordable, households should spend no more than one-third of their income on rent and
+                            utilities.
+                        </p>
+                    </div>
+                    <div class="lottery-faq-block">
+                        <h2 class="lottery-faq-block--title" onclick="toggleFaq('faq16')">What happens if I make more money after I move in?</h2>
+                        <p class="lottery-faq-block--content" id="faq16" style="display: none">
+                            Yes. This is a new program offered through Mayor Bill de Blasio through NYC Housing Preservation and Development.
+                            Moderate Income families have also been priced out of the market, so this new program was developed to target
+                            moderate income households. As long as your combined income is within the income range and matching household
+                            size stated in the Affordability chart then you have the possibility to qualify. The common rule of thumb
+                            is for housing to be affordable, households should spend no more than one-third of their income on rent and
+                            utilities.
+                        </p>
+                    </div>
+                    <div class="lottery-faq-block">
+                        <h2 class="lottery-faq-block--title" onclick="toggleFaq('faq17')">Will my rent go up or will I have to leave my apartment?</h2>
+                        <p class="lottery-faq-block--content" id="faq17" style="display: none">
+                            Yes. This is a new program offered through Mayor Bill de Blasio through NYC Housing Preservation and Development.
+                            Moderate Income families have also been priced out of the market, so this new program was developed to target
+                            moderate income households. As long as your combined income is within the income range and matching household
+                            size stated in the Affordability chart then you have the possibility to qualify. The common rule of thumb
+                            is for housing to be affordable, households should spend no more than one-third of their income on rent and
+                            utilities.
+                        </p>
+                    </div>
+                    <div class="lottery-faq-block">
+                        <h2 class="lottery-faq-block--title" onclick="toggleFaq('faq18')">What documents will I need if I’m selected?</h2>
+                        <p class="lottery-faq-block--content" id="faq18" style="display: none">
+                            Yes. This is a new program offered through Mayor Bill de Blasio through NYC Housing Preservation and Development.
+                            Moderate Income families have also been priced out of the market, so this new program was developed to target
+                            moderate income households. As long as your combined income is within the income range and matching household
+                            size stated in the Affordability chart then you have the possibility to qualify. The common rule of thumb
+                            is for housing to be affordable, households should spend no more than one-third of their income on rent and
+                            utilities.
+                        </p>
+                    </div>
+                </div>
+            </div>
+            <!-- end Lottery FAQ -->
+        </div>
+    </div>
+    <!-- end Lottery -->
+
+    <!-- Contact start -->
+    <div id="modal-center" class="uk-flex-top" uk-modal>
+        <div class="uk-modal-dialog uk-modal-body uk-margin-auto-vertical modal-contact">
+
+            <button class="uk-modal-close-default" type="button" uk-close></button>
+            <div class="modal-contact__titles">
+                <h1 class="modal-contact__titles--dark">Lorem ipsum</h1>
+                <h1 class="modal-contact__titles--light">Cnibh euismod tincid</h1>
+            </div>
+            <form class="modal-contact-form" action="">
+                <div class="modal-contact-form__section">
+                    <input type="text" id="name" class="modal-contact-form__section--input" placeholder="Name">
+                </div>
+                <div class="modal-contact-form__section">
+                    <input type="text" id="email" class="modal-contact-form__section--input" placeholder="Email address">
+                </div>
+                <button class="modal-contact-form--submit">Send</button>
+            </form>
+            <div class="modal-contact-info">
+                <p class="modal-contact-info--message">
+                    Lorem ipsum dolor sit amet, consectetuer adipiscing elit,
+                    sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna
+                    aliquam erat volutpat. Ut wisi enim ad minim veniam, quis nostrud
+                    exerci Lorem ipsum dolor sit amet, consectetuer adipiscing elit,
+                    sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam erat volutpat.
+                </p>
+            </div>
+
+        </div>
+    </div>
+    <!-- Contact end -->
+
+    <!-- layout start -->
+    <div id="layout" class="uk-flex-top layout" uk-modal>
+        <div class="uk-modal-dialog uk-modal-body uk-margin-auto-vertical modal-layout">
+
+            <button class="uk-modal-close-default" type="button" uk-close></button>
+            <div class="layout-wrapper">
+                <div class="layout_options">
+                    <ul>
+                        <li onclick="changeLayout('Lois_Studio')" class="active">Studio</li>
+                        <li onclick="changeLayout('Lois_1BR')">1 BEDROOM</li>
+                        <li onclick="changeLayout('Lois_2BR')">2 BEDROOMS</li>
+                        <li onclick="changeLayout('Lois_3BR')">3 BEDROOMS</li>
+                    </ul>
+                </div>
+                <div class="layout_image">
+                    <div id="layoutBg" class="building-image--bg building__first--bg" style="background-image: url('../images/Lois_Studio.png'); opacity: 1;"></div>
+                    <img id="layoutImg" class="building-image" src="../images/Lois_Studio.png" alt="Build">
+                </div>
+            </div>
+
+        </div>
+    </div>
+    <!-- layout end -->
+</div>
+
+
+<script>
+
+    function toggleFaq(id) {
+        const x = document.getElementById(id);
+        if (x.style.display === "none") {
+            x.style.display = "block";
+        } else {
+            x.style.display = "none";
+        }
+    }
+
+    function changeLayout(image) {
+        let elSmallResolution = document.getElementById('layoutImg');
+        let elBigResolution = document.getElementById('layoutBg');
+        elSmallResolution.style.backgroundImage = 'url(../images/' + image + '.png)';
+        elBigResolution.style.backgroundImage = 'url(../images/' + image + '.png)';
+    }
+
+</script>
+</body>
+</html>

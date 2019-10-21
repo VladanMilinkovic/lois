@@ -1,0 +1,1490 @@
+@font-face {
+  font-family: "IntegralExtaBold";
+  src: url(../fonts/IntegralCF-ExtraBold.woff) format("truetype");
+}
+
+@font-face {
+  font-family: "FoundersGroteskText";
+  src: url(../fonts/foundersgrotesktext-light.woff) format("truetype");
+}
+
+// Mixins
+@mixin breakpoint($point) {
+  // from 2048px
+  @if $point==hugeScreen {
+    @media (min-width: $hugeScreen) {
+      @content;
+    }
+  }
+  // from 1920px
+  @if $point==bigScreen {
+    @media (min-width: 1920px) {
+      @content;
+    }
+  }
+    // from 1200px
+  @else if $point==bigDesktop {
+    @media (min-width: 1200px) {
+      @content;
+    }
+  }
+    // from 1024px
+  @else if $point==desktop {
+    @media (min-width: 1024px) {
+      @content;
+    }
+  }
+    // from 600px
+  @else if $point==tablet {
+    @media (min-width: 600px) {
+      @content;
+    }
+  }
+
+    // from 0px to 599px
+  @else if $point==mobileScreen {
+    @media (min-width: 0px) and (max-width: 599px) {
+      @content;
+    }
+  }
+    // mobiles up to 599px height in landscape orientation
+  @else if $point==mobileScreenLandscape {
+    @media (max-height: 599px) and (max-width: 830px) and (orientation: landscape) {
+      @content;
+    }
+  }
+    // from 600px to 899px
+  @else if $point==tabletScreen {
+    @media (min-width: 600px) and (max-width: 899px) {
+      @content;
+    }
+  }
+    // from 600px to 1366px in landscape orientation
+  @else if $point==tabletScreenLandscape {
+    @media (min-width: 600px) and (max-width: 1366px) and (min-height: 600px) and (max-height:1024px) and (orientation: landscape) {
+      @content;
+    }
+  }
+
+  @else if $point==iPad {
+    @media only screen and (min-device-width: 768px) and (max-device-width: 1024px) and (-webkit-min-device-pixel-ratio: 2) {
+      @content
+    }
+  }
+
+  @else if $point==iPadLandscape {
+    @media only screen and (min-device-width: 768px) and (max-device-width: 1024px) and (-webkit-min-device-pixel-ratio: 2) and (orientation: landscape) {
+      @content;
+    }
+  }
+
+  @else if $point==iPadProPortrait {
+    @media only screen and (min-device-width: 1024px) and (max-device-width: 1366px) and (-webkit-min-device-pixel-ratio: 2) {
+      @content;
+    }
+  }
+
+  @else if $point==iPadProLandscape {
+    @media only screen and (min-device-width: 1024px) and (max-device-width: 1366px) and (-webkit-min-device-pixel-ratio: 2) and (orientation: landscape) {
+      @content;
+    }
+  }
+
+    // from 900px to 1199px
+  @else if $point==smallScreen {
+    @media (min-width: 900px) and (max-width: 1199px) {
+      @content;
+    }
+  }
+    // from 1200px to 1799px
+  @else if $point==mediumScreen {
+    @media (min-width: 1200px) and (max-width: 1799px) {
+      @content;
+    }
+  }
+    // from 1800px
+  @else if $point==largeScreen {
+    @media (min-width: 1800px) {
+      @content;
+    }
+  }
+}
+
+@mixin multiple-media($media...) {
+  @each $query in $media {
+    @include breakpoint($query) {
+      @content
+    }
+  }
+}
+
+* {
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  background-color: #ffffff;
+
+  @include breakpoint(bigDesktop) {
+    margin-left: 7vw;
+    width: 86vw;
+    margin-right: 7vw;
+  }
+
+}
+
+html {
+  overflow-x: hidden;
+  font-size: 10px;
+  font-family: "FoundersGroteskText";
+  background-image: url(../images/half.png);
+  background-repeat: repeat;
+  //from 1920px
+  @include breakpoint (largeScreen) {
+    font-size: 16px;
+  }
+  //from 1441px to 1919px
+  @media screen and (min-width:1441px) and (max-width: 1919px) {
+    font-size: 14px;
+  }
+  //from 1281px to 1440px
+  @media screen and (min-width:1281px) and (max-width: 1440px) {
+    font-size: 12px;
+  }
+  //from 601px to 1280px
+  @media screen and (min-width:601px) and (max-width: 1280px) {
+    font-size: 12px;
+  }
+  //up to 600px
+  @media screen and (max-width:600px) {
+    font-size: 10px;
+  }
+  &.noFont{
+    font-size: inherit !important;
+    body{
+      padding: 0;
+    }
+  }
+}
+
+
+// Navigation
+.lois-navigation {
+  height: 4rem;
+  display: flex;
+  width: 100%;
+  position: fixed;
+  background-color: #000000;
+  color: #fff;
+  align-items: center;
+  margin-bottom: 1.2rem;
+  justify-content: space-between;
+  z-index: 100;
+
+  @include breakpoint(bigDesktop) {
+    width: 86vw;
+  }
+
+  &--address {
+    font-family: "FoundersGroteskText";
+    font-size: 1rem;
+    padding-left: 1rem;
+
+    .number {
+      display: none;
+      padding-left: 1rem;
+      white-space: pre;
+
+      @include breakpoint(tablet) {
+        display: inline;
+      }
+    }
+  }
+
+  &__mobile {
+    display: flex;
+    padding-right: 1rem;
+
+    @include breakpoint(tablet) {
+      display: none;
+    }
+
+
+    a {
+      color: #ffffff;
+    }
+
+    i {
+      font-size: 2.5rem;
+      padding: 0 0 0 1rem;
+      cursor: pointer;
+    }
+
+    &__tabs {
+      display: none;
+
+      &.show-mobile {
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        position: fixed;
+        width: 100vw;
+        background-color: #000000;
+        height: calc(100vh - 4rem);
+        color: white;
+        margin-top: 4rem;
+        padding-bottom: 1rem;
+        z-index: 10;
+      }
+
+      &__nav {
+        list-style: none;
+        font-size: 2.4rem;
+        padding-left: 1rem;
+
+        li {
+          font-family: "IntegralExtaBold";
+
+          a {
+            color: #000;
+            letter-spacing: .3rem;
+            text-transform: uppercase;
+            text-shadow: -0.7px 0 #fff, 0 0.5px #fff, 0.5px 0 #fff, 0 -0.7px #fff;
+
+            &.active {
+              color: #fff;
+              text-shadow: none;
+              letter-spacing: .1rem;
+            }
+          }
+        }
+      }
+
+      &--call {
+        color: #9AFFBF;
+        text-transform: uppercase;
+        padding-left: 1rem;
+        font-size: 2.4rem;
+        font-weight: 600;
+        font-family: "IntegralExtaBold";
+        margin-bottom: 1rem;
+      }
+    }
+
+  }
+
+  &-tabs {
+    display: none;
+    flex-grow: 1;
+    flex-direction: row-reverse;
+    font-size: 1.8rem;
+
+    @include breakpoint(tablet) {
+      display: flex;
+    }
+
+    .lois-navbar-nav {
+      list-style-type:none;
+      display: flex;
+      flex-direction: row;
+      align-items: center;
+      margin: 0;
+      padding: 0 .5rem;
+
+      &__tabs {
+        padding: 0 .5rem;
+        font-size: 1rem;
+        font-family: "FoundersGroteskText";
+        font-weight: 600;
+
+        a {
+          color: #ffffff;
+          cursor: pointer;
+          height: 5rem;
+          text-decoration: none;
+        }
+      }
+    }
+  }
+}
+
+// Lois
+.lois {
+  padding: 4rem 0 3.6rem 0;
+
+  // Map
+  .location {
+    height: calc(100vh - 27rem);
+    min-height: 18rem;
+    position: relative;
+    margin: 1rem;
+
+    #map {
+      width: 100%;
+      height: 100%;
+    }
+  }
+  // End Map
+
+  // Header
+  &-header {
+    margin-bottom: 1rem;
+    display: flex;
+    justify-content: space-between;
+    padding: 0 1rem;
+    align-items: flex-end;
+
+    &-logo {
+      margin-top: 1rem;
+    }
+
+    &__neigh {
+      display: none;
+      width: 41rem;
+      margin-top: 1rem;
+      align-items: flex-end;
+
+      @include breakpoint(desktop) {
+        display: flex;
+      }
+
+      .white-title {
+        font-family: "IntegralExtaBold";
+        font-size: 2rem;
+        color: #fff;
+        text-transform: uppercase;
+        text-shadow: -1px -1px 0 #000, 1px -1px 0 #000, -1px 1px 0 #000, 1px 1px 0 #000;
+        letter-spacing: 0.2rem;
+        line-height: 1;
+        margin-top: .5rem;
+      }
+
+      h2 {
+        margin: 0;
+      }
+
+      &__item {
+        margin: 0 0.5rem;
+        line-height: 1;
+      }
+    }
+
+    &__features {
+      border-left: 1px solid #000;
+      padding-left: 10px;
+      margin: 1rem 2rem 0 0;
+      display: none;
+
+      @include breakpoint(tablet) {
+        display: flex;
+        flex-direction: column;
+      }
+
+      &--title {
+        color: #000000;
+        font-size: 1rem;
+        font-family: "FoundersGroteskText";
+        margin-bottom: .7rem;
+        margin-top: 0;
+        font-weight: bold;
+
+      }
+
+      .lois-header-list {
+        list-style-type:none;
+        margin: 0;
+        padding-left: 0;
+
+        &--item {
+          color: #000000;
+          font-size: 1rem;
+          height: 1rem;
+          font-family: "FoundersGroteskText";
+        }
+      }
+    }
+  }
+  // End Header
+
+  // Building , Apartments
+  .building {
+    padding: 0 1rem;
+
+    &-image {
+      display: block;
+      width: 100%;
+
+      @include breakpoint(tablet) {
+        display: none;
+      }
+
+      &--bg {
+        display: none;
+
+        @include breakpoint(tablet) {
+          display: block;
+          background-repeat: no-repeat;
+          background-size: 100%;
+        }
+      }
+    }
+
+    &-first-description {
+      display: flex;
+      flex-direction: column;
+
+      @include breakpoint(tablet) {
+        flex-direction: row;
+        margin-top: 1rem;
+      }
+
+      @include breakpoint(desktop) {
+        margin-top: 0;
+        display: flex;
+        flex-direction: column;
+        width: 45%;
+        margin-left: 1rem;
+      }
+    }
+
+    .description-text {
+      @include breakpoint(mobileScreen) {
+        margin-top: 1rem;
+      }
+
+      @include breakpoint(tablet) {
+        width: 50%;
+      }
+
+      @include breakpoint(desktop) {
+        width: auto;
+      }
+
+      &--black {
+        font-family: "IntegralExtaBold";
+        font-size: 2rem;
+        color: #000;
+        text-transform: uppercase;
+        text-shadow: -1px -1px 0 #fff, 1px -1px 0 #fff, -1px 1px 0 #fff, 1px 1px 0 #fff;
+        letter-spacing: .1rem;
+        line-height: 1;
+        margin: 0;
+      }
+
+      &--white {
+        font-family: "IntegralExtaBold";
+        font-size: 2rem;
+        color: #fff;
+        text-transform: uppercase;
+        text-shadow: -1px -1px 0 #000, 1px -1px 0 #000, -1px 1px 0 #000, 1px 1px 0 #000;
+        letter-spacing: .2rem;
+        line-height: 1;
+        margin: 0;
+      }
+
+      &--content {
+        margin: 1rem 1rem 0 0;
+        font-size: 1.4rem;
+        line-height: 1;
+
+        @include breakpoint(mobileScreen) {
+          margin-bottom: 1rem;
+        }
+
+        @include breakpoint(tablet) {
+          margin-bottom: 0;
+        }
+
+        @include breakpoint(desktop) {
+          margin-right: 0;
+        }
+      }
+    }
+
+
+    &__first {
+
+      @include breakpoint(desktop) {
+        display: flex;
+        height: calc(100vh - 27rem);
+      }
+
+      @include breakpoint(iPadProPortrait) {
+        height: calc(100vh - 74rem);
+      }
+
+      @include breakpoint(iPadProLandscape) {
+        height: calc(100vh - 27rem);
+      }
+
+      &--bg {
+        height: calc(100vh - 40rem);
+        width: 100%;
+        background-size: cover;
+        background-position: 50%;
+
+        @include breakpoint(iPad) {
+          height: calc(100vh - 49rem);
+        }
+
+        @include breakpoint(desktop) {
+          height: auto;
+        }
+      }
+
+      &-description--bg {
+        height: auto;
+        width: 50%;
+        background-size: cover;
+        background-position: 50%;
+
+
+        @include breakpoint(desktop) {
+          width: 100%;
+          height: 100%;
+          margin-top: auto;
+          max-height: 50%;
+        }
+      }
+
+    }
+
+    &-second {
+
+
+      @include breakpoint(tablet) {
+        margin-top: 1rem;
+      }
+
+      @include breakpoint(desktop) {
+        display: flex;
+        height: calc(100vh - 22rem);
+        margin-top: 1rem;
+      }
+
+      @include breakpoint(iPad) {
+        height: calc(100vh - 13rem);
+      }
+
+      @include breakpoint(iPadLandscape) {
+        height: calc(100vh - 27rem);
+      }
+
+      @include breakpoint(iPadProPortrait) {
+        height: auto;
+      }
+
+      .building-description {
+
+
+        @include breakpoint(tablet) {
+          display: flex;
+          flex-direction: column-reverse;
+        }
+
+        @include breakpoint(desktop) {
+          display: flex;
+          flex-direction: row;
+        }
+
+        .description-text {
+          @include breakpoint(mobileScreen) {
+            margin-top: 1rem;
+          }
+
+          @include breakpoint(tabletScreen) {
+            margin-left: auto;
+            margin-top: 1rem;
+          }
+
+          @include breakpoint(desktop) {
+            width: 55%;
+            margin-right: 1rem;
+            margin-top: auto;
+          }
+
+        }
+      }
+
+      &-description--bg {
+
+        @include breakpoint(tablet) {
+          min-height: 40rem;
+          width: 100%;
+          background-size: cover;
+          background-position: 50%;
+        }
+
+        @include breakpoint(desktop) {
+          width: 100%;
+          height: 100%;
+          min-height: 20rem;
+        }
+      }
+    }
+  }
+
+  // Slider
+  .slider-box {
+    margin-top: 1rem;
+    height: 20rem;
+
+    @include breakpoint(tablet) {
+      margin-bottom: 4.5rem;
+      height: calc(100vh - 13rem);
+    }
+
+    .uk-position-center-right,
+    .uk-position-center-left {
+      top: 88% !important;
+
+      @include breakpoint(tablet) {
+        top: 95% !important;
+      }
+    }
+
+    .uk-position-relative {
+      height: 100%;
+
+      @include breakpoint(tablet) {
+        height: calc(100vh - 13.5rem);
+      }
+
+      .uk-slideshow-items {
+        min-height: 100% !important;
+        height: 100%;
+      }
+    }
+
+    .next-text {
+      margin-right: 1rem;
+    }
+  }
+  //End Slider
+
+  // Lottery - page
+  .lottery{
+
+    &-first {
+      height: calc(100vh - 19rem);
+      display: flex;
+
+      &-wrapper {
+        margin: auto 1rem;
+        width: 100%;
+        font-family: "FoundersGroteskText";
+
+        @include breakpoint(tablet) {
+          width: 50%;
+          margin: auto;
+        }
+
+        &-title {
+          text-align: center;
+
+          &-black {
+            font-family: "IntegralExtaBold";
+            font-size: 2rem;
+            color: #000;
+            text-transform: uppercase;
+            text-shadow: -1px -1px 0 #fff, 1px -1px 0 #fff, -1px 1px 0 #fff, 1px 1px 0 #fff;
+            letter-spacing: 0.1rem;
+            line-height: 1;
+            margin: 0;
+            text-align: center;
+          }
+
+          &-white {
+            font-family: "IntegralExtaBold";
+            font-size: 2rem;
+            color: #fff;
+            text-transform: uppercase;
+            text-shadow: -1px -1px 0 #000, 1px -1px 0 #000, -1px 1px 0 #000, 1px 1px 0 #000;
+            letter-spacing: 0.2rem;
+            line-height: 1;
+            margin: 0;
+            text-align: center;
+          }
+        }
+
+        &-text {
+          text-align: center;
+          padding: 0 1rem;
+          word-break: break-all;
+        }
+
+        &-button {
+          cursor: pointer;
+          display: block;
+          margin: 0 auto;
+          color: #ffffff;
+          font-size: 1rem;
+          padding: 1rem 2rem;
+          background-color: #000000;
+        }
+      }
+    }
+
+    &-second {
+
+
+      &-head {
+        margin: 0 1rem;
+
+        &--black {
+          font-family: "IntegralExtaBold";
+          font-size: 2rem;
+          color: #000;
+          text-transform: uppercase;
+          text-shadow: -1px -1px 0 #fff, 1px -1px 0 #fff, -1px 1px 0 #fff, 1px 1px 0 #fff;
+          letter-spacing: 0.1rem;
+          line-height: 1;
+          margin: 0;
+        }
+
+        &--white {
+          font-family: "IntegralExtaBold";
+          font-size: 2rem;
+          color: #fff;
+          text-transform: uppercase;
+          text-shadow: -1px -1px 0 #000, 1px -1px 0 #000, -1px 1px 0 #000, 1px 1px 0 #000;
+          letter-spacing: 0.2rem;
+          line-height: 1;
+          margin: 0;
+        }
+      }
+      //Lottery table
+      .lottery-table {
+        $table-header: #1976D2;
+        $table-header-border: #1565C0;
+        $table-border: #d9d9d9;
+        $row-bg: #f4f2f1;
+
+        background-color: #E0E0E0;
+        margin-top: 1rem;
+        padding-bottom: 1rem;
+
+        @include breakpoint(mobileScreen) {
+          background-color: #ffffff;
+          margin: 1rem 1rem 0 1rem;
+        }
+
+        div {
+          box-sizing: border-box;
+        }
+
+        .table-container {
+          display: block;
+          margin-left: auto;
+          margin-right: 1rem;
+          width: 100%;
+          max-width: 62.5rem;
+        }
+
+        .flag-icon {
+          margin-right: 0.1em;
+        }
+
+        .flex-table {
+          display: flex;
+          flex-flow: row wrap;
+          transition: 0.5s;
+
+          &.custom-color {
+            background-color: #9AFFBF;
+          }
+        }
+
+        .flex-row {
+          width: calc(100% / 5);
+          text-align: center;
+          padding: 0.5em 0.5em;
+          border-bottom: solid 1px $table-border;
+          font-size: 1.2rem;
+
+        }
+
+        .rowspan {
+          display: flex;
+          flex-flow: row wrap;
+          align-items: flex-start;
+          justify-content: center;
+          align-self: flex-start;
+
+          @include breakpoint(mobileScreen) {
+            min-height: 49px;
+          }
+        }
+
+        .column {
+          display: flex;
+          flex-flow: column wrap;
+          width: 40%;
+          padding: 0;
+          .flex-row {
+            display: flex;
+            flex-flow: row wrap;
+            width: 100%;
+            padding: 0;
+            border: 0;
+            border-bottom: solid 1px $table-border;
+            &:hover {
+              background: #F5F5F5;
+              transition: 500ms;
+            }
+          }
+        }
+
+        .flex-cell {
+          width: calc(100% / 2); //1px = border right
+          text-align: center;
+          padding: 0.5em 0.5em;
+          &:last-child {
+            // border-right: 0;
+          }
+        }
+
+        &-mark {
+          display: flex;
+          max-width: 61.5rem;
+          margin-left: auto;
+
+          @include breakpoint(mobileScreen) {
+            margin: 0 1rem;
+          }
+
+          ol {
+            font-size: 1rem;
+            padding: 0;
+            margin: 0;
+          }
+
+        }
+
+
+      }
+      // Lottery rent smart
+      .rent-smart {
+        background-color: #99ffbf;
+        text-align: center;
+        padding: 4rem 1rem;
+
+        &-content {
+          width: 100%;
+          margin: 0 auto;
+
+          @include breakpoint(tablet) {
+            width: 50%
+          }
+        }
+
+        &-black {
+          font-size: 2rem;
+          color: #000;
+          font-weight: bold;
+          text-transform: lowercase;
+          text-shadow: -1px -1px 0 #9AFFBF, 1px -1px 0 #9AFFBF, -1px 1px 0 #9AFFBF, 1px 1px 0 #9AFFBF;
+          letter-spacing: 0.1rem;
+          line-height: 1;
+        }
+
+        &-white {
+          font-size: 2rem;
+          color: #9AFFBF;
+          text-transform: lowercase;
+          text-shadow: -1px -1px 0 #000, 1px -1px 0 #000, -1px 1px 0 #000, 1px 1px 0 #000;
+          letter-spacing: 0.2rem;
+          line-height: 1;
+        }
+
+        &-text {
+          margin: 1rem 0 0 0;
+        }
+      }
+      // end Lottery rent smart
+
+
+    }
+    &-third {
+
+      // Lottery apartments
+      .lottery-apartments {
+        margin-top: 1rem;
+
+        &-wrapper {
+          display: flex;
+          flex-direction: column;
+
+          @include breakpoint(tablet) {
+            flex-direction: row;
+          }
+
+          .lottery-apartment {
+            flex: 1;
+            margin: 0 1rem;
+
+            &-head {
+
+              &--black {
+                font-family: "IntegralExtaBold";
+                font-size: 2rem;
+                color: #000;
+                text-transform: uppercase;
+                text-shadow: -1px -1px 0 #fff, 1px -1px 0 #fff, -1px 1px 0 #fff, 1px 1px 0 #fff;
+                letter-spacing: 0.1rem;
+                line-height: 1;
+                margin: 0;
+              }
+
+              &--white {
+                font-family: "IntegralExtaBold";
+                font-size: 2rem;
+                color: #fff;
+                text-transform: uppercase;
+                text-shadow: -1px -1px 0 #000, 1px -1px 0 #000, -1px 1px 0 #000, 1px 1px 0 #000;
+                letter-spacing: 0.2rem;
+                line-height: 1;
+                margin: 0;
+              }
+            }
+
+            &-image {
+              margin: 1rem 0;
+              .building__first--bg {
+
+                @include breakpoint(tablet) {
+                  height: 15rem;
+                }
+              }
+            }
+          }
+        }
+      }
+      // end Lottery apartments
+    }
+
+    &-fourth {
+      margin: 0 1rem;
+
+      .lottery-faq {
+
+        &-head {
+          margin-bottom: 1rem;
+
+          &--black {
+            font-family: "IntegralExtaBold";
+            font-size: 2rem;
+            color: #000;
+            text-transform: uppercase;
+            text-shadow: -1px -1px 0 #fff, 1px -1px 0 #fff, -1px 1px 0 #fff, 1px 1px 0 #fff;
+            letter-spacing: 0.1rem;
+            line-height: 1;
+            margin: 0;
+          }
+
+          &--white {
+            font-family: "IntegralExtaBold";
+            font-size: 2rem;
+            color: #fff;
+            text-transform: uppercase;
+            text-shadow: -1px -1px 0 #000, 1px -1px 0 #000, -1px 1px 0 #000, 1px 1px 0 #000;
+            letter-spacing: 0.2rem;
+            line-height: 1;
+            margin: 0;
+          }
+        }
+
+        &-block {
+
+          &--title {
+            border: none;
+            cursor: pointer;
+            padding: 0;
+            font-size: 1.4rem;
+            margin-bottom: .5rem;
+
+            &:hover {
+              text-decoration: underline;
+            }
+          }
+
+          &--content {
+            display: none;
+            font-size: 1.4rem;
+            color: #000;
+            margin: 1rem 0;
+          }
+
+        }
+      }
+    }
+  }
+  // End Lottery page
+
+  // Slide in page
+  .slide-in {
+    display: flex;
+    flex-direction: column;
+    margin-left: .5rem;
+    margin-right: .5rem;
+
+    @include breakpoint(tablet) {
+      flex-direction: row;
+      flex-wrap: wrap;
+      margin-bottom: 5rem;
+    }
+
+    &-cart {
+      margin-top: 1rem;
+      flex-grow: 1;
+
+      @include breakpoint(tablet) {
+        width: 31%;
+        padding: 0 .5rem;
+      }
+
+      @include breakpoint(desktop) {
+        width: 22%;
+        padding: 0 .5rem;
+      }
+
+      &__image {
+
+        .building-second-description--bg {
+
+          @include breakpoint(tablet) {
+            height: 20rem;
+            max-height: 20rem;
+            min-height: unset;
+          }
+
+          @include breakpoint(desktop) {
+            height: 15rem;
+          }
+
+        }
+      }
+
+      &__content {
+
+        &--black {
+          font-family: "IntegralExtaBold";
+          font-size: 2rem;
+          color: #000;
+          text-transform: uppercase;
+          text-shadow: -1px -1px 0 #fff, 1px -1px 0 #fff, -1px 1px 0 #fff, 1px 1px 0 #fff;
+          letter-spacing: 0.1rem;
+          line-height: 1;
+          margin: 0;
+        }
+
+        &--white {
+          font-family: "IntegralExtaBold";
+          font-size: 2rem;
+          color: #fff;
+          text-transform: uppercase;
+          text-shadow: -1px -1px 0 #000, 1px -1px 0 #000, -1px 1px 0 #000, 1px 1px 0 #000;
+          letter-spacing: 0.2rem;
+          line-height: 1;
+          margin: 0;
+        }
+
+        &--link {
+          margin-top: 1rem;
+          display: block;
+          color: #000;
+          font-size: 1.2rem;
+        }
+      }
+    }
+  }
+  // End Slide in page
+
+}
+
+// Lottery layer
+.lottery-layer {
+  display: flex;
+  flex-direction: row;
+  background-color: #9AFFBF;
+  justify-content: space-between;
+  margin-top: auto;
+  width: 100%;
+  padding: 1rem 0;
+  align-items: flex-start;
+  position:fixed;
+  bottom:0;
+  z-index:50000; //Just in case :)
+
+  @include breakpoint(mobileScreen) {
+    flex-direction: column;
+    position: fixed;
+    justify-content: center;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 30rem;
+    height: 15rem;
+    display: none;
+    padding: 2rem 1rem;
+  }
+
+
+  @include breakpoint(tabletScreenLandscape) {
+    top: unset;
+    left: unset;
+    transform: unset;
+    width: 100%;
+    height: unset;
+    display: flex;
+  }
+
+  @include breakpoint(tabletScreenLandscape) {
+    display: flex;
+  }
+
+  @include breakpoint(bigDesktop) {
+    width: 86vw;
+  }
+
+  .lottery-open {
+
+    @include breakpoint(tablet) {
+      margin-left: 1rem;
+    }
+
+    &__title {
+
+      &--black {
+        font-family: "IntegralExtaBold";
+        font-size: 2rem;
+        color: #000;
+        text-transform: uppercase;
+        text-shadow: -1px -1px 0 #9AFFBF, 1px -1px 0 #9AFFBF, -1px 1px 0 #9AFFBF, 1px 1px 0 #9AFFBF;
+        letter-spacing: 0.1rem;
+        line-height: 1;
+        margin: 0;
+      }
+      &--white {
+        font-family: "IntegralExtaBold";
+        font-size: 2rem;
+        color: #9AFFBF;
+        text-transform: uppercase;
+        text-shadow: -1px -1px 0 #000, 1px -1px 0 #000, -1px 1px 0 #000, 1px 1px 0 #000;
+        letter-spacing: 0.2rem;
+        line-height: 1;
+        margin: 0;
+
+        a {
+          color: #9AFFBF;
+        }
+      }
+    }
+
+    h1 {
+      margin: 0;
+
+      @include breakpoint(mobileScreen) {
+        font-size: 2.4rem;
+        text-align: center;
+      }
+    }
+
+    .click-here {
+      @include breakpoint(mobileScreen) {
+        display: none;
+      }
+
+      a {
+        text-decoration: none;
+      }
+    }
+
+    .learn-more {
+      display: none;
+      color: #99ffbf;
+      text-shadow: -1px -1px 0 #000, 1px -1px 0 #000, -1px 1px 0 #000, 1px 1px 0 #000;
+      @include breakpoint(mobileScreen) {
+        display: block;
+      }
+    }
+
+  }
+
+  .lottery-ending {
+    display: flex;
+    flex-direction: column;
+
+    @include breakpoint(tablet) {
+      margin-right: 1rem;
+    }
+
+    @include breakpoint(mobileScreen) {
+      margin-top: 2rem;
+      text-align: center;
+    }
+
+    h1 {
+      margin: 0;
+
+      @include breakpoint(mobileScreen) {
+        font-size: 2.4rem;
+        text-align: center;
+      }
+    }
+
+    &__time {
+      display: flex;
+      flex-direction: row;
+      justify-content: flex-end;
+
+      @include breakpoint(mobileScreen) {
+        text-align: center;
+        display: inline-flex;
+        justify-content: center;
+      }
+
+      &__value {
+        display: flex;
+        flex-direction: column;
+        padding-left: .5rem;
+        align-items: flex-end;
+      }
+
+      &__text {
+
+        span {
+          font-size: 1.5rem;
+        }
+      }
+    }
+  }
+}
+// Lottery layer end
+
+
+// Contact modal
+.modal-contact {
+  width: 45rem !important;
+  background-color: #9AFFBF;
+  padding: 2rem;
+
+  &__titles {
+
+    &--dark {
+      font-family: "IntegralExtaBold";
+      font-size: 2rem;
+      color: #000;
+      text-transform: uppercase;
+      text-shadow: -1px -1px 0 #9AFFBF, 1px -1px 0 #9AFFBF, -1px 1px 0 #9AFFBF, 1px 1px 0 #9AFFBF;
+      letter-spacing: .1rem;
+      line-height: 1;
+      margin: 0;
+
+      @include breakpoint(tablet) {
+        font-size: 2.4rem;
+      }
+    }
+
+    &--light {
+      font-family: "IntegralExtaBold";
+      font-size: 2rem;
+      color: #9AFFBF;
+      text-transform: uppercase;
+      text-shadow: -1px -1px 0 #000, 1px -1px 0 #000, -1px 1px 0 #000, 1px 1px 0 #000;
+      letter-spacing: .2rem;
+      line-height: 1;
+      margin: 0;
+
+      @include breakpoint(tablet) {
+        font-size: 2.4rem;
+      }
+    }
+  }
+
+  &-form {
+    display: flex;
+    flex-direction: column;
+
+    &__section {
+      display: flex;
+      flex-direction: column;
+
+      &--label {
+
+      }
+
+      &--input {
+        background: transparent;
+        border: none;
+        border-bottom: 1px solid #000000;
+        margin-top: 2rem;
+        font-size: 1.4rem;
+        width: 60%;
+        color: #000000;
+
+        &::selection{
+          background-color: transparent;
+        }
+
+        &::-moz-selection{
+          background-color: transparent;
+        }
+
+        &:focus {
+          outline:0;
+        }
+      }
+    }
+
+    &--submit {
+      width: 20%;
+      min-width: 100px;
+      padding: 1rem 0;
+      font-size: 1.5rem;
+      background-color: #000000;
+      color: #ffffff;
+      margin-top: 2.5rem;
+      margin-bottom: 2rem;
+      border: none;
+      cursor: pointer;
+    }
+  }
+
+  &-info {
+    &--message {
+      font-size: 1rem;
+      color: #000000;
+      margin-bottom: 0;
+    }
+  }
+}
+// End Contact modal
+
+// Layout modal
+.layout {
+  padding: 1rem;
+
+  .uk-margin-auto-vertical {
+    height: 100%;
+    width: 100%;
+  }
+
+  .modal-layout {
+    display: flex;
+    background-color: #ededed;
+  }
+
+  &-wrapper {
+    display: flex;
+    flex-grow: 1;
+    min-width: 17rem;
+
+    @include breakpoint(mobileScreen) {
+      flex-direction: column;
+    }
+  }
+
+  &_options {
+    min-width: 35%;
+
+    ul {
+      list-style: none;
+      padding-left: 0;
+
+      li {
+        cursor: pointer;
+        font-family: "IntegralExtaBold";
+        font-size: 2rem;
+        color: #ededed;
+        text-transform: uppercase;
+        text-shadow: -1px -1px 0 #000, 1px -1px 0 #000, -1px 1px 0 #000, 1px 1px 0 #000;
+        letter-spacing: 0.2rem;
+        line-height: 1;
+        margin: 0;
+
+        &.active {
+          color: #000;
+          text-shadow: -1px -1px 0 #fff, 1px -1px 0 #fff, -1px 1px 0 #fff, 1px 1px 0 #fff;
+          letter-spacing: 0.1rem;
+        }
+      }
+    }
+
+  }
+
+  &_image {
+    flex-grow: 1;
+
+    .building-image {
+      display: block;
+
+      @include breakpoint(tablet) {
+        display: none;
+      }
+
+      &--bg {
+        display: none;
+
+        @include breakpoint(tablet) {
+          display: block;
+          background-size: cover;
+          background-position: 50%;
+          height: 50rem;
+          width:100%;
+        }
+      }
+    }
+  }
+}
+// end Layout modal
+
+// Shared
+.divider {
+  border-left: 1px solid #000000;
+  border-right: 1px solid #000000;
+  height: 1.5rem;
+  display: inline-block;
+}
+.convenience {
+  background-image: url('../images/convenience.png');
+  background-size: cover;
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+  cursor: pointer;
+}
+.drink {
+  background-image: url('../images/drink.png');
+  background-size: cover;
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+  cursor: pointer;
+}
+.food {
+  background-image: url('../images/food.png');
+  background-size: cover;
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+  cursor: pointer;
+}
+.lifestyle {
+  background-image: url('../images/lifestyle.png');
+  background-size: cover;
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+  cursor: pointer;
+}
+
+.pointer {
+  background-image: url('../images/pointer.png');
+  background-size: cover;
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+  cursor: pointer;
+}
