@@ -231,6 +231,16 @@ html.noFont body {
   margin-top: 0.5rem;
   cursor: pointer;
 }
+.lois-header__neigh .active {
+  font-family: "IntegralExtaBold";
+  font-size: 2rem;
+  color: #000;
+  text-transform: uppercase;
+  text-shadow: -1px -1px 0 #fff, 1px -1px 0 #fff, -1px 1px 0 #fff, 1px 1px 0 #fff;
+  letter-spacing: 0.1rem;
+  line-height: 1;
+  margin: 0.5rem 0 0 0;
+}
 .lois-header__neigh h2 {
   margin: 0;
 }

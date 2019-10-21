@@ -468,7 +468,7 @@
             <button class="uk-modal-close-default" type="button" uk-close></button>
             <div class="layout-wrapper">
                 <div class="layout_options">
-                    <ul>
+                    <ul onclick="toggleActive(event)">
                         <li onclick="changeLayout('Lois_Studio')" class="active">Studio</li>
                         <li onclick="changeLayout('Lois_1BR')">1 BEDROOM</li>
                         <li onclick="changeLayout('Lois_2BR')">2 BEDROOMS</li>
@@ -503,6 +503,15 @@
         let elBigResolution = document.getElementById('layoutBg');
         elSmallResolution.style.backgroundImage = 'url(../images/' + image + '.png)';
         elBigResolution.style.backgroundImage = 'url(../images/' + image + '.png)';
+    }
+
+    function toggleActive(e) {
+        let elems = document.querySelectorAll(".active");
+        [].forEach.call(elems, function(el) {
+            el.classList.remove("active");
+            el.classList.add("white-title");
+        });
+        e.target.className = "active";
     }
 
 </script>
