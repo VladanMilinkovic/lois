@@ -34,7 +34,7 @@
 
     <div class="lois-navigation__mobile">
         <span><a href="#modal-center" uk-toggle><i class="fa fa-envelope-o" aria-hidden="true"></i></a></span>
-        <span uk-toggle="target: #mobile; cls: show-mobile"><i class="fa fa-bars" aria-hidden="true"></i></span>
+        <span uk-toggle="target: #mobile; cls: show-mobile" id="mobile-icon" onclick="toggleNavIcon()"><i class="fa fa-bars" aria-hidden="true"></i></span>
     </div>
 
     <div class="lois-navigation-tabs">
@@ -54,7 +54,7 @@
     <!-- Header end -->
 
     <!-- Apartments search start -->
-    <div class="appartments-toggle" uk-toggle="target: #apartments-search; animation: uk-animation-slide-top">
+    <div id="apartments-toggle" class="appartments-toggle" uk-toggle="target: #apartments-search; animation: uk-animation-slide-top" onclick="toggleIcon()">
         <i class="fa fa-angle-down" aria-hidden="true"></i>
     </div>
     <div class="apartments-search">
@@ -62,38 +62,38 @@
             <div class="apartments-search-select__section">
                 <button class="uk-button uk-button-default" type="button">Im looking for <i class="fa fa-caret-down" aria-hidden="true"></i></button>
                 <div uk-dropdown="animation: uk-animation-slide-top-small; duration: 1000">
-                    <ul class="uk-nav uk-dropdown-nav">
+                    <ul class="uk-nav uk-dropdown-nav" id="lookingFor" onclick="setSelectedValue('lookingFor', 'lookingForValue')">
                         <li class="uk-active"><a href="#">Studio</a></li>
                         <li><a href="#">1 Bathroom</a></li>
                         <li><a href="#">2 Bathroom</a></li>
                         <li><a href="#">3 Bathroom</a></li>
                     </ul>
                 </div>
-                <span class="apartments-search-select__section--value">3 Bathroom</span>
+                <span id="lookingForValue" class="apartments-search-select__section--value">3 Bathroom</span>
             </div>
             <div class="apartments-search-select__section">
                 <button class="uk-button uk-button-default" type="button">$ Minimum <i class="fa fa-caret-down" aria-hidden="true"></i></button>
                 <div uk-dropdown="animation: uk-animation-slide-top-small; duration: 1000">
-                    <ul class="uk-nav uk-dropdown-nav">
+                    <ul class="uk-nav uk-dropdown-nav" id="minimum" onclick="setSelectedValue('minimum', 'minimumValue')">
                         <li class="uk-active"><a href="#">2000</a></li>
                         <li><a href="#">3000</a></li>
                         <li><a href="#">4000</a></li>
                         <li><a href="#">5000</a></li>
                     </ul>
                 </div>
-                <span class="apartments-search-select__section--value">$2000</span>
+                <span id="minimumValue" class="apartments-search-select__section--value">$2000</span>
             </div>
             <div class="apartments-search-select__section">
                 <button class="uk-button uk-button-default" type="button">$ Maximum <i class="fa fa-caret-down" aria-hidden="true"></i></button>
                 <div uk-dropdown="animation: uk-animation-slide-top-small; duration: 1000">
-                    <ul class="uk-nav uk-dropdown-nav">
+                    <ul class="uk-nav uk-dropdown-nav" id="maximum" onclick="setSelectedValue('maximum', 'maximumValue')">
                         <li class="uk-active"><a href="#">2000</a></li>
                         <li><a href="#">3000</a></li>
                         <li><a href="#">4000</a></li>
                         <li><a href="#">5000</a></li>
                     </ul>
                 </div>
-                <span class="apartments-search-select__section--value">$2000</span>
+                <span id="maximumValue" class="apartments-search-select__section--value">$2000</span>
             </div>
         </div>
     </div>
@@ -216,5 +216,31 @@
     <!-- Contact end -->
 </div>
 
+
+<script>
+    function setSelectedValue(id, setValue) {
+        let listItems = document.getElementById(id).querySelectorAll("ul li");
+
+        listItems.forEach(function(item) {
+            item.onclick = function(e) {
+                document.getElementById(setValue).innerHTML = this.innerText;
+            }
+        });
+    }
+
+    function toggleIcon() {
+        let child = document.getElementById('apartments-toggle').children[0];
+
+        child.classList.toggle("fa-angle-down");
+        child.classList.toggle("fa-angle-up");
+
+    }
+    function toggleNavIcon() {
+        let child = document.getElementById('mobile-icon').children[0];
+
+        child.classList.toggle("fa-bars");
+        child.classList.toggle("fa-times");
+    }
+</script>
 </body>
 </html>

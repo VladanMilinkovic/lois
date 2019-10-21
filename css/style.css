@@ -210,15 +210,10 @@ html.noFont body {
   margin-top: 1rem;
 }
 .lois-header__neigh {
-  display: none;
+  display: flex;
   width: 41rem;
   margin-top: 1rem;
   align-items: flex-end;
-}
-@media (min-width: 1024px) {
-  .lois-header__neigh {
-    display: flex;
-  }
 }
 .lois-header__neigh .white-title {
   font-family: "IntegralExtaBold";
@@ -941,6 +936,15 @@ html.noFont body {
   line-height: 1;
   margin: 0;
   text-align: center;
+}
+
+@media (min-width: 0px) and (max-width: 599px) {
+  .neighborhood-header {
+    flex-direction: column;
+  }
+  .neighborhood-header .lois-header__neigh {
+    width: auto;
+  }
 }
 
 .lottery-layer {

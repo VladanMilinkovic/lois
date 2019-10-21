@@ -340,14 +340,11 @@ html {
     }
 
     &__neigh {
-      display: none;
+      display: flex;
       width: 41rem;
       margin-top: 1rem;
       align-items: flex-end;
 
-      @include breakpoint(desktop) {
-        display: flex;
-      }
 
       .white-title {
         font-family: "IntegralExtaBold";
@@ -1181,7 +1178,18 @@ html {
     }
   }
   // Apartments header section end
+}
 
+.neighborhood-header {
+
+
+  @include breakpoint(mobileScreen) {
+    flex-direction: column;
+
+    .lois-header__neigh {
+      width: auto;
+    }
+  }
 }
 
 // Lottery layer
