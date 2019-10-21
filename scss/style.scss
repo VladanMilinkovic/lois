@@ -358,6 +358,7 @@ html {
         letter-spacing: 0.2rem;
         line-height: 1;
         margin-top: .5rem;
+        cursor: pointer;
       }
 
       h2 {
@@ -445,6 +446,7 @@ html {
         flex-direction: column;
         width: 45%;
         margin-left: 1rem;
+        overflow-y: auto;
       }
     }
 
@@ -504,6 +506,7 @@ html {
 
 
     &__first {
+      margin-top: 1rem;
 
       @include breakpoint(desktop) {
         display: flex;
@@ -801,7 +804,7 @@ html {
           text-align: center;
           padding: 0.5em 0.5em;
           border-bottom: solid 1px $table-border;
-          font-size: 1.2rem;
+          font-size: 1rem;
 
         }
 
@@ -849,6 +852,7 @@ html {
           display: flex;
           max-width: 61.5rem;
           margin-left: auto;
+          margin-right: 1rem;
 
           @include breakpoint(mobileScreen) {
             margin: 0 1rem;
@@ -910,7 +914,7 @@ html {
 
       // Lottery apartments
       .lottery-apartments {
-        margin-top: 1rem;
+        margin: 1rem .5rem 0 .5rem;
 
         &-wrapper {
           display: flex;
@@ -922,7 +926,7 @@ html {
 
           .lottery-apartment {
             flex: 1;
-            margin: 0 1rem;
+            margin: 0 .5rem;
 
             &-head {
 
@@ -1001,7 +1005,7 @@ html {
             border: none;
             cursor: pointer;
             padding: 0;
-            font-size: 1.4rem;
+            font-size: 1rem;
             margin-bottom: .5rem;
 
             &:hover {
@@ -1011,7 +1015,7 @@ html {
 
           &--content {
             display: none;
-            font-size: 1.4rem;
+            font-size: 1rem;
             color: #000;
             margin: 1rem 0;
           }
@@ -1100,6 +1104,72 @@ html {
     }
   }
   // End Slide in page
+
+  // Apartments header section (slide in & slide single)
+  .appartments-toggle {
+    position: absolute;
+    margin-left: 1rem;
+    cursor: pointer;
+
+    i {
+      font-size: 2rem;
+    }
+  }
+  .apartments-search {
+    display: flex;
+    flex-direction: row-reverse;
+    border-bottom: 1px solid #000;
+    padding-bottom: 1rem;
+    margin: 0 1rem;
+    min-height: 1rem;
+
+    &-select {
+      display: flex;
+
+      &__section {
+        display: flex;
+        flex-direction: column;
+        margin: 0 .5rem;
+
+        .uk-button-default {
+          border: none;
+          border-bottom: 1px solid #e5e5e5;
+          line-height: 2.5rem;
+          font-size: 1rem;
+          text-align: left;
+          display: flex;
+          justify-content: space-between;
+          align-items: center;
+          padding: 0;
+          text-transform: unset;
+          color: #000;
+        }
+
+        .uk-dropdown {
+          min-width: 10rem;
+          padding: 15px;
+          margin-top: 0;
+
+          a {
+            font-size: 1.4rem;
+          }
+        }
+
+        &--value {
+          font-family: "IntegralExtaBold";
+          font-size: 2rem;
+          color: #fff;
+          text-transform: uppercase;
+          text-shadow: -1px -1px 0 #000, 1px -1px 0 #000, -1px 1px 0 #000, 1px 1px 0 #000;
+          letter-spacing: 0.2rem;
+          line-height: 1;
+          margin: 0;
+          text-align: center;
+        }
+      }
+    }
+  }
+  // Apartments header section end
 
 }
 
@@ -1296,10 +1366,6 @@ html {
       letter-spacing: .2rem;
       line-height: 1;
       margin: 0;
-
-      @include breakpoint(tablet) {
-        font-size: 2.4rem;
-      }
     }
   }
 
@@ -1342,7 +1408,7 @@ html {
       width: 20%;
       min-width: 100px;
       padding: 1rem 0;
-      font-size: 1.5rem;
+      font-size: 1rem;
       background-color: #000000;
       color: #ffffff;
       margin-top: 2.5rem;
@@ -1447,44 +1513,32 @@ html {
   height: 1.5rem;
   display: inline-block;
 }
-.convenience {
-  background-image: url('../images/convenience.png');
+
+// Map icons
+.convenience,
+.pointer,
+.drink,
+.food,
+.lifestyle {
   background-size: cover;
-  width: 50px;
-  height: 50px;
+  width: 2.5rem;
+  height: 2.5rem;
   border-radius: 50%;
   cursor: pointer;
+}
+.convenience {
+  background-image: url('../images/convenience.png');
 }
 .drink {
   background-image: url('../images/drink.png');
-  background-size: cover;
-  width: 50px;
-  height: 50px;
-  border-radius: 50%;
-  cursor: pointer;
 }
 .food {
   background-image: url('../images/food.png');
-  background-size: cover;
-  width: 50px;
-  height: 50px;
-  border-radius: 50%;
-  cursor: pointer;
 }
 .lifestyle {
   background-image: url('../images/lifestyle.png');
-  background-size: cover;
-  width: 50px;
-  height: 50px;
-  border-radius: 50%;
-  cursor: pointer;
 }
 
 .pointer {
   background-image: url('../images/pointer.png');
-  background-size: cover;
-  width: 50px;
-  height: 50px;
-  border-radius: 50%;
-  cursor: pointer;
 }

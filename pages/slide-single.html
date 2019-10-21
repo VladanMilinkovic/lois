@@ -50,14 +50,55 @@
 <!-- Navigation end -->
 <div class="lois">
     <!-- Header start -->
-    <div class="lois-header">
-        <div class="lois-header-logo">
-        </div>
-        <div class="lois-header__features">
 
+    <!-- Header end -->
+
+    <!-- Apartments search start -->
+    <div class="appartments-toggle" uk-toggle="target: #apartments-search; animation: uk-animation-slide-top">
+        <i class="fa fa-angle-down" aria-hidden="true"></i>
+    </div>
+    <div class="apartments-search">
+        <div class="apartments-search-select" id="apartments-search">
+            <div class="apartments-search-select__section">
+                <button class="uk-button uk-button-default" type="button">Im looking for <i class="fa fa-caret-down" aria-hidden="true"></i></button>
+                <div uk-dropdown="animation: uk-animation-slide-top-small; duration: 1000">
+                    <ul class="uk-nav uk-dropdown-nav">
+                        <li class="uk-active"><a href="#">Studio</a></li>
+                        <li><a href="#">1 Bathroom</a></li>
+                        <li><a href="#">2 Bathroom</a></li>
+                        <li><a href="#">3 Bathroom</a></li>
+                    </ul>
+                </div>
+                <span class="apartments-search-select__section--value">3 Bathroom</span>
+            </div>
+            <div class="apartments-search-select__section">
+                <button class="uk-button uk-button-default" type="button">$ Minimum <i class="fa fa-caret-down" aria-hidden="true"></i></button>
+                <div uk-dropdown="animation: uk-animation-slide-top-small; duration: 1000">
+                    <ul class="uk-nav uk-dropdown-nav">
+                        <li class="uk-active"><a href="#">2000</a></li>
+                        <li><a href="#">3000</a></li>
+                        <li><a href="#">4000</a></li>
+                        <li><a href="#">5000</a></li>
+                    </ul>
+                </div>
+                <span class="apartments-search-select__section--value">$2000</span>
+            </div>
+            <div class="apartments-search-select__section">
+                <button class="uk-button uk-button-default" type="button">$ Maximum <i class="fa fa-caret-down" aria-hidden="true"></i></button>
+                <div uk-dropdown="animation: uk-animation-slide-top-small; duration: 1000">
+                    <ul class="uk-nav uk-dropdown-nav">
+                        <li class="uk-active"><a href="#">2000</a></li>
+                        <li><a href="#">3000</a></li>
+                        <li><a href="#">4000</a></li>
+                        <li><a href="#">5000</a></li>
+                    </ul>
+                </div>
+                <span class="apartments-search-select__section--value">$2000</span>
+            </div>
         </div>
     </div>
-    <!-- Header end -->
+
+    <!-- Apartment sliders start -->
 
     <!-- Building Apartments -->
     <div class="building">

@@ -61,10 +61,10 @@
         </div>
         <div class="lois-header__neigh">
             <div class="lois-header__neigh__item">
-                <h2 class="white-title">Food</h2>
-                <h2 class="white-title">Drink</h2>
-                <h2 class="white-title">Markets</h2>
-                <h2 class="white-title">Lifestyle</h2>
+                <h2 class="white-title" onclick="markerSelect('food')">Food</h2>
+                <h2 class="white-title" onclick="markerSelect('drink')">Drink</h2>
+                <h2 class="white-title" onclick="markerSelect('convenience')">Markets</h2>
+                <h2 class="white-title" onclick="markerSelect('lifestyle')">Lifestyle</h2>
             </div>
             <div class="lois-header__neigh__item">
                 Lorem ipsum Dolor sit amet ipsum Lorem ipsum lorem Dolor sit
@@ -199,6 +199,8 @@
 
 
 <script>
+    let currentMarkers=[];
+
     mapboxgl.accessToken = 'pk.eyJ1IjoiYmVqemJvbGthIiwiYSI6ImNrMXY2ejdoMzA0d3UzaHA3d2VxeDAzMjkifQ.WQ14pXCP4uTSz-Ap0Ve1KQ';
 
     let map = new mapboxgl.Map({
@@ -282,10 +284,37 @@
         el.className = markerStyle;
 
         // make a marker for each feature and add to the map
-        new mapboxgl.Marker(el)
+        let oneMarker = new mapboxgl.Marker(el)
             .setLngLat(marker.geometry.coordinates)
             .addTo(map);
+
+        currentMarkers.push(oneMarker);
     });
+
+    function markerSelect(selectedMarker) {
+        if (currentMarkers!==null) {
+            for (var i = currentMarkers.length - 1; i >= 0; i--) {
+                currentMarkers[i].remove();
+            }
+        }
+        geojson.features.forEach(function(marker) {
+
+            // create a HTML element for each feature
+            let el = document.createElement('div');
+            let markerStyle = marker.properties.properties.icon;
+            if(markerStyle === selectedMarker || markerStyle === 'pointer') {
+                el.className = markerStyle;
+                // make a marker for each feature and add to the map
+                let oneMarker = new mapboxgl.Marker(el)
+                    .setLngLat(marker.geometry.coordinates)
+                    .addTo(map);
+
+                currentMarkers.push(oneMarker);
+            }
+
+        });
+
+    }
 </script>
 
 <script src="https://code.jquery.com/jquery-3.4.1.min.js" integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo=" crossorigin="anonymous"></script>

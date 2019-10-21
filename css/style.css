@@ -229,6 +229,7 @@ html.noFont body {
   letter-spacing: 0.2rem;
   line-height: 1;
   margin-top: 0.5rem;
+  cursor: pointer;
 }
 .lois-header__neigh h2 {
   margin: 0;
@@ -307,6 +308,7 @@ html.noFont body {
     flex-direction: column;
     width: 45%;
     margin-left: 1rem;
+    overflow-y: auto;
   }
 }
 @media (min-width: 0px) and (max-width: 599px) {
@@ -363,6 +365,9 @@ html.noFont body {
   .lois .building .description-text--content {
     margin-right: 0;
   }
+}
+.lois .building__first {
+  margin-top: 1rem;
 }
 @media (min-width: 1024px) {
   .lois .building__first {
@@ -631,7 +636,7 @@ html.noFont body {
   text-align: center;
   padding: 0.5em 0.5em;
   border-bottom: solid 1px #d9d9d9;
-  font-size: 1.2rem;
+  font-size: 1rem;
 }
 .lois .lottery-second .lottery-table .rowspan {
   display: flex;
@@ -672,6 +677,7 @@ html.noFont body {
   display: flex;
   max-width: 61.5rem;
   margin-left: auto;
+  margin-right: 1rem;
 }
 @media (min-width: 0px) and (max-width: 599px) {
   .lois .lottery-second .lottery-table-mark {
@@ -718,7 +724,7 @@ html.noFont body {
   margin: 1rem 0 0 0;
 }
 .lois .lottery-third .lottery-apartments {
-  margin-top: 1rem;
+  margin: 1rem 0.5rem 0 0.5rem;
 }
 .lois .lottery-third .lottery-apartments-wrapper {
   display: flex;
@@ -731,7 +737,7 @@ html.noFont body {
 }
 .lois .lottery-third .lottery-apartments-wrapper .lottery-apartment {
   flex: 1;
-  margin: 0 1rem;
+  margin: 0 0.5rem;
 }
 .lois .lottery-third .lottery-apartments-wrapper .lottery-apartment-head--black {
   font-family: "IntegralExtaBold";
@@ -791,7 +797,7 @@ html.noFont body {
   border: none;
   cursor: pointer;
   padding: 0;
-  font-size: 1.4rem;
+  font-size: 1rem;
   margin-bottom: 0.5rem;
 }
 .lois .lottery-fourth .lottery-faq-block--title:hover {
@@ -799,7 +805,7 @@ html.noFont body {
 }
 .lois .lottery-fourth .lottery-faq-block--content {
   display: none;
-  font-size: 1.4rem;
+  font-size: 1rem;
   color: #000;
   margin: 1rem 0;
 }
@@ -869,6 +875,62 @@ html.noFont body {
   display: block;
   color: #000;
   font-size: 1.2rem;
+}
+.lois .appartments-toggle {
+  position: absolute;
+  margin-left: 1rem;
+  cursor: pointer;
+}
+.lois .appartments-toggle i {
+  font-size: 2rem;
+}
+.lois .apartments-search {
+  display: flex;
+  flex-direction: row-reverse;
+  border-bottom: 1px solid #000;
+  padding-bottom: 1rem;
+  margin: 0 1rem;
+  min-height: 1rem;
+}
+.lois .apartments-search-select {
+  display: flex;
+}
+.lois .apartments-search-select__section {
+  display: flex;
+  flex-direction: column;
+  margin: 0 0.5rem;
+}
+.lois .apartments-search-select__section .uk-button-default {
+  border: none;
+  border-bottom: 1px solid #e5e5e5;
+  line-height: 2.5rem;
+  font-size: 1rem;
+  text-align: left;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0;
+  text-transform: unset;
+  color: #000;
+}
+.lois .apartments-search-select__section .uk-dropdown {
+  min-width: 10rem;
+  padding: 15px;
+  margin-top: 0;
+}
+.lois .apartments-search-select__section .uk-dropdown a {
+  font-size: 1.4rem;
+}
+.lois .apartments-search-select__section--value {
+  font-family: "IntegralExtaBold";
+  font-size: 2rem;
+  color: #fff;
+  text-transform: uppercase;
+  text-shadow: -1px -1px 0 #000, 1px -1px 0 #000, -1px 1px 0 #000, 1px 1px 0 #000;
+  letter-spacing: 0.2rem;
+  line-height: 1;
+  margin: 0;
+  text-align: center;
 }
 
 .lottery-layer {
@@ -1049,11 +1111,6 @@ html.noFont body {
   line-height: 1;
   margin: 0;
 }
-@media (min-width: 600px) {
-  .modal-contact__titles--light {
-    font-size: 2.4rem;
-  }
-}
 .modal-contact-form {
   display: flex;
   flex-direction: column;
@@ -1084,7 +1141,7 @@ html.noFont body {
   width: 20%;
   min-width: 100px;
   padding: 1rem 0;
-  font-size: 1.5rem;
+  font-size: 1rem;
   background-color: #000000;
   color: #ffffff;
   margin-top: 2.5rem;
@@ -1173,49 +1230,36 @@ html.noFont body {
   display: inline-block;
 }
 
-.convenience {
-  background-image: url("../images/convenience.png");
+.convenience,
+.pointer,
+.drink,
+.food,
+.lifestyle {
   background-size: cover;
-  width: 50px;
-  height: 50px;
+  width: 2.5rem;
+  height: 2.5rem;
   border-radius: 50%;
   cursor: pointer;
+}
+
+.convenience {
+  background-image: url("../images/convenience.png");
 }
 
 .drink {
   background-image: url("../images/drink.png");
-  background-size: cover;
-  width: 50px;
-  height: 50px;
-  border-radius: 50%;
-  cursor: pointer;
 }
 
 .food {
   background-image: url("../images/food.png");
-  background-size: cover;
-  width: 50px;
-  height: 50px;
-  border-radius: 50%;
-  cursor: pointer;
 }
 
 .lifestyle {
   background-image: url("../images/lifestyle.png");
-  background-size: cover;
-  width: 50px;
-  height: 50px;
-  border-radius: 50%;
-  cursor: pointer;
 }
 
 .pointer {
   background-image: url("../images/pointer.png");
-  background-size: cover;
-  width: 50px;
-  height: 50px;
-  border-radius: 50%;
-  cursor: pointer;
 }
 
 /*# sourceMappingURL=style.css.map */
