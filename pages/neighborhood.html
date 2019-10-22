@@ -39,7 +39,12 @@
 
     <div class="lois-navigation__mobile">
         <span><a href="#modal-center" uk-toggle><i class="fa fa-envelope-o" aria-hidden="true"></i></a></span>
-        <span uk-toggle="target: #mobile; cls: show-mobile" id="mobile-icon" onclick="toggleNavIcon()"><i class="fa fa-bars" aria-hidden="true"></i></span>
+        <div uk-toggle="target: #mobile; cls: show-mobile" id="mobile-icon" onclick="toggleNavIcon()">
+            <span></span>
+            <span></span>
+            <span></span>
+            <span></span>
+        </div>
     </div>
 
     <div class="lois-navigation-tabs">
@@ -90,7 +95,7 @@
 
 
     <!-- Building Apartments -->
-    <div class="building">
+    <div class="building neighborhood-apartments">
         <div class="building__first">
             <div class="building-image--bg building__first--bg" style="background-image: url('../images/eIM8es@2x.png'); opacity: 1;"></div>
             <img class="building-image" src="../images/eIM8es.png" alt="Build">
@@ -178,20 +183,19 @@
     </div>
     <div class="lottery-ending">
         <h1 class="lottery-open__title--black">ENDING IN</h1>
-        <div class="lottery-ending__time">
+        <div class="lottery-ending__time" uk-countdown="date: 2019-10-28T20:39:56+00:00">
             <div class="lottery-ending__time__value">
-                <span class="lottery-open__title--white">02</span>
+                <span class="lottery-open__title--white uk-countdown-number uk-countdown-days"></span>
                 <span class="lottery-ending__time__value--text">Days</span>
             </div>
             <div class="lottery-ending__time__value">
-                <span class="lottery-open__title--white">02</span>
+                <span class="lottery-open__title--white uk-countdown-number uk-countdown-hours"></span>
                 <span class="lottery-ending__time__value--text">Hours</span>
             </div>
             <div class="lottery-ending__time__value">
-                <span class="lottery-open__title--white">02</span>
+                <span class="lottery-open__title--white uk-countdown-number uk-countdown-minutes"></span>
                 <span class="lottery-ending__time__value--text">Minutes</span>
             </div>
-
         </div>
     </div>
 </div>
@@ -205,9 +209,288 @@
 
     let map = new mapboxgl.Map({
         container: 'map',
-        style: 'mapbox://styles/mapbox/light-v10',
+        style: {
+            "version": 8,
+            "name": "Basic-copy",
+            "metadata": {
+                "mapbox:origin": "basic-template",
+                "mapbox:autocomposite": true,
+                "mapbox:type": "template",
+                "mapbox:sdk-support": {
+                    "js": "0.54.0",
+                    "android": "7.4.0",
+                    "ios": "4.11.0"
+                },
+                "mapbox:groups": {
+                    "9f87387e10111589208a0894cd1f0da9": {
+                        "name": "Group",
+                        "collapsed": false
+                    }
+                }
+            },
+            "center": [-73.95122929381489, 40.658562669275454],
+            "zoom": 16.729194099699956,
+            "bearing": 0,
+            "pitch": 0,
+            "sources": {
+                "composite": {
+                    "url": "mapbox://mapbox.mapbox-streets-v8",
+                    "type": "vector"
+                }
+            },
+            "sprite": "mapbox://sprites/milank/ck20xf0v9dcj71cp7iyuw8pgt/2a402me31ovu0g1k832hcf39y",
+            "glyphs": "mapbox://fonts/milank/{fontstack}/{range}.pbf",
+            "layers": [
+                {
+                    "id": "background",
+                    "type": "background",
+                    "layout": {},
+                    "paint": {"background-color": "#f0f0f0"}
+                },
+                {
+                    "id": "landuse",
+                    "type": "fill",
+                    "source": "composite",
+                    "source-layer": "landuse",
+                    "minzoom": 5,
+                    "filter": [
+                        "match",
+                        ["get", "class"],
+                        ["airport", "hospital", "park", "pitch", "school"],
+                        true,
+                        false
+                    ],
+                    "layout": {},
+                    "paint": {
+                        "fill-color": [
+                            "match",
+                            ["get", "class"],
+                            ["airport"],
+                            "hsla(345, 100%, 31%, 0)",
+                            ["hospital"],
+                            "#f0f0f0",
+                            ["park", "pitch"],
+                            "hsl(78, 0%, 100%)",
+                            ["school"],
+                            "#f0f0f0",
+                            "hsla(0, 0%, 0%, 0)"
+                        ],
+                        "fill-opacity": [
+                            "interpolate",
+                            ["linear"],
+                            ["zoom"],
+                            5,
+                            0,
+                            6,
+                            1
+                        ],
+                        "fill-pattern": "test"
+                    }
+                },
+                {
+                    "id": "water",
+                    "type": "fill",
+                    "source": "composite",
+                    "source-layer": "water",
+                    "filter": ["all"],
+                    "layout": {},
+                    "paint": {"fill-color": "hsl(170, 100%, 55%)"}
+                },
+                {
+                    "id": "road",
+                    "type": "line",
+                    "source": "composite",
+                    "source-layer": "road",
+                    "minzoom": 5,
+                    "filter": [
+                        "all",
+                        ["==", ["geometry-type"], "LineString"],
+                        ["!=", ["get", "type"], "service:parking_aisle"],
+                        [
+                            "match",
+                            ["get", "structure"],
+                            ["bridge", "tunnel"],
+                            false,
+                            true
+                        ],
+                        [
+                            "match",
+                            ["get", "class"],
+                            [
+                                "motorway",
+                                "motorway_link",
+                                "trunk",
+                                "trunk_link",
+                                "primary",
+                                "primary_link",
+                                "secondary",
+                                "secondary_link",
+                                "tertiary",
+                                "tertiary_link",
+                                "street",
+                                "street_limited",
+                                "service",
+                                "track"
+                            ],
+                            true,
+                            false
+                        ]
+                    ],
+                    "layout": {"line-round-limit": 1, "line-cap": "round"},
+                    "paint": {
+                        "line-width": [
+                            "interpolate",
+                            ["exponential", 1.5],
+                            ["zoom"],
+                            0,
+                            [
+                                "match",
+                                ["get", "class"],
+                                ["motorway", "trunk", "primary"],
+                                1,
+                                ["secondary", "tertiary"],
+                                0.5,
+                                [
+                                    "motorway_link",
+                                    "trunk_link",
+                                    "street",
+                                    "street_limited"
+                                ],
+                                0.5,
+                                0
+                            ],
+                            5,
+                            [
+                                "match",
+                                ["get", "class"],
+                                ["motorway", "trunk", "primary"],
+                                0.1,
+                                "tertiary",
+                                0.01,
+                                0
+                            ],
+                            18,
+                            [
+                                "match",
+                                ["get", "class"],
+                                ["motorway", "trunk", "primary"],
+                                3,
+                                ["secondary", "tertiary"],
+                                3,
+                                [
+                                    "motorway_link",
+                                    "trunk_link",
+                                    "street",
+                                    "street_limited"
+                                ],
+                                3,
+                                3
+                            ]
+                        ],
+                        "line-color": [
+                            "match",
+                            ["get", "class"],
+                            [
+                                "street",
+                                "street_limited",
+                                "service",
+                                "track",
+                                "secondary_link",
+                                "tertiary_link",
+                                "primary_link",
+                                "trunk_link"
+                            ],
+                            "hsl(38, 0%, 0%)",
+                            "",
+                            "hsl(0, 0%, 0%)",
+                            "hsl(0, 0%, 0%)"
+                        ],
+                        "line-gap-width": 0
+                    }
+                },
+                {
+                    "id": "road-label",
+                    "type": "symbol",
+                    "source": "composite",
+                    "source-layer": "road",
+                    "minzoom": 12,
+                    "filter": [
+                        "match",
+                        ["get", "class"],
+                        [
+                            "motorway",
+                            "trunk",
+                            "primary",
+                            "secondary",
+                            "tertiary",
+                            "street",
+                            "street_limited",
+                            "pedestrian"
+                        ],
+                        true,
+                        false
+                    ],
+                    "layout": {
+                        "text-size": [
+                            "interpolate",
+                            ["linear"],
+                            ["zoom"],
+                            9,
+                            [
+                                "match",
+                                ["get", "class"],
+                                [
+                                    "motorway",
+                                    "trunk",
+                                    "primary",
+                                    "secondary",
+                                    "tertiary"
+                                ],
+                                10,
+                                9
+                            ],
+                            20,
+                            [
+                                "match",
+                                ["get", "class"],
+                                [
+                                    "motorway",
+                                    "trunk",
+                                    "primary",
+                                    "secondary",
+                                    "tertiary"
+                                ],
+                                15,
+                                14
+                            ]
+                        ],
+                        "text-max-angle": 30,
+                        "text-transform": "uppercase",
+                        "text-font": ["Caveat Bold", "Arial Unicode MS Regular"],
+                        "symbol-placement": "line",
+                        "text-padding": 1,
+                        "visibility": "visible",
+                        "text-rotation-alignment": "map",
+                        "text-pitch-alignment": "viewport",
+                        "text-field": ["coalesce", ["get", "name_en"], ["get", "name"]],
+                        "text-letter-spacing": 0.05
+                    },
+                    "paint": {
+                        "text-color": "hsl(0, 0%, 0%)",
+                        "text-halo-color": "#f0f0f0",
+                        "text-halo-width": 5
+                    }
+                }
+            ],
+            "created": "2019-10-21T21:22:55.278Z",
+            "id": "ck20xf0v9dcj71cp7iyuw8pgt",
+            "modified": "2019-10-21T21:37:44.450Z",
+            "owner": "milank",
+            "visibility": "private",
+            "draft": false
+        },
         center: [-73.948341, 40.655170],
-        zoom: 16
+        zoom: 14
     });
 
     var geojson = {
@@ -325,10 +608,8 @@
     }
 
     function toggleNavIcon() {
-        let child = document.getElementById('mobile-icon').children[0];
-
-        child.classList.toggle("fa-bars");
-        child.classList.toggle("fa-times");
+        let child = document.getElementById('mobile-icon');
+        child.classList.toggle("open");
     }
 </script>
 

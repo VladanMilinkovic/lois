@@ -93,6 +93,70 @@ html.noFont body {
     display: inline;
   }
 }
+.lois-navigation #mobile-icon {
+  width: 3rem;
+  height: 4rem;
+  position: relative;
+  margin: 0;
+  -webkit-transform: rotate(0deg);
+  -moz-transform: rotate(0deg);
+  -o-transform: rotate(0deg);
+  transform: rotate(0deg);
+  -webkit-transition: 0.5s ease-in-out;
+  -moz-transition: 0.5s ease-in-out;
+  -o-transition: 0.5s ease-in-out;
+  transition: 0.5s ease-in-out;
+  cursor: pointer;
+}
+.lois-navigation #mobile-icon span {
+  display: block;
+  position: absolute;
+  height: 2px;
+  width: 100%;
+  background: #ffffff;
+  border-radius: 9px;
+  opacity: 1;
+  left: 0;
+  -webkit-transform: rotate(0deg);
+  -moz-transform: rotate(0deg);
+  -o-transform: rotate(0deg);
+  transform: rotate(0deg);
+  -webkit-transition: 0.25s ease-in-out;
+  -moz-transition: 0.25s ease-in-out;
+  -o-transition: 0.25s ease-in-out;
+  transition: 0.25s ease-in-out;
+}
+.lois-navigation #mobile-icon span:nth-child(1) {
+  top: 11px;
+}
+.lois-navigation #mobile-icon span:nth-child(2), .lois-navigation #mobile-icon span:nth-child(3) {
+  top: 19px;
+}
+.lois-navigation #mobile-icon span:nth-child(4) {
+  top: 27px;
+}
+.lois-navigation #mobile-icon.open span:nth-child(1) {
+  top: 5px;
+  width: 0%;
+  left: 50%;
+}
+.lois-navigation #mobile-icon.open span:nth-child(2) {
+  -webkit-transform: rotate(45deg);
+  -moz-transform: rotate(45deg);
+  -o-transform: rotate(45deg);
+  transform: rotate(45deg);
+}
+.lois-navigation #mobile-icon.open span:nth-child(3) {
+  -webkit-transform: rotate(-45deg);
+  -moz-transform: rotate(-45deg);
+  -o-transform: rotate(-45deg);
+  transform: rotate(-45deg);
+}
+.lois-navigation #mobile-icon.open span:nth-child(4) {
+  top: 18px;
+  width: 0%;
+  left: 50%;
+}
 .lois-navigation__mobile {
   display: flex;
   padding-right: 1rem;
@@ -102,13 +166,12 @@ html.noFont body {
     display: none;
   }
 }
-.lois-navigation__mobile a {
-  color: #ffffff;
-}
-.lois-navigation__mobile i {
+.lois-navigation__mobile span {
   font-size: 2.5rem;
-  padding: 0 0 0 1rem;
-  cursor: pointer;
+  margin-right: 1rem;
+}
+.lois-navigation__mobile span a {
+  color: #fff;
 }
 .lois-navigation__mobile__tabs {
   display: none;
@@ -136,14 +199,17 @@ html.noFont body {
 }
 .lois-navigation__mobile__tabs__nav li a {
   color: #000;
-  letter-spacing: 0.3rem;
   text-transform: uppercase;
-  text-shadow: -0.7px 0 #fff, 0 0.5px #fff, 0.5px 0 #fff, 0 -0.7px #fff;
+  -webkit-text-fill-color: #000;
+  -webkit-text-stroke-width: 1px;
+  -webkit-text-stroke-color: #fff;
 }
 .lois-navigation__mobile__tabs__nav li a.active {
-  color: #fff;
-  text-shadow: none;
-  letter-spacing: 0.1rem;
+  color: black;
+  -webkit-text-fill-color: white;
+  /* Will override color (regardless of order) */
+  -webkit-text-stroke-width: 1px;
+  -webkit-text-stroke-color: black;
 }
 .lois-navigation__mobile__tabs--call {
   color: #9AFFBF;
@@ -173,11 +239,27 @@ html.noFont body {
   margin: 0;
   padding: 0 0.5rem;
 }
+@media (min-width: 1024px) {
+  .lois-navigation-tabs .lois-navbar-nav {
+    padding: 0;
+    max-width: 400px;
+    min-width: 400px;
+    margin-right: 1rem;
+    margin-left: 1rem;
+    display: flex;
+    justify-content: space-between;
+  }
+}
 .lois-navigation-tabs .lois-navbar-nav__tabs {
   padding: 0 0.5rem;
   font-size: 1rem;
   font-family: "FoundersGroteskText";
   font-weight: 600;
+}
+@media (min-width: 1024px) {
+  .lois-navigation-tabs .lois-navbar-nav__tabs {
+    padding: 0;
+  }
 }
 .lois-navigation-tabs .lois-navbar-nav__tabs a {
   color: #ffffff;
@@ -218,21 +300,21 @@ html.noFont body {
 .lois-header__neigh .white-title {
   font-family: "IntegralExtaBold";
   font-size: 2rem;
-  color: #fff;
   text-transform: uppercase;
-  text-shadow: -1px -1px 0 #000, 1px -1px 0 #000, -1px 1px 0 #000, 1px 1px 0 #000;
-  letter-spacing: 0.2rem;
   line-height: 1;
   margin-top: 0.5rem;
   cursor: pointer;
+  color: #000000;
+  -webkit-text-fill-color: #ffffff;
+  /* Will override color (regardless of order) */
+  -webkit-text-stroke-width: 1px;
+  -webkit-text-stroke-color: #000000;
 }
 .lois-header__neigh .active {
   font-family: "IntegralExtaBold";
   font-size: 2rem;
-  color: #000;
   text-transform: uppercase;
-  text-shadow: -1px -1px 0 #fff, 1px -1px 0 #fff, -1px 1px 0 #fff, 1px 1px 0 #fff;
-  letter-spacing: 0.1rem;
+  -webkit-text-fill-color: #000;
   line-height: 1;
   margin: 0.5rem 0 0 0;
 }
@@ -246,7 +328,7 @@ html.noFont body {
 .lois-header__features {
   border-left: 1px solid #000;
   padding-left: 10px;
-  margin: 1rem 2rem 0 0;
+  margin: 1rem 1rem 0 0;
   display: none;
 }
 @media (min-width: 600px) {
@@ -270,7 +352,7 @@ html.noFont body {
 }
 .lois-header__features .lois-header-list--item {
   color: #000000;
-  font-size: 1rem;
+  font-size: 0.8rem;
   height: 1rem;
   font-family: "FoundersGroteskText";
 }
@@ -314,6 +396,8 @@ html.noFont body {
     width: 45%;
     margin-left: 1rem;
     overflow-y: auto;
+    max-width: 400px;
+    min-width: 400px;
   }
 }
 @media (min-width: 0px) and (max-width: 599px) {
@@ -334,27 +418,27 @@ html.noFont body {
 .lois .building .description-text--black {
   font-family: "IntegralExtaBold";
   font-size: 2rem;
-  color: #000;
   text-transform: uppercase;
-  text-shadow: -1px -1px 0 #fff, 1px -1px 0 #fff, -1px 1px 0 #fff, 1px 1px 0 #fff;
-  letter-spacing: 0.1rem;
   line-height: 1;
   margin: 0;
+  color: #000000;
+  -webkit-text-fill-color: #000000;
 }
 .lois .building .description-text--white {
   font-family: "IntegralExtaBold";
   font-size: 2rem;
-  color: #fff;
   text-transform: uppercase;
-  text-shadow: -1px -1px 0 #000, 1px -1px 0 #000, -1px 1px 0 #000, 1px 1px 0 #000;
-  letter-spacing: 0.2rem;
-  line-height: 1;
+  color: #000000;
+  -webkit-text-fill-color: #ffffff;
+  -webkit-text-stroke-width: 1px;
+  -webkit-text-stroke-color: #000000;
   margin: 0;
 }
 .lois .building .description-text--content {
   margin: 1rem 1rem 0 0;
-  font-size: 1.4rem;
+  font-size: 1rem;
   line-height: 1;
+  color: #000000;
 }
 @media (min-width: 0px) and (max-width: 599px) {
   .lois .building .description-text--content {
@@ -378,11 +462,6 @@ html.noFont body {
   .lois .building__first {
     display: flex;
     height: calc(100vh - 27rem);
-  }
-}
-@media only screen and (min-device-width: 1024px) and (max-device-width: 1366px) and (-webkit-min-device-pixel-ratio: 2) {
-  .lois .building__first {
-    height: calc(100vh - 74rem);
   }
 }
 @media only screen and (min-device-width: 1024px) and (max-device-width: 1366px) and (-webkit-min-device-pixel-ratio: 2) and (orientation: landscape) {
@@ -428,7 +507,7 @@ html.noFont body {
 @media (min-width: 1024px) {
   .lois .building-second {
     display: flex;
-    height: calc(100vh - 22rem);
+    height: calc(100vh - 13.5rem);
     margin-top: 1rem;
   }
 }
@@ -444,7 +523,7 @@ html.noFont body {
 }
 @media only screen and (min-device-width: 1024px) and (max-device-width: 1366px) and (-webkit-min-device-pixel-ratio: 2) {
   .lois .building-second {
-    height: auto;
+    height: calc(100vh - 13.5rem);
   }
 }
 @media (min-width: 600px) {
@@ -490,6 +569,17 @@ html.noFont body {
     width: 100%;
     height: 100%;
     min-height: 20rem;
+  }
+}
+@media (min-width: 1024px) {
+  .lois .neighborhood-apartments .building__first {
+    display: flex;
+    height: calc(100vh - 13.5rem);
+  }
+}
+@media only screen and (min-device-width: 1024px) and (max-device-width: 1366px) and (-webkit-min-device-pixel-ratio: 2) and (orientation: landscape) {
+  .lois .neighborhood-apartments .building__first {
+    height: calc(100vh - 13.5rem);
   }
 }
 .lois .slider-box {
@@ -548,28 +638,30 @@ html.noFont body {
 .lois .lottery-first-wrapper-title-black {
   font-family: "IntegralExtaBold";
   font-size: 2rem;
-  color: #000;
   text-transform: uppercase;
-  text-shadow: -1px -1px 0 #fff, 1px -1px 0 #fff, -1px 1px 0 #fff, 1px 1px 0 #fff;
-  letter-spacing: 0.1rem;
   line-height: 1;
   margin: 0;
+  color: #000000;
   text-align: center;
+  -webkit-text-fill-color: #000000;
 }
 .lois .lottery-first-wrapper-title-white {
   font-family: "IntegralExtaBold";
   font-size: 2rem;
-  color: #fff;
   text-transform: uppercase;
-  text-shadow: -1px -1px 0 #000, 1px -1px 0 #000, -1px 1px 0 #000, 1px 1px 0 #000;
-  letter-spacing: 0.2rem;
   line-height: 1;
   margin: 0;
   text-align: center;
+  color: #000000;
+  -webkit-text-fill-color: #ffffff;
+  -webkit-text-stroke-width: 1px;
+  -webkit-text-stroke-color: #000000;
 }
 .lois .lottery-first-wrapper-text {
+  color: #000000;
   text-align: center;
   padding: 0 1rem;
+  font-size: 1rem;
   word-break: break-all;
 }
 .lois .lottery-first-wrapper-button {
@@ -580,6 +672,7 @@ html.noFont body {
   font-size: 1rem;
   padding: 1rem 2rem;
   background-color: #000000;
+  font-family: "FoundersGroteskText";
 }
 .lois .lottery-second-head {
   margin: 0 1rem;
@@ -587,21 +680,21 @@ html.noFont body {
 .lois .lottery-second-head--black {
   font-family: "IntegralExtaBold";
   font-size: 2rem;
-  color: #000;
   text-transform: uppercase;
-  text-shadow: -1px -1px 0 #fff, 1px -1px 0 #fff, -1px 1px 0 #fff, 1px 1px 0 #fff;
-  letter-spacing: 0.1rem;
   line-height: 1;
   margin: 0;
+  color: #000000;
+  -webkit-text-fill-color: #000000;
 }
 .lois .lottery-second-head--white {
   font-family: "IntegralExtaBold";
   font-size: 2rem;
-  color: #fff;
   text-transform: uppercase;
-  text-shadow: -1px -1px 0 #000, 1px -1px 0 #000, -1px 1px 0 #000, 1px 1px 0 #000;
-  letter-spacing: 0.2rem;
   line-height: 1;
+  color: #000000;
+  -webkit-text-fill-color: #ffffff;
+  -webkit-text-stroke-width: 1px;
+  -webkit-text-stroke-color: #000000;
   margin: 0;
 }
 .lois .lottery-second .lottery-table {
@@ -617,6 +710,7 @@ html.noFont body {
 }
 .lois .lottery-second .lottery-table div {
   box-sizing: border-box;
+  color: #000000;
 }
 .lois .lottery-second .lottery-table .table-container {
   display: block;
@@ -710,23 +804,26 @@ html.noFont body {
 }
 .lois .lottery-second .rent-smart-black {
   font-size: 2rem;
-  color: #000;
   font-weight: bold;
   text-transform: lowercase;
-  text-shadow: -1px -1px 0 #9AFFBF, 1px -1px 0 #9AFFBF, -1px 1px 0 #9AFFBF, 1px 1px 0 #9AFFBF;
-  letter-spacing: 0.1rem;
   line-height: 1;
+  color: #000000;
+  -webkit-text-fill-color: #000000;
+  font-family: "FoundersGroteskText";
 }
 .lois .lottery-second .rent-smart-white {
   font-size: 2rem;
-  color: #9AFFBF;
   text-transform: lowercase;
-  text-shadow: -1px -1px 0 #000, 1px -1px 0 #000, -1px 1px 0 #000, 1px 1px 0 #000;
-  letter-spacing: 0.2rem;
+  color: #000000;
+  -webkit-text-fill-color: #9AFFBF;
+  -webkit-text-stroke-width: 1px;
+  -webkit-text-stroke-color: #000000;
   line-height: 1;
+  font-family: "FoundersGroteskText";
 }
 .lois .lottery-second .rent-smart-text {
   margin: 1rem 0 0 0;
+  color: #000000;
 }
 .lois .lottery-third .lottery-apartments {
   margin: 1rem 0.5rem 0 0.5rem;
@@ -747,21 +844,21 @@ html.noFont body {
 .lois .lottery-third .lottery-apartments-wrapper .lottery-apartment-head--black {
   font-family: "IntegralExtaBold";
   font-size: 2rem;
-  color: #000;
   text-transform: uppercase;
-  text-shadow: -1px -1px 0 #fff, 1px -1px 0 #fff, -1px 1px 0 #fff, 1px 1px 0 #fff;
-  letter-spacing: 0.1rem;
   line-height: 1;
   margin: 0;
+  color: #000000;
+  -webkit-text-fill-color: #000000;
 }
 .lois .lottery-third .lottery-apartments-wrapper .lottery-apartment-head--white {
   font-family: "IntegralExtaBold";
   font-size: 2rem;
-  color: #fff;
   text-transform: uppercase;
-  text-shadow: -1px -1px 0 #000, 1px -1px 0 #000, -1px 1px 0 #000, 1px 1px 0 #000;
-  letter-spacing: 0.2rem;
   line-height: 1;
+  color: #000000;
+  -webkit-text-fill-color: #ffffff;
+  -webkit-text-stroke-width: 1px;
+  -webkit-text-stroke-color: #000000;
   margin: 0;
 }
 .lois .lottery-third .lottery-apartments-wrapper .lottery-apartment-image {
@@ -770,6 +867,11 @@ html.noFont body {
 @media (min-width: 600px) {
   .lois .lottery-third .lottery-apartments-wrapper .lottery-apartment-image .building__first--bg {
     height: 15rem;
+  }
+}
+@media (min-width: 1024px) {
+  .lois .lottery-third .lottery-apartments-wrapper .lottery-apartment-image .building__first--bg {
+    height: 20rem;
   }
 }
 .lois .lottery-fourth {
@@ -781,21 +883,21 @@ html.noFont body {
 .lois .lottery-fourth .lottery-faq-head--black {
   font-family: "IntegralExtaBold";
   font-size: 2rem;
-  color: #000;
   text-transform: uppercase;
-  text-shadow: -1px -1px 0 #fff, 1px -1px 0 #fff, -1px 1px 0 #fff, 1px 1px 0 #fff;
-  letter-spacing: 0.1rem;
   line-height: 1;
   margin: 0;
+  color: #000000;
+  -webkit-text-fill-color: #000000;
 }
 .lois .lottery-fourth .lottery-faq-head--white {
   font-family: "IntegralExtaBold";
   font-size: 2rem;
-  color: #fff;
   text-transform: uppercase;
-  text-shadow: -1px -1px 0 #000, 1px -1px 0 #000, -1px 1px 0 #000, 1px 1px 0 #000;
-  letter-spacing: 0.2rem;
   line-height: 1;
+  color: #000000;
+  -webkit-text-fill-color: #ffffff;
+  -webkit-text-stroke-width: 1px;
+  -webkit-text-stroke-color: #000000;
   margin: 0;
 }
 .lois .lottery-fourth .lottery-faq-block--title {
@@ -803,7 +905,10 @@ html.noFont body {
   cursor: pointer;
   padding: 0;
   font-size: 1rem;
+  font-weight: bold;
+  color: #000;
   margin-bottom: 0.5rem;
+  font-family: "FoundersGroteskText";
 }
 .lois .lottery-fourth .lottery-faq-block--title:hover {
   text-decoration: underline;
@@ -858,22 +963,22 @@ html.noFont body {
 .lois .slide-in-cart__content--black {
   font-family: "IntegralExtaBold";
   font-size: 2rem;
-  color: #000;
   text-transform: uppercase;
-  text-shadow: -1px -1px 0 #fff, 1px -1px 0 #fff, -1px 1px 0 #fff, 1px 1px 0 #fff;
-  letter-spacing: 0.1rem;
   line-height: 1;
   margin: 0;
+  color: #000000;
+  -webkit-text-fill-color: #000000;
 }
 .lois .slide-in-cart__content--white {
   font-family: "IntegralExtaBold";
   font-size: 2rem;
-  color: #fff;
   text-transform: uppercase;
-  text-shadow: -1px -1px 0 #000, 1px -1px 0 #000, -1px 1px 0 #000, 1px 1px 0 #000;
-  letter-spacing: 0.2rem;
   line-height: 1;
   margin: 0;
+  color: #000000;
+  -webkit-text-fill-color: #ffffff;
+  -webkit-text-stroke-width: 1px;
+  -webkit-text-stroke-color: #000000;
 }
 .lois .slide-in-cart__content--link {
   margin-top: 1rem;
@@ -929,13 +1034,14 @@ html.noFont body {
 .lois .apartments-search-select__section--value {
   font-family: "IntegralExtaBold";
   font-size: 2rem;
-  color: #fff;
   text-transform: uppercase;
-  text-shadow: -1px -1px 0 #000, 1px -1px 0 #000, -1px 1px 0 #000, 1px 1px 0 #000;
-  letter-spacing: 0.2rem;
   line-height: 1;
   margin: 0;
   text-align: center;
+  color: #000000;
+  -webkit-text-fill-color: #ffffff;
+  -webkit-text-stroke-width: 1px;
+  -webkit-text-stroke-color: #000000;
 }
 
 @media (min-width: 0px) and (max-width: 599px) {
@@ -1002,22 +1108,22 @@ html.noFont body {
 .lottery-layer .lottery-open__title--black {
   font-family: "IntegralExtaBold";
   font-size: 2rem;
-  color: #000;
   text-transform: uppercase;
-  text-shadow: -1px -1px 0 #9AFFBF, 1px -1px 0 #9AFFBF, -1px 1px 0 #9AFFBF, 1px 1px 0 #9AFFBF;
-  letter-spacing: 0.1rem;
   line-height: 1;
   margin: 0;
+  color: #000000;
+  -webkit-text-fill-color: #000000;
 }
 .lottery-layer .lottery-open__title--white {
   font-family: "IntegralExtaBold";
   font-size: 2rem;
-  color: #9AFFBF;
   text-transform: uppercase;
-  text-shadow: -1px -1px 0 #000, 1px -1px 0 #000, -1px 1px 0 #000, 1px 1px 0 #000;
-  letter-spacing: 0.2rem;
   line-height: 1;
   margin: 0;
+  color: #000000;
+  -webkit-text-fill-color: #9AFFBF;
+  -webkit-text-stroke-width: 1px;
+  -webkit-text-stroke-color: #000000;
 }
 .lottery-layer .lottery-open__title--white a {
   color: #9AFFBF;
@@ -1041,8 +1147,7 @@ html.noFont body {
 }
 .lottery-layer .lottery-open .learn-more {
   display: none;
-  color: #99ffbf;
-  text-shadow: -1px -1px 0 #000, 1px -1px 0 #000, -1px 1px 0 #000, 1px 1px 0 #000;
+  -webkit-text-fill-color: #99ffbf;
 }
 @media (min-width: 0px) and (max-width: 599px) {
   .lottery-layer .lottery-open .learn-more {
@@ -1105,25 +1210,20 @@ html.noFont body {
   font-size: 2rem;
   color: #000;
   text-transform: uppercase;
-  text-shadow: -1px -1px 0 #9AFFBF, 1px -1px 0 #9AFFBF, -1px 1px 0 #9AFFBF, 1px 1px 0 #9AFFBF;
-  letter-spacing: 0.1rem;
   line-height: 1;
   margin: 0;
-}
-@media (min-width: 600px) {
-  .modal-contact__titles--dark {
-    font-size: 2.4rem;
-  }
+  -webkit-text-fill-color: #000000;
 }
 .modal-contact__titles--light {
   font-family: "IntegralExtaBold";
   font-size: 2rem;
-  color: #9AFFBF;
+  color: #000000;
   text-transform: uppercase;
-  text-shadow: -1px -1px 0 #000, 1px -1px 0 #000, -1px 1px 0 #000, 1px 1px 0 #000;
-  letter-spacing: 0.2rem;
   line-height: 1;
   margin: 0;
+  -webkit-text-fill-color: #9AFFBF;
+  -webkit-text-stroke-width: 1px;
+  -webkit-text-stroke-color: #000000;
 }
 .modal-contact-form {
   display: flex;
@@ -1138,12 +1238,17 @@ html.noFont body {
   border: none;
   border-bottom: 1px solid #000000;
   margin-top: 2rem;
-  font-size: 1.4rem;
+  font-size: 1rem;
   width: 60%;
   color: #000000;
+  font-family: "FoundersGroteskText";
 }
 .modal-contact-form__section--input::selection {
   background-color: transparent;
+}
+.modal-contact-form__section--input::placeholder {
+  color: #000000;
+  font-family: "FoundersGroteskText";
 }
 .modal-contact-form__section--input::-moz-selection {
   background-color: transparent;
@@ -1162,15 +1267,16 @@ html.noFont body {
   margin-bottom: 2rem;
   border: none;
   cursor: pointer;
+  font-family: "FoundersGroteskText";
 }
 .modal-contact-info--message {
-  font-size: 1rem;
+  font-size: 0.8rem;
   color: #000000;
   margin-bottom: 0;
 }
 
 .layout {
-  padding: 1rem;
+  padding: 0;
 }
 .layout .uk-margin-auto-vertical {
   height: 100%;
@@ -1201,20 +1307,20 @@ html.noFont body {
   cursor: pointer;
   font-family: "IntegralExtaBold";
   font-size: 2rem;
-  color: #ededed;
   text-transform: uppercase;
-  text-shadow: -1px -1px 0 #000, 1px -1px 0 #000, -1px 1px 0 #000, 1px 1px 0 #000;
-  letter-spacing: 0.2rem;
   line-height: 1;
   margin: 0;
+  color: #000000;
+  -webkit-text-fill-color: #ededed;
+  -webkit-text-stroke-width: 1px;
+  -webkit-text-stroke-color: #000000;
 }
 .layout_options ul li.active {
-  color: #000;
-  text-shadow: -1px -1px 0 #fff, 1px -1px 0 #fff, -1px 1px 0 #fff, 1px 1px 0 #fff;
-  letter-spacing: 0.1rem;
+  -webkit-text-fill-color: #000000;
 }
 .layout_image {
   flex-grow: 1;
+  display: none;
 }
 .layout_image .building-image {
   display: block;

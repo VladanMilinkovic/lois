@@ -34,7 +34,12 @@
 
     <div class="lois-navigation__mobile">
         <span><a href="#modal-center" uk-toggle><i class="fa fa-envelope-o" aria-hidden="true"></i></a></span>
-        <span uk-toggle="target: #mobile; cls: show-mobile" id="mobile-icon" onclick="toggleNavIcon()"><i class="fa fa-bars" aria-hidden="true"></i></span>
+        <div uk-toggle="target: #mobile; cls: show-mobile" id="mobile-icon" onclick="toggleNavIcon()">
+            <span></span>
+            <span></span>
+            <span></span>
+            <span></span>
+        </div>
     </div>
 
     <div class="lois-navigation-tabs">
@@ -236,10 +241,8 @@
 
     }
     function toggleNavIcon() {
-        let child = document.getElementById('mobile-icon').children[0];
-
-        child.classList.toggle("fa-bars");
-        child.classList.toggle("fa-times");
+        let child = document.getElementById('mobile-icon');
+        child.classList.toggle("open");
     }
 </script>
 </body>

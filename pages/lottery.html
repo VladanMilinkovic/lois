@@ -34,7 +34,12 @@
 
     <div class="lois-navigation__mobile">
         <span><a href="#modal-center" uk-toggle><i class="fa fa-envelope-o" aria-hidden="true"></i></a></span>
-        <span uk-toggle="target: #mobile; cls: show-mobile" id="mobile-icon" onclick="toggleNavIcon()"><i class="fa fa-bars" aria-hidden="true"></i></span>
+        <div uk-toggle="target: #mobile; cls: show-mobile" id="mobile-icon" onclick="toggleNavIcon()">
+            <span></span>
+            <span></span>
+            <span></span>
+            <span></span>
+        </div>
     </div>
 
     <div class="lois-navigation-tabs">
@@ -433,7 +438,7 @@
     <div id="modal-center" class="uk-flex-top" uk-modal>
         <div class="uk-modal-dialog uk-modal-body uk-margin-auto-vertical modal-contact">
 
-            <button class="uk-modal-close-default" type="button" uk-close></button>
+            <button class="uk-modal-close-default uk-close-large" type="button" uk-close></button>
             <div class="modal-contact__titles">
                 <h1 class="modal-contact__titles--dark">Lorem ipsum</h1>
                 <h1 class="modal-contact__titles--light">Cnibh euismod tincid</h1>
@@ -465,7 +470,7 @@
     <div id="layout" class="uk-flex-top layout" uk-modal>
         <div class="uk-modal-dialog uk-modal-body uk-margin-auto-vertical modal-layout">
 
-            <button class="uk-modal-close-default" type="button" uk-close></button>
+            <button class="uk-modal-close-default uk-close-large" type="button" uk-close></button>
             <div class="layout-wrapper">
                 <div class="layout_options">
                     <ul onclick="toggleActive(event)">
@@ -475,9 +480,17 @@
                         <li onclick="changeLayout('Lois_3BR')">3 BEDROOMS</li>
                     </ul>
                 </div>
-                <div class="layout_image">
-                    <div id="layoutBg" class="building-image--bg building__first--bg" style="background-image: url('../images/Lois_Studio.png'); opacity: 1;"></div>
-                    <img id="layoutImg" class="building-image" src="../images/Lois_Studio.png" alt="Build">
+                <div class="layout_image" id="Lois_Studio" style="display: block">
+                    <img class="" src="../images/Lois_Studio.png" alt="Layout">
+                </div>
+                <div class="layout_image" id="Lois_1BR" style="display: none">
+                    <img class="" src="../images/Lois_1BR.png" alt="Layout">
+                </div>
+                <div class="layout_image" id="Lois_2BR" style="display: none">
+                    <img class="" src="../images/Lois_2BR.png" alt="Layout">
+                </div>
+                <div class="layout_image" id="Lois_3BR" style="display: none">
+                    <img class="" src="../images/Lois_3BR.png" alt="Layout">
                 </div>
             </div>
 
@@ -489,20 +502,41 @@
 
 <script>
 
+    let faqActive = 'faq1';
+    let layout = 'Lois_Studio';
+
     function toggleFaq(id) {
+
+        if (faqActive.length) {
+            let prevElement = document.getElementById(faqActive);
+            prevElement.style.display = "none";
+            faqActive = '';
+        }
         const x = document.getElementById(id);
         if (x.style.display === "none") {
             x.style.display = "block";
+            faqActive = id;
         } else {
             x.style.display = "none";
         }
     }
 
-    function changeLayout(image) {
-        let elSmallResolution = document.getElementById('layoutImg');
-        let elBigResolution = document.getElementById('layoutBg');
-        elSmallResolution.style.backgroundImage = 'url(../images/' + image + '.png)';
-        elBigResolution.style.backgroundImage = 'url(../images/' + image + '.png)';
+    function changeLayout(id) {
+
+        if (layout.length) {
+            let prevElement = document.getElementById(layout);
+            prevElement.style.display = "none";
+            layout = '';
+        }
+        const x = document.getElementById(id);
+        console.log(x);
+        if (x.style.display === "none") {
+            console.log('ulazi')
+            x.style.display = "block";
+            layout = id;
+        } else {
+            x.style.display = "none";
+        }
     }
 
     function toggleActive(e) {
@@ -515,10 +549,8 @@
     }
 
     function toggleNavIcon() {
-        let child = document.getElementById('mobile-icon').children[0];
-
-        child.classList.toggle("fa-bars");
-        child.classList.toggle("fa-times");
+        let child = document.getElementById('mobile-icon');
+        child.classList.toggle("open");
     }
 
 </script>

@@ -201,7 +201,78 @@ html {
       }
     }
   }
+  #mobile-icon {
+    width: 3rem;
+    height: 4rem;
+    position: relative;
+    margin: 0;
+    -webkit-transform: rotate(0deg);
+    -moz-transform: rotate(0deg);
+    -o-transform: rotate(0deg);
+    transform: rotate(0deg);
+    -webkit-transition: 0.5s ease-in-out;
+    -moz-transition: 0.5s ease-in-out;
+    -o-transition: 0.5s ease-in-out;
+    transition: 0.5s ease-in-out;
+    cursor: pointer;
 
+    span {
+      display: block;
+      position: absolute;
+      height: 2px;
+      width: 100%;
+      background: #ffffff;
+      border-radius: 9px;
+      opacity: 1;
+      left: 0;
+      -webkit-transform: rotate(0deg);
+      -moz-transform: rotate(0deg);
+      -o-transform: rotate(0deg);
+      transform: rotate(0deg);
+      -webkit-transition: .25s ease-in-out;
+      -moz-transition: .25s ease-in-out;
+      -o-transition: .25s ease-in-out;
+      transition: .25s ease-in-out;
+    }
+  }
+
+  #mobile-icon span:nth-child(1) {
+    top: 11px;
+  }
+
+  #mobile-icon span:nth-child(2),#mobile-icon span:nth-child(3) {
+    top: 19px;
+  }
+
+  #mobile-icon span:nth-child(4) {
+    top: 27px;
+  }
+
+  #mobile-icon.open span:nth-child(1) {
+    top: 5px;
+    width: 0%;
+    left: 50%;
+  }
+
+  #mobile-icon.open span:nth-child(2) {
+    -webkit-transform: rotate(45deg);
+    -moz-transform: rotate(45deg);
+    -o-transform: rotate(45deg);
+    transform: rotate(45deg);
+  }
+
+  #mobile-icon.open span:nth-child(3) {
+    -webkit-transform: rotate(-45deg);
+    -moz-transform: rotate(-45deg);
+    -o-transform: rotate(-45deg);
+    transform: rotate(-45deg);
+  }
+
+  #mobile-icon.open span:nth-child(4) {
+    top: 18px;
+    width: 0%;
+    left: 50%;
+  }
   &__mobile {
     display: flex;
     padding-right: 1rem;
@@ -210,16 +281,15 @@ html {
       display: none;
     }
 
-
-    a {
-      color: #ffffff;
-    }
-
-    i {
+    span {
       font-size: 2.5rem;
-      padding: 0 0 0 1rem;
-      cursor: pointer;
+      margin-right: 1rem;
+
+      a {
+        color: #fff;
+      }
     }
+
 
     &__tabs {
       display: none;
@@ -248,14 +318,16 @@ html {
 
           a {
             color: #000;
-            letter-spacing: .3rem;
             text-transform: uppercase;
-            text-shadow: -0.7px 0 #fff, 0 0.5px #fff, 0.5px 0 #fff, 0 -0.7px #fff;
+            -webkit-text-fill-color: #000;
+            -webkit-text-stroke-width: 1px;
+            -webkit-text-stroke-color: #fff;
 
             &.active {
-              color: #fff;
-              text-shadow: none;
-              letter-spacing: .1rem;
+              color: black;
+              -webkit-text-fill-color: white; /* Will override color (regardless of order) */
+              -webkit-text-stroke-width: 1px;
+              -webkit-text-stroke-color: black;
             }
           }
         }
@@ -292,11 +364,25 @@ html {
       margin: 0;
       padding: 0 .5rem;
 
+      @include breakpoint(desktop) {
+        padding: 0;
+        max-width: 400px;
+        min-width: 400px;
+        margin-right: 1rem;
+        margin-left: 1rem;
+        display: flex;
+        justify-content: space-between;
+      }
+
       &__tabs {
         padding: 0 .5rem;
         font-size: 1rem;
         font-family: "FoundersGroteskText";
         font-weight: 600;
+
+        @include breakpoint(desktop) {
+          padding: 0;
+        }
 
         a {
           color: #ffffff;
@@ -349,22 +435,21 @@ html {
       .white-title {
         font-family: "IntegralExtaBold";
         font-size: 2rem;
-        color: #fff;
         text-transform: uppercase;
-        text-shadow: -1px -1px 0 #000, 1px -1px 0 #000, -1px 1px 0 #000, 1px 1px 0 #000;
-        letter-spacing: 0.2rem;
         line-height: 1;
         margin-top: .5rem;
         cursor: pointer;
+        color: #000000;
+        -webkit-text-fill-color: #ffffff; /* Will override color (regardless of order) */
+        -webkit-text-stroke-width: 1px;
+        -webkit-text-stroke-color: #000000;
       }
 
       .active {
         font-family: "IntegralExtaBold";
         font-size: 2rem;
-        color: #000;
         text-transform: uppercase;
-        text-shadow: -1px -1px 0 #fff, 1px -1px 0 #fff, -1px 1px 0 #fff, 1px 1px 0 #fff;
-        letter-spacing: 0.1rem;
+        -webkit-text-fill-color: #000;
         line-height: 1;
         margin: .5rem 0 0 0;
       }
@@ -382,7 +467,7 @@ html {
     &__features {
       border-left: 1px solid #000;
       padding-left: 10px;
-      margin: 1rem 2rem 0 0;
+      margin: 1rem 1rem 0 0;
       display: none;
 
       @include breakpoint(tablet) {
@@ -407,7 +492,7 @@ html {
 
         &--item {
           color: #000000;
-          font-size: 1rem;
+          font-size: .8rem;
           height: 1rem;
           font-family: "FoundersGroteskText";
         }
@@ -455,6 +540,8 @@ html {
         width: 45%;
         margin-left: 1rem;
         overflow-y: auto;
+        max-width: 400px;
+        min-width: 400px;
       }
     }
 
@@ -474,29 +561,29 @@ html {
       &--black {
         font-family: "IntegralExtaBold";
         font-size: 2rem;
-        color: #000;
         text-transform: uppercase;
-        text-shadow: -1px -1px 0 #fff, 1px -1px 0 #fff, -1px 1px 0 #fff, 1px 1px 0 #fff;
-        letter-spacing: .1rem;
         line-height: 1;
         margin: 0;
+        color: #000000;
+        -webkit-text-fill-color: #000000;
       }
 
       &--white {
         font-family: "IntegralExtaBold";
         font-size: 2rem;
-        color: #fff;
         text-transform: uppercase;
-        text-shadow: -1px -1px 0 #000, 1px -1px 0 #000, -1px 1px 0 #000, 1px 1px 0 #000;
-        letter-spacing: .2rem;
-        line-height: 1;
+        color: #000000;
+        -webkit-text-fill-color: #ffffff;
+        -webkit-text-stroke-width: 1px;
+        -webkit-text-stroke-color: #000000;
         margin: 0;
       }
 
       &--content {
         margin: 1rem 1rem 0 0;
-        font-size: 1.4rem;
+        font-size: 1rem;
         line-height: 1;
+        color: #000000;
 
         @include breakpoint(mobileScreen) {
           margin-bottom: 1rem;
@@ -519,10 +606,6 @@ html {
       @include breakpoint(desktop) {
         display: flex;
         height: calc(100vh - 27rem);
-      }
-
-      @include breakpoint(iPadProPortrait) {
-        height: calc(100vh - 74rem);
       }
 
       @include breakpoint(iPadProLandscape) {
@@ -570,7 +653,7 @@ html {
 
       @include breakpoint(desktop) {
         display: flex;
-        height: calc(100vh - 22rem);
+        height: calc(100vh - 13.5rem);
         margin-top: 1rem;
       }
 
@@ -583,7 +666,7 @@ html {
       }
 
       @include breakpoint(iPadProPortrait) {
-        height: auto;
+        height: calc(100vh - 13.5rem);
       }
 
       .building-description {
@@ -632,6 +715,19 @@ html {
           height: 100%;
           min-height: 20rem;
         }
+      }
+    }
+  }
+  .neighborhood-apartments {
+
+    .building__first {
+      @include breakpoint(desktop) {
+        display: flex;
+        height: calc(100vh - 13.5rem);
+      }
+
+      @include breakpoint(iPadProLandscape) {
+        height: calc(100vh - 13.5rem);
       }
     }
   }
@@ -697,31 +793,33 @@ html {
           &-black {
             font-family: "IntegralExtaBold";
             font-size: 2rem;
-            color: #000;
             text-transform: uppercase;
-            text-shadow: -1px -1px 0 #fff, 1px -1px 0 #fff, -1px 1px 0 #fff, 1px 1px 0 #fff;
-            letter-spacing: 0.1rem;
             line-height: 1;
             margin: 0;
+            color: #000000;
             text-align: center;
+            -webkit-text-fill-color: #000000;
           }
 
           &-white {
             font-family: "IntegralExtaBold";
             font-size: 2rem;
-            color: #fff;
             text-transform: uppercase;
-            text-shadow: -1px -1px 0 #000, 1px -1px 0 #000, -1px 1px 0 #000, 1px 1px 0 #000;
-            letter-spacing: 0.2rem;
             line-height: 1;
             margin: 0;
             text-align: center;
+            color: #000000;
+            -webkit-text-fill-color: #ffffff;
+            -webkit-text-stroke-width: 1px;
+            -webkit-text-stroke-color: #000000;
           }
         }
 
         &-text {
+          color: #000000;
           text-align: center;
           padding: 0 1rem;
+          font-size: 1rem;
           word-break: break-all;
         }
 
@@ -733,6 +831,7 @@ html {
           font-size: 1rem;
           padding: 1rem 2rem;
           background-color: #000000;
+          font-family: "FoundersGroteskText";
         }
       }
     }
@@ -746,22 +845,22 @@ html {
         &--black {
           font-family: "IntegralExtaBold";
           font-size: 2rem;
-          color: #000;
           text-transform: uppercase;
-          text-shadow: -1px -1px 0 #fff, 1px -1px 0 #fff, -1px 1px 0 #fff, 1px 1px 0 #fff;
-          letter-spacing: 0.1rem;
           line-height: 1;
           margin: 0;
+          color: #000000;
+          -webkit-text-fill-color: #000000;
         }
 
         &--white {
           font-family: "IntegralExtaBold";
           font-size: 2rem;
-          color: #fff;
           text-transform: uppercase;
-          text-shadow: -1px -1px 0 #000, 1px -1px 0 #000, -1px 1px 0 #000, 1px 1px 0 #000;
-          letter-spacing: 0.2rem;
           line-height: 1;
+          color: #000000;
+          -webkit-text-fill-color: #ffffff;
+          -webkit-text-stroke-width: 1px;
+          -webkit-text-stroke-color: #000000;
           margin: 0;
         }
       }
@@ -783,6 +882,7 @@ html {
 
         div {
           box-sizing: border-box;
+          color: #000000;
         }
 
         .table-container {
@@ -893,25 +993,28 @@ html {
 
         &-black {
           font-size: 2rem;
-          color: #000;
           font-weight: bold;
           text-transform: lowercase;
-          text-shadow: -1px -1px 0 #9AFFBF, 1px -1px 0 #9AFFBF, -1px 1px 0 #9AFFBF, 1px 1px 0 #9AFFBF;
-          letter-spacing: 0.1rem;
           line-height: 1;
+          color: #000000;
+          -webkit-text-fill-color: #000000;
+          font-family: "FoundersGroteskText";
         }
 
         &-white {
           font-size: 2rem;
-          color: #9AFFBF;
           text-transform: lowercase;
-          text-shadow: -1px -1px 0 #000, 1px -1px 0 #000, -1px 1px 0 #000, 1px 1px 0 #000;
-          letter-spacing: 0.2rem;
+          color: #000000;
+          -webkit-text-fill-color: #9AFFBF;
+          -webkit-text-stroke-width: 1px;
+          -webkit-text-stroke-color: #000000;
           line-height: 1;
+          font-family: "FoundersGroteskText";
         }
 
         &-text {
           margin: 1rem 0 0 0;
+          color: #000000;
         }
       }
       // end Lottery rent smart
@@ -941,22 +1044,22 @@ html {
               &--black {
                 font-family: "IntegralExtaBold";
                 font-size: 2rem;
-                color: #000;
                 text-transform: uppercase;
-                text-shadow: -1px -1px 0 #fff, 1px -1px 0 #fff, -1px 1px 0 #fff, 1px 1px 0 #fff;
-                letter-spacing: 0.1rem;
                 line-height: 1;
                 margin: 0;
+                color: #000000;
+                -webkit-text-fill-color: #000000;
               }
 
               &--white {
                 font-family: "IntegralExtaBold";
                 font-size: 2rem;
-                color: #fff;
                 text-transform: uppercase;
-                text-shadow: -1px -1px 0 #000, 1px -1px 0 #000, -1px 1px 0 #000, 1px 1px 0 #000;
-                letter-spacing: 0.2rem;
                 line-height: 1;
+                color: #000000;
+                -webkit-text-fill-color: #ffffff;
+                -webkit-text-stroke-width: 1px;
+                -webkit-text-stroke-color: #000000;
                 margin: 0;
               }
             }
@@ -967,6 +1070,10 @@ html {
 
                 @include breakpoint(tablet) {
                   height: 15rem;
+                }
+
+                @include breakpoint(desktop) {
+                  height: 20rem;
                 }
               }
             }
@@ -987,22 +1094,22 @@ html {
           &--black {
             font-family: "IntegralExtaBold";
             font-size: 2rem;
-            color: #000;
             text-transform: uppercase;
-            text-shadow: -1px -1px 0 #fff, 1px -1px 0 #fff, -1px 1px 0 #fff, 1px 1px 0 #fff;
-            letter-spacing: 0.1rem;
             line-height: 1;
             margin: 0;
+            color: #000000;
+            -webkit-text-fill-color: #000000;
           }
 
           &--white {
             font-family: "IntegralExtaBold";
             font-size: 2rem;
-            color: #fff;
             text-transform: uppercase;
-            text-shadow: -1px -1px 0 #000, 1px -1px 0 #000, -1px 1px 0 #000, 1px 1px 0 #000;
-            letter-spacing: 0.2rem;
             line-height: 1;
+            color: #000000;
+            -webkit-text-fill-color: #ffffff;
+            -webkit-text-stroke-width: 1px;
+            -webkit-text-stroke-color: #000000;
             margin: 0;
           }
         }
@@ -1014,7 +1121,10 @@ html {
             cursor: pointer;
             padding: 0;
             font-size: 1rem;
-            margin-bottom: .5rem;
+            font-weight: bold;
+            color: #000;
+            margin-bottom: 0.5rem;
+            font-family: "FoundersGroteskText";
 
             &:hover {
               text-decoration: underline;
@@ -1083,23 +1193,23 @@ html {
         &--black {
           font-family: "IntegralExtaBold";
           font-size: 2rem;
-          color: #000;
           text-transform: uppercase;
-          text-shadow: -1px -1px 0 #fff, 1px -1px 0 #fff, -1px 1px 0 #fff, 1px 1px 0 #fff;
-          letter-spacing: 0.1rem;
           line-height: 1;
           margin: 0;
+          color: #000000;
+          -webkit-text-fill-color: #000000;
         }
 
         &--white {
           font-family: "IntegralExtaBold";
           font-size: 2rem;
-          color: #fff;
           text-transform: uppercase;
-          text-shadow: -1px -1px 0 #000, 1px -1px 0 #000, -1px 1px 0 #000, 1px 1px 0 #000;
-          letter-spacing: 0.2rem;
           line-height: 1;
           margin: 0;
+          color: #000000;
+          -webkit-text-fill-color: #ffffff;
+          -webkit-text-stroke-width: 1px;
+          -webkit-text-stroke-color: #000000;
         }
 
         &--link {
@@ -1166,13 +1276,14 @@ html {
         &--value {
           font-family: "IntegralExtaBold";
           font-size: 2rem;
-          color: #fff;
           text-transform: uppercase;
-          text-shadow: -1px -1px 0 #000, 1px -1px 0 #000, -1px 1px 0 #000, 1px 1px 0 #000;
-          letter-spacing: 0.2rem;
           line-height: 1;
           margin: 0;
           text-align: center;
+          color: #000000;
+          -webkit-text-fill-color: #ffffff;
+          -webkit-text-stroke-width: 1px;
+          -webkit-text-stroke-color: #000000;
         }
       }
     }
@@ -1248,22 +1359,22 @@ html {
       &--black {
         font-family: "IntegralExtaBold";
         font-size: 2rem;
-        color: #000;
         text-transform: uppercase;
-        text-shadow: -1px -1px 0 #9AFFBF, 1px -1px 0 #9AFFBF, -1px 1px 0 #9AFFBF, 1px 1px 0 #9AFFBF;
-        letter-spacing: 0.1rem;
         line-height: 1;
         margin: 0;
+        color: #000000;
+        -webkit-text-fill-color: #000000;
       }
       &--white {
         font-family: "IntegralExtaBold";
         font-size: 2rem;
-        color: #9AFFBF;
         text-transform: uppercase;
-        text-shadow: -1px -1px 0 #000, 1px -1px 0 #000, -1px 1px 0 #000, 1px 1px 0 #000;
-        letter-spacing: 0.2rem;
         line-height: 1;
         margin: 0;
+        color: #000000;
+        -webkit-text-fill-color: #9AFFBF;
+        -webkit-text-stroke-width: 1px;
+        -webkit-text-stroke-color: #000000;
 
         a {
           color: #9AFFBF;
@@ -1292,8 +1403,7 @@ html {
 
     .learn-more {
       display: none;
-      color: #99ffbf;
-      text-shadow: -1px -1px 0 #000, 1px -1px 0 #000, -1px 1px 0 #000, 1px 1px 0 #000;
+      -webkit-text-fill-color: #99ffbf;
       @include breakpoint(mobileScreen) {
         display: block;
       }
@@ -1366,25 +1476,21 @@ html {
       font-size: 2rem;
       color: #000;
       text-transform: uppercase;
-      text-shadow: -1px -1px 0 #9AFFBF, 1px -1px 0 #9AFFBF, -1px 1px 0 #9AFFBF, 1px 1px 0 #9AFFBF;
-      letter-spacing: .1rem;
       line-height: 1;
       margin: 0;
-
-      @include breakpoint(tablet) {
-        font-size: 2.4rem;
-      }
+      -webkit-text-fill-color: #000000;
     }
 
     &--light {
       font-family: "IntegralExtaBold";
       font-size: 2rem;
-      color: #9AFFBF;
+      color: #000000;
       text-transform: uppercase;
-      text-shadow: -1px -1px 0 #000, 1px -1px 0 #000, -1px 1px 0 #000, 1px 1px 0 #000;
-      letter-spacing: .2rem;
       line-height: 1;
       margin: 0;
+      -webkit-text-fill-color: #9AFFBF;
+      -webkit-text-stroke-width: 1px;
+      -webkit-text-stroke-color: #000000;
     }
   }
 
@@ -1405,12 +1511,18 @@ html {
         border: none;
         border-bottom: 1px solid #000000;
         margin-top: 2rem;
-        font-size: 1.4rem;
+        font-size: 1rem;
         width: 60%;
         color: #000000;
+        font-family: "FoundersGroteskText";
 
         &::selection{
           background-color: transparent;
+        }
+
+        &::placeholder {
+          color: #000000;
+          font-family: "FoundersGroteskText";
         }
 
         &::-moz-selection{
@@ -1434,12 +1546,13 @@ html {
       margin-bottom: 2rem;
       border: none;
       cursor: pointer;
+      font-family: "FoundersGroteskText";
     }
   }
 
   &-info {
     &--message {
-      font-size: 1rem;
+      font-size: .8rem;
       color: #000000;
       margin-bottom: 0;
     }
@@ -1449,7 +1562,7 @@ html {
 
 // Layout modal
 .layout {
-  padding: 1rem;
+  padding: 0;
 
   .uk-margin-auto-vertical {
     height: 100%;
@@ -1482,17 +1595,16 @@ html {
         cursor: pointer;
         font-family: "IntegralExtaBold";
         font-size: 2rem;
-        color: #ededed;
         text-transform: uppercase;
-        text-shadow: -1px -1px 0 #000, 1px -1px 0 #000, -1px 1px 0 #000, 1px 1px 0 #000;
-        letter-spacing: 0.2rem;
         line-height: 1;
         margin: 0;
+        color: #000000;
+        -webkit-text-fill-color: #ededed;
+        -webkit-text-stroke-width: 1px;
+        -webkit-text-stroke-color: #000000;
 
         &.active {
-          color: #000;
-          text-shadow: -1px -1px 0 #fff, 1px -1px 0 #fff, -1px 1px 0 #fff, 1px 1px 0 #fff;
-          letter-spacing: 0.1rem;
+          -webkit-text-fill-color: #000000;
         }
       }
     }
@@ -1501,6 +1613,7 @@ html {
 
   &_image {
     flex-grow: 1;
+    display: none;
 
     .building-image {
       display: block;
