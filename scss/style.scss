@@ -1144,151 +1144,7 @@ html {
   }
   // End Lottery page
 
-  // Slide in page
-  .slide-in {
-    display: flex;
-    flex-direction: column;
-    margin-left: .5rem;
-    margin-right: .5rem;
 
-    @include breakpoint(tablet) {
-      flex-direction: row;
-      flex-wrap: wrap;
-      margin-bottom: 5rem;
-    }
-
-    &-cart {
-      margin-top: 1rem;
-      flex-grow: 1;
-
-      @include breakpoint(tablet) {
-        width: 31%;
-        padding: 0 .5rem;
-      }
-
-      @include breakpoint(desktop) {
-        width: 22%;
-        padding: 0 .5rem;
-      }
-
-      &__image {
-
-        .building-second-description--bg {
-
-          @include breakpoint(tablet) {
-            height: 20rem;
-            max-height: 20rem;
-            min-height: unset;
-          }
-
-          @include breakpoint(desktop) {
-            height: 15rem;
-          }
-
-        }
-      }
-
-      &__content {
-
-        &--black {
-          font-family: "IntegralExtaBold";
-          font-size: 2rem;
-          text-transform: uppercase;
-          line-height: 1;
-          margin: 0;
-          color: #000000;
-          -webkit-text-fill-color: #000000;
-        }
-
-        &--white {
-          font-family: "IntegralExtaBold";
-          font-size: 2rem;
-          text-transform: uppercase;
-          line-height: 1;
-          margin: 0;
-          color: #000000;
-          -webkit-text-fill-color: #ffffff;
-          -webkit-text-stroke-width: 1px;
-          -webkit-text-stroke-color: #000000;
-        }
-
-        &--link {
-          margin-top: 1rem;
-          display: block;
-          color: #000;
-          font-size: 1.2rem;
-        }
-      }
-    }
-  }
-  // End Slide in page
-
-  // Apartments header section (slide in & slide single)
-  .appartments-toggle {
-    position: absolute;
-    margin-left: 1rem;
-    cursor: pointer;
-
-    i {
-      font-size: 2rem;
-    }
-  }
-  .apartments-search {
-    display: flex;
-    flex-direction: row-reverse;
-    border-bottom: 1px solid #000;
-    padding-bottom: 1rem;
-    margin: 0 1rem;
-    min-height: 1rem;
-
-    &-select {
-      display: flex;
-
-      &__section {
-        display: flex;
-        flex-direction: column;
-        margin: 0 .5rem;
-
-        .uk-button-default {
-          border: none;
-          border-bottom: 1px solid #e5e5e5;
-          line-height: 2.5rem;
-          font-size: 1rem;
-          text-align: left;
-          display: flex;
-          justify-content: space-between;
-          align-items: center;
-          padding: 0;
-          text-transform: unset;
-          color: #000;
-        }
-
-        .uk-dropdown {
-          min-width: 10rem;
-          padding: 15px;
-          margin-top: 0;
-
-          a {
-            font-size: 1.4rem;
-          }
-        }
-
-        &--value {
-          font-family: "IntegralExtaBold";
-          font-size: 2rem;
-          text-transform: uppercase;
-          line-height: 1;
-          margin: 0;
-          text-align: center;
-          color: #000000;
-          -webkit-text-fill-color: #ffffff;
-          -webkit-text-stroke-width: 1px;
-          -webkit-text-stroke-color: #000000;
-        }
-      }
-    }
-  }
-  // Apartments header section end
 }
 
 .neighborhood-header {
@@ -1462,6 +1318,237 @@ html {
 }
 // Lottery layer end
 
+// Single Apartment
+.single-apartment {
+  display: none;
+
+  &.show-apartment {
+    display: block;
+    transition: all .5s ease;
+  }
+}
+// end Single Apartment
+
+// Action Layer
+.action-layer {
+  display: flex;
+  flex-direction: column;
+  top: 91.5%;
+  transition: all .5s ease;
+  padding-top: 0;
+  background-color: #ffffff;
+
+  &-view {
+    display: flex;
+    width: 100%;
+    justify-content: space-between;
+    padding-bottom: 1rem;
+    padding-top: 1rem;
+    border-bottom: 1px solid #000;
+    background-color: #9AFFBF;
+  }
+
+  &.expand {
+    top: 6%;
+
+    .action-layer-view {
+      background-color: #ffffff;
+
+      .lottery-open {
+
+        h1 {
+          display: none;
+        }
+      }
+    }
+  }
+
+  .expand-single-apartment {
+    width: 100%;
+    height: calc(100vh - 11rem);
+    position: absolute;
+    top: 7rem;
+    left: 0;
+    z-index: 100;
+    display: block;
+    background-color: #ffffff;
+  }
+}
+// Action Layer end
+
+// Apartments header section (slide in & slide single)
+.appartments-toggle {
+  position: absolute;
+  margin-left: 1rem;
+  cursor: pointer;
+
+  i {
+    font-size: 2rem;
+  }
+}
+.apartments-search {
+  display: flex;
+  flex-direction: row-reverse;
+  margin: 0 1rem;
+  min-height: 1rem;
+
+  @include breakpoint(desktop) {
+    width: 400px;
+  }
+
+  &-select {
+    display: flex;
+    flex-grow: 1;
+    justify-content: space-between;
+
+    &__section {
+      display: flex;
+      flex-direction: column;
+      margin: 0 .5rem;
+
+      .uk-button-default {
+        border: none;
+        border-bottom: 1px solid #e5e5e5;
+        line-height: 2.5rem;
+        font-size: 1rem;
+        text-align: left;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        padding: 0;
+        text-transform: unset;
+        color: #000;
+        height: 2rem;
+      }
+
+      .uk-dropdown {
+        min-width: 10rem;
+        padding: 15px;
+        margin-top: 0;
+
+        a {
+          font-size: 1.4rem;
+        }
+      }
+
+      &--value {
+        font-family: "IntegralExtaBold";
+        font-size: 2rem;
+        text-transform: uppercase;
+        line-height: 1;
+        margin: 0;
+        text-align: center;
+        color: #000000;
+        -webkit-text-fill-color: #ffffff;
+        -webkit-text-stroke-width: 1px;
+        -webkit-text-stroke-color: #000000;
+      }
+    }
+  }
+}
+// Apartments header section end
+
+// Slide in page
+.slide-in {
+  display: flex;
+  flex-direction: column;
+  margin-left: .5rem;
+  margin-right: .5rem;
+  height: 100%;
+
+  @include breakpoint(tablet) {
+    flex-direction: row;
+    flex-wrap: wrap;
+    margin-bottom: 5rem;
+  }
+
+  &-cart {
+    margin-top: 1rem;
+
+    @include breakpoint(tablet) {
+      width: 31%;
+      padding: 0 .5rem;
+    }
+
+    @include breakpoint(desktop) {
+      width: 22%;
+      padding: 0 .5rem;
+    }
+
+    &__image {
+
+      .building {
+        padding: 0 1rem;
+
+        &-image {
+          display: block;
+          width: 100%;
+
+          @include breakpoint(tablet) {
+            display: none;
+          }
+
+          &--bg {
+            display: none;
+
+            @include breakpoint(tablet) {
+              display: block;
+              background-repeat: no-repeat;
+              background-size: 100%;
+            }
+          }
+        }
+      }
+
+      .building-second-description--bg {
+
+        @include breakpoint(tablet) {
+          height: 20rem;
+          max-height: 20rem;
+          min-height: unset;
+        }
+
+        @include breakpoint(desktop) {
+          height: 15rem;
+        }
+
+      }
+    }
+
+    &__content {
+
+      &--black {
+        font-family: "IntegralExtaBold";
+        font-size: 2rem;
+        text-transform: uppercase;
+        line-height: 1;
+        margin: 0;
+        color: #000000;
+        -webkit-text-fill-color: #000000;
+      }
+
+      &--white {
+        font-family: "IntegralExtaBold";
+        font-size: 2rem;
+        text-transform: uppercase;
+        line-height: 1;
+        margin: 0;
+        color: #000000;
+        -webkit-text-fill-color: #ffffff;
+        -webkit-text-stroke-width: 1px;
+        -webkit-text-stroke-color: #000000;
+      }
+
+      &--link {
+        margin-top: 1rem;
+        display: block;
+        color: #000;
+        font-size: 1.2rem;
+      }
+    }
+  }
+}
+// End Slide in page
 
 // Contact modal
 .modal-contact {

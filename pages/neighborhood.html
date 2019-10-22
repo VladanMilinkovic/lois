@@ -493,6 +493,60 @@
         zoom: 14
     });
 
+
+    map.on('load', function() {
+// Add GeoJSON data
+        map.addSource('source', {
+            "type": "geojson",
+            "data": {
+                "type": "Feature",
+                "properties": {},
+                "geometry": {
+                    "type": "Polygon",
+                    "coordinates": [[
+                        [-73.945147, 40.659596],
+                        [-73.944209, 40.659659],
+                        [-73.944138, 40.659003],
+                        [-73.943709, 40.658955],
+                        [-73.943698, 40.658800],
+                        [-73.943398, 40.658816],
+                        [-73.943298, 40.657679],
+                        [-73.944542, 40.657557],
+                        [-73.944735, 40.658916],
+                        [-73.945132, 40.658956],
+                    ],[
+                        [-73.954285, 40.656620],
+                        [-73.953652, 40.656734],
+                        [-73.953567, 40.656449],
+                        [-73.954274, 40.656424],
+                    ],[
+                        [-73.962707, 40.663101],
+                        [-73.963353, 40.662449],
+                        [-73.963052, 40.660525],
+                        [-73.963856, 40.660200],
+                        [-73.964511, 40.661396],
+                        [-73.963988, 40.662432],
+                        [-73.963313, 40.663507],
+                    ]]
+                }
+            }
+        });
+
+
+        map.loadImage('http://localhost:63342/lois3/images/test.png', function(err, image) {
+            if (err) throw err;
+            map.addImage('pattern', image);
+            map.addLayer({
+                "id": "pattern-layer",
+                "type": "fill",
+                "source": "source",
+                "paint": {
+                    "fill-pattern": "pattern"
+                }
+            });
+        });
+    });
+
     var geojson = {
         type: 'FeatureCollection',
         features: [{
