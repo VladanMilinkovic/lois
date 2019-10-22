@@ -186,14 +186,14 @@
             <h1 class="lottery-open__title--white learn-more">Learn more</h1>
         </div>
         <!-- Apartment search -->
-        <div id="apartments-toggle" class="appartments-toggle"  onclick="toggleActionLayer()">
+        <div id="apartments-toggle" class="apartments-toggle"  onclick="toggleActionLayer()">
             <i class="fa fa-angle-down" aria-hidden="true"></i>
         </div>
         <div class="apartments-search">
             <div class="apartments-search-select" id="apartments-search">
                 <div class="apartments-search-select__section">
                     <button class="uk-button uk-button-default" type="button">Im looking for <i class="fa fa-caret-down" aria-hidden="true"></i></button>
-                    <div uk-dropdown="animation: uk-animation-slide-top-small; duration: 1000">
+                    <div uk-dropdown="animation: uk-animation-slide-top-small; duration: 300">
                         <ul class="uk-nav uk-dropdown-nav" id="lookingFor" onclick="setSelectedValue('lookingFor', 'lookingForValue')">
                             <li class="uk-active"><a href="#">Studio</a></li>
                             <li><a href="#">1 Bedroom</a></li>
@@ -205,7 +205,7 @@
                 </div>
                 <div class="apartments-search-select__section">
                     <button class="uk-button uk-button-default" type="button">$ Minimum <i class="fa fa-caret-down" aria-hidden="true"></i></button>
-                    <div uk-dropdown="animation: uk-animation-slide-top-small; duration: 1000">
+                    <div uk-dropdown="animation: uk-animation-slide-top-small; duration: 300">
                         <ul class="uk-nav uk-dropdown-nav" id="minimum" onclick="setSelectedValue('minimum', 'minimumValue')">
                             <li class="uk-active"><a href="#">2000</a></li>
                             <li><a href="#">3000</a></li>
@@ -217,7 +217,7 @@
                 </div>
                 <div class="apartments-search-select__section">
                     <button class="uk-button uk-button-default" type="button">$ Maximum <i class="fa fa-caret-down" aria-hidden="true"></i></button>
-                    <div uk-dropdown="animation: uk-animation-slide-top-small; duration: 1000">
+                    <div uk-dropdown="animation: uk-animation-slide-top-small; duration: 300">
                         <ul class="uk-nav uk-dropdown-nav" id="maximum" onclick="setSelectedValue('maximum', 'maximumValue')">
                             <li class="uk-active"><a href="#">2000</a></li>
                             <li><a href="#">3000</a></li>
@@ -238,13 +238,24 @@
                 <div class="building-image--bg building-second-description--bg" style="background-image: url('../images/Rectangle 5@2x.png')"></div>
                 <img class="building-image" src="../images/Rectangle%205.png" alt="Build">
             </div>
+            <div class="slide-in-cart__content">
+                <h2 class="slide-in-cart__content--black">3 BEDROOM <div class="divider"></div> 2 BATH</h2>
+                <h2 class="slide-in-cart__content--white">120 <div class="divider"></div> $2000</h2>
+                <a  class="slide-in-cart__content--link" href="#">Learn More</a>
+            </div>
+        </div>
+        <div class="slide-in-cart" onclick="showSelectedSlide()">
+            <div class="slide-in-cart__image">
+                <div class="building-image--bg building-second-description--bg" style="background-image: url('../images/Rectangle 5@2x.png')"></div>
+                <img class="building-image" src="../images/Rectangle%205.png" alt="Build">
+            </div>
             <div class="slide-in-cart__content ">
                 <h2 class="slide-in-cart__content--black">3 BEDROOM <div class="divider"></div> 2 BATH</h2>
                 <h2 class="slide-in-cart__content--white">120 <div class="divider"></div> $2000</h2>
                 <a  class="slide-in-cart__content--link" href="#">Learn More</a>
             </div>
         </div>
-        <div class="slide-in-cart">
+        <div class="slide-in-cart" onclick="showSelectedSlide()">
             <div class="slide-in-cart__image">
                 <div class="building-image--bg building-second-description--bg" style="background-image: url('../images/Rectangle 5@2x.png')"></div>
                 <img class="building-image" src="../images/Rectangle%205.png" alt="Build">
@@ -252,10 +263,10 @@
             <div class="slide-in-cart__content ">
                 <h2 class="slide-in-cart__content--black">3 BEDROOM <div class="divider"></div> 2 BATH</h2>
                 <h2 class="slide-in-cart__content--white">120 <div class="divider"></div> $2000</h2>
-                <a  class="slide-in-cart__content--link" href="./slide-single.html">Learn More</a>
+                <a  class="slide-in-cart__content--link" href="#">Learn More</a>
             </div>
         </div>
-        <div class="slide-in-cart">
+        <div class="slide-in-cart" onclick="showSelectedSlide()">
             <div class="slide-in-cart__image">
                 <div class="building-image--bg building-second-description--bg" style="background-image: url('../images/Rectangle 5@2x.png')"></div>
                 <img class="building-image" src="../images/Rectangle%205.png" alt="Build">
@@ -263,10 +274,10 @@
             <div class="slide-in-cart__content ">
                 <h2 class="slide-in-cart__content--black">3 BEDROOM <div class="divider"></div> 2 BATH</h2>
                 <h2 class="slide-in-cart__content--white">120 <div class="divider"></div> $2000</h2>
-                <a  class="slide-in-cart__content--link" href="./slide-single.html">Learn More</a>
+                <a  class="slide-in-cart__content--link" href="#">Learn More</a>
             </div>
         </div>
-        <div class="slide-in-cart">
+        <div class="slide-in-cart" onclick="showSelectedSlide()">
             <div class="slide-in-cart__image">
                 <div class="building-image--bg building-second-description--bg" style="background-image: url('../images/Rectangle 5@2x.png')"></div>
                 <img class="building-image" src="../images/Rectangle%205.png" alt="Build">
@@ -274,18 +285,7 @@
             <div class="slide-in-cart__content ">
                 <h2 class="slide-in-cart__content--black">3 BEDROOM <div class="divider"></div> 2 BATH</h2>
                 <h2 class="slide-in-cart__content--white">120 <div class="divider"></div> $2000</h2>
-                <a  class="slide-in-cart__content--link" href="./slide-single.html">Learn More</a>
-            </div>
-        </div>
-        <div class="slide-in-cart">
-            <div class="slide-in-cart__image">
-                <div class="building-image--bg building-second-description--bg" style="background-image: url('../images/Rectangle 5@2x.png')"></div>
-                <img class="building-image" src="../images/Rectangle%205.png" alt="Build">
-            </div>
-            <div class="slide-in-cart__content ">
-                <h2 class="slide-in-cart__content--black">3 BEDROOM <div class="divider"></div> 2 BATH</h2>
-                <h2 class="slide-in-cart__content--white">120 <div class="divider"></div> $2000</h2>
-                <a  class="slide-in-cart__content--link" href="./slide-single.html">Learn More</a>
+                <a  class="slide-in-cart__content--link" href="#">Learn More</a>
             </div>
         </div>
     </div>
@@ -293,28 +293,15 @@
 
     <!-- Single apartment -->
     <div class="building single-apartment" id="single-apartment">
-        <div class="uk-position-relative uk-visible-toggle uk-light" tabindex="-1" uk-slideshow>
 
-            <ul class="uk-slideshow-items">
-                <li>
-                    <img src="../images/575_4thAve-8@2x.png" alt="" uk-cover>
-                </li>
-                <li>
-                    <img src="../images/575_4thAve-8@2x.png" alt="" uk-cover>
-                </li>
-                <li>
-                    <img src="../images/575_4thAve-8@2x.png" alt="" uk-cover>
-                </li>
-            </ul>
-
-            <a class="uk-position-center-left uk-position-small uk-hidden-hover" href="#" uk-slidenav-previous uk-slideshow-item="previous"></a>
-            <a class="uk-position-center-right uk-position-small uk-hidden-hover" href="#" uk-slidenav-next uk-slideshow-item="next"></a>
-
-        </div>
         <div class="building__first">
 
-            <div class="building-first-description" uk-scrollspy="cls: uk-animation-fade; target: .description-text; delay: 500; repeat: true">
+            <div class="building-image--bg building__first--bg" style="background-image: url('../images/575_4thAve-8@2x.png'); opacity: 1;"></div>
+            <img class="building-image" src="../images/575_4thAve-8.png" alt="Build">
+
+            <div class="building-first-description">
                 <div class="description-text">
+                    <i onclick="closeSingleLayer()" class="fa fa-times" aria-hidden="true"></i>
                     <h2 class="description-text--black">3 BEDROOM <div class="divider"></div> 2 BATH</h2>
                     <h2 class="description-text--white">120 <div class="divider"></div> $2000</h2>
                     <p class="description-text--content">
@@ -327,7 +314,7 @@
                         The lois is a thoughtfully-appointed rental building designed for modern living in
 
                     </p>
-                    <p>Highlights:</p>
+                    <p class="highlights">Highlights:</p>
                     <ul>
                         <li>- Attended Lobby </li>
                         <li>- Lorem ipsum</li>
@@ -368,7 +355,18 @@
     }
     function toggleActionLayer() {
         let element = document.getElementById("action-layer");
+        if(document.documentElement.style.overflow==="hidden") {
+            document.documentElement.style.overflow="auto"
+        } else {
+            document.documentElement.style.overflow="hidden";
+        }
+
         element.classList.toggle("expand");
+        if(document.getElementById('apartments-toggle').style.display === "block") {
+            document.getElementById('apartments-toggle').style.display = "none";
+        } else {
+            document.getElementById('apartments-toggle').style.display = "block";
+        }
 
         let el = document.getElementById("single-apartment");
         el.classList.remove("expand-single-apartment");
@@ -377,6 +375,12 @@
     function showSelectedSlide() {
         let element = document.getElementById("single-apartment");
         element.classList.toggle("expand-single-apartment");
+    }
+
+    function closeSingleLayer() {
+        let element = document.getElementById("single-apartment");
+        element.classList.remove("expand-single-apartment");
+
     }
 </script>
 </body>

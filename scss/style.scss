@@ -1321,10 +1321,106 @@ html {
 // Single Apartment
 .single-apartment {
   display: none;
+  height: calc(100vh - 14rem);
+  position: absolute;
+  top: 7rem;
+  left: 0;
+  z-index: 100;
+  margin: 1.5rem;
+  background-color: #ffffff;
 
   &.show-apartment {
     display: block;
     transition: all .5s ease;
+  }
+
+  .building__first {
+    display: flex;
+    flex-direction: row;
+    height: calc(100% - 2.5rem);
+    padding-top: 1.5rem;
+  }
+
+  .building-image {
+    width: 65%
+  }
+
+  .building-first-description {
+    margin-left: 1.5rem;
+    overflow-y: auto;
+  }
+
+  .description-text {
+
+    ul {
+      list-style: none;
+      padding-left: 0;
+    }
+
+    i {
+      right: 0;
+      position: absolute;
+      font-size: 2rem;
+      color: #cccccc;
+      cursor: pointer;
+    }
+  }
+
+  .description-text--black {
+    font-family: "IntegralExtaBold";
+    font-size: 2rem;
+    text-transform: uppercase;
+    line-height: 1;
+    margin: 0;
+    color: #000000;
+    -webkit-text-fill-color: #000000;
+  }
+
+  .description-text--white {
+    font-family: "IntegralExtaBold";
+    font-size: 2rem;
+    text-transform: uppercase;
+    line-height: 1;
+    margin: 0;
+    color: #000000;
+    -webkit-text-fill-color: #ffffff;
+    -webkit-text-stroke-width: 1px;
+    -webkit-text-stroke-color: #000000;
+  }
+
+  .description-text--content {
+    font-size: 1rem;
+    margin: 1.5rem 0;
+  }
+
+  .highlights {
+    font-weight: bold;
+    color: #000000;
+  }
+
+  .close {
+    position: absolute;
+    right: 32px;
+    top: 32px;
+    width: 32px;
+    height: 32px;
+    opacity: 0.3;
+  }
+  .close:hover {
+    opacity: 1;
+  }
+  .close:before, .close:after {
+    position: absolute;
+    left: 15px;
+    content: ' ';
+    height: 33px;
+    width: 2px;
+  }
+  .close:before {
+    transform: rotate(45deg);
+  }
+  .close:after {
+    transform: rotate(-45deg);
   }
 }
 // end Single Apartment
@@ -1338,26 +1434,43 @@ html {
   padding-top: 0;
   background-color: #ffffff;
 
+  @include breakpoint(mobileScreen) {
+    display: none;
+  }
+
   @include breakpoint(desktop) {
-    top: 91.5%;
+    top: 92%;
+  }
+
+  @include breakpoint(tabletScreen) {
+    top: 91%;
+  }
+
+  @include breakpoint(iPadProPortrait) {
+    top: 87%;
+  }
+
+  @include breakpoint(iPad) {
+    top: 90%;
+  }
+
+  @media (min-width: 1366px) and (max-width: 1449px) {
+    top: 92%;
   }
 
   &-view {
     display: flex;
     width: 100%;
+    min-height: 5rem;
     justify-content: space-between;
     padding-bottom: 1.5rem;
     padding-top: 1.5rem;
     border-bottom: 1px solid #000;
     background-color: #9AFFBF;
-
-    @include breakpoint(desktop) {
-      min-height: 5.5rem;
-    }
   }
 
   &.expand {
-    top: 6%;
+    top: 4rem;
 
     .action-layer-view {
       background-color: #ffffff;
@@ -1372,7 +1485,6 @@ html {
   }
 
   .expand-single-apartment {
-    width: 100%;
     height: calc(100vh - 11rem);
     position: absolute;
     top: 7rem;
@@ -1385,13 +1497,14 @@ html {
 // Action Layer end
 
 // Apartments header section (slide in & slide single)
-.appartments-toggle {
+.apartments-toggle {
   position: absolute;
   margin-left: 1.5rem;
   cursor: pointer;
+  display: none;
 
   i {
-    font-size: 2rem;
+    font-size: 3.5rem;
   }
 }
 .apartments-search {
@@ -1463,6 +1576,8 @@ html {
   margin-left: .75rem;
   margin-right: .75rem;
   height: 100%;
+  width: 100%;
+  overflow-y: auto;
 
   @include breakpoint(tablet) {
     flex-direction: row;
