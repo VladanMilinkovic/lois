@@ -493,9 +493,11 @@
         zoom: 14
     });
 
+    // disable map zoom when using scroll
+    map.scrollZoom.disable();
 
     map.on('load', function() {
-// Add GeoJSON data
+        // Add GeoJSON data
         map.addSource('source', {
             "type": "geojson",
             "data": {
@@ -568,8 +570,8 @@
                     coordinates: [-73.950821, 40.654327]
                 },
                 properties: {
-                    title: 'Mapbox',
-                    description: 'San Francisco, California',
+                    title: 'Convenience',
+                    description: 'Convenience NY',
                     properties: {icon: 'convenience'},
                 }
             },
@@ -580,8 +582,8 @@
                     coordinates: [-73.946887, 40.654916]
                 },
                 properties: {
-                    title: 'Mapbox',
-                    description: 'San Francisco, California',
+                    title: 'Restoran',
+                    description: 'Best restoran',
                     properties: {icon: 'food'},
                 }
             },
@@ -592,8 +594,8 @@
                     coordinates: [-73.948711, 40.656177]
                 },
                 properties: {
-                    title: 'Mapbox',
-                    description: 'San Francisco, California',
+                    title: 'Lifestyle',
+                    description: 'Central Garder',
                     properties: {icon: 'lifestyle'},
                 }
             },
@@ -605,7 +607,7 @@
                 },
                 properties: {
                     title: 'Mapbox',
-                    description: 'San Francisco, California',
+                    description: '350 Clarkson Avenue Brooklyn NY 11226',
                     properties: {icon: 'pointer'},
                 }
             }
@@ -614,6 +616,8 @@
 
     // add markers to map
     geojson.features.forEach(function(marker) {
+        let popup = new mapboxgl.Popup({ offset: 25 })
+            .setText(marker.properties.description);
 
         // create a HTML element for each feature
         let el = document.createElement('div');
@@ -623,9 +627,22 @@
         // make a marker for each feature and add to the map
         let oneMarker = new mapboxgl.Marker(el)
             .setLngLat(marker.geometry.coordinates)
+            .setPopup(popup)
             .addTo(map);
 
         currentMarkers.push(oneMarker);
+    });
+
+    map.on('click', function (e) {
+        var features = map.queryRenderedFeatures(e.point, {
+            layers: ['water'] // replace this with the name of the layer
+        });
+
+        if (!features.length) {
+            return;
+        }
+        console.log(features);
+        var feature = features[0]
     });
 
     function markerSelect(selectedMarker) {
