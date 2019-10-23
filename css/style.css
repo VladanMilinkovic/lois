@@ -275,6 +275,10 @@ a:active {
   }
 }
 
+.uk-sticky-placeholder {
+  display: none;
+}
+
 .uk-card-default {
   position: absolute;
   padding: 0;
