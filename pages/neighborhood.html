@@ -494,6 +494,7 @@
 
     // disable map zoom when using scroll
     map.scrollZoom.disable();
+    map.addControl(new mapboxgl.NavigationControl(), 'top-left');
 
     map.on('load', function() {
         // Add GeoJSON data
