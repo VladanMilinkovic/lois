@@ -31,7 +31,12 @@ html {
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
 }
-@media (min-width: 1800px) {
+@media screen and (min-width: 601px) and (max-width: 1280px) {
+  html {
+    font-size: 12px;
+  }
+}
+@media screen and (min-width: 1281px) and (max-width: 1366px) {
   html {
     font-size: 12px;
   }
@@ -41,26 +46,17 @@ html {
     font-size: 14px;
   }
 }
-@media screen and (min-width: 1200px) and (max-width: 1336px) {
+@media screen and (min-width: 1920px) {
   html {
     font-size: 16px;
   }
 }
-@media screen and (min-width: 601px) and (max-width: 1280px) {
-  html {
-    font-size: 12px;
-  }
+
+a {
+  text-decoration: none;
 }
-@media screen and (max-width: 600px) {
-  html {
-    font-size: 10px;
-  }
-}
-html.noFont {
-  font-size: inherit !important;
-}
-html.noFont body {
-  padding: 0;
+a:active {
+  text-decoration: none;
 }
 
 .lois-navigation {
@@ -73,7 +69,7 @@ html.noFont body {
   align-items: center;
   margin-bottom: 1.5rem;
   justify-content: space-between;
-  z-index: 100;
+  z-index: 100000;
 }
 @media (min-width: 1200px) {
   .lois-navigation {
@@ -244,8 +240,8 @@ html.noFont body {
 @media (min-width: 1024px) {
   .lois-navigation-tabs .lois-navbar-nav {
     padding: 0;
-    max-width: 40rem;
-    min-width: 40rem;
+    max-width: 30rem;
+    min-width: 30rem;
     margin-right: 1.5rem;
     margin-left: 1.5rem;
     display: flex;
@@ -270,11 +266,35 @@ html.noFont body {
   text-decoration: none;
 }
 
+.uk-card-default {
+  position: absolute;
+  right: 8vw;
+  padding: 0;
+}
+
+.uk-sticky-fixed {
+  width: auto !important;
+  right: 8vw;
+}
+
 .lois {
   padding: 4rem 0 3.6rem 0;
 }
+.lois .sticky-pdf {
+  padding: 1.5rem;
+  background-color: #9AFFBF;
+  color: #000000;
+}
+.lois .sticky-pdf span {
+  padding: 1rem 0;
+  border-left: 1px solid black;
+  margin-left: 0.5rem;
+  padding-left: 0.5rem;
+  font-family: "FoundersGroteskText";
+  font-size: 1rem;
+}
 .lois .location {
-  height: calc(100vh - 27rem);
+  height: calc(100vh - 29.5rem);
   min-height: 18rem;
   position: relative;
   margin: 1.5rem;
@@ -283,28 +303,45 @@ html.noFont body {
   width: 100%;
   height: 100%;
 }
+.lois .location .slide-location {
+  position: absolute;
+  right: 0;
+  top: 0;
+  width: 16.6%;
+  z-index: 1000;
+  padding: 1.5rem;
+  display: none;
+  background-color: #ffffff;
+  height: calc(100vh - 32.5rem);
+}
+.lois .location .slide-location-elements span {
+  display: block;
+  color: #000000;
+  font-size: 0.9rem;
+  cursor: pointer;
+}
+.lois .location .open {
+  display: block;
+}
 .lois-header {
   margin-bottom: 1.5rem;
+  margin-top: 1.5rem;
   display: flex;
   justify-content: space-between;
   padding: 0 1.5rem;
-  align-items: flex-end;
-}
-.lois-header-logo {
-  margin-top: 1.5rem;
+  align-items: flex-start;
 }
 .lois-header__neigh {
   display: flex;
-  width: 41rem;
-  margin-top: 1.5rem;
   align-items: flex-end;
+  justify-content: flex-end;
 }
 .lois-header__neigh .white-title {
   font-family: "IntegralExtaBold";
   font-size: 2rem;
   text-transform: uppercase;
   line-height: 1;
-  margin-top: 0.75rem;
+  margin-bottom: 0.75rem;
   cursor: pointer;
   color: #000000;
   -webkit-text-fill-color: #ffffff;
@@ -318,13 +355,12 @@ html.noFont body {
   text-transform: uppercase;
   -webkit-text-fill-color: #000;
   line-height: 1;
-  margin: 0.75rem 0 0 0;
+  margin-bottom: 0.75rem;
 }
 .lois-header__neigh h2 {
   margin: 0;
 }
 .lois-header__neigh__item {
-  margin: 0 0.75rem;
   line-height: 1;
 }
 .lois-header__features {
@@ -353,7 +389,7 @@ html.noFont body {
 }
 .lois-header__features .lois-header-list--item {
   color: #000000;
-  font-size: 0.7rem;
+  font-size: 0.9rem;
   height: 1rem;
   font-family: "FoundersGroteskText";
 }
@@ -394,11 +430,11 @@ html.noFont body {
     margin-top: 0;
     display: flex;
     flex-direction: column;
-    width: 45%;
+    width: 30%;
     margin-left: 1.5rem;
     overflow-y: auto;
-    max-width: 40rem;
-    min-width: 40rem;
+    max-width: 30rem;
+    min-width: 30rem;
   }
 }
 @media (min-width: 0px) and (max-width: 599px) {
@@ -462,7 +498,7 @@ html.noFont body {
 @media (min-width: 1024px) {
   .lois .building__first {
     display: flex;
-    height: calc(100vh - 29rem);
+    height: calc(100vh - 29.5rem);
   }
 }
 @media only screen and (min-device-width: 1024px) and (max-device-width: 1366px) and (-webkit-min-device-pixel-ratio: 2) and (orientation: landscape) {
@@ -552,7 +588,8 @@ html.noFont body {
 }
 @media (min-width: 1024px) {
   .lois .building-second .building-description .description-text {
-    width: 55%;
+    width: 30%;
+    min-width: 30rem;
     margin-right: 1.5rem;
     margin-top: auto;
   }
@@ -575,7 +612,7 @@ html.noFont body {
 @media (min-width: 1024px) {
   .lois .neighborhood-apartments .building__first {
     display: flex;
-    height: calc(100vh - 13.5rem);
+    height: calc(100vh - 15.5rem);
   }
 }
 @media only screen and (min-device-width: 1024px) and (max-device-width: 1366px) and (-webkit-min-device-pixel-ratio: 2) and (orientation: landscape) {
@@ -600,7 +637,7 @@ html.noFont body {
 @media (min-width: 600px) {
   .lois .slider-box .uk-position-center-right,
 .lois .slider-box .uk-position-center-left {
-    top: 95% !important;
+    top: 97% !important;
   }
 }
 .lois .slider-box .uk-position-relative {
@@ -615,8 +652,15 @@ html.noFont body {
   min-height: 100% !important;
   height: 100%;
 }
+.lois .slider-box .uk-slidenav {
+  right: 0.5rem;
+  margin-right: 0;
+}
 .lois .slider-box .next-text {
   margin-right: 1.5rem;
+}
+.lois .slider-box .uk-position-center-right {
+  text-decoration: none;
 }
 .lois .lottery-first {
   height: calc(100vh - 19rem);
@@ -718,10 +762,35 @@ html.noFont body {
   margin-left: auto;
   margin-right: 1.5rem;
   width: 100%;
-  max-width: 62.5rem;
+}
+@media (min-width: 600px) {
+  .lois .lottery-second .lottery-table .table-container {
+    padding: 1.5rem;
+  }
+}
+@media screen and (min-width: 1366px) and (max-width: 1440px) {
+  .lois .lottery-second .lottery-table .table-container {
+    width: 71%;
+  }
+}
+@media screen and (min-width: 1441px) and (max-width: 1779px) {
+  .lois .lottery-second .lottery-table .table-container {
+    width: 68%;
+  }
+}
+@media (min-width: 1800px) {
+  .lois .lottery-second .lottery-table .table-container {
+    width: 66%;
+  }
+}
+@media screen and (min-width: 1920px) {
+  .lois .lottery-second .lottery-table .table-container {
+    width: 70%;
+  }
 }
 .lois .lottery-second .lottery-table .flag-icon {
   margin-right: 0.1em;
+  width: 100%;
 }
 .lois .lottery-second .lottery-table .flex-table {
   display: flex;
@@ -733,9 +802,9 @@ html.noFont body {
 }
 .lois .lottery-second .lottery-table .flex-row {
   width: calc(100% / 5);
-  text-align: center;
+  text-align: left;
   padding: 0.75em 0.75em;
-  border-bottom: solid 1px #d9d9d9;
+  border-bottom: solid 1px #000000;
   font-size: 1rem;
 }
 .lois .lottery-second .lottery-table .rowspan {
@@ -762,22 +831,44 @@ html.noFont body {
   width: 100%;
   padding: 0;
   border: 0;
-  border-bottom: solid 1px #d9d9d9;
-}
-.lois .lottery-second .lottery-table .column .flex-row:hover {
-  background: #F5F5F5;
-  transition: 500ms;
+  border-bottom: solid 1px #000000;
 }
 .lois .lottery-second .lottery-table .flex-cell {
   width: calc(100% / 2);
-  text-align: center;
   padding: 0.75em 0.75em;
+  text-align: left;
 }
 .lois .lottery-second .lottery-table-mark {
   display: flex;
-  max-width: 61.5rem;
-  margin-left: auto;
-  margin-right: 1.5rem;
+  width: 100%;
+  margin: 3rem 1.5rem 1.5rem auto;
+}
+@media (min-width: 600px) {
+  .lois .lottery-second .lottery-table-mark {
+    padding: 1.5rem 1.5rem 1.5rem 2rem;
+  }
+}
+@media screen and (min-width: 1366px) and (max-width: 1440px) {
+  .lois .lottery-second .lottery-table-mark {
+    width: 71%;
+  }
+}
+@media screen and (min-width: 1441px) and (max-width: 1779px) {
+  .lois .lottery-second .lottery-table-mark {
+    width: 68%;
+    padding-right: 3rem;
+  }
+}
+@media (min-width: 1800px) {
+  .lois .lottery-second .lottery-table-mark {
+    width: 66%;
+    padding-left: 3rem;
+  }
+}
+@media screen and (min-width: 1920px) {
+  .lois .lottery-second .lottery-table-mark {
+    width: 70%;
+  }
 }
 @media (min-width: 0px) and (max-width: 599px) {
   .lois .lottery-second .lottery-table-mark {
@@ -997,20 +1088,21 @@ html.noFont body {
   text-transform: uppercase;
   line-height: 1;
   margin: 0;
+  cursor: pointer;
   color: #000000;
   -webkit-text-fill-color: #9AFFBF;
   -webkit-text-stroke-width: 1px;
   -webkit-text-stroke-color: #000000;
 }
-.lottery-layer .lottery-open__title--white a {
-  color: #9AFFBF;
+.lottery-layer .lottery-open__title--white:hover {
+  -webkit-text-fill-color: #000000;
+  -webkit-text-stroke-width: 0;
 }
 .lottery-layer .lottery-open h1 {
   margin: 0;
 }
 @media (min-width: 0px) and (max-width: 599px) {
   .lottery-layer .lottery-open h1 {
-    font-size: 2.4rem;
     text-align: center;
   }
 }
@@ -1034,6 +1126,7 @@ html.noFont body {
 .lottery-layer .lottery-ending {
   display: flex;
   flex-direction: column;
+  align-items: flex-end;
 }
 @media (min-width: 600px) {
   .lottery-layer .lottery-ending {
@@ -1050,7 +1143,6 @@ html.noFont body {
 }
 @media (min-width: 0px) and (max-width: 599px) {
   .lottery-layer .lottery-ending h1 {
-    font-size: 2.4rem;
     text-align: center;
   }
 }
@@ -1071,6 +1163,10 @@ html.noFont body {
   flex-direction: column;
   padding-left: 0.75rem;
   align-items: flex-end;
+}
+.lottery-layer .lottery-ending__time__value--text {
+  font-size: 1rem;
+  color: #000000;
 }
 .lottery-layer .lottery-ending__time__text span {
   font-size: 1.5rem;
@@ -1118,7 +1214,6 @@ html.noFont body {
   font-family: "IntegralExtaBold";
   font-size: 2rem;
   text-transform: uppercase;
-  line-height: 1;
   margin: 0;
   color: #000000;
   -webkit-text-fill-color: #000000;
@@ -1169,46 +1264,24 @@ html.noFont body {
 
 .action-layer {
   display: flex;
-  flex-direction: column;
-  top: 90%;
-  transition: all 0.5s ease;
-  padding-top: 0;
-  background-color: #ffffff;
+  flex-direction: row;
+  background-color: #9AFFBF;
+  justify-content: space-between;
+  margin-top: auto;
+  position: fixed;
+  bottom: 0;
+  z-index: 50000;
+  padding: 0;
+  top: unset;
 }
 @media (min-width: 0px) and (max-width: 599px) {
   .action-layer {
     display: none;
   }
 }
-@media (min-width: 1024px) {
-  .action-layer {
-    top: 92%;
-  }
-}
-@media (min-width: 600px) and (max-width: 899px) {
-  .action-layer {
-    top: 91%;
-  }
-}
-@media only screen and (min-device-width: 1024px) and (max-device-width: 1366px) and (-webkit-min-device-pixel-ratio: 2) {
-  .action-layer {
-    top: 87%;
-  }
-}
-@media only screen and (min-device-width: 768px) and (max-device-width: 1024px) and (-webkit-min-device-pixel-ratio: 2) {
-  .action-layer {
-    top: 90%;
-  }
-}
-@media (min-width: 1366px) and (max-width: 1449px) {
-  .action-layer {
-    top: 92%;
-  }
-}
 .action-layer-view {
   display: flex;
   width: 100%;
-  min-height: 5rem;
   justify-content: space-between;
   padding-bottom: 1.5rem;
   padding-top: 1.5rem;
@@ -1301,7 +1374,7 @@ html.noFont body {
 }
 
 .slide-in {
-  display: flex;
+  display: none;
   flex-direction: column;
   margin-left: 0.75rem;
   margin-right: 0.75rem;
@@ -1393,9 +1466,12 @@ html.noFont body {
 }
 
 .modal-contact {
-  width: 45rem !important;
+  width: 30rem !important;
   background-color: #9AFFBF;
   padding: 1.5rem;
+}
+.modal-contact .uk-close {
+  display: none;
 }
 .modal-contact__titles--dark {
   font-family: "IntegralExtaBold";
@@ -1431,7 +1507,7 @@ html.noFont body {
   border-bottom: 1px solid #000000;
   margin-top: 1.5rem;
   font-size: 1rem;
-  width: 60%;
+  width: 100%;
   color: #000000;
   font-family: "FoundersGroteskText";
 }
@@ -1451,7 +1527,7 @@ html.noFont body {
 .modal-contact-form--submit {
   width: 20%;
   min-width: 100px;
-  padding: 1.5rem 0;
+  padding: 1rem 0;
   font-size: 1rem;
   background-color: #000000;
   color: #ffffff;
