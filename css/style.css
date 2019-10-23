@@ -266,15 +266,44 @@ a:active {
   text-decoration: none;
 }
 
+.uk-card {
+  display: none;
+}
+@media screen and (min-width: 1366px) {
+  .uk-card {
+    display: block;
+  }
+}
+
 .uk-card-default {
   position: absolute;
-  right: 8vw;
   padding: 0;
+  right: 1.5rem;
+}
+@media (min-width: 1200px) and (max-width: 1799px) {
+  .uk-card-default {
+    right: 8vw;
+  }
+}
+@media (min-width: 1800px) {
+  .uk-card-default {
+    right: 8vw;
+  }
 }
 
 .uk-sticky-fixed {
   width: auto !important;
-  right: 8vw;
+  right: 1.5rem;
+}
+@media (min-width: 1200px) and (max-width: 1799px) {
+  .uk-sticky-fixed {
+    right: 8vw;
+  }
+}
+@media (min-width: 1800px) {
+  .uk-sticky-fixed {
+    right: 8vw;
+  }
 }
 
 .lois {
@@ -282,19 +311,20 @@ a:active {
 }
 .lois .sticky-pdf {
   padding: 1.5rem;
+  display: flex;
   background-color: #9AFFBF;
   color: #000000;
 }
 .lois .sticky-pdf span {
-  padding: 1rem 0;
   border-left: 1px solid black;
   margin-left: 0.5rem;
   padding-left: 0.5rem;
   font-family: "FoundersGroteskText";
   font-size: 1rem;
+  font-weight: bold;
 }
 .lois .location {
-  height: calc(100vh - 29.5rem);
+  height: calc(100vh - 30rem);
   min-height: 18rem;
   position: relative;
   margin: 1.5rem;
@@ -307,7 +337,7 @@ a:active {
   position: absolute;
   right: 0;
   top: 0;
-  width: 14%;
+  width: 13.5rem;
   z-index: 1000;
   padding: 1.5rem;
   display: none;
@@ -336,6 +366,7 @@ a:active {
   display: flex;
   align-items: flex-end;
   justify-content: flex-end;
+  width: 17rem;
 }
 .lois-header__neigh .white-title {
   font-family: "IntegralExtaBold";
@@ -967,7 +998,7 @@ a:active {
 }
 @media (min-width: 1024px) {
   .lois .lottery-third .lottery-apartments-wrapper .lottery-apartment-image .building__first--bg {
-    height: 20rem;
+    height: 25rem;
   }
 }
 .lois .lottery-fourth {

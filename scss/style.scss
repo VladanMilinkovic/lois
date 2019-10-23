@@ -399,14 +399,37 @@ a {
   }
 }
 
+.uk-card {
+  display: none;
+
+  @media screen and (min-width: 1366px) {
+   display: block;
+  }
+}
+
 .uk-card-default {
-  position: absolute;
-  right: 8vw;
+  position: absolute ;
   padding: 0;
+
+  right: 1.5rem;
+
+  @include breakpoint(mediumScreen) {
+    right: 8vw;
+  }
+  @include breakpoint(largeScreen) {
+    right: 8vw;
+  }
 }
 .uk-sticky-fixed {
   width: auto !important;
-  right: 8vw;
+  right: 1.5rem;
+
+  @include breakpoint(mediumScreen) {
+    right: 8vw;
+  }
+  @include breakpoint(largeScreen) {
+    right: 8vw;
+  }
 }
 
 // Lois
@@ -415,22 +438,23 @@ a {
 
   .sticky-pdf {
     padding: 1.5rem;
+    display: flex;
     background-color: #9AFFBF;
     color: #000000;
 
     span {
-      padding: 1rem 0;
       border-left: 1px solid black;
       margin-left: 0.5rem;
       padding-left: .5rem;
       font-family: "FoundersGroteskText";
       font-size: 1rem;
+      font-weight: bold;
     }
   }
 
   // Map
   .location {
-    height: calc(100vh - 29.5rem);
+    height: calc(100vh - 30rem);
     min-height: 18rem;
     position: relative;
     margin: 1.5rem;
@@ -444,7 +468,7 @@ a {
       position: absolute;
       right: 0;
       top: 0;
-      width: 14%;
+      width: 13.5rem;
       z-index: 1000;
       padding: 1.5rem;
       display: none;
@@ -485,6 +509,7 @@ a {
       display: flex;
       align-items: flex-end;
       justify-content: flex-end;
+      width: 17rem;
 
 
       .white-title {
@@ -1177,7 +1202,7 @@ a {
                 }
 
                 @include breakpoint(desktop) {
-                  height: 20rem;
+                  height: 25rem;
                 }
               }
             }
