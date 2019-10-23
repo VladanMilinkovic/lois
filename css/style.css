@@ -307,7 +307,7 @@ a:active {
   position: absolute;
   right: 0;
   top: 0;
-  width: 16.6%;
+  width: 14%;
   z-index: 1000;
   padding: 1.5rem;
   display: none;
@@ -319,6 +319,7 @@ a:active {
   color: #000000;
   font-size: 0.9rem;
   cursor: pointer;
+  font-family: "FoundersGroteskText";
 }
 .lois .location .open {
   display: block;
@@ -362,6 +363,9 @@ a:active {
 }
 .lois-header__neigh__item {
   line-height: 1;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
 }
 .lois-header__features {
   border-left: 1px solid #000;
