@@ -352,9 +352,9 @@ a {
 
   &-tabs {
     display: none;
-    flex-grow: 1;
     flex-direction: row-reverse;
     font-size: 1.8rem;
+    width: 33%;
 
     @include breakpoint(tablet) {
       display: flex;
@@ -370,10 +370,8 @@ a {
 
       @include breakpoint(desktop) {
         padding: 0;
-        max-width: 30rem;
-        min-width: 30rem;
-        margin-right: 1.5rem;
-        margin-left: 1.5rem;
+        width: 100%;
+        padding-right: 1.5rem;
         display: flex;
         justify-content: space-between;
       }
@@ -622,11 +620,9 @@ a {
         margin-top: 0;
         display: flex;
         flex-direction: column;
-        width: 30%;
+        width: 33%;
         margin-left: 1.5rem;
         overflow-y: auto;
-        max-width: 30rem;
-        min-width: 30rem;
       }
     }
 
@@ -699,7 +695,7 @@ a {
 
       &--bg {
         height: calc(100vh - 40rem);
-        width: 100%;
+        width: 67%;
         background-size: cover;
         background-position: 50%;
 
@@ -778,7 +774,7 @@ a {
           }
 
           @include breakpoint(desktop) {
-            width: 30%;
+            width: 33%;
             min-width: 30rem;
             margin-right: 1.5rem;
             margin-top: auto;
@@ -797,7 +793,7 @@ a {
         }
 
         @include breakpoint(desktop) {
-          width: 100%;
+          width: 67%;
           height: 100%;
           min-height: 20rem;
         }
