@@ -136,12 +136,31 @@ body {
 
 html {
   overflow-x: hidden;
-  font-size: 10px;
+  font-size: 12px;
   font-family: "FoundersGroteskText";
   background-image: url(../images/half.png);
   background-repeat: repeat;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
+
+  //from 1200px to 1366px
+  @media screen and (min-width: 1200px) and (max-width: 1366px) {
+    font-size: 12px;
+  }
+
+  //from 1367px to 1600px
+  @media screen and (min-width: 1367px) and (max-width: 1600px) {
+    font-size: 14px;
+  }
+
+  //from 1920px
+  @media screen and (min-width: 1601px) {
+    font-size: 16px;
+  }
+}
+
+body {
+  font-size: 10px;
 
   //from 601px to 1280px
   @media screen and (min-width: 601px) and (max-width: 1280px) {
@@ -149,7 +168,7 @@ html {
   }
 
   //from 1281px to 1366px
-  @media screen and (min-width: 1281px) and (max-width: 1366px) {
+  @media screen and (min-width: 1200px) and (max-width: 1366px) {
     font-size: 12px;
   }
 
@@ -197,7 +216,7 @@ a {
 
     .number {
       display: none;
-      padding-left: 1.5rem;
+      padding-left: .5rem;
       white-space: pre;
 
       @include breakpoint(tablet) {
@@ -314,7 +333,7 @@ a {
 
       &__nav {
         list-style: none;
-        font-size: 2.4rem;
+        font-size: 2.5rem;
         padding-left: 1.5rem;
 
         li {
@@ -341,7 +360,7 @@ a {
         color: #9AFFBF;
         text-transform: uppercase;
         padding-left: 1.5rem;
-        font-size: 2.4rem;
+        font-size: 2.5rem;
         font-weight: 600;
         font-family: "IntegralExtaBold";
         margin-bottom: 1.5rem;
@@ -416,10 +435,10 @@ a {
   right: 1.5rem;
 
   @include breakpoint(mediumScreen) {
-    right: 8vw;
+    right: 8.5vw;
   }
   @include breakpoint(largeScreen) {
-    right: 8vw;
+    right: 8.5vw;
   }
 }
 .uk-sticky-fixed {
@@ -434,6 +453,11 @@ a {
   }
 }
 
+.lois-uk-card {
+  box-shadow: none;
+  right: 8.5vw;
+}
+
 // Lois
 .lois {
   padding: 4rem 0 3.6rem 0;
@@ -443,6 +467,7 @@ a {
     display: flex;
     background-color: #9AFFBF;
     color: #000000;
+    cursor: pointer;
 
     span {
       border-left: 1px solid black;
@@ -456,7 +481,7 @@ a {
 
   // Map
   .location {
-    height: calc(100vh - 30rem);
+    height: calc(100vh - 30.5rem);
     min-height: 18rem;
     position: relative;
     margin: 1.5rem;
@@ -516,10 +541,9 @@ a {
 
       .white-title {
         font-family: "IntegralExtaBold";
-        font-size: 2rem;
+        font-size: 2.5rem;
         text-transform: uppercase;
         line-height: 1;
-        margin-bottom: .75rem;
         cursor: pointer;
         color: #000000;
         -webkit-text-fill-color: #ffffff; /* Will override color (regardless of order) */
@@ -529,7 +553,7 @@ a {
 
       .active {
         font-family: "IntegralExtaBold";
-        font-size: 2rem;
+        font-size: 2.5rem;
         text-transform: uppercase;
         -webkit-text-fill-color: #000;
         line-height: 1;
@@ -641,9 +665,10 @@ a {
 
       &--black {
         font-family: "IntegralExtaBold";
-        font-size: 2rem;
+        font-size: 2.5rem;
         text-transform: uppercase;
         line-height: 1;
+        letter-spacing: 1px;
         margin: 0;
         color: #000000;
         -webkit-text-fill-color: #000000;
@@ -651,7 +676,7 @@ a {
 
       &--white {
         font-family: "IntegralExtaBold";
-        font-size: 2rem;
+        font-size: 2.5rem;
         text-transform: uppercase;
         color: #000000;
         -webkit-text-fill-color: #ffffff;
@@ -686,7 +711,7 @@ a {
 
       @include breakpoint(desktop) {
         display: flex;
-        height: calc(100vh - 29.5rem);
+        height: calc(100vh - 30.5rem);
       }
 
       @include breakpoint(iPadProLandscape) {
@@ -734,7 +759,7 @@ a {
 
       @include breakpoint(desktop) {
         display: flex;
-        height: calc(100vh - 15.5rem);
+        height: calc(100vh - 16.4rem);
         margin-top: 1.5rem;
       }
 
@@ -805,7 +830,7 @@ a {
     .building__first {
       @include breakpoint(desktop) {
         display: flex;
-        height: calc(100vh - 15.5rem);
+        height: calc(100vh - 16.4rem);
       }
 
       @include breakpoint(iPadProLandscape) {
@@ -837,7 +862,7 @@ a {
       height: 100%;
 
       @include breakpoint(tablet) {
-        height: calc(100vh - 15.5rem);
+        height: calc(100vh - 16.4rem);
       }
 
       .uk-slideshow-items {
@@ -848,6 +873,7 @@ a {
     .uk-slidenav {
       right: .5rem;
       margin-right: 0;
+      color: #ffffff;
     }
 
     .next-text {
@@ -856,6 +882,9 @@ a {
 
     .uk-position-center-right {
       text-decoration: none;
+    }
+    .uk-slidenav:hover {
+      color: #ffffff;
     }
   }
   //End Slider
@@ -882,7 +911,7 @@ a {
 
           &-black {
             font-family: "IntegralExtaBold";
-            font-size: 2rem;
+            font-size: 2.5rem;
             text-transform: uppercase;
             line-height: 1;
             margin: 0;
@@ -893,7 +922,7 @@ a {
 
           &-white {
             font-family: "IntegralExtaBold";
-            font-size: 2rem;
+            font-size: 2.5rem;
             text-transform: uppercase;
             line-height: 1;
             margin: 0;
@@ -922,6 +951,7 @@ a {
           padding: 1.5rem 2rem;
           background-color: #000000;
           font-family: "FoundersGroteskText";
+          outline: 0;
         }
       }
     }
@@ -934,9 +964,10 @@ a {
 
         &--black {
           font-family: "IntegralExtaBold";
-          font-size: 2rem;
+          font-size: 2.5rem;
           text-transform: uppercase;
           line-height: 1;
+          letter-spacing: 1px;
           margin: 0;
           color: #000000;
           -webkit-text-fill-color: #000000;
@@ -944,9 +975,10 @@ a {
 
         &--white {
           font-family: "IntegralExtaBold";
-          font-size: 2rem;
+          font-size: 2.5rem;
           text-transform: uppercase;
           line-height: 1;
+          letter-spacing: 1px;
           color: #000000;
           -webkit-text-fill-color: #ffffff;
           -webkit-text-stroke-width: 1px;
@@ -978,7 +1010,6 @@ a {
         .table-container {
           display: block;
           margin-left: auto;
-          margin-right: 1.5rem;
           width: 100%;
 
 
@@ -987,19 +1018,19 @@ a {
           }
 
           @media screen and (min-width:1366px) and (max-width: 1440px) {
-            width: 71%;
+            width: 64%;
           }
 
           @media screen and (min-width:1441px) and (max-width: 1779px) {
-            width: 68%;
+            width: 61%;
           }
 
           @include breakpoint(largeScreen) {
-            width: 66%;
+            width: 59%;
           }
 
           @media screen and (min-width:1920px) {
-            width: 70%;
+            width: 63%;
           }
         }
 
@@ -1074,21 +1105,21 @@ a {
           }
 
           @media screen and (min-width:1366px) and (max-width: 1440px) {
-            width: 71%;
+            width: 64%;
           }
 
           @media screen and (min-width:1441px) and (max-width: 1779px) {
-            width: 68%;
+            width: 61%;
             padding-right: 3rem;
           }
 
           @include breakpoint(largeScreen) {
-            width: 66%;
+            width: 59%;
             padding-left: 3rem;
           }
 
           @media screen and (min-width:1920px) {
-            width: 70%;
+            width: 63%;
           }
 
           @include breakpoint(mobileScreen) {
@@ -1172,9 +1203,10 @@ a {
 
               &--black {
                 font-family: "IntegralExtaBold";
-                font-size: 2rem;
+                font-size: 2.5rem;
                 text-transform: uppercase;
                 line-height: 1;
+                letter-spacing: 1px;
                 margin: 0;
                 color: #000000;
                 -webkit-text-fill-color: #000000;
@@ -1182,7 +1214,7 @@ a {
 
               &--white {
                 font-family: "IntegralExtaBold";
-                font-size: 2rem;
+                font-size: 2.5rem;
                 text-transform: uppercase;
                 line-height: 1;
                 color: #000000;
@@ -1223,9 +1255,10 @@ a {
 
           &--black {
             font-family: "IntegralExtaBold";
-            font-size: 2rem;
+            font-size: 2.5rem;
             text-transform: uppercase;
             line-height: 1;
+            letter-spacing: 1px;
             margin: 0;
             color: #000000;
             -webkit-text-fill-color: #000000;
@@ -1233,7 +1266,7 @@ a {
 
           &--white {
             font-family: "IntegralExtaBold";
-            font-size: 2rem;
+            font-size: 2.5rem;
             text-transform: uppercase;
             line-height: 1;
             color: #000000;
@@ -1344,16 +1377,17 @@ a {
 
       &--black {
         font-family: "IntegralExtaBold";
-        font-size: 2rem;
+        font-size: 2.5rem;
         text-transform: uppercase;
         line-height: 1;
+        letter-spacing: 1px;
         margin: 0;
         color: #000000;
         -webkit-text-fill-color: #000000;
       }
       &--white {
         font-family: "IntegralExtaBold";
-        font-size: 2rem;
+        font-size: 2.5rem;
         text-transform: uppercase;
         line-height: 1;
         margin: 0;
@@ -1419,6 +1453,14 @@ a {
         text-align: center;
       }
     }
+    .lottery-open__title--white {
+      cursor: default;
+
+      &:hover {
+         -webkit-text-fill-color: #9AFFBF;
+        -webkit-text-stroke-width: 1px;
+      }
+    }
 
     &__time {
       display: flex;
@@ -1437,10 +1479,23 @@ a {
         padding-left: .75rem;
         align-items: flex-end;
 
+
         &--text {
           font-size: 1rem;
           color: #000000;
         }
+      }
+
+      .uk-divider-vertical {
+        width: 1px;
+        height: 2rem;
+        margin-left: auto;
+        margin-right: auto;
+        border-right: 1px solid #000;
+        border-left: none;
+        margin-top: 7px;
+        padding-left: 0.75rem;
+        padding-right: 0;
       }
 
       &__text {
@@ -1504,8 +1559,10 @@ a {
 
   .description-text--black {
     font-family: "IntegralExtaBold";
-    font-size: 2rem;
+    font-size: 2.5rem;
     text-transform: uppercase;
+    letter-spacing: 1px;
+    line-height: 1;
     margin: 0;
     color: #000000;
     -webkit-text-fill-color: #000000;
@@ -1513,9 +1570,10 @@ a {
 
   .description-text--white {
     font-family: "IntegralExtaBold";
-    font-size: 2rem;
+    font-size: 2.5rem;
     text-transform: uppercase;
     line-height: 1;
+    letter-spacing: 1px;
     margin: 0;
     color: #000000;
     -webkit-text-fill-color: #ffffff;
@@ -1673,7 +1731,7 @@ a {
 
       &--value {
         font-family: "IntegralExtaBold";
-        font-size: 2rem;
+        font-size: 2.5rem;
         text-transform: uppercase;
         line-height: 1;
         margin: 0;
@@ -1762,9 +1820,10 @@ a {
 
       &--black {
         font-family: "IntegralExtaBold";
-        font-size: 2rem;
+        font-size: 2.5rem;
         text-transform: uppercase;
         line-height: 1;
+        letter-spacing: 1px;
         margin: 0;
         color: #000000;
         -webkit-text-fill-color: #000000;
@@ -1772,7 +1831,7 @@ a {
 
       &--white {
         font-family: "IntegralExtaBold";
-        font-size: 2rem;
+        font-size: 2.5rem;
         text-transform: uppercase;
         line-height: 1;
         margin: 0;
@@ -1817,7 +1876,7 @@ a {
 
     &--light {
       font-family: "IntegralExtaBold";
-      font-size: 2rem;
+      font-size: 2.5rem;
       color: #000000;
       text-transform: uppercase;
       line-height: 1;
@@ -1897,6 +1956,16 @@ a {
 // Layout modal
 .layout {
   padding: 0;
+  z-index: 10000000000;
+
+  &-close {
+    right: 0;
+    position: absolute;
+    margin-right: 1.5rem;
+    margin-top: 1rem;
+    color: #000;
+    cursor: pointer;
+  }
 
   .uk-margin-auto-vertical {
     height: 100%;
@@ -1906,6 +1975,7 @@ a {
   .modal-layout {
     display: flex;
     background-color: #ededed;
+    padding: 1.5rem;
   }
 
   &-wrapper {
@@ -1928,10 +1998,10 @@ a {
       li {
         cursor: pointer;
         font-family: "IntegralExtaBold";
-        font-size: 2rem;
+        font-size: 2.5rem;
         text-transform: uppercase;
         line-height: 1;
-        margin: 0;
+        margin: 0 0 1.5rem 0;
         color: #000000;
         -webkit-text-fill-color: #ededed;
         -webkit-text-stroke-width: 1px;
@@ -1948,6 +2018,8 @@ a {
   &_image {
     flex-grow: 1;
     display: none;
+    margin: 1.5rem;
+    padding: 1.5rem;
 
     .building-image {
       display: block;
