@@ -349,7 +349,7 @@ a:active {
 .lois .location .slide-location-elements span {
   display: block;
   color: #000000;
-  font-size: 0.9rem;
+  font-size: 1rem;
   cursor: pointer;
   font-family: "FoundersGroteskText";
 }
