@@ -444,12 +444,15 @@ a {
 .uk-sticky-fixed {
   width: auto !important;
   right: 1.5rem;
+  margin-top: 1.5rem;
 
   @include breakpoint(mediumScreen) {
     right: 8vw;
+    margin-top: 1.5rem !important;
   }
   @include breakpoint(largeScreen) {
     right: 8vw;
+    margin-top: 1.5rem !important;
   }
 }
 

@@ -315,15 +315,18 @@ a:active {
 .uk-sticky-fixed {
   width: auto !important;
   right: 1.5rem;
+  margin-top: 1.5rem;
 }
 @media (min-width: 1200px) and (max-width: 1799px) {
   .uk-sticky-fixed {
     right: 8vw;
+    margin-top: 1.5rem !important;
   }
 }
 @media (min-width: 1800px) {
   .uk-sticky-fixed {
     right: 8vw;
+    margin-top: 1.5rem !important;
   }
 }
 
