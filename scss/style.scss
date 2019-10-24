@@ -456,7 +456,7 @@ a {
 
   // Map
   .location {
-    height: calc(100vh - 30rem);
+    height: calc(100vh - 29.5rem);
     min-height: 18rem;
     position: relative;
     margin: 1.5rem;
@@ -1196,6 +1196,7 @@ a {
             &-image {
               margin: 1.5rem 0;
               .building__first--bg {
+                width: 100%;
 
                 @include breakpoint(tablet) {
                   height: 15rem;
