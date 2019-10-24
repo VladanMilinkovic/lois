@@ -228,11 +228,14 @@ a {
       @include breakpoint(tablet) {
         display: inline;
       }
+      @include breakpoint(iPad) {
+        display: none;
+      }
     }
   }
   #mobile-icon {
     width: 3rem;
-    height: 4rem;
+    height: 3rem;
     position: relative;
     margin: 0;
     -webkit-transform: rotate(0deg);
@@ -306,6 +309,11 @@ a {
     display: flex;
     padding-right: 1.5rem;
 
+    @include breakpoint(mobileScreen) {
+      display: flex;
+      align-items: center;
+    }
+
     @include breakpoint(tablet) {
       display: none;
     }
@@ -339,7 +347,7 @@ a {
 
       &__nav {
         list-style: none;
-        font-size: 2.5rem;
+        font-size: 2.2rem;
         padding-left: 1.5rem;
 
         li {
@@ -366,7 +374,7 @@ a {
         color: #9AFFBF;
         text-transform: uppercase;
         padding-left: 1.5rem;
-        font-size: 2.5rem;
+        font-size: 2.2rem;
         font-weight: 600;
         font-family: "IntegralExtaBold";
         margin-bottom: 1.5rem;
@@ -487,7 +495,7 @@ a {
 
   // Map
   .location {
-    height: calc(100vh - 30.5rem);
+    height: calc(100vh - 30rem);
     min-height: 18rem;
     position: relative;
     margin: 1.5rem;
@@ -507,6 +515,10 @@ a {
       display: none;
       background-color: #ffffff;
       height: calc(100vh - 33.5rem);
+
+      @include breakpoint(iPadProLandscape) {
+        width: 16rem;
+      }
 
       &-elements {
 
@@ -547,7 +559,7 @@ a {
 
       .white-title {
         font-family: "IntegralExtaBold";
-        font-size: 2.5rem;
+        font-size: 2.2rem;
         text-transform: uppercase;
         line-height: 1;
         letter-spacing: 1px;
@@ -560,11 +572,14 @@ a {
 
       .active {
         font-family: "IntegralExtaBold";
-        font-size: 2.5rem;
+        font-size: 2.2rem;
         text-transform: uppercase;
         -webkit-text-fill-color: #000;
         line-height: 1;
         letter-spacing: 1px;
+        align-items: flex-end;
+        display: flex;
+        flex-direction: column;
       }
 
       h2 {
@@ -672,7 +687,7 @@ a {
 
       &--black {
         font-family: "IntegralExtaBold";
-        font-size: 2.5rem;
+        font-size: 2.2rem;
         text-transform: uppercase;
         line-height: 1;
         letter-spacing: 1px;
@@ -683,7 +698,7 @@ a {
 
       &--white {
         font-family: "IntegralExtaBold";
-        font-size: 2.5rem;
+        font-size: 2.2rem;
         text-transform: uppercase;
         color: #000000;
         line-height: 1;
@@ -720,11 +735,12 @@ a {
 
       @include breakpoint(desktop) {
         display: flex;
-        height: calc(100vh - 30.5rem);
+        height: calc(100vh - 30rem);
       }
 
+
       @include breakpoint(iPadProLandscape) {
-        height: calc(100vh - 29rem);
+        height: calc(100vh - 30.5rem);
       }
 
       &--bg {
@@ -735,10 +751,12 @@ a {
 
         @include breakpoint(iPad) {
           height: calc(100vh - 49rem);
+          width: 100%;
         }
 
         @include breakpoint(desktop) {
           height: auto;
+          width: 67%;
         }
       }
 
@@ -768,7 +786,7 @@ a {
 
       @include breakpoint(desktop) {
         display: flex;
-        height: calc(100vh - 16.4rem);
+        height: calc(100vh - 16rem);
         margin-top: 1.5rem;
       }
 
@@ -781,7 +799,7 @@ a {
       }
 
       @include breakpoint(iPadProPortrait) {
-        height: calc(100vh - 13.5rem);
+        height: calc(100vh - 16.5rem);
       }
 
       .building-description {
@@ -843,7 +861,7 @@ a {
       }
 
       @include breakpoint(iPadProLandscape) {
-        height: calc(100vh - 13.5rem);
+        height: calc(100vh - 16.5rem);
       }
     }
   }
@@ -871,7 +889,7 @@ a {
       height: 100%;
 
       @include breakpoint(tablet) {
-        height: calc(100vh - 16.4rem);
+        height: calc(100vh - 16rem);
       }
 
       .uk-slideshow-items {
@@ -920,7 +938,7 @@ a {
 
           &-black {
             font-family: "IntegralExtaBold";
-            font-size: 2.5rem;
+            font-size: 2.2rem;
             text-transform: uppercase;
             line-height: 1;
             letter-spacing: 1px;
@@ -932,7 +950,7 @@ a {
 
           &-white {
             font-family: "IntegralExtaBold";
-            font-size: 2.5rem;
+            font-size: 2.2rem;
             text-transform: uppercase;
             line-height: 1;
             letter-spacing: 1px;
@@ -959,6 +977,7 @@ a {
           margin: 0 auto;
           color: #ffffff;
           font-size: 1rem;
+          font-weight: bold;
           padding: 1.5rem 2rem;
           background-color: #000000;
           font-family: "FoundersGroteskText";
@@ -975,7 +994,7 @@ a {
 
         &--black {
           font-family: "IntegralExtaBold";
-          font-size: 2.5rem;
+          font-size: 2.2rem;
           text-transform: uppercase;
           line-height: 1;
           letter-spacing: 1px;
@@ -986,7 +1005,7 @@ a {
 
         &--white {
           font-family: "IntegralExtaBold";
-          font-size: 2.5rem;
+          font-size: 2.2rem;
           text-transform: uppercase;
           line-height: 1;
           letter-spacing: 1px;
@@ -1143,10 +1162,6 @@ a {
             width: 62%;
           }
 
-          @include breakpoint(mobileScreen) {
-            margin: 0 1.5rem;
-          }
-
           ol {
             font-size: .8rem;
             padding: 0;
@@ -1173,7 +1188,7 @@ a {
         }
 
         &-black {
-          font-size: 2rem;
+          font-size: 2.2rem;
           font-weight: bold;
           text-transform: lowercase;
           line-height: 1;
@@ -1183,7 +1198,7 @@ a {
         }
 
         &-white {
-          font-size: 2rem;
+          font-size: 2.2rem;
           text-transform: lowercase;
           color: #000000;
           -webkit-text-fill-color: #9AFFBF;
@@ -1224,7 +1239,7 @@ a {
 
               &--black {
                 font-family: "IntegralExtaBold";
-                font-size: 2.5rem;
+                font-size: 2.2rem;
                 text-transform: uppercase;
                 line-height: 1;
                 letter-spacing: 1px;
@@ -1235,7 +1250,7 @@ a {
 
               &--white {
                 font-family: "IntegralExtaBold";
-                font-size: 2.5rem;
+                font-size: 2.2rem;
                 text-transform: uppercase;
                 line-height: 1;
                 letter-spacing: 1px;
@@ -1277,7 +1292,7 @@ a {
 
           &--black {
             font-family: "IntegralExtaBold";
-            font-size: 2.5rem;
+            font-size: 2.2rem;
             text-transform: uppercase;
             line-height: 1;
             letter-spacing: 1px;
@@ -1288,7 +1303,7 @@ a {
 
           &--white {
             font-family: "IntegralExtaBold";
-            font-size: 2.5rem;
+            font-size: 2.2rem;
             text-transform: uppercase;
             line-height: 1;
             letter-spacing: 1px;
@@ -1340,7 +1355,7 @@ a {
     flex-direction: column;
 
     .lois-header__neigh {
-      width: auto;
+      width: 100%;
     }
   }
 }
@@ -1400,7 +1415,7 @@ a {
 
       &--black {
         font-family: "IntegralExtaBold";
-        font-size: 2.5rem;
+        font-size: 2.2rem;
         text-transform: uppercase;
         line-height: 1;
         letter-spacing: 1px;
@@ -1410,7 +1425,7 @@ a {
       }
       &--white {
         font-family: "IntegralExtaBold";
-        font-size: 2.5rem;
+        font-size: 2.2rem;
         text-transform: uppercase;
         line-height: 1;
         letter-spacing: 1px;
@@ -1583,7 +1598,7 @@ a {
 
   .description-text--black {
     font-family: "IntegralExtaBold";
-    font-size: 2.5rem;
+    font-size: 2.2rem;
     text-transform: uppercase;
     letter-spacing: 1px;
     line-height: 1;
@@ -1594,7 +1609,7 @@ a {
 
   .description-text--white {
     font-family: "IntegralExtaBold";
-    font-size: 2.5rem;
+    font-size: 2.2rem;
     text-transform: uppercase;
     line-height: 1;
     letter-spacing: 1px;
@@ -1755,7 +1770,7 @@ a {
 
       &--value {
         font-family: "IntegralExtaBold";
-        font-size: 2.5rem;
+        font-size: 2.2rem;
         text-transform: uppercase;
         line-height: 1;
         margin: 0;
@@ -1844,7 +1859,7 @@ a {
 
       &--black {
         font-family: "IntegralExtaBold";
-        font-size: 2.5rem;
+        font-size: 2.2rem;
         text-transform: uppercase;
         line-height: 1;
         letter-spacing: 1px;
@@ -1855,7 +1870,7 @@ a {
 
       &--white {
         font-family: "IntegralExtaBold";
-        font-size: 2.5rem;
+        font-size: 2.2rem;
         text-transform: uppercase;
         line-height: 1;
         letter-spacing: 1px;
@@ -1891,7 +1906,7 @@ a {
 
     &--dark {
       font-family: "IntegralExtaBold";
-      font-size: 2.5rem;
+      font-size: 2.2rem;
       color: #000;
       text-transform: uppercase;
       line-height: 1;
@@ -1901,7 +1916,7 @@ a {
 
     &--light {
       font-family: "IntegralExtaBold";
-      font-size: 2.5rem;
+      font-size: 2.2rem;
       color: #000000;
       text-transform: uppercase;
       line-height: 1;
@@ -2023,7 +2038,7 @@ a {
       li {
         cursor: pointer;
         font-family: "IntegralExtaBold";
-        font-size: 2.5rem;
+        font-size: 2.2rem;
         text-transform: uppercase;
         line-height: 1;
         margin: 0 0 .75rem 0;

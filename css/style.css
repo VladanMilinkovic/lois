@@ -115,9 +115,14 @@ a:active {
     display: inline;
   }
 }
+@media only screen and (min-device-width: 768px) and (max-device-width: 1024px) and (-webkit-min-device-pixel-ratio: 2) {
+  .lois-navigation--address .number {
+    display: none;
+  }
+}
 .lois-navigation #mobile-icon {
   width: 3rem;
-  height: 4rem;
+  height: 3rem;
   position: relative;
   margin: 0;
   -webkit-transform: rotate(0deg);
@@ -183,6 +188,12 @@ a:active {
   display: flex;
   padding-right: 1.5rem;
 }
+@media (min-width: 0px) and (max-width: 599px) {
+  .lois-navigation__mobile {
+    display: flex;
+    align-items: center;
+  }
+}
 @media (min-width: 600px) {
   .lois-navigation__mobile {
     display: none;
@@ -213,7 +224,7 @@ a:active {
 }
 .lois-navigation__mobile__tabs__nav {
   list-style: none;
-  font-size: 2.5rem;
+  font-size: 2.2rem;
   padding-left: 1.5rem;
 }
 .lois-navigation__mobile__tabs__nav li {
@@ -237,7 +248,7 @@ a:active {
   color: #9AFFBF;
   text-transform: uppercase;
   padding-left: 1.5rem;
-  font-size: 2.5rem;
+  font-size: 2.2rem;
   font-weight: 600;
   font-family: "IntegralExtaBold";
   margin-bottom: 1.5rem;
@@ -356,7 +367,7 @@ a:active {
   font-weight: bold;
 }
 .lois .location {
-  height: calc(100vh - 30.5rem);
+  height: calc(100vh - 30rem);
   min-height: 18rem;
   position: relative;
   margin: 1.5rem;
@@ -375,6 +386,11 @@ a:active {
   display: none;
   background-color: #ffffff;
   height: calc(100vh - 33.5rem);
+}
+@media only screen and (min-device-width: 1024px) and (max-device-width: 1366px) and (-webkit-min-device-pixel-ratio: 2) and (orientation: landscape) {
+  .lois .location .slide-location {
+    width: 16rem;
+  }
 }
 .lois .location .slide-location-elements span {
   display: block;
@@ -402,7 +418,7 @@ a:active {
 }
 .lois-header__neigh .white-title {
   font-family: "IntegralExtaBold";
-  font-size: 2.5rem;
+  font-size: 2.2rem;
   text-transform: uppercase;
   line-height: 1;
   letter-spacing: 1px;
@@ -415,11 +431,14 @@ a:active {
 }
 .lois-header__neigh .active {
   font-family: "IntegralExtaBold";
-  font-size: 2.5rem;
+  font-size: 2.2rem;
   text-transform: uppercase;
   -webkit-text-fill-color: #000;
   line-height: 1;
   letter-spacing: 1px;
+  align-items: flex-end;
+  display: flex;
+  flex-direction: column;
 }
 .lois-header__neigh h2 {
   margin: 0;
@@ -519,7 +538,7 @@ a:active {
 }
 .lois .building .description-text--black {
   font-family: "IntegralExtaBold";
-  font-size: 2.5rem;
+  font-size: 2.2rem;
   text-transform: uppercase;
   line-height: 1;
   letter-spacing: 1px;
@@ -529,7 +548,7 @@ a:active {
 }
 .lois .building .description-text--white {
   font-family: "IntegralExtaBold";
-  font-size: 2.5rem;
+  font-size: 2.2rem;
   text-transform: uppercase;
   color: #000000;
   line-height: 1;
@@ -566,12 +585,12 @@ a:active {
 @media (min-width: 1024px) {
   .lois .building__first {
     display: flex;
-    height: calc(100vh - 30.5rem);
+    height: calc(100vh - 30rem);
   }
 }
 @media only screen and (min-device-width: 1024px) and (max-device-width: 1366px) and (-webkit-min-device-pixel-ratio: 2) and (orientation: landscape) {
   .lois .building__first {
-    height: calc(100vh - 29rem);
+    height: calc(100vh - 30.5rem);
   }
 }
 .lois .building__first--bg {
@@ -583,11 +602,13 @@ a:active {
 @media only screen and (min-device-width: 768px) and (max-device-width: 1024px) and (-webkit-min-device-pixel-ratio: 2) {
   .lois .building__first--bg {
     height: calc(100vh - 49rem);
+    width: 100%;
   }
 }
 @media (min-width: 1024px) {
   .lois .building__first--bg {
     height: auto;
+    width: 67%;
   }
 }
 .lois .building__first-description--bg {
@@ -612,7 +633,7 @@ a:active {
 @media (min-width: 1024px) {
   .lois .building-second {
     display: flex;
-    height: calc(100vh - 16.4rem);
+    height: calc(100vh - 16rem);
     margin-top: 1.5rem;
   }
 }
@@ -628,7 +649,7 @@ a:active {
 }
 @media only screen and (min-device-width: 1024px) and (max-device-width: 1366px) and (-webkit-min-device-pixel-ratio: 2) {
   .lois .building-second {
-    height: calc(100vh - 13.5rem);
+    height: calc(100vh - 16.5rem);
   }
 }
 @media (min-width: 600px) {
@@ -685,7 +706,7 @@ a:active {
 }
 @media only screen and (min-device-width: 1024px) and (max-device-width: 1366px) and (-webkit-min-device-pixel-ratio: 2) and (orientation: landscape) {
   .lois .neighborhood-apartments .building__first {
-    height: calc(100vh - 13.5rem);
+    height: calc(100vh - 16.5rem);
   }
 }
 .lois .slider-box {
@@ -713,7 +734,7 @@ a:active {
 }
 @media (min-width: 600px) {
   .lois .slider-box .uk-position-relative {
-    height: calc(100vh - 16.4rem);
+    height: calc(100vh - 16rem);
   }
 }
 .lois .slider-box .uk-position-relative .uk-slideshow-items {
@@ -754,7 +775,7 @@ a:active {
 }
 .lois .lottery-first-wrapper-title-black {
   font-family: "IntegralExtaBold";
-  font-size: 2.5rem;
+  font-size: 2.2rem;
   text-transform: uppercase;
   line-height: 1;
   letter-spacing: 1px;
@@ -765,7 +786,7 @@ a:active {
 }
 .lois .lottery-first-wrapper-title-white {
   font-family: "IntegralExtaBold";
-  font-size: 2.5rem;
+  font-size: 2.2rem;
   text-transform: uppercase;
   line-height: 1;
   letter-spacing: 1px;
@@ -789,6 +810,7 @@ a:active {
   margin: 0 auto;
   color: #ffffff;
   font-size: 1rem;
+  font-weight: bold;
   padding: 1.5rem 2rem;
   background-color: #000000;
   font-family: "FoundersGroteskText";
@@ -799,7 +821,7 @@ a:active {
 }
 .lois .lottery-second-head--black {
   font-family: "IntegralExtaBold";
-  font-size: 2.5rem;
+  font-size: 2.2rem;
   text-transform: uppercase;
   line-height: 1;
   letter-spacing: 1px;
@@ -809,7 +831,7 @@ a:active {
 }
 .lois .lottery-second-head--white {
   font-family: "IntegralExtaBold";
-  font-size: 2.5rem;
+  font-size: 2.2rem;
   text-transform: uppercase;
   line-height: 1;
   letter-spacing: 1px;
@@ -955,11 +977,6 @@ a:active {
     width: 62%;
   }
 }
-@media (min-width: 0px) and (max-width: 599px) {
-  .lois .lottery-second .lottery-table-mark {
-    margin: 0 1.5rem;
-  }
-}
 .lois .lottery-second .lottery-table-mark ol {
   font-size: 0.8rem;
   padding: 0;
@@ -980,7 +997,7 @@ a:active {
   }
 }
 .lois .lottery-second .rent-smart-black {
-  font-size: 2rem;
+  font-size: 2.2rem;
   font-weight: bold;
   text-transform: lowercase;
   line-height: 1;
@@ -989,7 +1006,7 @@ a:active {
   font-family: "FoundersGroteskText";
 }
 .lois .lottery-second .rent-smart-white {
-  font-size: 2rem;
+  font-size: 2.2rem;
   text-transform: lowercase;
   color: #000000;
   -webkit-text-fill-color: #9AFFBF;
@@ -1020,7 +1037,7 @@ a:active {
 }
 .lois .lottery-third .lottery-apartments-wrapper .lottery-apartment-head--black {
   font-family: "IntegralExtaBold";
-  font-size: 2.5rem;
+  font-size: 2.2rem;
   text-transform: uppercase;
   line-height: 1;
   letter-spacing: 1px;
@@ -1030,7 +1047,7 @@ a:active {
 }
 .lois .lottery-third .lottery-apartments-wrapper .lottery-apartment-head--white {
   font-family: "IntegralExtaBold";
-  font-size: 2.5rem;
+  font-size: 2.2rem;
   text-transform: uppercase;
   line-height: 1;
   letter-spacing: 1px;
@@ -1064,7 +1081,7 @@ a:active {
 }
 .lois .lottery-fourth .lottery-faq-head--black {
   font-family: "IntegralExtaBold";
-  font-size: 2.5rem;
+  font-size: 2.2rem;
   text-transform: uppercase;
   line-height: 1;
   letter-spacing: 1px;
@@ -1074,7 +1091,7 @@ a:active {
 }
 .lois .lottery-fourth .lottery-faq-head--white {
   font-family: "IntegralExtaBold";
-  font-size: 2.5rem;
+  font-size: 2.2rem;
   text-transform: uppercase;
   line-height: 1;
   letter-spacing: 1px;
@@ -1109,7 +1126,7 @@ a:active {
     flex-direction: column;
   }
   .neighborhood-header .lois-header__neigh {
-    width: auto;
+    width: 100%;
   }
 }
 
@@ -1167,7 +1184,7 @@ a:active {
 }
 .lottery-layer .lottery-open__title--black {
   font-family: "IntegralExtaBold";
-  font-size: 2.5rem;
+  font-size: 2.2rem;
   text-transform: uppercase;
   line-height: 1;
   letter-spacing: 1px;
@@ -1177,7 +1194,7 @@ a:active {
 }
 .lottery-layer .lottery-open__title--white {
   font-family: "IntegralExtaBold";
-  font-size: 2.5rem;
+  font-size: 2.2rem;
   text-transform: uppercase;
   line-height: 1;
   letter-spacing: 1px;
@@ -1324,7 +1341,7 @@ a:active {
 }
 .single-apartment .description-text--black {
   font-family: "IntegralExtaBold";
-  font-size: 2.5rem;
+  font-size: 2.2rem;
   text-transform: uppercase;
   letter-spacing: 1px;
   line-height: 1;
@@ -1334,7 +1351,7 @@ a:active {
 }
 .single-apartment .description-text--white {
   font-family: "IntegralExtaBold";
-  font-size: 2.5rem;
+  font-size: 2.2rem;
   text-transform: uppercase;
   line-height: 1;
   letter-spacing: 1px;
@@ -1477,7 +1494,7 @@ a:active {
 }
 .apartments-search-select__section--value {
   font-family: "IntegralExtaBold";
-  font-size: 2.5rem;
+  font-size: 2.2rem;
   text-transform: uppercase;
   line-height: 1;
   margin: 0;
@@ -1555,7 +1572,7 @@ a:active {
 }
 .slide-in-cart__content--black {
   font-family: "IntegralExtaBold";
-  font-size: 2.5rem;
+  font-size: 2.2rem;
   text-transform: uppercase;
   line-height: 1;
   letter-spacing: 1px;
@@ -1565,7 +1582,7 @@ a:active {
 }
 .slide-in-cart__content--white {
   font-family: "IntegralExtaBold";
-  font-size: 2.5rem;
+  font-size: 2.2rem;
   text-transform: uppercase;
   line-height: 1;
   letter-spacing: 1px;
@@ -1592,7 +1609,7 @@ a:active {
 }
 .modal-contact__titles--dark {
   font-family: "IntegralExtaBold";
-  font-size: 2.5rem;
+  font-size: 2.2rem;
   color: #000;
   text-transform: uppercase;
   line-height: 1;
@@ -1601,7 +1618,7 @@ a:active {
 }
 .modal-contact__titles--light {
   font-family: "IntegralExtaBold";
-  font-size: 2.5rem;
+  font-size: 2.2rem;
   color: #000000;
   text-transform: uppercase;
   line-height: 1;
@@ -1701,7 +1718,7 @@ a:active {
 .layout_options ul li {
   cursor: pointer;
   font-family: "IntegralExtaBold";
-  font-size: 2.5rem;
+  font-size: 2.2rem;
   text-transform: uppercase;
   line-height: 1;
   margin: 0 0 0.75rem 0;
