@@ -367,12 +367,12 @@ a:active {
   position: absolute;
   right: 0;
   top: 0;
-  width: 13.5rem;
+  width: 16.5rem;
   z-index: 1000;
   padding: 1.5rem;
   display: none;
   background-color: #ffffff;
-  height: calc(100vh - 32.5rem);
+  height: calc(100vh - 33.5rem);
 }
 .lois .location .slide-location-elements span {
   display: block;
@@ -396,7 +396,7 @@ a:active {
   display: flex;
   align-items: flex-end;
   justify-content: flex-end;
-  width: 17rem;
+  width: 20rem;
 }
 .lois-header__neigh .white-title {
   font-family: "IntegralExtaBold";
@@ -416,7 +416,7 @@ a:active {
   text-transform: uppercase;
   -webkit-text-fill-color: #000;
   line-height: 1;
-  margin-bottom: 0.75rem;
+  letter-spacing: 1px;
 }
 .lois-header__neigh h2 {
   margin: 0;
