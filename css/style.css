@@ -871,10 +871,16 @@ a:active {
 .lois .lottery-second .lottery-table .flex-table.custom-color {
   background-color: #9AFFBF;
 }
+.lois .lottery-second .lottery-table .flex-table.spec-row {
+  border-bottom: 1px solid #000000;
+}
+.lois .lottery-second .lottery-table .flex-table.spec-row .flex-row {
+  border-bottom: none;
+}
 .lois .lottery-second .lottery-table .flex-row {
   width: calc(100% / 5);
   text-align: left;
-  padding: 0.75em 0.75em;
+  padding: 0.75em 0.75em 0.75em 0;
   border-bottom: solid 1px #000000;
   font-size: 1rem;
 }
@@ -906,7 +912,7 @@ a:active {
 }
 .lois .lottery-second .lottery-table .flex-cell {
   width: calc(100% / 2);
-  padding: 0.75em 0.75em;
+  padding: 0.75em 0.75em 0.75em 0;
   text-align: left;
 }
 .lois .lottery-second .lottery-table-mark {
@@ -947,7 +953,7 @@ a:active {
   }
 }
 .lois .lottery-second .lottery-table-mark ol {
-  font-size: 1rem;
+  font-size: 0.8rem;
   padding: 0;
   margin: 0;
 }
@@ -1578,7 +1584,7 @@ a:active {
 }
 .modal-contact__titles--dark {
   font-family: "IntegralExtaBold";
-  font-size: 2rem;
+  font-size: 2.5rem;
   color: #000;
   text-transform: uppercase;
   line-height: 1;
