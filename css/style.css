@@ -315,18 +315,15 @@ a:active {
 .uk-sticky-fixed {
   width: auto !important;
   right: 1.5rem;
-  margin-top: 1.5rem;
 }
 @media (min-width: 1200px) and (max-width: 1799px) {
   .uk-sticky-fixed {
     right: 8vw;
-    margin-top: 1.5rem !important;
   }
 }
 @media (min-width: 1800px) {
   .uk-sticky-fixed {
     right: 8vw;
-    margin-top: 1.5rem !important;
   }
 }
 
@@ -788,7 +785,7 @@ a:active {
   outline: 0;
 }
 .lois .lottery-second-head {
-  margin: 0 1.5rem;
+  margin: 3rem 1.5rem 1.5rem 1.5rem;
 }
 .lois .lottery-second-head--black {
   font-family: "IntegralExtaBold";

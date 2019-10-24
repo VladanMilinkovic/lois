@@ -444,15 +444,12 @@ a {
 .uk-sticky-fixed {
   width: auto !important;
   right: 1.5rem;
-  margin-top: 1.5rem;
 
   @include breakpoint(mediumScreen) {
     right: 8vw;
-    margin-top: 1.5rem !important;
   }
   @include breakpoint(largeScreen) {
     right: 8vw;
-    margin-top: 1.5rem !important;
   }
 }
 
@@ -963,7 +960,7 @@ a {
 
 
       &-head {
-        margin: 0 1.5rem;
+        margin: 3rem 1.5rem 1.5rem 1.5rem;
 
         &--black {
           font-family: "IntegralExtaBold";
