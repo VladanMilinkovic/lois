@@ -6,6 +6,11 @@
   font-family: "FoundersGroteskText";
   src: url(../fonts/foundersgrotesktext-light.woff) format("truetype");
 }
+@font-face {
+  font-family: "FoundersGroteskTextBold";
+  src: url(../fonts/foundersgrotesktext-light.woff) format("truetype");
+  font-weight: 600;
+}
 * {
   margin: 0;
   padding: 0;
@@ -268,7 +273,7 @@ a:active {
 .lois-navigation-tabs .lois-navbar-nav__tabs {
   padding: 0 0.75rem;
   font-size: 1rem;
-  font-family: "FoundersGroteskText";
+  font-family: "FoundersGroteskTextBold";
   font-weight: 600;
 }
 @media (min-width: 1024px) {
@@ -1084,7 +1089,7 @@ a:active {
   font-weight: bold;
   color: #000;
   margin-bottom: 0.75rem;
-  font-family: "FoundersGroteskText";
+  font-family: "FoundersGroteskTextBold";
 }
 .lois .lottery-fourth .lottery-faq-block--title:hover {
   text-decoration: underline;

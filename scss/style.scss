@@ -8,6 +8,12 @@
   src: url(../fonts/foundersgrotesktext-light.woff) format("truetype");
 }
 
+@font-face {
+  font-family: "FoundersGroteskTextBold";
+  src: url(../fonts/foundersgrotesktext-light.woff) format("truetype");
+  font-weight: 600;
+}
+
 // Mixins
 @mixin breakpoint($point) {
   // from 2048px
@@ -398,7 +404,7 @@ a {
       &__tabs {
         padding: 0 .75rem;
         font-size: 1rem;
-        font-family: "FoundersGroteskText";
+        font-family: "FoundersGroteskTextBold";
         font-weight: 600;
 
         @include breakpoint(desktop) {
@@ -1301,7 +1307,7 @@ a {
             font-weight: bold;
             color: #000;
             margin-bottom: 0.75rem;
-            font-family: "FoundersGroteskText";
+            font-family: "FoundersGroteskTextBold";
 
             &:hover {
               text-decoration: underline;
