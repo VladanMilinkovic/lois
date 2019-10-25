@@ -310,7 +310,7 @@ h1, h2, h3, h4, h5, h6 {
 .uk-card {
   display: none;
 }
-@media screen and (min-width: 1366px) {
+@media screen and (min-width: 601px) {
   .uk-card {
     display: block;
   }
@@ -354,6 +354,11 @@ h1, h2, h3, h4, h5, h6 {
 .lois-uk-card {
   box-shadow: none;
   right: 8.5vw;
+}
+@media screen and (min-width: 601px) and (max-width: 1024px) {
+  .lois-uk-card {
+    right: 1.5rem;
+  }
 }
 
 .lois {
@@ -1226,6 +1231,10 @@ h1, h2, h3, h4, h5, h6 {
 .lois .lottery-third .lottery-apartments-wrapper .lottery-apartment {
   flex: 1;
   margin: 0 0.75rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  min-height: 22rem;
 }
 @media (min-width: 0px) and (max-width: 599px) {
   .lois .lottery-third .lottery-apartments-wrapper .lottery-apartment {

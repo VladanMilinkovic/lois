@@ -436,7 +436,7 @@ h1,h2,h3,h4,h5,h6 {
 .uk-card {
   display: none;
 
-  @media screen and (min-width: 1366px) {
+  @media screen and (min-width: 601px) {
    display: block;
   }
 }
@@ -473,6 +473,10 @@ h1,h2,h3,h4,h5,h6 {
 .lois-uk-card {
   box-shadow: none;
   right: 8.5vw;
+
+  @media screen and (min-width: 601px) and (max-width: 1024px) {
+    right: 1.5rem;
+  }
 }
 
 // Lois
@@ -1382,6 +1386,10 @@ h1,h2,h3,h4,h5,h6 {
           .lottery-apartment {
             flex: 1;
             margin: 0 .75rem;
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+            min-height: 22rem;
 
             @include breakpoint(mobileScreen) {
                 margin: 0;
