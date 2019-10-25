@@ -922,6 +922,11 @@ h1, h2, h3, h4, h5, h6 {
   height: calc(100vh - 19rem);
   display: flex;
 }
+@media (min-width: 0px) and (max-width: 599px) {
+  .lois .lottery-first {
+    height: auto;
+  }
+}
 .lois .lottery-first-wrapper {
   margin: auto 1.5rem;
   width: 100%;

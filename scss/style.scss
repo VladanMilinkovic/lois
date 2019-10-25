@@ -1079,6 +1079,10 @@ h1,h2,h3,h4,h5,h6 {
       height: calc(100vh - 19rem);
       display: flex;
 
+      @include breakpoint(mobileScreen) {
+        height: auto;
+      }
+
       &-wrapper {
         margin: auto 1.5rem;
         width: 100%;
