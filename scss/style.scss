@@ -1203,14 +1203,16 @@ h1,h2,h3,h4,h5,h6 {
           font-size: 1rem;
 
           @include breakpoint(mobileScreen) {
-            font-size: .8rem;
             width: calc(100% / 6) !important;
+            padding: 0.5em 0.5em 0.5em 0;
+            font-size: .9rem;
           }
         }
 
         .mobile-width-3 {
           @include breakpoint(mobileScreen) {
             width: calc(100% / 3) !important;
+            text-align: right;
           }
         }
         .mobile-width-6 {
@@ -1226,6 +1228,12 @@ h1,h2,h3,h4,h5,h6 {
         .mobile-width-1 {
           @include breakpoint(mobileScreen) {
             width: 100% !important;
+          }
+        }
+        .mobile-width-1-5 {
+          @include breakpoint(mobileScreen) {
+            width: calc(100% / 1.5) !important;
+            text-align: right !important;
           }
         }
 
