@@ -508,11 +508,10 @@ h1,h2,h3,h4,h5,h6 {
 
     span {
       border-left: 1px solid black;
-      margin-left: 0.5rem;
-      padding-left: .5rem;
+      margin-left: 1.5rem;
+      padding-left: 1.5rem;
       font-family: "FoundersGroteskText";
       font-size: 1rem;
-      font-weight: bold;
 
       @include breakpoint(mobileScreen) {
         font-size: 1.15rem;
@@ -660,7 +659,7 @@ h1,h2,h3,h4,h5,h6 {
         font-family: "FoundersGroteskText";
         margin-bottom: .75rem;
         margin-top: 0;
-        font-weight: bold;
+        font-weight: 600;
 
         @include breakpoint(mobileScreen) {
           font-size: 1.15rem;
@@ -938,7 +937,7 @@ h1,h2,h3,h4,h5,h6 {
     .building__first {
       @include breakpoint(desktop) {
         display: flex;
-        height: calc(100vh - 16.4rem);
+        height: calc(100vh - 16rem);
       }
 
       @include breakpoint(iPadProLandscape) {
@@ -1080,7 +1079,7 @@ h1,h2,h3,h4,h5,h6 {
           margin: 0 auto;
           color: #ffffff;
           font-size: 1rem;
-          font-weight: bold;
+          font-weight: 600;
           padding: 1.5rem 2rem;
           background-color: #000000;
           font-family: "FoundersGroteskText";
@@ -1361,7 +1360,7 @@ h1,h2,h3,h4,h5,h6 {
 
         &-black {
           font-size: 2.2rem;
-          font-weight: bold;
+          font-weight: 600;
           text-transform: lowercase;
           line-height: 1;
           color: #000000;
@@ -1517,7 +1516,7 @@ h1,h2,h3,h4,h5,h6 {
             cursor: pointer;
             padding: 0;
             font-size: 1rem;
-            font-weight: bold;
+            font-weight: 600;
             color: #000;
             margin-bottom: 0.8rem;
             font-family: "FoundersGroteskTextBold";
@@ -1833,7 +1832,7 @@ h1,h2,h3,h4,h5,h6 {
   }
 
   .highlights {
-    font-weight: bold;
+    font-weight: 600;
     color: #000000;
   }
 
