@@ -1204,9 +1204,36 @@ h1,h2,h3,h4,h5,h6 {
           font-size: 1rem;
 
           @include breakpoint(mobileScreen) {
-            font-size: 1.15rem;
+            font-size: .8rem;
+            width: calc(100% / 6) !important;
           }
+        }
 
+        .mobile-width-3 {
+          @include breakpoint(mobileScreen) {
+            width: calc(100% / 3) !important;
+          }
+        }
+        .mobile-width-6 {
+          @include breakpoint(mobileScreen) {
+            width: calc(100% / 6) !important;
+          }
+        }
+        .mobile-width-2 {
+           @include breakpoint(mobileScreen) {
+             width: calc(100% / 2) !important;
+           }
+         }
+        .mobile-width-1 {
+          @include breakpoint(mobileScreen) {
+            width: 100% !important;
+          }
+        }
+
+        .mobile-border-none {
+          @include breakpoint(mobileScreen) {
+           border-bottom: none;
+          }
         }
 
         .rowspan {
@@ -1323,6 +1350,10 @@ h1,h2,h3,h4,h5,h6 {
             }
 
             @include breakpoint(tablet) {
+              height: 3rem;
+            }
+
+            @media (min-width: 601px) and (max-width: 1024px) {
               height: 2.5rem;
             }
           }
