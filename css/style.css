@@ -262,11 +262,21 @@ h1, h2, h3, h4, h5, h6 {
   font-weight: 600;
   font-family: "IntegralExtaBold";
   margin-bottom: 1.5rem;
+  cursor: pointer;
+  text-decoration: none;
 }
 @media (min-width: 0px) and (max-width: 599px) {
   .lois-navigation__mobile__tabs--call {
     margin-bottom: 0.8rem;
   }
+}
+.lois-navigation__mobile__tabs--call:hover {
+  color: #9AFFBF;
+  text-decoration: none !important;
+}
+.lois-navigation__mobile__tabs--call:active {
+  color: #9AFFBF;
+  text-decoration: none;
 }
 .lois-navigation-tabs {
   display: none;
