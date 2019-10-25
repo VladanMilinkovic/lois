@@ -1229,10 +1229,8 @@ h1,h2,h3,h4,h5,h6 {
           }
         }
 
-        .mobile-border-none {
-          @include breakpoint(mobileScreen) {
-           border-bottom: none;
-          }
+        .table-border-none {
+          border-bottom: none;
         }
 
         .rowspan {

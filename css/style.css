@@ -1077,10 +1077,8 @@ h1, h2, h3, h4, h5, h6 {
     width: 100% !important;
   }
 }
-@media (min-width: 0px) and (max-width: 599px) {
-  .lois .lottery-second .lottery-table .mobile-border-none {
-    border-bottom: none;
-  }
+.lois .lottery-second .lottery-table .table-border-none {
+  border-bottom: none;
 }
 .lois .lottery-second .lottery-table .rowspan {
   display: flex;
