@@ -96,6 +96,11 @@ h1, h2, h3, h4, h5, h6 {
     padding-left: 0.8rem;
   }
 }
+@media (max-height: 601px) and (max-width: 900px) {
+  .lois-navigation--address {
+    font-size: 1.15rem;
+  }
+}
 .lois-navigation--address .number {
   display: none;
   padding-left: 0.5rem;
@@ -274,6 +279,11 @@ h1, h2, h3, h4, h5, h6 {
     display: flex;
   }
 }
+@media (min-width: 600px) and (max-width: 899px) {
+  .lois-navigation-tabs {
+    width: 50%;
+  }
+}
 .lois-navigation-tabs .lois-navbar-nav {
   list-style-type: none;
   display: flex;
@@ -297,6 +307,11 @@ h1, h2, h3, h4, h5, h6 {
   font-family: "FoundersGroteskTextBold";
 }
 @media (min-width: 0px) and (max-width: 599px) {
+  .lois-navigation-tabs .lois-navbar-nav__tabs {
+    font-size: 1.15rem;
+  }
+}
+@media (max-height: 600px) and (max-width: 900px) {
   .lois-navigation-tabs .lois-navbar-nav__tabs {
     font-size: 1.15rem;
   }
@@ -372,7 +387,7 @@ h1, h2, h3, h4, h5, h6 {
 }
 @media (min-width: 0px) and (max-width: 599px) {
   .lois {
-    padding-bottom: 4rem;
+    padding-bottom: 2.5rem;
   }
 }
 .lois-dots {
@@ -424,6 +439,11 @@ h1, h2, h3, h4, h5, h6 {
     font-size: 1.15rem;
   }
 }
+@media (max-height: 600px) and (max-width: 900px) {
+  .lois .sticky-pdf span {
+    font-size: 1.15rem;
+  }
+}
 .lois .location {
   height: calc(100vh - 30rem);
   min-height: 35rem;
@@ -464,6 +484,11 @@ h1, h2, h3, h4, h5, h6 {
   font-family: "FoundersGroteskText";
 }
 @media (min-width: 0px) and (max-width: 599px) {
+  .lois .location .slide-location-elements span {
+    font-size: 1.15rem;
+  }
+}
+@media (max-height: 600px) and (max-width: 900px) {
   .lois .location .slide-location-elements span {
     font-size: 1.15rem;
   }
@@ -559,6 +584,11 @@ h1, h2, h3, h4, h5, h6 {
   .lois-header__features--title {
     font-size: 1.15rem;
     margin-bottom: 0.8rem;
+  }
+}
+@media (max-height: 600px) and (max-width: 900px) {
+  .lois-header__features--title {
+    font-size: 1.15rem;
   }
 }
 .lois-header__features .lois-header-list {
@@ -947,6 +977,11 @@ h1, h2, h3, h4, h5, h6 {
   .lois .lottery-first-wrapper {
     width: 50%;
     margin: auto;
+  }
+}
+@media (max-height: 600px) and (max-width: 900px) {
+  .lois .lottery-first-wrapper {
+    font-size: 1.15rem;
   }
 }
 .lois .lottery-first-wrapper-title {

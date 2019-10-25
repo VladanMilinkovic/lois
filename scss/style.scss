@@ -208,6 +208,12 @@ h1,h2,h3,h4,h5,h6 {
       padding-left: .8rem;
     }
 
+    @media (max-height: 601px) and (max-width: 900px) {
+      font-size: 1.15rem;
+    }
+
+
+
     .number {
       display: none;
       padding-left: .5rem;
@@ -398,6 +404,10 @@ h1,h2,h3,h4,h5,h6 {
       display: flex;
     }
 
+    @media (min-width: 600px) and (max-width: 899px) {
+      width: 50%;
+    }
+
     .lois-navbar-nav {
       list-style-type:none;
       display: flex;
@@ -420,6 +430,10 @@ h1,h2,h3,h4,h5,h6 {
         font-family: "FoundersGroteskTextBold";
 
         @include breakpoint(mobileScreen) {
+          font-size: 1.15rem;
+        }
+
+        @media (max-height: 600px) and (max-width: 900px) {
           font-size: 1.15rem;
         }
 
@@ -489,7 +503,7 @@ h1,h2,h3,h4,h5,h6 {
   padding: 4rem 0 3.6rem 0;
 
   @include breakpoint(mobileScreen) {
-    padding-bottom: 4rem;
+    padding-bottom: 2.5rem;
   }
 
   @media screen and (min-width: 601px) and (max-width: 1024px) {
@@ -549,6 +563,9 @@ h1,h2,h3,h4,h5,h6 {
       @include breakpoint(mobileScreen) {
         font-size: 1.15rem;
       }
+      @media (max-height: 600px) and (max-width: 900px) {
+        font-size: 1.15rem;
+      }
     }
   }
 
@@ -594,6 +611,9 @@ h1,h2,h3,h4,h5,h6 {
           font-family: "FoundersGroteskText";
 
           @include breakpoint(mobileScreen) {
+            font-size: 1.15rem;
+          }
+          @media (max-height: 600px) and (max-width: 900px) {
             font-size: 1.15rem;
           }
         }
@@ -696,6 +716,9 @@ h1,h2,h3,h4,h5,h6 {
         @include breakpoint(mobileScreen) {
           font-size: 1.15rem;
           margin-bottom: .8rem;
+        }
+        @media (max-height: 600px) and (max-width: 900px) {
+          font-size: 1.15rem;
         }
 
       }
@@ -1099,6 +1122,9 @@ h1,h2,h3,h4,h5,h6 {
         @media (min-width: 1025px) {
           width: 50%;
           margin: auto;
+        }
+        @media (max-height: 600px) and (max-width: 900px) {
+          font-size: 1.15rem;
         }
 
         &-title {
