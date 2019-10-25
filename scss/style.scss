@@ -223,7 +223,7 @@ h1,h2,h3,h4,h5,h6 {
   }
   #mobile-icon {
     width: 2rem;
-    height: 3rem;
+    height: 3.1rem;
     position: relative;
     margin: 0;
     -webkit-transform: rotate(0deg);
@@ -319,7 +319,13 @@ h1,h2,h3,h4,h5,h6 {
         color: #fff;
       }
     }
-
+    &-email {
+      background-image : url('../images/eho.svg');
+      background-repeat: no-repeat;
+      background-size: cover;
+      height: 21px;
+      width: 26px;
+    }
 
     &__tabs {
       display: none;
@@ -335,7 +341,7 @@ h1,h2,h3,h4,h5,h6 {
         color: white;
         margin-top: 4rem;
         padding-bottom: 1.5rem;
-        z-index: 10;
+        z-index: 100000;
       }
 
       &__nav {
@@ -412,7 +418,6 @@ h1,h2,h3,h4,h5,h6 {
         padding: 0 .75rem;
         font-size: 1rem;
         font-family: "FoundersGroteskTextBold";
-        font-weight: 600;
 
         @include breakpoint(mobileScreen) {
           font-size: 1.15rem;
@@ -484,11 +489,11 @@ h1,h2,h3,h4,h5,h6 {
   padding: 4rem 0 3.6rem 0;
 
   @include breakpoint(mobileScreen) {
-    padding-bottom: 12rem;
+    padding-bottom: 4rem;
   }
 
   @media screen and (min-width: 601px) and (max-width: 1024px) {
-    padding-bottom: 6.6rem;
+    // padding-bottom: 6.6rem;
   }
 
   &-dots {
@@ -496,6 +501,34 @@ h1,h2,h3,h4,h5,h6 {
 
     @include breakpoint(mobileScreen) {
       display: flex;
+      margin: .8rem 0 !important;
+    }
+
+    a {
+      background-color: #000;
+    }
+
+    .uk-active {
+
+      a {
+        background-color: #ffffff !important;
+        border-color: #000000 !important;
+      }
+    }
+
+    .uk-dotnav>*>* {
+      display: block;
+      box-sizing: border-box;
+      width: .6rem;
+      height: .6rem;
+      border-radius: 50%;
+      background: 0 0;
+      text-indent: 100%;
+      overflow: hidden;
+      white-space: nowrap;
+      border: 1px solid  #000;
+      transition: .2s ease-in-out;
+      transition-property: background-color,border-color;
     }
   }
 
@@ -659,7 +692,6 @@ h1,h2,h3,h4,h5,h6 {
         font-family: "FoundersGroteskText";
         margin-bottom: .75rem;
         margin-top: 0;
-        font-weight: 600;
 
         @include breakpoint(mobileScreen) {
           font-size: 1.15rem;
@@ -951,6 +983,9 @@ h1,h2,h3,h4,h5,h6 {
     margin-top: 1.5rem;
     height: 20rem;
 
+    @include breakpoint(mobileScreen) {
+      margin-bottom: 8rem;
+    }
     @include breakpoint(tablet) {
       margin-bottom: 4rem;
       height: calc(100vh - 13rem);
@@ -971,6 +1006,10 @@ h1,h2,h3,h4,h5,h6 {
 
     .uk-position-relative {
       height: 100%;
+
+      @include breakpoint(mobileScreen) {
+        right: 0;
+      }
 
       @include breakpoint(tablet) {
         height: calc(100vh - 16rem);
@@ -1002,8 +1041,33 @@ h1,h2,h3,h4,h5,h6 {
     .uk-position-center-right {
       text-decoration: none;
     }
+    .uk-slidenav {
+      @include breakpoint(mobileScreen) {
+        right: 0;
+      }
+    }
     .uk-slidenav:hover {
       color: #ffffff;
+    }
+
+    .uk-position-small {
+
+      @include breakpoint(mobileScreen) {
+
+      }
+
+      span {
+        margin-right: 0;
+        margin-left: 0;
+      }
+
+      svg {
+        @include breakpoint(mobileScreen) {
+          display: none;
+        }
+      }
+
+
     }
   }
   //End Slider
@@ -1079,7 +1143,6 @@ h1,h2,h3,h4,h5,h6 {
           margin: 0 auto;
           color: #ffffff;
           font-size: 1rem;
-          font-weight: 600;
           padding: 1.5rem 2rem;
           background-color: #000000;
           font-family: "FoundersGroteskText";
@@ -1205,7 +1268,6 @@ h1,h2,h3,h4,h5,h6 {
           @include breakpoint(mobileScreen) {
             width: calc(100% / 6) !important;
             padding: 0.5em 0.5em 0.5em 0;
-            font-size: .9rem;
           }
         }
 
@@ -1317,6 +1379,7 @@ h1,h2,h3,h4,h5,h6 {
             @include breakpoint(mobileScreen) {
               margin-left: .8rem;
               line-height: 1.2;
+              padding: .8rem;
             }
           }
 
@@ -1525,7 +1588,6 @@ h1,h2,h3,h4,h5,h6 {
             cursor: pointer;
             padding: 0;
             font-size: 1rem;
-            font-weight: 600;
             color: #000;
             margin-bottom: 0.8rem;
             font-family: "FoundersGroteskTextBold";
@@ -1589,7 +1651,7 @@ h1,h2,h3,h4,h5,h6 {
   z-index:50000; //Just in case :)
 
   @include breakpoint(mobileScreen) {
-    padding: .8rem;
+    padding: .8rem 0;
   }
 
 
