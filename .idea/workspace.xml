@@ -2,9 +2,18 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="19036ac1-fd22-45e0-aa2d-52662cc300d2" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/fonts/foundersgrotesktext-medium.eot" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/fonts/foundersgrotesktext-medium.ttf" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/fonts/foundersgrotesktext-medium.woff" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/images/Group 8.svg" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/css/style.css" beforeDir="false" afterPath="$PROJECT_DIR$/css/style.css" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/css/style.css.map" beforeDir="false" afterPath="$PROJECT_DIR$/css/style.css.map" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/index.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/pages/lottery.html" beforeDir="false" afterPath="$PROJECT_DIR$/pages/lottery.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/pages/neighborhood.html" beforeDir="false" afterPath="$PROJECT_DIR$/pages/neighborhood.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/pages/residences.html" beforeDir="false" afterPath="$PROJECT_DIR$/pages/residences.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/pages/slide.html" beforeDir="false" afterPath="$PROJECT_DIR$/pages/slide.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/scss/style.scss" beforeDir="false" afterPath="$PROJECT_DIR$/scss/style.scss" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -29,13 +38,14 @@
   <component name="PropertiesComponent">
     <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/../mercury" />
     <property name="nodejs_interpreter_path.stuck_in_default_project" value="undefined stuck path" />
     <property name="nodejs_npm_path_reset_for_default_project" value="true" />
   </component>
   <component name="RecentsManager">
     <key name="MoveFile.RECENT_KEYS">
       <recent name="$PROJECT_DIR$/images" />
+      <recent name="$PROJECT_DIR$/fonts" />
       <recent name="$PROJECT_DIR$" />
     </key>
   </component>
@@ -67,7 +77,7 @@
       <workItem from="1571904838414" duration="6704000" />
       <workItem from="1571928572024" duration="292000" />
       <workItem from="1571936718305" duration="2456000" />
-      <workItem from="1571942995016" duration="2796000" />
+      <workItem from="1571942995016" duration="15261000" />
     </task>
     <servers />
   </component>
@@ -92,7 +102,7 @@
       <breakpoints>
         <line-breakpoint enabled="true" type="javascript">
           <url>file://$PROJECT_DIR$/pages/neighborhood.html</url>
-          <line>212</line>
+          <line>217</line>
           <option name="timeStamp" value="1" />
         </line-breakpoint>
       </breakpoints>

@@ -8,8 +8,7 @@
 }
 @font-face {
   font-family: "FoundersGroteskTextBold";
-  src: url(../fonts/foundersgrotesktext-light.woff) format("truetype");
-  font-weight: 600;
+  src: url(../fonts/foundersgrotesktext-medium.woff) format("truetype");
 }
 * {
   margin: 0;
@@ -52,35 +51,16 @@ html {
   }
 }
 
-body {
-  font-size: 10px;
-}
-@media screen and (min-width: 601px) and (max-width: 1280px) {
-  body {
-    font-size: 12px;
-  }
-}
-@media screen and (min-width: 1200px) and (max-width: 1366px) {
-  body {
-    font-size: 12px;
-  }
-}
-@media screen and (min-width: 1367px) and (max-width: 1600px) {
-  body {
-    font-size: 14px;
-  }
-}
-@media screen and (min-width: 1920px) {
-  body {
-    font-size: 16px;
-  }
-}
-
 a {
   text-decoration: none;
 }
 a:active {
   text-decoration: none;
+}
+
+h1, h2, h3, h4, h5, h6 {
+  letter-spacing: 1px;
+  line-height: 1;
 }
 
 .lois-navigation {
@@ -95,6 +75,11 @@ a:active {
   justify-content: space-between;
   z-index: 100000;
 }
+@media (min-width: 0px) and (max-width: 599px) {
+  .lois-navigation {
+    margin-bottom: 0.8rem;
+  }
+}
 @media (min-width: 1200px) {
   .lois-navigation {
     width: 86vw;
@@ -104,6 +89,12 @@ a:active {
   font-family: "FoundersGroteskText";
   font-size: 1rem;
   padding-left: 1.5rem;
+}
+@media (min-width: 0px) and (max-width: 599px) {
+  .lois-navigation--address {
+    font-size: 1.15rem;
+    padding-left: 0.8rem;
+  }
 }
 .lois-navigation--address .number {
   display: none;
@@ -121,7 +112,7 @@ a:active {
   }
 }
 .lois-navigation #mobile-icon {
-  width: 3rem;
+  width: 2rem;
   height: 3rem;
   position: relative;
   margin: 0;
@@ -192,6 +183,7 @@ a:active {
   .lois-navigation__mobile {
     display: flex;
     align-items: center;
+    padding-right: 0.8rem;
   }
 }
 @media (min-width: 600px) {
@@ -202,6 +194,11 @@ a:active {
 .lois-navigation__mobile span {
   font-size: 2.5rem;
   margin-right: 1.5rem;
+}
+@media (min-width: 0px) and (max-width: 599px) {
+  .lois-navigation__mobile span {
+    margin-right: 0.8rem;
+  }
 }
 .lois-navigation__mobile span a {
   color: #fff;
@@ -229,6 +226,7 @@ a:active {
 }
 .lois-navigation__mobile__tabs__nav li {
   font-family: "IntegralExtaBold";
+  letter-spacing: 1px;
 }
 .lois-navigation__mobile__tabs__nav li a {
   color: #000;
@@ -238,11 +236,11 @@ a:active {
   -webkit-text-stroke-color: #fff;
 }
 .lois-navigation__mobile__tabs__nav li a.active {
-  color: black;
-  -webkit-text-fill-color: white;
-  /* Will override color (regardless of order) */
+  color: #000000;
+  -webkit-text-fill-color: #ffffff;
   -webkit-text-stroke-width: 1px;
-  -webkit-text-stroke-color: black;
+  -webkit-text-stroke-color: #ffffff;
+  letter-spacing: 1.2px;
 }
 .lois-navigation__mobile__tabs--call {
   color: #9AFFBF;
@@ -252,6 +250,11 @@ a:active {
   font-weight: 600;
   font-family: "IntegralExtaBold";
   margin-bottom: 1.5rem;
+}
+@media (min-width: 0px) and (max-width: 599px) {
+  .lois-navigation__mobile__tabs--call {
+    margin-bottom: 0.8rem;
+  }
 }
 .lois-navigation-tabs {
   display: none;
@@ -286,6 +289,11 @@ a:active {
   font-size: 1rem;
   font-family: "FoundersGroteskTextBold";
   font-weight: 600;
+}
+@media (min-width: 0px) and (max-width: 599px) {
+  .lois-navigation-tabs .lois-navbar-nav__tabs {
+    font-size: 1.15rem;
+  }
 }
 @media (min-width: 1024px) {
   .lois-navigation-tabs .lois-navbar-nav__tabs {
@@ -351,6 +359,24 @@ a:active {
 .lois {
   padding: 4rem 0 3.6rem 0;
 }
+@media (min-width: 0px) and (max-width: 599px) {
+  .lois {
+    padding-bottom: 12rem;
+  }
+}
+@media screen and (min-width: 601px) and (max-width: 1024px) {
+  .lois {
+    padding-bottom: 6.6rem;
+  }
+}
+.lois-dots {
+  display: none;
+}
+@media (min-width: 0px) and (max-width: 599px) {
+  .lois-dots {
+    display: flex;
+  }
+}
 .lois .sticky-pdf {
   padding: 1.5rem;
   display: flex;
@@ -366,15 +392,26 @@ a:active {
   font-size: 1rem;
   font-weight: bold;
 }
+@media (min-width: 0px) and (max-width: 599px) {
+  .lois .sticky-pdf span {
+    font-size: 1.15rem;
+  }
+}
 .lois .location {
   height: calc(100vh - 30rem);
-  min-height: 18rem;
+  min-height: 35rem;
   position: relative;
   margin: 1.5rem;
+}
+@media (min-width: 0px) and (max-width: 599px) {
+  .lois .location {
+    margin: 0.8rem;
+  }
 }
 .lois .location #map {
   width: 100%;
   height: 100%;
+  min-height: 35rem;
 }
 .lois .location .slide-location {
   position: absolute;
@@ -399,8 +436,18 @@ a:active {
   cursor: pointer;
   font-family: "FoundersGroteskText";
 }
+@media (min-width: 0px) and (max-width: 599px) {
+  .lois .location .slide-location-elements span {
+    font-size: 1.15rem;
+  }
+}
 .lois .location .open {
   display: block;
+}
+@media (min-width: 0px) and (max-width: 599px) {
+  .lois .location .open {
+    display: none;
+  }
 }
 .lois-header {
   margin-bottom: 1.5rem;
@@ -410,18 +457,34 @@ a:active {
   padding: 0 1.5rem;
   align-items: flex-start;
 }
+@media (min-width: 0px) and (max-width: 599px) {
+  .lois-header {
+    margin: 0.8rem 0;
+    padding: 0 0.8rem;
+  }
+}
+.lois-header-logo {
+  background-image: url("../images/Group 8.svg");
+  background-repeat: no-repeat;
+  background-size: cover;
+  height: 13rem;
+  width: 23rem;
+}
 .lois-header__neigh {
   display: flex;
   align-items: flex-end;
   justify-content: flex-end;
   width: 20rem;
 }
+@media (min-width: 0px) and (max-width: 599px) {
+  .lois-header__neigh {
+    margin-top: 0.8rem;
+  }
+}
 .lois-header__neigh .white-title {
   font-family: "IntegralExtaBold";
   font-size: 2.2rem;
   text-transform: uppercase;
-  line-height: 1;
-  letter-spacing: 1px;
   cursor: pointer;
   color: #000000;
   -webkit-text-fill-color: #ffffff;
@@ -434,8 +497,6 @@ a:active {
   font-size: 2.2rem;
   text-transform: uppercase;
   -webkit-text-fill-color: #000;
-  line-height: 1;
-  letter-spacing: 1px;
   align-items: flex-end;
   display: flex;
   flex-direction: column;
@@ -468,6 +529,12 @@ a:active {
   margin-top: 0;
   font-weight: bold;
 }
+@media (min-width: 0px) and (max-width: 599px) {
+  .lois-header__features--title {
+    font-size: 1.15rem;
+    margin-bottom: 0.8rem;
+  }
+}
 .lois-header__features .lois-header-list {
   list-style-type: none;
   margin: 0;
@@ -479,8 +546,18 @@ a:active {
   height: 1rem;
   font-family: "FoundersGroteskText";
 }
+@media (min-width: 0px) and (max-width: 599px) {
+  .lois-header__features .lois-header-list--item {
+    font-size: 1.15rem;
+  }
+}
 .lois .building {
   padding: 0 1.5rem;
+}
+@media (min-width: 0px) and (max-width: 599px) {
+  .lois .building {
+    padding: 0 0.8rem;
+  }
 }
 .lois .building-image {
   display: block;
@@ -504,6 +581,7 @@ a:active {
 .lois .building-first-description {
   display: flex;
   flex-direction: column;
+  min-height: 35rem;
 }
 @media (min-width: 600px) {
   .lois .building-first-description {
@@ -523,12 +601,15 @@ a:active {
 }
 @media (min-width: 0px) and (max-width: 599px) {
   .lois .building .description-text {
-    margin-top: 1.5rem;
+    margin: 0.8rem 0;
   }
 }
 @media (min-width: 600px) {
   .lois .building .description-text {
     width: 50%;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
   }
 }
 @media (min-width: 1024px) {
@@ -540,8 +621,6 @@ a:active {
   font-family: "IntegralExtaBold";
   font-size: 2.2rem;
   text-transform: uppercase;
-  line-height: 1;
-  letter-spacing: 1px;
   margin: 0;
   color: #000000;
   -webkit-text-fill-color: #000000;
@@ -551,8 +630,6 @@ a:active {
   font-size: 2.2rem;
   text-transform: uppercase;
   color: #000000;
-  line-height: 1;
-  letter-spacing: 1px;
   -webkit-text-fill-color: #ffffff;
   -webkit-text-stroke-width: 1px;
   -webkit-text-stroke-color: #000000;
@@ -566,7 +643,8 @@ a:active {
 }
 @media (min-width: 0px) and (max-width: 599px) {
   .lois .building .description-text--content {
-    margin-bottom: 1.5rem;
+    font-size: 1.15rem;
+    margin: 0.8rem 0 0 0;
   }
 }
 @media (min-width: 600px) {
@@ -577,10 +655,17 @@ a:active {
 @media (min-width: 1024px) {
   .lois .building .description-text--content {
     margin-right: 0;
+    margin-bottom: 1.5rem;
   }
 }
 .lois .building__first {
   margin-top: 1.5rem;
+  min-height: 35rem;
+}
+@media (min-width: 0px) and (max-width: 599px) {
+  .lois .building__first {
+    margin-top: 0.8rem;
+  }
 }
 @media (min-width: 1024px) {
   .lois .building__first {
@@ -593,6 +678,11 @@ a:active {
     height: calc(100vh - 30.5rem);
   }
 }
+@media (min-width: 600px) and (max-width: 1024px) {
+  .lois .building__first {
+    height: auto;
+  }
+}
 .lois .building__first--bg {
   height: calc(100vh - 40rem);
   width: 67%;
@@ -602,6 +692,11 @@ a:active {
 @media only screen and (min-device-width: 768px) and (max-device-width: 1024px) and (-webkit-min-device-pixel-ratio: 2) {
   .lois .building__first--bg {
     height: calc(100vh - 49rem);
+    width: 100%;
+  }
+}
+@media only screen and (min-width: 600px) {
+  .lois .building__first--bg {
     width: 100%;
   }
 }
@@ -625,6 +720,9 @@ a:active {
     max-height: 50%;
   }
 }
+.lois .building-second {
+  min-height: 35rem;
+}
 @media (min-width: 600px) {
   .lois .building-second {
     margin-top: 1.5rem;
@@ -639,7 +737,7 @@ a:active {
 }
 @media only screen and (min-device-width: 768px) and (max-device-width: 1024px) and (-webkit-min-device-pixel-ratio: 2) {
   .lois .building-second {
-    height: calc(100vh - 13rem);
+    height: auto;
   }
 }
 @media only screen and (min-device-width: 768px) and (max-device-width: 1024px) and (-webkit-min-device-pixel-ratio: 2) and (orientation: landscape) {
@@ -649,7 +747,7 @@ a:active {
 }
 @media only screen and (min-device-width: 1024px) and (max-device-width: 1366px) and (-webkit-min-device-pixel-ratio: 2) {
   .lois .building-second {
-    height: calc(100vh - 16.5rem);
+    height: auto;
   }
 }
 @media (min-width: 600px) {
@@ -666,7 +764,7 @@ a:active {
 }
 @media (min-width: 0px) and (max-width: 599px) {
   .lois .building-second .building-description .description-text {
-    margin-top: 1.5rem;
+    margin-top: 0.8rem;
   }
 }
 @media (min-width: 600px) and (max-width: 899px) {
@@ -719,6 +817,11 @@ a:active {
     height: calc(100vh - 13rem);
   }
 }
+@media screen and (min-width: 601px) and (max-width: 1024px) {
+  .lois .slider-box {
+    height: calc(100vh - 50rem);
+  }
+}
 .lois .slider-box .uk-position-center-right,
 .lois .slider-box .uk-position-center-left {
   top: 88% !important;
@@ -737,6 +840,11 @@ a:active {
     height: calc(100vh - 16rem);
   }
 }
+@media screen and (min-width: 601px) and (max-width: 1024px) {
+  .lois .slider-box .uk-position-relative {
+    height: calc(100vh - 50rem);
+  }
+}
 .lois .slider-box .uk-position-relative .uk-slideshow-items {
   min-height: 100% !important;
   height: 100%;
@@ -748,6 +856,11 @@ a:active {
 }
 .lois .slider-box .next-text {
   margin-right: 1.5rem;
+}
+@media (min-width: 0px) and (max-width: 599px) {
+  .lois .slider-box .next-text {
+    margin-right: 0.8rem;
+  }
 }
 .lois .slider-box .uk-position-center-right {
   text-decoration: none;
@@ -764,7 +877,18 @@ a:active {
   width: 100%;
   font-family: "FoundersGroteskText";
 }
+@media (min-width: 0px) and (max-width: 599px) {
+  .lois .lottery-first-wrapper {
+    margin: auto 0.8rem;
+  }
+}
 @media (min-width: 600px) {
+  .lois .lottery-first-wrapper {
+    width: 80%;
+    margin: auto;
+  }
+}
+@media (min-width: 1025px) {
   .lois .lottery-first-wrapper {
     width: 50%;
     margin: auto;
@@ -777,8 +901,6 @@ a:active {
   font-family: "IntegralExtaBold";
   font-size: 2.2rem;
   text-transform: uppercase;
-  line-height: 1;
-  letter-spacing: 1px;
   margin: 0;
   color: #000000;
   text-align: center;
@@ -788,8 +910,6 @@ a:active {
   font-family: "IntegralExtaBold";
   font-size: 2.2rem;
   text-transform: uppercase;
-  line-height: 1;
-  letter-spacing: 1px;
   margin: 0;
   text-align: center;
   color: #000000;
@@ -804,6 +924,13 @@ a:active {
   font-size: 1rem;
   word-break: break-all;
 }
+@media (min-width: 0px) and (max-width: 599px) {
+  .lois .lottery-first-wrapper-text {
+    font-size: 1.15rem;
+    padding: 0;
+    margin-top: 0.8rem;
+  }
+}
 .lois .lottery-first-wrapper-button {
   cursor: pointer;
   display: block;
@@ -816,15 +943,23 @@ a:active {
   font-family: "FoundersGroteskText";
   outline: 0;
 }
+@media (min-width: 0px) and (max-width: 599px) {
+  .lois .lottery-first-wrapper-button {
+    font-size: 1.15rem;
+  }
+}
 .lois .lottery-second-head {
   margin: 3rem 1.5rem 1.5rem 1.5rem;
+}
+@media (min-width: 0px) and (max-width: 599px) {
+  .lois .lottery-second-head {
+    margin: 0.8rem 0.8rem 0.8rem 0.8rem;
+  }
 }
 .lois .lottery-second-head--black {
   font-family: "IntegralExtaBold";
   font-size: 2.2rem;
   text-transform: uppercase;
-  line-height: 1;
-  letter-spacing: 1px;
   margin: 0;
   color: #000000;
   -webkit-text-fill-color: #000000;
@@ -833,8 +968,6 @@ a:active {
   font-family: "IntegralExtaBold";
   font-size: 2.2rem;
   text-transform: uppercase;
-  line-height: 1;
-  letter-spacing: 1px;
   color: #000000;
   -webkit-text-fill-color: #ffffff;
   -webkit-text-stroke-width: 1px;
@@ -849,7 +982,7 @@ a:active {
 @media (min-width: 0px) and (max-width: 599px) {
   .lois .lottery-second .lottery-table {
     background-color: #ffffff;
-    margin: 1.5rem 1.5rem 0 1.5rem;
+    margin: 0.8rem 0.8rem 0 0.8rem;
   }
 }
 .lois .lottery-second .lottery-table div {
@@ -914,6 +1047,11 @@ a:active {
   border-bottom: solid 1px #000000;
   font-size: 1rem;
 }
+@media (min-width: 0px) and (max-width: 599px) {
+  .lois .lottery-second .lottery-table .flex-row {
+    font-size: 1.15rem;
+  }
+}
 .lois .lottery-second .lottery-table .rowspan {
   display: flex;
   flex-flow: row wrap;
@@ -950,6 +1088,11 @@ a:active {
   width: 100%;
   margin: 3rem 1.5rem 1.5rem auto;
 }
+@media (min-width: 0px) and (max-width: 599px) {
+  .lois .lottery-second .lottery-table-mark {
+    margin: 3rem 0 0 0;
+  }
+}
 @media (min-width: 600px) {
   .lois .lottery-second .lottery-table-mark {
     padding: 1.5rem 1.5rem 1.5rem 2rem;
@@ -982,10 +1125,21 @@ a:active {
   padding: 0;
   margin: 0;
 }
+@media (min-width: 0px) and (max-width: 599px) {
+  .lois .lottery-second .lottery-table-mark ol {
+    margin-left: 0.8rem;
+    line-height: 1.2;
+  }
+}
 .lois .lottery-second .rent-smart {
   background-color: #99ffbf;
   text-align: center;
   padding: 4rem 1.5rem;
+}
+@media (min-width: 0px) and (max-width: 599px) {
+  .lois .lottery-second .rent-smart {
+    padding: 4rem 0.8rem;
+  }
 }
 .lois .lottery-second .rent-smart-content {
   width: 100%;
@@ -994,6 +1148,24 @@ a:active {
 @media (min-width: 600px) {
   .lois .lottery-second .rent-smart-content {
     width: 50%;
+  }
+}
+.lois .lottery-second .rent-smart-content--image {
+  background-image: url("../images/rentsmart.svg");
+  background-repeat: no-repeat;
+  background-size: 100%;
+  height: 3rem;
+  width: 30%;
+  margin: 0 auto;
+}
+@media (min-width: 0px) and (max-width: 599px) {
+  .lois .lottery-second .rent-smart-content--image {
+    width: 50%;
+  }
+}
+@media (min-width: 600px) {
+  .lois .lottery-second .rent-smart-content--image {
+    height: 2.5rem;
   }
 }
 .lois .lottery-second .rent-smart-black {
@@ -1019,8 +1191,28 @@ a:active {
   margin: 1.5rem 0 0 0;
   color: #000000;
 }
+@media (min-width: 0px) and (max-width: 599px) {
+  .lois .lottery-second .rent-smart-text {
+    margin: 0;
+  }
+}
+@media (min-width: 600px) {
+  .lois .lottery-second .rent-smart-text {
+    margin: 0;
+  }
+}
+@media (min-width: 1800px) {
+  .lois .lottery-second .rent-smart-text {
+    margin: 1.5rem 0 0 0;
+  }
+}
 .lois .lottery-third .lottery-apartments {
   margin: 1.5rem 0.75rem 0 0.75rem;
+}
+@media (min-width: 0px) and (max-width: 599px) {
+  .lois .lottery-third .lottery-apartments {
+    margin: 0.8rem;
+  }
 }
 .lois .lottery-third .lottery-apartments-wrapper {
   display: flex;
@@ -1035,12 +1227,15 @@ a:active {
   flex: 1;
   margin: 0 0.75rem;
 }
+@media (min-width: 0px) and (max-width: 599px) {
+  .lois .lottery-third .lottery-apartments-wrapper .lottery-apartment {
+    margin: 0;
+  }
+}
 .lois .lottery-third .lottery-apartments-wrapper .lottery-apartment-head--black {
   font-family: "IntegralExtaBold";
   font-size: 2.2rem;
   text-transform: uppercase;
-  line-height: 1;
-  letter-spacing: 1px;
   margin: 0;
   color: #000000;
   -webkit-text-fill-color: #000000;
@@ -1049,8 +1244,6 @@ a:active {
   font-family: "IntegralExtaBold";
   font-size: 2.2rem;
   text-transform: uppercase;
-  line-height: 1;
-  letter-spacing: 1px;
   color: #000000;
   -webkit-text-fill-color: #ffffff;
   -webkit-text-stroke-width: 1px;
@@ -1059,6 +1252,11 @@ a:active {
 }
 .lois .lottery-third .lottery-apartments-wrapper .lottery-apartment-image {
   margin: 1.5rem 0;
+}
+@media (min-width: 0px) and (max-width: 599px) {
+  .lois .lottery-third .lottery-apartments-wrapper .lottery-apartment-image {
+    margin: 0.8rem 0;
+  }
 }
 .lois .lottery-third .lottery-apartments-wrapper .lottery-apartment-image .building__first--bg {
   width: 100%;
@@ -1076,15 +1274,23 @@ a:active {
 .lois .lottery-fourth {
   margin: 0 1.5rem;
 }
+@media (min-width: 0px) and (max-width: 599px) {
+  .lois .lottery-fourth {
+    margin: 0 0.8rem;
+  }
+}
 .lois .lottery-fourth .lottery-faq-head {
   margin-bottom: 1.5rem;
+}
+@media (min-width: 0px) and (max-width: 599px) {
+  .lois .lottery-fourth .lottery-faq-head {
+    margin: 0 0 0.8rem 0;
+  }
 }
 .lois .lottery-fourth .lottery-faq-head--black {
   font-family: "IntegralExtaBold";
   font-size: 2.2rem;
   text-transform: uppercase;
-  line-height: 1;
-  letter-spacing: 1px;
   margin: 0;
   color: #000000;
   -webkit-text-fill-color: #000000;
@@ -1093,8 +1299,6 @@ a:active {
   font-family: "IntegralExtaBold";
   font-size: 2.2rem;
   text-transform: uppercase;
-  line-height: 1;
-  letter-spacing: 1px;
   color: #000000;
   -webkit-text-fill-color: #ffffff;
   -webkit-text-stroke-width: 1px;
@@ -1108,8 +1312,13 @@ a:active {
   font-size: 1rem;
   font-weight: bold;
   color: #000;
-  margin-bottom: 0.75rem;
+  margin-bottom: 0.8rem;
   font-family: "FoundersGroteskTextBold";
+}
+@media (min-width: 0px) and (max-width: 599px) {
+  .lois .lottery-fourth .lottery-faq-block--title {
+    font-size: 1.15rem;
+  }
 }
 .lois .lottery-fourth .lottery-faq-block--title:hover {
   text-decoration: underline;
@@ -1119,6 +1328,16 @@ a:active {
   font-size: 1rem;
   color: #000;
   margin: 1.5rem 0;
+}
+@media (min-width: 0px) and (max-width: 599px) {
+  .lois .lottery-fourth .lottery-faq-block--content {
+    margin: 0.8rem 0;
+  }
+}
+@media (min-width: 0px) and (max-width: 599px) {
+  .lois .lottery-fourth .lottery-faq-block--content {
+    font-size: 1.15rem;
+  }
 }
 
 @media (min-width: 0px) and (max-width: 599px) {
@@ -1145,16 +1364,7 @@ a:active {
 }
 @media (min-width: 0px) and (max-width: 599px) {
   .lottery-layer {
-    flex-direction: column;
-    position: fixed;
-    justify-content: center;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-    width: 30rem;
-    height: 15rem;
-    display: none;
-    padding: 2rem 1.5rem;
+    padding: 0.8rem;
   }
 }
 @media (min-width: 600px) and (max-width: 1366px) and (min-height: 600px) and (max-height: 1024px) and (orientation: landscape) {
@@ -1186,8 +1396,6 @@ a:active {
   font-family: "IntegralExtaBold";
   font-size: 2.2rem;
   text-transform: uppercase;
-  line-height: 1;
-  letter-spacing: 1px;
   margin: 0;
   color: #000000;
   -webkit-text-fill-color: #000000;
@@ -1196,8 +1404,6 @@ a:active {
   font-family: "IntegralExtaBold";
   font-size: 2.2rem;
   text-transform: uppercase;
-  line-height: 1;
-  letter-spacing: 1px;
   margin: 0;
   cursor: pointer;
   color: #000000;
@@ -1239,14 +1445,15 @@ a:active {
   flex-direction: column;
   align-items: flex-end;
 }
-@media (min-width: 600px) {
-  .lottery-layer .lottery-ending {
-    margin-right: 1.5rem;
-  }
-}
 @media (min-width: 0px) and (max-width: 599px) {
   .lottery-layer .lottery-ending {
     text-align: center;
+    display: none;
+  }
+}
+@media (min-width: 600px) {
+  .lottery-layer .lottery-ending {
+    margin-right: 1.5rem;
   }
 }
 .lottery-layer .lottery-ending h1 {
@@ -1286,6 +1493,11 @@ a:active {
   font-size: 1rem;
   color: #000000;
 }
+@media (min-width: 0px) and (max-width: 599px) {
+  .lottery-layer .lottery-ending__time__value--text {
+    font-size: 1.15rem;
+  }
+}
 .lottery-layer .lottery-ending__time .uk-divider-vertical {
   width: 1px;
   height: 2rem;
@@ -1311,6 +1523,11 @@ a:active {
   margin: 1.5rem;
   background-color: #ffffff;
 }
+@media (min-width: 0px) and (max-width: 599px) {
+  .single-apartment {
+    margin: 0.8rem;
+  }
+}
 .single-apartment.show-apartment {
   display: block;
   transition: all 0.5s ease;
@@ -1328,6 +1545,11 @@ a:active {
   margin-left: 1.5rem;
   overflow-y: auto;
 }
+@media (min-width: 0px) and (max-width: 599px) {
+  .single-apartment .building-first-description {
+    margin: 0.8rem;
+  }
+}
 .single-apartment .description-text ul {
   list-style: none;
   padding-left: 0;
@@ -1343,8 +1565,6 @@ a:active {
   font-family: "IntegralExtaBold";
   font-size: 2.2rem;
   text-transform: uppercase;
-  letter-spacing: 1px;
-  line-height: 1;
   margin: 0;
   color: #000000;
   -webkit-text-fill-color: #000000;
@@ -1353,8 +1573,6 @@ a:active {
   font-family: "IntegralExtaBold";
   font-size: 2.2rem;
   text-transform: uppercase;
-  line-height: 1;
-  letter-spacing: 1px;
   margin: 0;
   color: #000000;
   -webkit-text-fill-color: #ffffff;
@@ -1364,6 +1582,12 @@ a:active {
 .single-apartment .description-text--content {
   font-size: 1rem;
   margin: 1.5rem 0;
+}
+@media (min-width: 0px) and (max-width: 599px) {
+  .single-apartment .description-text--content {
+    font-size: 1.15rem;
+    margin: 0.8rem 0;
+  }
 }
 .single-apartment .highlights {
   font-weight: bold;
@@ -1445,6 +1669,11 @@ a:active {
   cursor: pointer;
   display: none;
 }
+@media (min-width: 0px) and (max-width: 599px) {
+  .apartments-toggle {
+    margin-left: 0.8rem;
+  }
+}
 .apartments-toggle i {
   font-size: 3.5rem;
 }
@@ -1454,6 +1683,12 @@ a:active {
   flex-direction: row-reverse;
   margin: 0 1.5rem;
   min-height: 1rem;
+}
+@media (min-width: 0px) and (max-width: 599px) {
+  .apartments-search {
+    font-size: 1.15rem;
+    margin: 0 0.8rem;
+  }
 }
 @media (min-width: 1024px) {
   .apartments-search {
@@ -1484,6 +1719,11 @@ a:active {
   color: #000;
   height: 2rem;
 }
+@media (min-width: 0px) and (max-width: 599px) {
+  .apartments-search-select__section .uk-button-default {
+    font-size: 1.15rem;
+  }
+}
 .apartments-search-select__section .uk-dropdown {
   min-width: 10rem;
   padding: 1.5rem;
@@ -1496,7 +1736,6 @@ a:active {
   font-family: "IntegralExtaBold";
   font-size: 2.2rem;
   text-transform: uppercase;
-  line-height: 1;
   margin: 0;
   text-align: center;
   color: #000000;
@@ -1523,6 +1762,11 @@ a:active {
 }
 .slide-in-cart {
   margin-top: 1.5rem;
+}
+@media (min-width: 0px) and (max-width: 599px) {
+  .slide-in-cart {
+    margin: 0.8rem;
+  }
 }
 @media (min-width: 600px) {
   .slide-in-cart {
@@ -1574,8 +1818,6 @@ a:active {
   font-family: "IntegralExtaBold";
   font-size: 2.2rem;
   text-transform: uppercase;
-  line-height: 1;
-  letter-spacing: 1px;
   margin: 0;
   color: #000000;
   -webkit-text-fill-color: #000000;
@@ -1584,8 +1826,6 @@ a:active {
   font-family: "IntegralExtaBold";
   font-size: 2.2rem;
   text-transform: uppercase;
-  line-height: 1;
-  letter-spacing: 1px;
   margin: 0;
   color: #000000;
   -webkit-text-fill-color: #ffffff;
@@ -1598,11 +1838,21 @@ a:active {
   color: #000;
   font-size: 1.2rem;
 }
+@media (min-width: 0px) and (max-width: 599px) {
+  .slide-in-cart__content--link {
+    margin: 0.8rem;
+  }
+}
 
 .modal-contact {
   width: 30rem !important;
   background-color: #9AFFBF;
   padding: 1.5rem;
+}
+@media (min-width: 0px) and (max-width: 599px) {
+  .modal-contact {
+    padding: 0.8rem;
+  }
 }
 .modal-contact .uk-close {
   display: none;
@@ -1612,7 +1862,6 @@ a:active {
   font-size: 2.2rem;
   color: #000;
   text-transform: uppercase;
-  line-height: 1;
   margin: 0;
   -webkit-text-fill-color: #000000;
 }
@@ -1621,7 +1870,6 @@ a:active {
   font-size: 2.2rem;
   color: #000000;
   text-transform: uppercase;
-  line-height: 1;
   margin: 0;
   -webkit-text-fill-color: #9AFFBF;
   -webkit-text-stroke-width: 1px;
@@ -1644,6 +1892,12 @@ a:active {
   width: 100%;
   color: #000000;
   font-family: "FoundersGroteskText";
+}
+@media (min-width: 0px) and (max-width: 599px) {
+  .modal-contact-form__section--input {
+    font-size: 1.15rem;
+    margin-top: 0.8rem;
+  }
 }
 .modal-contact-form__section--input::selection {
   background-color: transparent;
@@ -1671,10 +1925,17 @@ a:active {
   cursor: pointer;
   font-family: "FoundersGroteskText";
 }
+@media (min-width: 0px) and (max-width: 599px) {
+  .modal-contact-form--submit {
+    font-size: 1.15rem;
+    margin: 0.8rem 0;
+  }
+}
 .modal-contact-info--message {
   font-size: 0.8rem;
   color: #000000;
   margin-bottom: 0;
+  line-height: 1.2;
 }
 
 .layout {
@@ -1688,6 +1949,11 @@ a:active {
   margin-top: 1rem;
   color: #000;
   cursor: pointer;
+}
+@media (min-width: 0px) and (max-width: 599px) {
+  .layout-close {
+    margin-right: 0.8rem;
+  }
 }
 .layout .uk-margin-auto-vertical {
   height: 100%;
@@ -1720,8 +1986,7 @@ a:active {
   font-family: "IntegralExtaBold";
   font-size: 2.2rem;
   text-transform: uppercase;
-  line-height: 1;
-  margin: 0 0 0.75rem 0;
+  margin: 0 0 0.8rem 0;
   color: #000000;
   -webkit-text-fill-color: #ededed;
   -webkit-text-stroke-width: 1px;
@@ -1735,6 +2000,11 @@ a:active {
   display: none;
   margin: 1.5rem;
   padding: 1.5rem;
+}
+@media (min-width: 0px) and (max-width: 599px) {
+  .layout_image {
+    margin: 0.8rem;
+  }
 }
 .layout_image .building-image {
   display: block;
