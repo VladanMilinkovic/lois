@@ -544,7 +544,15 @@ h1,h2,h3,h4,h5,h6 {
     @include breakpoint(mobileScreen) {
       width: 3rem;
     }
+
+    @media not all and (min-resolution:.001dpcm)
+    { @supports (-webkit-appearance:none) {
+
+      width: 3.1rem;
+    }}
+
   }
+
 }
 
 .uk-sticky-placeholder {
