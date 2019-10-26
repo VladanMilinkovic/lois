@@ -554,10 +554,21 @@ h1,h2,h3,h4,h5,h6 {
 }
 
 .uk-card {
-  display: none;
+  display: block;
 
   @media screen and (min-width: 601px) {
    display: block;
+  }
+
+  &-document {
+    background-image: url('../images/document.svg');
+    background-repeat: no-repeat;
+    background-size: cover;
+    width: 2.7rem;
+
+    @include breakpoint(mobileScreen) {
+      width: 3rem;
+    }
   }
 }
 
@@ -593,6 +604,10 @@ h1,h2,h3,h4,h5,h6 {
 .lois-uk-card {
   box-shadow: none;
   right: 8.5vw;
+
+  @include breakpoint(mobileScreen) {
+    right: .8rem;
+  }
 
   @media screen and (min-width: 601px) and (max-width: 1024px) {
     right: 1.5rem;
@@ -654,6 +669,10 @@ h1,h2,h3,h4,h5,h6 {
     color: #000000;
     cursor: pointer;
 
+    @include breakpoint(mobileScreen) {
+      padding: .8rem;
+    }
+
     span {
       border-left: 1px solid black;
       margin-left: 1.5rem;
@@ -663,6 +682,8 @@ h1,h2,h3,h4,h5,h6 {
 
       @include breakpoint(mobileScreen) {
         font-size: 1.15rem;
+        margin-left: .8rem;
+        padding-left: .8rem;
       }
       @media (max-height: 600px) and (max-width: 900px) {
         font-size: 1.15rem;
@@ -1314,6 +1335,7 @@ h1,h2,h3,h4,h5,h6 {
 
         @include breakpoint(mobileScreen) {
           margin: .8rem .8rem .8rem .8rem;
+          width: 50%;
         }
 
         &--black {

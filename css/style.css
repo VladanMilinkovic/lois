@@ -416,11 +416,22 @@ h1, h2, h3, h4, h5, h6 {
 }
 
 .uk-card {
-  display: none;
+  display: block;
 }
 @media screen and (min-width: 601px) {
   .uk-card {
     display: block;
+  }
+}
+.uk-card-document {
+  background-image: url("../images/document.svg");
+  background-repeat: no-repeat;
+  background-size: cover;
+  width: 2.7rem;
+}
+@media (min-width: 0px) and (max-width: 599px) {
+  .uk-card-document {
+    width: 3rem;
   }
 }
 
@@ -462,6 +473,11 @@ h1, h2, h3, h4, h5, h6 {
 .lois-uk-card {
   box-shadow: none;
   right: 8.5vw;
+}
+@media (min-width: 0px) and (max-width: 599px) {
+  .lois-uk-card {
+    right: 0.8rem;
+  }
 }
 @media screen and (min-width: 601px) and (max-width: 1024px) {
   .lois-uk-card {
@@ -514,6 +530,11 @@ h1, h2, h3, h4, h5, h6 {
   color: #000000;
   cursor: pointer;
 }
+@media (min-width: 0px) and (max-width: 599px) {
+  .lois .sticky-pdf {
+    padding: 0.8rem;
+  }
+}
 .lois .sticky-pdf span {
   border-left: 1px solid black;
   margin-left: 1.5rem;
@@ -524,6 +545,8 @@ h1, h2, h3, h4, h5, h6 {
 @media (min-width: 0px) and (max-width: 599px) {
   .lois .sticky-pdf span {
     font-size: 1.15rem;
+    margin-left: 0.8rem;
+    padding-left: 0.8rem;
   }
 }
 @media (max-height: 600px) and (max-width: 900px) {
@@ -1156,6 +1179,7 @@ h1, h2, h3, h4, h5, h6 {
 @media (min-width: 0px) and (max-width: 599px) {
   .lois .lottery-second-head {
     margin: 0.8rem 0.8rem 0.8rem 0.8rem;
+    width: 50%;
   }
 }
 .lois .lottery-second-head--black {
