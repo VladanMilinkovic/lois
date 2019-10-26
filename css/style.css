@@ -557,7 +557,7 @@ h1, h2, h3, h4, h5, h6 {
   padding: 1.5rem;
   display: none;
   background-color: #ffffff;
-  height: calc(100vh - 33.5rem);
+  height: calc(100% - 1.5rem);
 }
 @media only screen and (min-device-width: 1024px) and (max-device-width: 1366px) and (-webkit-min-device-pixel-ratio: 2) and (orientation: landscape) {
   .lois .location .slide-location {
