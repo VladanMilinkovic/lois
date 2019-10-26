@@ -1054,6 +1054,7 @@ h1,h2,h3,h4,h5,h6 {
 
     @media screen and (min-width: 601px) and (max-width: 1024px) {
       height: calc(100vh - 47rem);
+      min-height: 30rem;
     }
 
     .uk-position-center-right,
@@ -1082,6 +1083,7 @@ h1,h2,h3,h4,h5,h6 {
 
       @media screen and (min-width: 601px) and (max-width: 1024px) {
         height: calc(100vh - 50rem);
+        min-height: 27rem;
       }
 
       @media screen and (min-width: 1024px) and (max-width: 768px) {
