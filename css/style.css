@@ -832,7 +832,7 @@ h1, h2, h3, h4, h5, h6 {
 }
 .lois .building__first {
   margin-top: 1.5rem;
-  min-height: 35rem;
+  min-height: 37rem;
 }
 @media (min-width: 0px) and (max-width: 599px) {
   .lois .building__first {

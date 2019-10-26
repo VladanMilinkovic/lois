@@ -978,7 +978,7 @@ h1,h2,h3,h4,h5,h6 {
 
     &__first {
       margin-top: 1.5rem;
-      min-height: 35rem;
+      min-height: 37rem;
 
       @include breakpoint(mobileScreen) {
         margin-top: .8rem;
