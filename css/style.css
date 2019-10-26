@@ -178,7 +178,7 @@ h1, h2, h3, h4, h5, h6 {
   -moz-transform: rotate(-45deg);
   -o-transform: rotate(-45deg);
   transform: rotate(-45deg);
-  animation: moving 1.5s;
+  animation: moving 0.8s;
   animation-direction: alternate;
 }
 @keyframes moving {
@@ -190,7 +190,7 @@ h1, h2, h3, h4, h5, h6 {
   }
 }
 .lois-navigation #mobile-icon.close span:nth-child(1) {
-  animation: moving4 1.5s;
+  animation: moving4 0.8s;
 }
 @keyframes moving4 {
   0% {
@@ -209,7 +209,7 @@ h1, h2, h3, h4, h5, h6 {
   -moz-transform: rotate(45deg);
   -o-transform: rotate(45deg);
   transform: rotate(45deg);
-  animation: moving2 1.5s;
+  animation: moving2 0.8s;
   animation-direction: alternate;
 }
 @keyframes moving2 {
@@ -221,7 +221,7 @@ h1, h2, h3, h4, h5, h6 {
   }
 }
 .lois-navigation #mobile-icon.close span:nth-child(4) {
-  animation: moving3 1.5s;
+  animation: moving3 0.8s;
 }
 @keyframes moving3 {
   0% {
