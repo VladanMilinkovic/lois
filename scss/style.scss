@@ -314,7 +314,7 @@ h1,h2,h3,h4,h5,h6 {
     -moz-transform: rotate(-45deg);
     -o-transform: rotate(-45deg);
      transform: rotate(-45deg);
-    animation: moving .8s ;
+    animation: moving 1s ;
     animation-direction: alternate;
 
     @keyframes moving {
@@ -325,19 +325,6 @@ h1,h2,h3,h4,h5,h6 {
 
       100% {
         -webkit-transform: rotate(-45deg);
-      }
-    }
-  }
-
-  #mobile-icon.close span:nth-child(1) {
-    animation: moving4 .8s;
-    @keyframes moving4 {
-      0%{
-        top: 15px;
-      }
-
-      100% {
-        top: 11px;
       }
     }
   }
@@ -355,7 +342,7 @@ h1,h2,h3,h4,h5,h6 {
     -moz-transform: rotate(45deg);
     -o-transform: rotate(45deg);
     transform: rotate(45deg);
-    animation: moving2 .8s ;
+    animation: moving2 1s ;
     animation-direction: alternate;
     @keyframes moving2 {
       0%{
@@ -367,18 +354,6 @@ h1,h2,h3,h4,h5,h6 {
       }
     }
 
-  }
-  #mobile-icon.close span:nth-child(4) {
-    animation: moving3 .8s;
-    @keyframes moving3 {
-      0%{
-        top: 15px;
-      }
-
-      100% {
-        top: 27px;
-      }
-    }
   }
 
   &__mobile {
