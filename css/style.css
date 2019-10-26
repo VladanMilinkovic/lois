@@ -1610,6 +1610,7 @@ h1, h2, h3, h4, h5, h6 {
 @media (min-width: 0px) and (max-width: 599px) {
   .lottery-layer {
     padding: 0.8rem 0;
+    display: block;
   }
 }
 @media (min-width: 600px) and (max-width: 1366px) and (min-height: 600px) and (max-height: 1024px) and (orientation: landscape) {
@@ -1635,6 +1636,11 @@ h1, h2, h3, h4, h5, h6 {
 @media (min-width: 600px) {
   .lottery-layer .lottery-open {
     margin-left: 1.5rem;
+  }
+}
+@media (min-width: 0px) and (max-width: 599px) {
+  .lottery-layer .lottery-open {
+    padding: 0 0.8rem;
   }
 }
 .lottery-layer .lottery-open__title--black {

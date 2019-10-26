@@ -1801,6 +1801,7 @@ h1,h2,h3,h4,h5,h6 {
 
   @include breakpoint(mobileScreen) {
     padding: .8rem 0;
+    display: block;
   }
 
 
@@ -1825,6 +1826,10 @@ h1,h2,h3,h4,h5,h6 {
 
     @include breakpoint(tablet) {
       margin-left: 1.5rem;
+    }
+
+    @include breakpoint(mobileScreen) {
+      padding: 0 .8rem;
     }
 
     &__title {
