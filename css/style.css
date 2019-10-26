@@ -136,10 +136,10 @@ h1, h2, h3, h4, h5, h6 {
   -moz-transform: rotate(0deg);
   -o-transform: rotate(0deg);
   transform: rotate(0deg);
-  -webkit-transition: 0.5s ease-in-out;
-  -moz-transition: 0.5s ease-in-out;
-  -o-transition: 0.5s ease-in-out;
-  transition: 0.5s ease-in-out;
+  -webkit-transition: 1s ease-in-out;
+  -moz-transition: 1s ease-in-out;
+  -o-transition: 1s ease-in-out;
+  transition: 1s ease-in-out;
   cursor: pointer;
 }
 .lois-navigation #mobile-icon span {
@@ -174,21 +174,62 @@ h1, h2, h3, h4, h5, h6 {
 }
 .lois-navigation #mobile-icon.open span:nth-child(1) {
   top: 19px;
-  -webkit-transform: rotate(45deg);
-  -moz-transform: rotate(45deg);
-  -o-transform: rotate(45deg);
-  transform: rotate(45deg);
-}
-.lois-navigation #mobile-icon.open span:nth-child(3) {
   -webkit-transform: rotate(-45deg);
   -moz-transform: rotate(-45deg);
   -o-transform: rotate(-45deg);
   transform: rotate(-45deg);
+  animation: moving 1.5s;
+  animation-direction: alternate;
+}
+@keyframes moving {
+  0% {
+    transform: rotate(0);
+  }
+  100% {
+    -webkit-transform: rotate(-45deg);
+  }
+}
+.lois-navigation #mobile-icon.close span:nth-child(1) {
+  animation: moving4 1.5s;
+}
+@keyframes moving4 {
+  0% {
+    top: 15px;
+  }
+  100% {
+    top: 11px;
+  }
+}
+.lois-navigation #mobile-icon.open span:nth-child(3) {
+  width: 0%;
 }
 .lois-navigation #mobile-icon.open span:nth-child(4) {
-  top: 18px;
-  width: 0%;
-  left: 50%;
+  top: 19px;
+  -webkit-transform: rotate(45deg);
+  -moz-transform: rotate(45deg);
+  -o-transform: rotate(45deg);
+  transform: rotate(45deg);
+  animation: moving2 1.5s;
+  animation-direction: alternate;
+}
+@keyframes moving2 {
+  0% {
+    transform: rotate(0);
+  }
+  100% {
+    -webkit-transform: rotate(45deg);
+  }
+}
+.lois-navigation #mobile-icon.close span:nth-child(4) {
+  animation: moving3 1.5s;
+}
+@keyframes moving3 {
+  0% {
+    top: 15px;
+  }
+  100% {
+    top: 27px;
+  }
 }
 .lois-navigation__mobile {
   display: flex;

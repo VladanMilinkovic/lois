@@ -212,7 +212,16 @@
     <script>
         function toggleNavIcon() {
             let child = document.getElementById('mobile-icon');
-            child.classList.toggle("open");
+
+            if(child.classList.contains("open")) {
+                child.classList.add("close");
+                child.classList.remove("open");
+            } else {
+                child.classList.add("open");
+                if(child.classList.contains("close")){
+                    child.classList.remove("close");
+                }
+            }
         }
     </script>
 </body>
