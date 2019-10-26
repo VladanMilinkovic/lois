@@ -93,6 +93,12 @@ h1, h2, h3, h4, h5, h6 {
   width: 26px;
   margin-right: 1.5rem;
 }
+@media screen and (device-aspect-ratio: 40/71) {
+  .lois-navigation--icon {
+    height: 18px;
+    width: 30px;
+  }
+}
 @media (min-width: 0px) and (max-width: 599px) {
   .lois-navigation--icon {
     margin-right: 0.8rem;

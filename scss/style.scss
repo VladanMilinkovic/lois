@@ -206,6 +206,13 @@ h1,h2,h3,h4,h5,h6 {
     width: 26px;
     margin-right: 1.5rem;
 
+    @media screen and (device-aspect-ratio: 40/71) {
+      height: 18px;
+      width: 30px;
+    }
+
+
+
     @include breakpoint(mobileScreen) {
       margin-right: .8rem;
     }
