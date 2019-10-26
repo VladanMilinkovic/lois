@@ -287,13 +287,12 @@ h1,h2,h3,h4,h5,h6 {
     top: 27px;
   }
 
-  #mobile-icon.open span:nth-child(1) {
-    top: 5px;
+  #mobile-icon.open span:nth-child(2) {
     width: 0%;
-    left: 50%;
   }
 
-  #mobile-icon.open span:nth-child(2) {
+  #mobile-icon.open span:nth-child(1) {
+    top: 19px;
     -webkit-transform: rotate(45deg);
     -moz-transform: rotate(45deg);
     -o-transform: rotate(45deg);
