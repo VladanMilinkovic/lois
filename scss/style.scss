@@ -199,6 +199,16 @@ h1,h2,h3,h4,h5,h6 {
   }
 
   &--icon {
+    background-image : url('../images/eho.svg');
+    background-repeat: no-repeat;
+    background-size: cover;
+    height: 21px;
+    width: 26px;
+    margin-right: 1.5rem;
+
+    @include breakpoint(mobileScreen) {
+      margin-right: .8rem;
+    }
 
   }
 
