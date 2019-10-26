@@ -198,10 +198,16 @@ h1,h2,h3,h4,h5,h6 {
     width: 86vw;
   }
 
+  &--icon {
+
+  }
+
   &--address {
     font-family: "FoundersGroteskText";
     font-size: 1rem;
     padding-left: 1.5rem;
+    display: flex;
+    align-items: center;
 
     @include breakpoint(mobileScreen) {
       font-size: 1.15rem;
@@ -212,7 +218,14 @@ h1,h2,h3,h4,h5,h6 {
       font-size: 1.15rem;
     }
 
+    svg {
+      height: 2rem;
+      margin-right: 1.5rem;
 
+      @include breakpoint(mobileScreen) {
+        margin-right: .8rem;
+      }
+    }
 
     .number {
       display: none;
@@ -231,7 +244,7 @@ h1,h2,h3,h4,h5,h6 {
     width: 2rem;
     height: 3.1rem;
     position: relative;
-    margin: 0;
+    margin: 0 0 0 1.5rem;
     -webkit-transform: rotate(0deg);
     -moz-transform: rotate(0deg);
     -o-transform: rotate(0deg);
@@ -299,14 +312,17 @@ h1,h2,h3,h4,h5,h6 {
     width: 0%;
     left: 50%;
   }
+
   &__mobile {
     display: flex;
     padding-right: 1.5rem;
+    margin-left: 1.5rem;
 
     @include breakpoint(mobileScreen) {
       display: flex;
       align-items: center;
       padding-right: .8rem;
+      margin-left: .8rem;
     }
 
     @include breakpoint(tablet) {
@@ -318,11 +334,17 @@ h1,h2,h3,h4,h5,h6 {
       margin-right: 1.5rem;
 
       @include breakpoint(mobileScreen) {
-        margin-right: .8rem;
+        margin-right: 0;
       }
 
       a {
         color: #fff;
+      }
+
+      i {
+        padding-bottom: 16px;
+        padding-top: 15px;
+        font-size: 2rem;
       }
     }
     &-email {
@@ -661,6 +683,11 @@ h1,h2,h3,h4,h5,h6 {
       background-size: cover;
       height: 13rem;
       width: 23rem;
+
+      @include breakpoint(mobileScreen) {
+        height: 10rem;
+        width: 18rem;
+      }
     }
 
     &__neigh {
@@ -1018,6 +1045,7 @@ h1,h2,h3,h4,h5,h6 {
     height: 20rem;
 
     @include breakpoint(mobileScreen) {
+      margin-top: .8rem;
       margin-bottom: 8rem;
     }
     @include breakpoint(tablet) {
@@ -1026,12 +1054,16 @@ h1,h2,h3,h4,h5,h6 {
     }
 
     @media screen and (min-width: 601px) and (max-width: 1024px) {
-      height: calc(100vh - 50rem);
+      height: calc(100vh - 47rem);
     }
 
     .uk-position-center-right,
     .uk-position-center-left {
       top: 88% !important;
+
+      @include breakpoint(mobileScreen) {
+        top: 100% !important;
+      }
 
       @include breakpoint(tablet) {
         top: 97% !important;
@@ -1051,6 +1083,10 @@ h1,h2,h3,h4,h5,h6 {
 
       @media screen and (min-width: 601px) and (max-width: 1024px) {
         height: calc(100vh - 50rem);
+      }
+
+      @media screen and (min-width: 1024px) and (max-width: 768px) {
+        height: calc(100vh - 28rem);
       }
 
       .uk-slideshow-items {
@@ -1078,6 +1114,7 @@ h1,h2,h3,h4,h5,h6 {
     .uk-slidenav {
       @include breakpoint(mobileScreen) {
         right: 0;
+        margin: 0;
       }
     }
     .uk-slidenav:hover {
@@ -1114,9 +1151,12 @@ h1,h2,h3,h4,h5,h6 {
       display: flex;
 
       @include breakpoint(mobileScreen) {
-        height: auto;
+        height: calc(100vh - 16rem);
       }
 
+      @media screen and (device-aspect-ratio: 40/71) {
+        height: auto;
+      }
       &-wrapper {
         margin: auto 1.5rem;
         width: 100%;
@@ -1240,6 +1280,7 @@ h1,h2,h3,h4,h5,h6 {
         @include breakpoint(mobileScreen) {
           background-color: #ffffff;
           margin: .8rem .8rem 0 .8rem;
+          padding-bottom: .8rem;
         }
 
         div {
@@ -1386,7 +1427,7 @@ h1,h2,h3,h4,h5,h6 {
           margin: 3rem 1.5rem 1.5rem auto;
 
           @include breakpoint(mobileScreen) {
-            margin: 3rem 0 0 0;
+            margin: 0;
           }
 
 
@@ -1418,9 +1459,9 @@ h1,h2,h3,h4,h5,h6 {
             margin: 0;
 
             @include breakpoint(mobileScreen) {
-              margin-left: .8rem;
+              margin-left: 0;
               line-height: 1.2;
-              padding: .8rem;
+              padding: .8rem 0 0 .8rem;
             }
           }
 
