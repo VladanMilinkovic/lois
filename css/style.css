@@ -376,6 +376,11 @@ h1, h2, h3, h4, h5, h6 {
     font-size: 1.15rem;
   }
 }
+@media (min-width: 600px) and (max-width: 899px) {
+  .lois-navigation-tabs .lois-navbar-nav__tabs {
+    font-size: 1.15rem;
+  }
+}
 @media (max-height: 600px) and (max-width: 900px) {
   .lois-navigation-tabs .lois-navbar-nav__tabs {
     font-size: 1.15rem;
@@ -414,8 +419,10 @@ h1, h2, h3, h4, h5, h6 {
 }
 @media not all and (min-resolution: 0.001dpcm) {
   @supports (-webkit-appearance: none) {
-    .uk-card-document {
-      width: 3.1rem;
+    @media (min-width: 0px) and (max-width: 599px) {
+      .uk-card-document {
+        width: 3.1rem;
+      }
     }
   }
 }
@@ -532,6 +539,11 @@ h1, h2, h3, h4, h5, h6 {
     font-size: 1.15rem;
     margin-left: 0.8rem;
     padding-left: 0.8rem;
+  }
+}
+@media (min-width: 600px) and (max-width: 899px) {
+  .lois .sticky-pdf span {
+    font-size: 1.15rem;
   }
 }
 @media (max-height: 600px) and (max-width: 900px) {
@@ -687,6 +699,11 @@ h1, h2, h3, h4, h5, h6 {
     margin-bottom: 0.8rem;
   }
 }
+@media (min-width: 600px) and (max-width: 899px) {
+  .lois-header__features--title {
+    font-size: 1.15rem;
+  }
+}
 @media (max-height: 600px) and (max-width: 900px) {
   .lois-header__features--title {
     font-size: 1.15rem;
@@ -704,6 +721,11 @@ h1, h2, h3, h4, h5, h6 {
   font-family: "FoundersGroteskText";
 }
 @media (min-width: 0px) and (max-width: 599px) {
+  .lois-header__features .lois-header-list--item {
+    font-size: 1.15rem;
+  }
+}
+@media (min-width: 600px) and (max-width: 899px) {
   .lois-header__features .lois-header-list--item {
     font-size: 1.15rem;
   }
@@ -802,6 +824,11 @@ h1, h2, h3, h4, h5, h6 {
   .lois .building .description-text--content {
     font-size: 1.15rem;
     margin: 0.8rem 0 0 0;
+  }
+}
+@media (min-width: 600px) and (max-width: 899px) {
+  .lois .building .description-text--content {
+    font-size: 1.15rem;
   }
 }
 @media (min-width: 600px) {
@@ -1142,6 +1169,11 @@ h1, h2, h3, h4, h5, h6 {
     margin-top: 0.8rem;
   }
 }
+@media (min-width: 600px) and (max-width: 899px) {
+  .lois .lottery-first-wrapper-text {
+    font-size: 1.15rem;
+  }
+}
 .lois .lottery-first-wrapper-button {
   cursor: pointer;
   display: block;
@@ -1263,6 +1295,11 @@ h1, h2, h3, h4, h5, h6 {
   .lois .lottery-second .lottery-table .flex-row {
     width: calc(100% / 6) !important;
     padding: 0.5em 0.5em 0.5em 0;
+  }
+}
+@media (min-width: 600px) and (max-width: 899px) {
+  .lois .lottery-second .lottery-table .flex-row {
+    font-size: 1.15rem;
   }
 }
 @media (min-width: 0px) and (max-width: 599px) {
@@ -1572,6 +1609,11 @@ h1, h2, h3, h4, h5, h6 {
     font-size: 1.15rem;
   }
 }
+@media (min-width: 600px) and (max-width: 899px) {
+  .lois .lottery-fourth .lottery-faq-block--title {
+    font-size: 1.15rem;
+  }
+}
 .lois .lottery-fourth .lottery-faq-block--title:hover {
   text-decoration: underline;
 }
@@ -1584,9 +1626,10 @@ h1, h2, h3, h4, h5, h6 {
 @media (min-width: 0px) and (max-width: 599px) {
   .lois .lottery-fourth .lottery-faq-block--content {
     margin: 0.8rem 0;
+    font-size: 1.15rem;
   }
 }
-@media (min-width: 0px) and (max-width: 599px) {
+@media (min-width: 600px) and (max-width: 899px) {
   .lois .lottery-fourth .lottery-faq-block--content {
     font-size: 1.15rem;
   }
@@ -1756,6 +1799,11 @@ h1, h2, h3, h4, h5, h6 {
     font-size: 1.15rem;
   }
 }
+@media (min-width: 600px) and (max-width: 899px) {
+  .lottery-layer .lottery-ending__time__value--text {
+    font-size: 1.15rem;
+  }
+}
 .lottery-layer .lottery-ending__time .uk-divider-vertical {
   width: 1px;
   height: 2rem;
@@ -1845,6 +1893,11 @@ h1, h2, h3, h4, h5, h6 {
   .single-apartment .description-text--content {
     font-size: 1.15rem;
     margin: 0.8rem 0;
+  }
+}
+@media (min-width: 600px) and (max-width: 899px) {
+  .single-apartment .description-text--content {
+    font-size: 1.15rem;
   }
 }
 .single-apartment .highlights {
@@ -1948,6 +2001,11 @@ h1, h2, h3, h4, h5, h6 {
     margin: 0 0.8rem;
   }
 }
+@media (min-width: 600px) and (max-width: 899px) {
+  .apartments-search {
+    font-size: 1.15rem;
+  }
+}
 @media (min-width: 1024px) {
   .apartments-search {
     width: 40rem;
@@ -1978,6 +2036,11 @@ h1, h2, h3, h4, h5, h6 {
   height: 2rem;
 }
 @media (min-width: 0px) and (max-width: 599px) {
+  .apartments-search-select__section .uk-button-default {
+    font-size: 1.15rem;
+  }
+}
+@media (min-width: 600px) and (max-width: 899px) {
   .apartments-search-select__section .uk-button-default {
     font-size: 1.15rem;
   }
@@ -2157,6 +2220,11 @@ h1, h2, h3, h4, h5, h6 {
     margin-top: 0.8rem;
   }
 }
+@media (min-width: 600px) and (max-width: 899px) {
+  .modal-contact-form__section--input {
+    font-size: 1.15rem;
+  }
+}
 .modal-contact-form__section--input::selection {
   background-color: transparent;
 }
@@ -2187,6 +2255,11 @@ h1, h2, h3, h4, h5, h6 {
   .modal-contact-form--submit {
     font-size: 1.15rem;
     margin: 0.8rem 0;
+  }
+}
+@media (min-width: 600px) and (max-width: 899px) {
+  .modal-contact-form--submit {
+    font-size: 1.15rem;
   }
 }
 .modal-contact-info--message {

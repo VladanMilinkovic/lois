@@ -509,6 +509,10 @@ h1,h2,h3,h4,h5,h6 {
           font-size: 1.15rem;
         }
 
+        @include breakpoint(tabletScreen) {
+          font-size: 1.15rem;
+        }
+
         @media (max-height: 600px) and (max-width: 900px) {
           font-size: 1.15rem;
         }
@@ -548,7 +552,10 @@ h1,h2,h3,h4,h5,h6 {
     @media not all and (min-resolution:.001dpcm)
     { @supports (-webkit-appearance:none) {
 
-      width: 3.1rem;
+      @include breakpoint(mobileScreen) {
+        width: 3.1rem;
+      }
+
     }}
 
   }
@@ -668,6 +675,10 @@ h1,h2,h3,h4,h5,h6 {
         margin-left: .8rem;
         padding-left: .8rem;
       }
+      @include breakpoint(tabletScreen) {
+        font-size: 1.15rem;
+      }
+
       @media (max-height: 600px) and (max-width: 900px) {
         font-size: 1.15rem;
       }
@@ -827,6 +838,9 @@ h1,h2,h3,h4,h5,h6 {
           font-size: 1.15rem;
           margin-bottom: .8rem;
         }
+        @include breakpoint(tabletScreen) {
+          font-size: 1.15rem;
+        }
         @media (max-height: 600px) and (max-width: 900px) {
           font-size: 1.15rem;
         }
@@ -845,6 +859,9 @@ h1,h2,h3,h4,h5,h6 {
           font-family: "FoundersGroteskText";
 
           @include breakpoint(mobileScreen) {
+            font-size: 1.15rem;
+          }
+          @include breakpoint(tabletScreen) {
             font-size: 1.15rem;
           }
         }
@@ -945,6 +962,9 @@ h1,h2,h3,h4,h5,h6 {
         @include breakpoint(mobileScreen) {
           font-size: 1.15rem;
           margin: .8rem 0 0 0;
+        }
+        @include breakpoint(tabletScreen) {
+          font-size: 1.15rem;
         }
 
         @include breakpoint(tablet) {
@@ -1290,6 +1310,10 @@ h1,h2,h3,h4,h5,h6 {
             padding: 0;
             margin-top: .8rem;
           }
+
+          @include breakpoint(tabletScreen) {
+            font-size: 1.15rem;
+          }
         }
 
         &-button {
@@ -1425,6 +1449,9 @@ h1,h2,h3,h4,h5,h6 {
           @include breakpoint(mobileScreen) {
             width: calc(100% / 6) !important;
             padding: 0.5em 0.5em 0.5em 0;
+          }
+          @include breakpoint(tabletScreen) {
+            font-size: 1.15rem;
           }
         }
 
@@ -1752,6 +1779,9 @@ h1,h2,h3,h4,h5,h6 {
             @include breakpoint(mobileScreen) {
               font-size: 1.15rem;
             }
+            @include breakpoint(tabletScreen) {
+              font-size: 1.15rem;
+            }
 
             &:hover {
               text-decoration: underline;
@@ -1766,8 +1796,9 @@ h1,h2,h3,h4,h5,h6 {
 
             @include breakpoint(mobileScreen) {
               margin: .8rem 0;
+              font-size: 1.15rem;
             }
-            @include breakpoint(mobileScreen) {
+            @include breakpoint(tabletScreen) {
               font-size: 1.15rem;
             }
           }
@@ -1952,6 +1983,9 @@ h1,h2,h3,h4,h5,h6 {
           @include breakpoint(mobileScreen) {
             font-size: 1.15rem;
           }
+          @include breakpoint(tabletScreen) {
+            font-size: 1.15rem;
+          }
         }
       }
 
@@ -2061,6 +2095,9 @@ h1,h2,h3,h4,h5,h6 {
     @include breakpoint(mobileScreen) {
       font-size: 1.15rem;
       margin: .8rem 0;
+    }
+    @include breakpoint(tabletScreen) {
+      font-size: 1.15rem;
     }
   }
 
@@ -2176,6 +2213,9 @@ h1,h2,h3,h4,h5,h6 {
     font-size: 1.15rem;
     margin: 0 .8rem;
   }
+  @include breakpoint(tabletScreen) {
+    font-size: 1.15rem;
+  }
 
   @include breakpoint(desktop) {
     width: 40rem;
@@ -2206,6 +2246,9 @@ h1,h2,h3,h4,h5,h6 {
         height: 2rem;
 
         @include breakpoint(mobileScreen) {
+          font-size: 1.15rem;
+        }
+        @include breakpoint(tabletScreen) {
           font-size: 1.15rem;
         }
       }
@@ -2410,6 +2453,9 @@ h1,h2,h3,h4,h5,h6 {
           font-size: 1.15rem;
           margin-top: .8rem;
         }
+        @include breakpoint(tabletScreen) {
+          font-size: 1.15rem;
+        }
 
         &::selection{
           background-color: transparent;
@@ -2446,6 +2492,9 @@ h1,h2,h3,h4,h5,h6 {
       @include breakpoint(mobileScreen) {
         font-size: 1.15rem;
         margin: .8rem 0;
+      }
+      @include breakpoint(tabletScreen) {
+        font-size: 1.15rem;
       }
     }
   }
