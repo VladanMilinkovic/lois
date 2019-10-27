@@ -93,15 +93,17 @@ h1, h2, h3, h4, h5, h6 {
   width: 1.5rem;
   margin-right: 1.5rem;
 }
-@media screen and (device-aspect-ratio: 40/71) {
-  .lois-navigation--icon {
-    height: 18px;
-    width: 30px;
-  }
-}
 @media (min-width: 0px) and (max-width: 599px) {
   .lois-navigation--icon {
     margin-right: 0.8rem;
+    height: 1.5rem;
+    width: 2rem;
+  }
+}
+@media screen and (device-aspect-ratio: 40/71) {
+  .lois-navigation--icon {
+    height: 1.5rem;
+    width: 2rem;
   }
 }
 .lois-navigation--address {
@@ -139,6 +141,11 @@ h1, h2, h3, h4, h5, h6 {
 @media (min-width: 600px) {
   .lois-navigation--address .number {
     display: inline;
+  }
+}
+@media (max-width: 768px) {
+  .lois-navigation--address .number {
+    display: none;
   }
 }
 @media only screen and (min-device-width: 768px) and (max-device-width: 1024px) and (-webkit-min-device-pixel-ratio: 2) {
@@ -298,9 +305,13 @@ h1, h2, h3, h4, h5, h6 {
 .lois-navigation__mobile__tabs__nav li a {
   color: #000;
   text-transform: uppercase;
+  text-decoration: none;
   -webkit-text-fill-color: #000;
   -webkit-text-stroke-width: 1px;
   -webkit-text-stroke-color: #fff;
+}
+.lois-navigation__mobile__tabs__nav li a:hover {
+  text-decoration: none;
 }
 .lois-navigation__mobile__tabs__nav li a.active {
   color: #000000;
@@ -632,8 +643,8 @@ h1, h2, h3, h4, h5, h6 {
 }
 @media (min-width: 0px) and (max-width: 599px) {
   .lois-header-logo {
-    height: 10rem;
-    width: 18rem;
+    height: 8rem;
+    width: 15rem;
   }
 }
 .lois-header__neigh {
@@ -1098,12 +1109,17 @@ h1, h2, h3, h4, h5, h6 {
 }
 @media (min-width: 0px) and (max-width: 599px) {
   .lois .lottery-first {
-    height: calc(100vh - 16rem);
+    height: 100%;
+  }
+}
+@media screen and (device-aspect-ratio: 2/3) {
+  .lois .lottery-first {
+    height: 100%;
   }
 }
 @media screen and (device-aspect-ratio: 40/71) {
   .lois .lottery-first {
-    height: auto;
+    height: 100%;
   }
 }
 .lois .lottery-first-wrapper {
@@ -1740,6 +1756,12 @@ h1, h2, h3, h4, h5, h6 {
 @media (min-width: 0px) and (max-width: 599px) {
   .lottery-layer .lottery-open .learn-more {
     display: block;
+    -webkit-text-fill-color: #99ffbf;
+  }
+  .lottery-layer .lottery-open .learn-more:hover {
+    -webkit-text-fill-color: #9AFFBF;
+    -webkit-text-stroke-width: 1px;
+    -webkit-text-stroke-color: #000000;
   }
 }
 .lottery-layer .lottery-ending {

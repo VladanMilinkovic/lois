@@ -206,15 +206,15 @@ h1,h2,h3,h4,h5,h6 {
     width: 1.5rem;
     margin-right: 1.5rem;
 
-    @media screen and (device-aspect-ratio: 40/71) {
-      height: 18px;
-      width: 30px;
-    }
-
-
-
     @include breakpoint(mobileScreen) {
       margin-right: .8rem;
+      height: 1.5rem;
+      width: 2rem;
+    }
+
+    @media screen and (device-aspect-ratio: 40/71) {
+      height: 1.5rem;
+      width: 2rem;
     }
 
   }
@@ -252,6 +252,11 @@ h1,h2,h3,h4,h5,h6 {
       @include breakpoint(tablet) {
         display: inline;
       }
+
+      @media (max-width: 768px) {
+        display: none
+      }
+
       @include breakpoint(iPad) {
         display: none;
       }
@@ -427,9 +432,14 @@ h1,h2,h3,h4,h5,h6 {
           a {
             color: #000;
             text-transform: uppercase;
+            text-decoration: none;
             -webkit-text-fill-color: #000;
             -webkit-text-stroke-width: 1px;
             -webkit-text-stroke-color: #fff;
+
+            &:hover {
+              text-decoration: none;
+            }
 
             &.active {
               color: #000000;
@@ -769,8 +779,8 @@ h1,h2,h3,h4,h5,h6 {
       width: 20rem;
 
       @include breakpoint(mobileScreen) {
-        height: 10rem;
-        width: 18rem;
+        height: 8rem;
+        width: 15rem;
       }
     }
 
@@ -1246,11 +1256,14 @@ h1,h2,h3,h4,h5,h6 {
       display: flex;
 
       @include breakpoint(mobileScreen) {
-        height: calc(100vh - 16rem);
+        height: 100%
       }
 
+      @media screen and (device-aspect-ratio: 2/3) {
+        height: 100%;
+      }
       @media screen and (device-aspect-ratio: 40/71) {
-        height: auto;
+        height: 100%;
       }
       &-wrapper {
         margin: auto 1.5rem;
@@ -1923,6 +1936,13 @@ h1,h2,h3,h4,h5,h6 {
       -webkit-text-fill-color: #99ffbf;
       @include breakpoint(mobileScreen) {
         display: block;
+        -webkit-text-fill-color: #99ffbf;
+
+        &:hover {
+          -webkit-text-fill-color: #9AFFBF;
+          -webkit-text-stroke-width: 1px;
+          -webkit-text-stroke-color: #000000;
+        }
       }
     }
 
