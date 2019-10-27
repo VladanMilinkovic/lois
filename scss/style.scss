@@ -1455,7 +1455,7 @@ h1,h2,h3,h4,h5,h6 {
 
         .flex-row {
           width: calc(100% / 5);
-          text-align: left;
+          text-align: center;
           padding: 0.75em 0.75em 0.75em 0;
           border-bottom: solid 1px $table-border;
           font-size: 1rem;
@@ -1472,7 +1472,7 @@ h1,h2,h3,h4,h5,h6 {
         .mobile-width-3 {
           @include breakpoint(mobileScreen) {
             width: calc(100% / 3) !important;
-            text-align: right;
+            text-align: center;
           }
         }
         .mobile-width-6 {
@@ -1493,7 +1493,6 @@ h1,h2,h3,h4,h5,h6 {
         .mobile-width-1-5 {
           @include breakpoint(mobileScreen) {
             width: calc(100% / 1.5) !important;
-            text-align: right !important;
           }
         }
 
@@ -1531,7 +1530,7 @@ h1,h2,h3,h4,h5,h6 {
         .flex-cell {
           width: calc(100% / 2); //1px = border right
           padding: 0.75em 0.75em 0.75em 0;
-          text-align: left;
+          text-align: center;
           &:last-child {
             // border-right: 0;
           }
