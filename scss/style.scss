@@ -199,11 +199,11 @@ h1,h2,h3,h4,h5,h6 {
   }
 
   &--icon {
-    background-image : url('../images/eho.svg');
+    background-image: url("../images/eho.svg");
     background-repeat: no-repeat;
-    background-size: cover;
-    height: 21px;
-    width: 26px;
+    background-size: 1.5rem;
+    height: 1.4rem;
+    width: 1.5rem;
     margin-right: 1.5rem;
 
     @media screen and (device-aspect-ratio: 40/71) {
@@ -546,7 +546,7 @@ h1,h2,h3,h4,h5,h6 {
     width: 2.7rem;
 
     @include breakpoint(mobileScreen) {
-      width: 3rem;
+      display: none;
     }
 
     @media not all and (min-resolution:.001dpcm)
@@ -672,8 +672,9 @@ h1,h2,h3,h4,h5,h6 {
 
       @include breakpoint(mobileScreen) {
         font-size: 1.15rem;
-        margin-left: .8rem;
-        padding-left: .8rem;
+        margin-left: 0;
+        padding-left: 0;
+        border: none;
       }
       @include breakpoint(tabletScreen) {
         font-size: 1.15rem;
@@ -764,8 +765,8 @@ h1,h2,h3,h4,h5,h6 {
       background-image: url('../images/Group 8.svg');
       background-repeat: no-repeat;
       background-size: cover;
-      height: 13rem;
-      width: 23rem;
+      height: 11.4rem;
+      width: 20rem;
 
       @include breakpoint(mobileScreen) {
         height: 10rem;

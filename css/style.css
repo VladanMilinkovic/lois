@@ -88,9 +88,9 @@ h1, h2, h3, h4, h5, h6 {
 .lois-navigation--icon {
   background-image: url("../images/eho.svg");
   background-repeat: no-repeat;
-  background-size: cover;
-  height: 21px;
-  width: 26px;
+  background-size: 1.5rem;
+  height: 1.4rem;
+  width: 1.5rem;
   margin-right: 1.5rem;
 }
 @media screen and (device-aspect-ratio: 40/71) {
@@ -414,7 +414,7 @@ h1, h2, h3, h4, h5, h6 {
 }
 @media (min-width: 0px) and (max-width: 599px) {
   .uk-card-document {
-    width: 3rem;
+    display: none;
   }
 }
 @media not all and (min-resolution: 0.001dpcm) {
@@ -537,8 +537,9 @@ h1, h2, h3, h4, h5, h6 {
 @media (min-width: 0px) and (max-width: 599px) {
   .lois .sticky-pdf span {
     font-size: 1.15rem;
-    margin-left: 0.8rem;
-    padding-left: 0.8rem;
+    margin-left: 0;
+    padding-left: 0;
+    border: none;
   }
 }
 @media (min-width: 600px) and (max-width: 899px) {
@@ -626,8 +627,8 @@ h1, h2, h3, h4, h5, h6 {
   background-image: url("../images/Group 8.svg");
   background-repeat: no-repeat;
   background-size: cover;
-  height: 13rem;
-  width: 23rem;
+  height: 11.4rem;
+  width: 20rem;
 }
 @media (min-width: 0px) and (max-width: 599px) {
   .lois-header-logo {
