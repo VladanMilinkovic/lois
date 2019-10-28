@@ -86,18 +86,12 @@ h1, h2, h3, h4, h5, h6 {
   }
 }
 .lois-navigation--icon {
-  width: 1.5rem;
+  width: 1rem;
   margin-right: 1.5rem;
 }
 @media (min-width: 0px) and (max-width: 599px) {
   .lois-navigation--icon {
     margin-right: 0.8rem;
-    width: 2rem;
-  }
-}
-@media screen and (device-aspect-ratio: 40/71) {
-  .lois-navigation--icon {
-    width: 2rem;
   }
 }
 .lois-navigation--address {

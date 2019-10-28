@@ -199,16 +199,11 @@ h1,h2,h3,h4,h5,h6 {
   }
 
   &--icon {
-    width: 1.5rem;
+    width: 1rem;
     margin-right: 1.5rem;
 
     @include breakpoint(mobileScreen) {
       margin-right: .8rem;
-      width: 2rem;
-    }
-
-    @media screen and (device-aspect-ratio: 40/71) {
-      width: 2rem;
     }
 
   }
