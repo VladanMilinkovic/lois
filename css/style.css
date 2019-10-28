@@ -302,6 +302,11 @@ h1, h2, h3, h4, h5, h6 {
   font-size: 2.2rem;
   padding-left: 1.5rem;
 }
+@media (min-width: 0px) and (max-width: 599px) {
+  .lois-navigation__mobile__tabs__nav {
+    padding-left: 0.8rem;
+  }
+}
 .lois-navigation__mobile__tabs__nav li {
   font-family: "IntegralExtaBold";
   letter-spacing: 1px;
@@ -533,10 +538,11 @@ h1, h2, h3, h4, h5, h6 {
   background-color: #9AFFBF;
   color: #000000;
   cursor: pointer;
+  line-height: 1.2rem;
 }
 @media (min-width: 0px) and (max-width: 599px) {
   .lois .sticky-pdf {
-    padding: 0.8rem;
+    padding: 1.5rem;
   }
 }
 .lois .sticky-pdf span {
@@ -641,7 +647,7 @@ h1, h2, h3, h4, h5, h6 {
 }
 @media (min-width: 0px) and (max-width: 599px) {
   .lois-header-logo {
-    width: 15rem;
+    width: 17rem;
   }
 }
 .lois-header__neigh {
@@ -1254,7 +1260,6 @@ h1, h2, h3, h4, h5, h6 {
 @media (min-width: 0px) and (max-width: 599px) {
   .lois .lottery-second-head {
     margin: 0.8rem 0.8rem 0.8rem 0.8rem;
-    width: 50%;
   }
 }
 .lois .lottery-second-head--black {
@@ -1485,9 +1490,9 @@ h1, h2, h3, h4, h5, h6 {
 }
 @media (min-width: 0px) and (max-width: 599px) {
   .lois .lottery-second .lottery-table-mark ol {
-    margin-left: 0;
     line-height: 1.2;
-    padding: 0.8rem 0 0 0.8rem;
+    padding: 0 0 0 0.8rem;
+    margin: 0.8rem;
   }
 }
 .lois .lottery-second .rent-smart {
@@ -1541,6 +1546,7 @@ h1, h2, h3, h4, h5, h6 {
 .lois .lottery-second .rent-smart-text {
   margin: 1.5rem 0 0 0;
   color: #000000;
+  font-size: 1.15rem;
 }
 @media (min-width: 0px) and (max-width: 599px) {
   .lois .lottery-second .rent-smart-text {
@@ -2391,7 +2397,7 @@ h1, h2, h3, h4, h5, h6 {
   font-family: "IntegralExtaBold";
   font-size: 2.2rem;
   text-transform: uppercase;
-  margin: 0 0 0.8rem 0;
+  margin: 0;
   color: #000000;
   -webkit-text-fill-color: #ededed;
   -webkit-text-stroke-width: 1px;

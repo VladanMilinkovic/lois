@@ -427,6 +427,10 @@ h1,h2,h3,h4,h5,h6 {
         font-size: 2.2rem;
         padding-left: 1.5rem;
 
+        @include breakpoint(mobileScreen) {
+          padding-left: .8rem;
+        }
+
         li {
           font-family: "IntegralExtaBold";
           letter-spacing: 1px;
@@ -667,9 +671,10 @@ h1,h2,h3,h4,h5,h6 {
     background-color: #9AFFBF;
     color: #000000;
     cursor: pointer;
+    line-height: 1.2rem;
 
     @include breakpoint(mobileScreen) {
-      padding: .8rem;
+      padding: 1.5rem;
     }
 
     span {
@@ -775,7 +780,7 @@ h1,h2,h3,h4,h5,h6 {
       width: 20rem;
 
       @include breakpoint(mobileScreen) {
-        width: 15rem;
+        width: 17rem;
       }
     }
 
@@ -1410,7 +1415,6 @@ h1,h2,h3,h4,h5,h6 {
 
         @include breakpoint(mobileScreen) {
           margin: .8rem .8rem .8rem .8rem;
-          width: 50%;
         }
 
         &--black {
@@ -1648,9 +1652,9 @@ h1,h2,h3,h4,h5,h6 {
             margin: 0;
 
             @include breakpoint(mobileScreen) {
-              margin-left: 0;
               line-height: 1.2;
-              padding: .8rem 0 0 .8rem;
+              padding: 0 0 0 0.8rem;
+              margin: .8rem;
             }
           }
 
@@ -1711,6 +1715,7 @@ h1,h2,h3,h4,h5,h6 {
         &-text {
           margin: 1.5rem 0 0 0;
           color: #000000;
+          font-size: 1.15rem;
 
           @include breakpoint(mobileScreen) {
             margin-top: .8rem;
@@ -2647,7 +2652,7 @@ h1,h2,h3,h4,h5,h6 {
         font-family: "IntegralExtaBold";
         font-size: 2.2rem;
         text-transform: uppercase;
-        margin: 0 0 .8rem 0;
+        margin: 0;
         color: #000000;
         -webkit-text-fill-color: #ededed;
         -webkit-text-stroke-width: 1px;
