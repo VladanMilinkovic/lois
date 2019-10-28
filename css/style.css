@@ -704,6 +704,7 @@ h1, h2, h3, h4, h5, h6 {
   font-family: "FoundersGroteskText";
   margin-bottom: 0.75rem;
   margin-top: 0;
+  font-weight: bold;
 }
 @media (min-width: 0px) and (max-width: 599px) {
   .lois-header__features--title {

@@ -844,6 +844,7 @@ h1,h2,h3,h4,h5,h6 {
         font-family: "FoundersGroteskText";
         margin-bottom: .75rem;
         margin-top: 0;
+        font-weight: bold;
 
         @include breakpoint(mobileScreen) {
           font-size: 1.15rem;
