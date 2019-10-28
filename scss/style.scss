@@ -423,7 +423,7 @@ h1,h2,h3,h4,h5,h6 {
       &.show-mobile {
         display: flex;
         flex-direction: column;
-        justify-content: space-between;
+        justify-content: normal;
         position: fixed;
         width: 100vw;
         background-color: #000000;
@@ -432,12 +432,14 @@ h1,h2,h3,h4,h5,h6 {
         margin-top: 4rem;
         padding-bottom: 1.5rem;
         z-index: 100000;
+
       }
 
       &__nav {
         list-style: none;
         font-size: 2.2rem;
         padding-left: 1.5rem;
+        margin-bottom: 0;
 
         @include breakpoint(mobileScreen) {
           padding-left: .8rem;
@@ -483,6 +485,7 @@ h1,h2,h3,h4,h5,h6 {
 
         @include breakpoint(mobileScreen) {
           margin-bottom: .8rem;
+          padding-left: .8rem;
         }
 
         &:hover {
