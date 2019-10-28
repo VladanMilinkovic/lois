@@ -130,6 +130,8 @@
 
 body {
   background-color: #ffffff;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
 
   @include breakpoint(bigDesktop) {
     margin-left: 7vw;
@@ -145,8 +147,6 @@ html {
   font-family: "FoundersGroteskText";
   background-image: url(../images/half.png);
   background-repeat: repeat;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
 
   //from 1200px to 1366px
   @media screen and (min-width: 1200px) and (max-width: 1366px) {
@@ -1368,6 +1368,8 @@ h1,h2,h3,h4,h5,h6 {
 
               &--text {
                 text-align: center;
+                color: #000000;
+                font-size: 1rem;
               }
             }
 
@@ -1381,6 +1383,7 @@ h1,h2,h3,h4,h5,h6 {
               -webkit-text-fill-color: #ffffff;
               -webkit-text-stroke-width: 1px;
               -webkit-text-stroke-color: #000000;
+              text-align: center;
             }
 
             .uk-divider-vertical {
@@ -1389,7 +1392,7 @@ h1,h2,h3,h4,h5,h6 {
               margin: .5rem;
               border-right: 1px solid #000;
               border-left: none;
-              padding-left: 0.75rem;
+              padding-left: 0;
               padding-right: 0;
             }
 

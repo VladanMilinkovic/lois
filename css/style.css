@@ -17,6 +17,8 @@
 
 body {
   background-color: #ffffff;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
 }
 @media (min-width: 1200px) {
   body {
@@ -32,8 +34,6 @@ html {
   font-family: "FoundersGroteskText";
   background-image: url(../images/half.png);
   background-repeat: repeat;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
 }
 @media screen and (min-width: 1200px) and (max-width: 1366px) {
   html {
@@ -1224,6 +1224,8 @@ h1, h2, h3, h4, h5, h6 {
 }
 .lois .lottery-first-wrapper-ending .lottery-ending .lottery-ending__time__value--text {
   text-align: center;
+  color: #000000;
+  font-size: 1rem;
 }
 .lois .lottery-first-wrapper-ending .lottery-ending .lottery-open__title--white {
   font-family: "IntegralExtaBold";
@@ -1235,6 +1237,7 @@ h1, h2, h3, h4, h5, h6 {
   -webkit-text-fill-color: #ffffff;
   -webkit-text-stroke-width: 1px;
   -webkit-text-stroke-color: #000000;
+  text-align: center;
 }
 .lois .lottery-first-wrapper-ending .lottery-ending .uk-divider-vertical {
   width: 1px;
@@ -1242,7 +1245,7 @@ h1, h2, h3, h4, h5, h6 {
   margin: 0.5rem;
   border-right: 1px solid #000;
   border-left: none;
-  padding-left: 0.75rem;
+  padding-left: 0;
   padding-right: 0;
 }
 .lois .lottery-second-head {
