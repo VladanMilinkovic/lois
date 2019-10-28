@@ -125,6 +125,8 @@ h1, h2, h3, h4, h5, h6 {
   display: none;
   padding-left: 0.5rem;
   white-space: pre;
+  color: #ffffff;
+  text-decoration: none;
 }
 @media (min-width: 600px) {
   .lois-navigation--address .number {
@@ -150,10 +152,10 @@ h1, h2, h3, h4, h5, h6 {
   -moz-transform: rotate(0deg);
   -o-transform: rotate(0deg);
   transform: rotate(0deg);
-  -webkit-transition: 1s ease-in-out;
-  -moz-transition: 1s ease-in-out;
-  -o-transition: 1s ease-in-out;
-  transition: 1s ease-in-out;
+  -webkit-transition: 0.5s ease-in-out;
+  -moz-transition: 0.5s ease-in-out;
+  -o-transition: 0.5s ease-in-out;
+  transition: 0.5s ease-in-out;
   cursor: pointer;
 }
 @media screen and (device-aspect-ratio: 2/3) {
@@ -212,7 +214,7 @@ h1, h2, h3, h4, h5, h6 {
   -moz-transform: rotate(-45deg);
   -o-transform: rotate(-45deg);
   transform: rotate(-45deg);
-  animation: moving 1s;
+  animation: moving 0.5s;
   animation-direction: alternate;
 }
 @keyframes moving {
@@ -232,7 +234,7 @@ h1, h2, h3, h4, h5, h6 {
   -moz-transform: rotate(45deg);
   -o-transform: rotate(45deg);
   transform: rotate(45deg);
-  animation: moving2 1s;
+  animation: moving2 0.5s;
   animation-direction: alternate;
 }
 @keyframes moving2 {
@@ -330,7 +332,7 @@ h1, h2, h3, h4, h5, h6 {
   letter-spacing: 1.2px;
 }
 .lois-navigation__mobile__tabs--call {
-  color: #9AFFBF;
+  color: #00FFB8;
   text-transform: uppercase;
   padding-left: 1.5rem;
   font-size: 2.2rem;
@@ -346,11 +348,11 @@ h1, h2, h3, h4, h5, h6 {
   }
 }
 .lois-navigation__mobile__tabs--call:hover {
-  color: #9AFFBF;
+  color: #00FFB8;
   text-decoration: none !important;
 }
 .lois-navigation__mobile__tabs--call:active {
-  color: #9AFFBF;
+  color: #00FFB8;
   text-decoration: none;
 }
 .lois-navigation-tabs {
@@ -535,7 +537,7 @@ h1, h2, h3, h4, h5, h6 {
 .lois .sticky-pdf {
   padding: 1.5rem;
   display: flex;
-  background-color: #9AFFBF;
+  background-color: #00FFB8;
   color: #000000;
   cursor: pointer;
   line-height: 1.2rem;
@@ -572,7 +574,7 @@ h1, h2, h3, h4, h5, h6 {
   }
 }
 .lois .location {
-  height: calc(100vh - 30rem);
+  height: calc(100vh - 28.5rem);
   min-height: 35rem;
   position: relative;
   margin: 1.5rem;
@@ -586,6 +588,9 @@ h1, h2, h3, h4, h5, h6 {
   width: 100%;
   height: 100%;
   min-height: 35rem;
+}
+.lois .location #map .mapboxgl-popup-close-button {
+  display: none;
 }
 .lois .location .slide-location {
   position: absolute;
@@ -703,7 +708,7 @@ h1, h2, h3, h4, h5, h6 {
 }
 .lois-header__features--title {
   color: #000000;
-  font-size: 1.15rem;
+  font-size: 1rem;
   font-family: "FoundersGroteskTextBold";
   margin-bottom: 0.75rem;
   margin-top: 0;
@@ -1244,7 +1249,7 @@ h1, h2, h3, h4, h5, h6 {
 }
 .lois .lottery-first-wrapper-ending .lottery-ending .uk-divider-vertical {
   width: 1px;
-  height: 2rem;
+  height: 1.5rem;
   margin: 0.5rem;
   border-right: 1px solid #000;
   border-left: none;
@@ -1339,7 +1344,7 @@ h1, h2, h3, h4, h5, h6 {
   transition: 0.5s;
 }
 .lois .lottery-second .lottery-table .flex-table.custom-color {
-  background-color: #9AFFBF;
+  background-color: #00FFB8;
 }
 .lois .lottery-second .lottery-table .flex-table.spec-row {
   border-bottom: 1px solid #000000;
@@ -1349,6 +1354,9 @@ h1, h2, h3, h4, h5, h6 {
 }
 .lois .lottery-second .lottery-table .flex-table .first-fix {
   border-bottom: 1px solid #000 !important;
+}
+.lois .lottery-second .lottery-table .header .flex-row {
+  font-family: "FoundersGroteskTextBold";
 }
 .lois .lottery-second .lottery-table .flex-row {
   width: calc(100% / 5);
@@ -1360,7 +1368,7 @@ h1, h2, h3, h4, h5, h6 {
 @media (min-width: 0px) and (max-width: 599px) {
   .lois .lottery-second .lottery-table .flex-row {
     width: calc(100% / 6) !important;
-    padding: 0.5em;
+    padding: 0.2em;
   }
 }
 @media (min-width: 600px) and (max-width: 899px) {
@@ -1499,7 +1507,7 @@ h1, h2, h3, h4, h5, h6 {
   }
 }
 .lois .lottery-second .rent-smart {
-  background-color: #99ffbf;
+  background-color: #00FFB8;
   text-align: center;
   padding: 4rem 1.5rem;
 }
@@ -1540,7 +1548,7 @@ h1, h2, h3, h4, h5, h6 {
   font-size: 2.2rem;
   text-transform: lowercase;
   color: #000000;
-  -webkit-text-fill-color: #9AFFBF;
+  -webkit-text-fill-color: #00FFB8;
   -webkit-text-stroke-width: 1px;
   -webkit-text-stroke-color: #000000;
   line-height: 1;
@@ -1722,7 +1730,7 @@ h1, h2, h3, h4, h5, h6 {
 .lottery-layer {
   display: flex;
   flex-direction: row;
-  background-color: #9AFFBF;
+  background-color: #00FFB8;
   justify-content: space-between;
   margin-top: auto;
   width: 100%;
@@ -1785,7 +1793,7 @@ h1, h2, h3, h4, h5, h6 {
   cursor: pointer;
   letter-spacing: 1px;
   color: #000000;
-  -webkit-text-fill-color: #9AFFBF;
+  -webkit-text-fill-color: #00FFB8;
   -webkit-text-stroke-width: 1px;
   -webkit-text-stroke-color: #000000;
 }
@@ -1811,15 +1819,15 @@ h1, h2, h3, h4, h5, h6 {
 }
 .lottery-layer .lottery-open .learn-more {
   display: none;
-  -webkit-text-fill-color: #99ffbf;
+  -webkit-text-fill-color: #00FFB8;
 }
 @media (min-width: 0px) and (max-width: 599px) {
   .lottery-layer .lottery-open .learn-more {
     display: block;
-    -webkit-text-fill-color: #99ffbf;
+    -webkit-text-fill-color: #00FFB8;
   }
   .lottery-layer .lottery-open .learn-more:hover {
-    -webkit-text-fill-color: #9AFFBF;
+    -webkit-text-fill-color: #00FFB8;
     -webkit-text-stroke-width: 1px;
     -webkit-text-stroke-color: #000000;
   }
@@ -1852,7 +1860,7 @@ h1, h2, h3, h4, h5, h6 {
   cursor: default;
 }
 .lottery-layer .lottery-ending .lottery-open__title--white:hover {
-  -webkit-text-fill-color: #9AFFBF;
+  -webkit-text-fill-color: #00FFB8;
   -webkit-text-stroke-width: 1px;
 }
 .lottery-layer .lottery-ending__time {
@@ -1889,12 +1897,12 @@ h1, h2, h3, h4, h5, h6 {
 }
 .lottery-layer .lottery-ending__time .uk-divider-vertical {
   width: 1px;
-  height: 2rem;
+  height: 1.5rem;
   margin-left: auto;
   margin-right: auto;
   border-right: 1px solid #000;
   border-left: none;
-  margin-top: 7px;
+  margin-top: 0.5rem;
   padding-left: 0.75rem;
   padding-right: 0;
 }
@@ -2015,7 +2023,7 @@ h1, h2, h3, h4, h5, h6 {
 .action-layer {
   display: flex;
   flex-direction: row;
-  background-color: #9AFFBF;
+  background-color: #00FFB8;
   justify-content: space-between;
   margin-top: auto;
   position: fixed;
@@ -2036,7 +2044,7 @@ h1, h2, h3, h4, h5, h6 {
   padding-bottom: 1.5rem;
   padding-top: 1.5rem;
   border-bottom: 1px solid #000;
-  background-color: #9AFFBF;
+  background-color: #00FFB8;
 }
 .action-layer.expand {
   top: 4rem;
@@ -2250,7 +2258,7 @@ h1, h2, h3, h4, h5, h6 {
 
 .modal-contact {
   width: 25rem !important;
-  background-color: #9AFFBF;
+  background-color: #00FFB8;
   padding: 1.5rem;
 }
 @media (min-width: 0px) and (max-width: 599px) {
@@ -2275,7 +2283,7 @@ h1, h2, h3, h4, h5, h6 {
   color: #000000;
   text-transform: uppercase;
   margin: 0;
-  -webkit-text-fill-color: #9AFFBF;
+  -webkit-text-fill-color: #00FFB8;
   -webkit-text-stroke-width: 1px;
   -webkit-text-stroke-color: #000000;
 }
