@@ -1110,16 +1110,7 @@ h1, h2, h3, h4, h5, h6 {
 @media (min-width: 0px) and (max-width: 599px) {
   .lois .lottery-first {
     height: 100%;
-  }
-}
-@media screen and (device-aspect-ratio: 2/3) {
-  .lois .lottery-first {
-    height: 100%;
-  }
-}
-@media screen and (device-aspect-ratio: 40/71) {
-  .lois .lottery-first {
-    height: 100%;
+    min-height: calc(100vh - 15rem);
   }
 }
 .lois .lottery-first-wrapper {
@@ -1311,7 +1302,7 @@ h1, h2, h3, h4, h5, h6 {
 @media (min-width: 0px) and (max-width: 599px) {
   .lois .lottery-second .lottery-table .flex-row {
     width: calc(100% / 6) !important;
-    padding: 0.5em 0.5em 0.5em 0;
+    padding: 0.5em;
   }
 }
 @media (min-width: 600px) and (max-width: 899px) {
@@ -1321,7 +1312,13 @@ h1, h2, h3, h4, h5, h6 {
 }
 @media (min-width: 0px) and (max-width: 599px) {
   .lois .lottery-second .lottery-table .mobile-width-3 {
-    width: calc(100% / 3) !important;
+    width: calc(100% / 3.2) !important;
+    text-align: center;
+  }
+}
+@media (min-width: 0px) and (max-width: 599px) {
+  .lois .lottery-second .lottery-table .mobile-width-5-5 {
+    width: calc(100% / 5.5) !important;
     text-align: center;
   }
 }
@@ -1332,7 +1329,7 @@ h1, h2, h3, h4, h5, h6 {
 }
 @media (min-width: 0px) and (max-width: 599px) {
   .lois .lottery-second .lottery-table .mobile-width-2 {
-    width: calc(100% / 2) !important;
+    width: calc(100% / 2.063) !important;
   }
 }
 @media (min-width: 0px) and (max-width: 599px) {
@@ -1343,6 +1340,16 @@ h1, h2, h3, h4, h5, h6 {
 @media (min-width: 0px) and (max-width: 599px) {
   .lois .lottery-second .lottery-table .mobile-width-1-5 {
     width: calc(100% / 1.5) !important;
+  }
+}
+@media (min-width: 0px) and (max-width: 599px) {
+  .lois .lottery-second .lottery-table .mobile-width-cell-36 {
+    width: 36% !important;
+  }
+}
+@media (min-width: 0px) and (max-width: 599px) {
+  .lois .lottery-second .lottery-table .mobile-width-cell-64 {
+    width: 62% !important;
   }
 }
 .lois .lottery-second .lottery-table .table-border-none {
@@ -1378,6 +1385,11 @@ h1, h2, h3, h4, h5, h6 {
   width: calc(100% / 2);
   padding: 0.75em 0.75em 0.75em 0;
   text-align: center;
+}
+@media (min-width: 0px) and (max-width: 599px) {
+  .lois .lottery-second .lottery-table .flex-cell {
+    padding: 0.5em;
+  }
 }
 .lois .lottery-second .lottery-table-mark {
   display: flex;
