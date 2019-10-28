@@ -428,7 +428,7 @@ h1, h2, h3, h4, h5, h6 {
   }
 }
 .uk-card-document {
-  width: 2.7rem;
+  width: 2rem;
 }
 @media (min-width: 0px) and (max-width: 599px) {
   .uk-card-document {
@@ -551,6 +551,7 @@ h1, h2, h3, h4, h5, h6 {
   padding-left: 1.5rem;
   font-family: "FoundersGroteskText";
   font-size: 1rem;
+  line-height: 1.3;
 }
 @media (min-width: 0px) and (max-width: 599px) {
   .lois .sticky-pdf span {
@@ -703,10 +704,9 @@ h1, h2, h3, h4, h5, h6 {
 .lois-header__features--title {
   color: #000000;
   font-size: 1rem;
-  font-family: "FoundersGroteskText";
+  font-family: "FoundersGroteskTextBold";
   margin-bottom: 0.75rem;
   margin-top: 0;
-  font-weight: bold;
 }
 @media (min-width: 0px) and (max-width: 599px) {
   .lois-header__features--title {
@@ -869,7 +869,7 @@ h1, h2, h3, h4, h5, h6 {
 @media (min-width: 1024px) {
   .lois .building__first {
     display: flex;
-    height: calc(100vh - 30rem);
+    height: calc(100vh - 29rem);
   }
 }
 @media only screen and (min-device-width: 1024px) and (max-device-width: 1366px) and (-webkit-min-device-pixel-ratio: 2) and (orientation: landscape) {
@@ -1193,9 +1193,9 @@ h1, h2, h3, h4, h5, h6 {
   margin: 0 auto;
   color: #ffffff;
   font-size: 1rem;
-  padding: 1.5rem 2rem;
+  padding: 1.5rem 3rem;
   background-color: #000000;
-  font-family: "FoundersGroteskText";
+  font-family: "FoundersGroteskTextBold";
   outline: 0;
   border: 1px solid #000000;
 }
@@ -1237,6 +1237,7 @@ h1, h2, h3, h4, h5, h6 {
   font-size: 2.2rem;
   text-transform: uppercase;
   margin: 0;
+  letter-spacing: 1px;
   cursor: pointer;
   color: #000000;
   -webkit-text-fill-color: #ffffff;
@@ -1515,7 +1516,7 @@ h1, h2, h3, h4, h5, h6 {
   }
 }
 .lois .lottery-second .rent-smart-content--image {
-  width: 50%;
+  width: 15rem;
   margin: 0 auto 1.5rem auto;
 }
 @media (min-width: 0px) and (max-width: 599px) {
@@ -1769,6 +1770,7 @@ h1, h2, h3, h4, h5, h6 {
   font-size: 2.2rem;
   text-transform: uppercase;
   margin: 0;
+  letter-spacing: 1px;
   color: #000000;
   -webkit-text-fill-color: #000000;
 }
@@ -1778,6 +1780,7 @@ h1, h2, h3, h4, h5, h6 {
   text-transform: uppercase;
   margin: 0;
   cursor: pointer;
+  letter-spacing: 1px;
   color: #000000;
   -webkit-text-fill-color: #9AFFBF;
   -webkit-text-stroke-width: 1px;
@@ -2243,7 +2246,7 @@ h1, h2, h3, h4, h5, h6 {
 }
 
 .modal-contact {
-  width: 30rem !important;
+  width: 25rem !important;
   background-color: #9AFFBF;
   padding: 1.5rem;
 }

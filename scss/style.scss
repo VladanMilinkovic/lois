@@ -557,7 +557,7 @@ h1,h2,h3,h4,h5,h6 {
   }
 
   &-document {
-    width: 2.7rem;
+    width: 2rem;
 
     @include breakpoint(mobileScreen) {
       display: none;
@@ -683,6 +683,7 @@ h1,h2,h3,h4,h5,h6 {
       padding-left: 1.5rem;
       font-family: "FoundersGroteskText";
       font-size: 1rem;
+      line-height: 1.3;
 
       @include breakpoint(mobileScreen) {
         font-size: 1.15rem;
@@ -840,10 +841,9 @@ h1,h2,h3,h4,h5,h6 {
       &--title {
         color: #000000;
         font-size: 1rem;
-        font-family: "FoundersGroteskText";
+        font-family: "FoundersGroteskTextBold";
         margin-bottom: .75rem;
         margin-top: 0;
-        font-weight: bold;
 
         @include breakpoint(mobileScreen) {
           font-size: 1.15rem;
@@ -1000,7 +1000,7 @@ h1,h2,h3,h4,h5,h6 {
 
       @include breakpoint(desktop) {
         display: flex;
-        height: calc(100vh - 30rem);
+        height: calc(100vh - 29rem);
       }
 
 
@@ -1335,9 +1335,9 @@ h1,h2,h3,h4,h5,h6 {
           margin: 0 auto;
           color: #ffffff;
           font-size: 1rem;
-          padding: 1.5rem 2rem;
+          padding: 1.5rem 3rem;
           background-color: #000000;
-          font-family: "FoundersGroteskText";
+          font-family: "FoundersGroteskTextBold";
           outline: 0;
           border: 1px solid #000000;
 
@@ -1383,6 +1383,7 @@ h1,h2,h3,h4,h5,h6 {
               font-size: 2.2rem;
               text-transform: uppercase;
               margin: 0;
+              letter-spacing: 1px;
               cursor: pointer;
               color: #000000;
               -webkit-text-fill-color: #ffffff;
@@ -1681,7 +1682,7 @@ h1,h2,h3,h4,h5,h6 {
           }
 
           &--image {
-            width: 50%;
+            width: 15rem;
             margin: 0 auto 1.5rem auto;
 
             @include breakpoint(mobileScreen) {
@@ -1959,6 +1960,7 @@ h1,h2,h3,h4,h5,h6 {
         font-size: 2.2rem;
         text-transform: uppercase;
         margin: 0;
+        letter-spacing: 1px;
         color: #000000;
         -webkit-text-fill-color: #000000;
       }
@@ -1968,6 +1970,7 @@ h1,h2,h3,h4,h5,h6 {
         text-transform: uppercase;
         margin: 0;
         cursor: pointer;
+        letter-spacing: 1px;
         color: #000000;
         -webkit-text-fill-color: #9AFFBF;
         -webkit-text-stroke-width: 1px;
@@ -2480,7 +2483,7 @@ h1,h2,h3,h4,h5,h6 {
 
 // Contact modal
 .modal-contact {
-  width: 30rem !important;
+  width: 25rem !important;
   background-color: #9AFFBF;
   padding: 1.5rem;
 
