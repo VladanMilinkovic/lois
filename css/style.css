@@ -86,23 +86,17 @@ h1, h2, h3, h4, h5, h6 {
   }
 }
 .lois-navigation--icon {
-  background-image: url("../images/eho.svg");
-  background-repeat: no-repeat;
-  background-size: 1.5rem;
-  height: 1.4rem;
   width: 1.5rem;
   margin-right: 1.5rem;
 }
 @media (min-width: 0px) and (max-width: 599px) {
   .lois-navigation--icon {
     margin-right: 0.8rem;
-    height: 1.5rem;
     width: 2rem;
   }
 }
 @media screen and (device-aspect-ratio: 40/71) {
   .lois-navigation--icon {
-    height: 1.5rem;
     width: 2rem;
   }
 }
@@ -271,10 +265,6 @@ h1, h2, h3, h4, h5, h6 {
   font-size: 2rem;
 }
 .lois-navigation__mobile-email {
-  background-image: url("../images/form.svg");
-  background-repeat: no-repeat;
-  background-size: cover;
-  height: 1.5rem;
   width: 2rem;
 }
 .lois-navigation__mobile__tabs {
@@ -418,9 +408,6 @@ h1, h2, h3, h4, h5, h6 {
   }
 }
 .uk-card-document {
-  background-image: url("../images/document.svg");
-  background-repeat: no-repeat;
-  background-size: cover;
   width: 2.7rem;
 }
 @media (min-width: 0px) and (max-width: 599px) {
@@ -635,15 +622,10 @@ h1, h2, h3, h4, h5, h6 {
   }
 }
 .lois-header-logo {
-  background-image: url("../images/Group 8.svg");
-  background-repeat: no-repeat;
-  background-size: cover;
-  height: 11.4rem;
   width: 20rem;
 }
 @media (min-width: 0px) and (max-width: 599px) {
   .lois-header-logo {
-    height: 8rem;
     width: 15rem;
   }
 }
@@ -1632,6 +1614,7 @@ h1, h2, h3, h4, h5, h6 {
   color: #000;
   margin-bottom: 0.8rem;
   font-family: "FoundersGroteskTextBold";
+  letter-spacing: normal;
 }
 @media (min-width: 0px) and (max-width: 599px) {
   .lois .lottery-fourth .lottery-faq-block--title {

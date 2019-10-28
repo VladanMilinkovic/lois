@@ -199,21 +199,15 @@ h1,h2,h3,h4,h5,h6 {
   }
 
   &--icon {
-    background-image: url("../images/eho.svg");
-    background-repeat: no-repeat;
-    background-size: 1.5rem;
-    height: 1.4rem;
     width: 1.5rem;
     margin-right: 1.5rem;
 
     @include breakpoint(mobileScreen) {
       margin-right: .8rem;
-      height: 1.5rem;
       width: 2rem;
     }
 
     @media screen and (device-aspect-ratio: 40/71) {
-      height: 1.5rem;
       width: 2rem;
     }
 
@@ -396,10 +390,6 @@ h1,h2,h3,h4,h5,h6 {
       }
     }
     &-email {
-      background-image : url('../images/form.svg');
-      background-repeat: no-repeat;
-      background-size: cover;
-      height: 1.5rem;
       width: 2rem;
     }
 
@@ -550,9 +540,6 @@ h1,h2,h3,h4,h5,h6 {
   }
 
   &-document {
-    background-image: url('../images/document.svg');
-    background-repeat: no-repeat;
-    background-size: cover;
     width: 2.7rem;
 
     @include breakpoint(mobileScreen) {
@@ -772,14 +759,9 @@ h1,h2,h3,h4,h5,h6 {
     }
 
     &-logo {
-      background-image: url('../images/Group 8.svg');
-      background-repeat: no-repeat;
-      background-size: cover;
-      height: 11.4rem;
       width: 20rem;
 
       @include breakpoint(mobileScreen) {
-        height: 8rem;
         width: 15rem;
       }
     }
@@ -1804,6 +1786,7 @@ h1,h2,h3,h4,h5,h6 {
             color: #000;
             margin-bottom: 0.8rem;
             font-family: "FoundersGroteskTextBold";
+            letter-spacing: normal;
 
             @include breakpoint(mobileScreen) {
               font-size: 1.15rem;
