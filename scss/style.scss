@@ -298,15 +298,15 @@ h1,h2,h3,h4,h5,h6 {
   }
 
   #mobile-icon span:nth-child(1) {
-    top: 11px;
+    top: 10px;
   }
 
   #mobile-icon span:nth-child(2),#mobile-icon span:nth-child(3) {
-    top: 19px;
+    top: 18px;
   }
 
   #mobile-icon span:nth-child(4) {
-    top: 27px;
+    top: 26px;
   }
 
   #mobile-icon.open span:nth-child(2) {
@@ -314,7 +314,7 @@ h1,h2,h3,h4,h5,h6 {
   }
 
   #mobile-icon.open span:nth-child(1) {
-    top: 19px;
+    top: 18px;
     -webkit-transform: rotate(-45deg);
     -moz-transform: rotate(-45deg);
     -o-transform: rotate(-45deg);
@@ -342,7 +342,7 @@ h1,h2,h3,h4,h5,h6 {
   }
 
   #mobile-icon.open span:nth-child(4) {
-    top: 19px;
+    top: 18px;
     -webkit-transform: rotate(45deg);
     -moz-transform: rotate(45deg);
     -o-transform: rotate(45deg);
@@ -396,11 +396,11 @@ h1,h2,h3,h4,h5,h6 {
       }
     }
     &-email {
-      background-image : url('../images/eho.svg');
+      background-image : url('../images/form.svg');
       background-repeat: no-repeat;
       background-size: cover;
-      height: 21px;
-      width: 26px;
+      height: 1.5rem;
+      width: 2rem;
     }
 
     &__tabs {

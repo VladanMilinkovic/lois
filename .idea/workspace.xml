@@ -4,8 +4,11 @@
     <list default="true" id="19036ac1-fd22-45e0-aa2d-52662cc300d2" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/css/style.css" beforeDir="false" afterPath="$PROJECT_DIR$/css/style.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/css/style.css.map" beforeDir="false" afterPath="$PROJECT_DIR$/css/style.css.map" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/index.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/pages/lottery.html" beforeDir="false" afterPath="$PROJECT_DIR$/pages/lottery.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/pages/neighborhood.html" beforeDir="false" afterPath="$PROJECT_DIR$/pages/neighborhood.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/pages/residences.html" beforeDir="false" afterPath="$PROJECT_DIR$/pages/residences.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/pages/slide.html" beforeDir="false" afterPath="$PROJECT_DIR$/pages/slide.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/scss/style.scss" beforeDir="false" afterPath="$PROJECT_DIR$/scss/style.scss" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -71,6 +74,7 @@
       <workItem from="1571936718305" duration="2456000" />
       <workItem from="1571942995016" duration="20422000" />
       <workItem from="1572026971989" duration="8733000" />
+      <workItem from="1572276727940" duration="1003000" />
     </task>
     <servers />
   </component>

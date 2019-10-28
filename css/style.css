@@ -187,19 +187,19 @@ h1, h2, h3, h4, h5, h6 {
   transition: 0.25s ease-in-out;
 }
 .lois-navigation #mobile-icon span:nth-child(1) {
-  top: 11px;
+  top: 10px;
 }
 .lois-navigation #mobile-icon span:nth-child(2), .lois-navigation #mobile-icon span:nth-child(3) {
-  top: 19px;
+  top: 18px;
 }
 .lois-navigation #mobile-icon span:nth-child(4) {
-  top: 27px;
+  top: 26px;
 }
 .lois-navigation #mobile-icon.open span:nth-child(2) {
   width: 0%;
 }
 .lois-navigation #mobile-icon.open span:nth-child(1) {
-  top: 19px;
+  top: 18px;
   -webkit-transform: rotate(-45deg);
   -moz-transform: rotate(-45deg);
   -o-transform: rotate(-45deg);
@@ -219,7 +219,7 @@ h1, h2, h3, h4, h5, h6 {
   width: 0%;
 }
 .lois-navigation #mobile-icon.open span:nth-child(4) {
-  top: 19px;
+  top: 18px;
   -webkit-transform: rotate(45deg);
   -moz-transform: rotate(45deg);
   -o-transform: rotate(45deg);
@@ -271,11 +271,11 @@ h1, h2, h3, h4, h5, h6 {
   font-size: 2rem;
 }
 .lois-navigation__mobile-email {
-  background-image: url("../images/eho.svg");
+  background-image: url("../images/form.svg");
   background-repeat: no-repeat;
   background-size: cover;
-  height: 21px;
-  width: 26px;
+  height: 1.5rem;
+  width: 2rem;
 }
 .lois-navigation__mobile__tabs {
   display: none;
