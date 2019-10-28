@@ -13,6 +13,16 @@
   src: url(../fonts/foundersgrotesktext-medium.woff) format("truetype");
 }
 
+@font-face {
+  font-family: "CaveatBold";
+  src: url(../fonts/Caveat-Bold.ttf) format("truetype");
+}
+
+@font-face {
+  font-family: "CaveatRegular";
+  src: url(../fonts/Caveat-Regular.ttf) format("truetype");
+}
+
 // Mixins
 @mixin breakpoint($point) {
   // from 2048px
@@ -721,6 +731,13 @@ h1,h2,h3,h4,h5,h6 {
 
       .mapboxgl-popup-close-button {
         display: none;
+      }
+
+      .mapboxgl-popup-content {
+        font-family: "CaveatRegular";
+        color: #000000;
+        font-size: 1rem;
+        text-transform: uppercase;
       }
     }
 

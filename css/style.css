@@ -10,6 +10,14 @@
   font-family: "FoundersGroteskTextBold";
   src: url(../fonts/foundersgrotesktext-medium.woff) format("truetype");
 }
+@font-face {
+  font-family: "CaveatBold";
+  src: url(../fonts/Caveat-Bold.ttf) format("truetype");
+}
+@font-face {
+  font-family: "CaveatRegular";
+  src: url(../fonts/Caveat-Regular.ttf) format("truetype");
+}
 * {
   margin: 0;
   padding: 0;
@@ -591,6 +599,12 @@ h1, h2, h3, h4, h5, h6 {
 }
 .lois .location #map .mapboxgl-popup-close-button {
   display: none;
+}
+.lois .location #map .mapboxgl-popup-content {
+  font-family: "CaveatRegular";
+  color: #000000;
+  font-size: 1rem;
+  text-transform: uppercase;
 }
 .lois .location .slide-location {
   position: absolute;
