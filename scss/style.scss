@@ -1601,23 +1601,12 @@ h1,h2,h3,h4,h5,h6 {
           }
 
           &--image {
-            background-image: url('../images/rentsmart.svg');
-            background-repeat: no-repeat;
-            background-size: 100%;
-            height: 3rem;
-            width: 30%;
-            margin: 0 auto;
+            width: 50%;
+            margin: 0 auto 1.5rem auto;
 
             @include breakpoint(mobileScreen) {
               width: 50%;
-            }
-
-            @include breakpoint(tablet) {
-              height: 3rem;
-            }
-
-            @media (min-width: 601px) and (max-width: 1024px) {
-              height: 2.5rem;
+              margin: 0 auto .8rem auto;
             }
           }
         }
