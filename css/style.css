@@ -148,7 +148,7 @@ h1, h2, h3, h4, h5, h6 {
   }
 }
 .lois-navigation #mobile-icon {
-  width: 3rem;
+  width: 2rem;
   height: 3.1rem;
   position: relative;
   margin: 0 0 0 0.8rem;
@@ -161,6 +161,21 @@ h1, h2, h3, h4, h5, h6 {
   -o-transition: 1s ease-in-out;
   transition: 1s ease-in-out;
   cursor: pointer;
+}
+@media screen and (device-aspect-ratio: 2/3) {
+  .lois-navigation #mobile-icon {
+    width: 2.5rem;
+  }
+}
+@media screen and (device-aspect-ratio: 40/71) {
+  .lois-navigation #mobile-icon {
+    width: 2.5rem;
+  }
+}
+@media only screen and (min-device-width: 560px) and (max-device-width: 1136px) and (-webkit-min-device-pixel-ratio: 2) {
+  .lois-navigation #mobile-icon {
+    width: 2.5rem;
+  }
 }
 .lois-navigation #mobile-icon span {
   display: block;
@@ -1077,11 +1092,13 @@ h1, h2, h3, h4, h5, h6 {
 .lois .slider-box .uk-slidenav:hover {
   color: #ffffff;
 }
-.lois .slider-box .uk-position-small span {
-  margin-right: 0;
-  margin-left: 0;
-}
 @media (min-width: 0px) and (max-width: 599px) {
+  .lois .slider-box .uk-position-small .next-text {
+    margin-right: 0;
+    margin-left: 0;
+  }
+}
+@media (min-width: 0px) and (max-width: 599px) and (min-width: 0px) and (max-width: 599px) {
   .lois .slider-box .uk-position-small svg {
     display: none;
   }
@@ -1180,6 +1197,52 @@ h1, h2, h3, h4, h5, h6 {
   .lois .lottery-first-wrapper-button {
     font-size: 1.15rem;
   }
+}
+.lois .lottery-first-wrapper-ending--black {
+  font-family: "IntegralExtaBold";
+  font-size: 2.2rem;
+  text-transform: uppercase;
+  margin: 0;
+  color: #000000;
+  text-align: center;
+  -webkit-text-fill-color: #000000;
+}
+.lois .lottery-first-wrapper-ending .lottery-ending {
+  display: flex;
+  justify-content: center;
+  margin-bottom: 1.5rem;
+}
+@media (min-width: 0px) and (max-width: 599px) {
+  .lois .lottery-first-wrapper-ending .lottery-ending {
+    margin-bottom: 0.8rem;
+  }
+}
+.lois .lottery-first-wrapper-ending .lottery-ending .lottery-ending__time__value {
+  display: flex;
+  flex-direction: column;
+}
+.lois .lottery-first-wrapper-ending .lottery-ending .lottery-ending__time__value--text {
+  text-align: center;
+}
+.lois .lottery-first-wrapper-ending .lottery-ending .lottery-open__title--white {
+  font-family: "IntegralExtaBold";
+  font-size: 2.2rem;
+  text-transform: uppercase;
+  margin: 0;
+  cursor: pointer;
+  color: #000000;
+  -webkit-text-fill-color: #ffffff;
+  -webkit-text-stroke-width: 1px;
+  -webkit-text-stroke-color: #000000;
+}
+.lois .lottery-first-wrapper-ending .lottery-ending .uk-divider-vertical {
+  width: 1px;
+  height: 2rem;
+  margin: 0.5rem;
+  border-right: 1px solid #000;
+  border-left: none;
+  padding-left: 0.75rem;
+  padding-right: 0;
 }
 .lois .lottery-second-head {
   margin: 3rem 1.5rem 1.5rem 1.5rem;

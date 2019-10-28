@@ -257,7 +257,7 @@ h1,h2,h3,h4,h5,h6 {
     }
   }
   #mobile-icon {
-    width: 3rem;
+    width: 2rem;
     height: 3.1rem;
     position: relative;
     margin: 0 0 0 .8rem;
@@ -270,6 +270,18 @@ h1,h2,h3,h4,h5,h6 {
     -o-transition: 1s ease-in-out;
     transition: 1s ease-in-out;
     cursor: pointer;
+
+    @media screen and (device-aspect-ratio: 2/3) {
+      width: 2.5rem;
+    }
+
+    @media screen and (device-aspect-ratio: 40/71) {
+      width: 2.5rem;
+    }
+
+    @media only screen and (min-device-width: 560px) and (max-device-width: 1136px) and (-webkit-min-device-pixel-ratio: 2) {
+      width: 2.5rem;
+    }
 
     span {
       display: block;
@@ -1209,25 +1221,29 @@ h1,h2,h3,h4,h5,h6 {
       color: #ffffff;
     }
 
-    .uk-position-small {
+    @include breakpoint(mobileScreen) {
+      .uk-position-small {
 
-      @include breakpoint(mobileScreen) {
-
-      }
-
-      span {
-        margin-right: 0;
-        margin-left: 0;
-      }
-
-      svg {
         @include breakpoint(mobileScreen) {
-          display: none;
+
         }
+
+        .next-text {
+          margin-right: 0;
+          margin-left: 0;
+        }
+
+        svg {
+          @include breakpoint(mobileScreen) {
+            display: none;
+          }
+        }
+
+
       }
-
-
     }
+
+
   }
   //End Slider
 
@@ -1321,6 +1337,61 @@ h1,h2,h3,h4,h5,h6 {
 
           @include breakpoint(mobileScreen) {
             font-size: 1.15rem;
+          }
+        }
+
+        &-ending {
+
+          &--black {
+            font-family: "IntegralExtaBold";
+            font-size: 2.2rem;
+            text-transform: uppercase;
+            margin: 0;
+            color: #000000;
+            text-align: center;
+            -webkit-text-fill-color: #000000;
+          }
+
+          .lottery-ending {
+            display: flex;
+            justify-content: center;
+            margin-bottom: 1.5rem;
+
+            @include breakpoint(mobileScreen) {
+              margin-bottom: .8rem;
+            }
+
+            .lottery-ending__time__value {
+              display: flex;
+              flex-direction: column;
+
+              &--text {
+                text-align: center;
+              }
+            }
+
+            .lottery-open__title--white {
+              font-family: "IntegralExtaBold";
+              font-size: 2.2rem;
+              text-transform: uppercase;
+              margin: 0;
+              cursor: pointer;
+              color: #000000;
+              -webkit-text-fill-color: #ffffff;
+              -webkit-text-stroke-width: 1px;
+              -webkit-text-stroke-color: #000000;
+            }
+
+            .uk-divider-vertical {
+              width: 1px;
+              height: 2rem;
+              margin: .5rem;
+              border-right: 1px solid #000;
+              border-left: none;
+              padding-left: 0.75rem;
+              padding-right: 0;
+            }
+
           }
         }
       }
