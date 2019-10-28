@@ -1192,6 +1192,7 @@ h1, h2, h3, h4, h5, h6 {
   background-color: #000000;
   font-family: "FoundersGroteskText";
   outline: 0;
+  border: 1px solid #000000;
 }
 @media (min-width: 0px) and (max-width: 599px) {
   .lois .lottery-first-wrapper-button {
