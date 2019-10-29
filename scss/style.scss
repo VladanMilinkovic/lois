@@ -1199,12 +1199,12 @@ input {
     .uk-position-center-left {
       top: 88% !important;
 
-      @include breakpoint(mobileScreen) {
-        top: 100% !important;
-      }
-
       @include breakpoint(tablet) {
         top: 97% !important;
+      }
+
+      @include multiple-media(mobileScreen, tabletScreen, tabletScreenLandscape, iPad, iPadLandscape, iPadProPortrait, iPadProLandscape) {
+        top: 100% !important;
       }
     }
 
