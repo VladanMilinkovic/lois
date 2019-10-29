@@ -232,6 +232,9 @@ input {
       font-size: 1.15rem;
       padding-left: .8rem;
     }
+    @include breakpoint(tabletScreen) {
+      font-size: 1.15rem;
+    }
 
     @media (max-height: 601px) and (max-width: 900px) {
       font-size: 1.15rem;
@@ -624,7 +627,7 @@ input {
 
 .lois-uk-card {
   box-shadow: none;
-  right: 8.5vw;
+  right: calc(7vw + 1.5rem);
 
   @include breakpoint(mobileScreen) {
     right: .8rem;
@@ -650,7 +653,7 @@ input {
   &-dots {
     display: none;
 
-    @include multiple-media(mobileScreen, tabletScreen) {
+    @include multiple-media(mobileScreen, tabletScreen, tabletScreenLandscape) {
       display: flex;
       margin: .8rem 0 !important;
     }
@@ -721,7 +724,7 @@ input {
 
   // Map
   .location {
-    height: calc(100vh - 28.5rem);
+    height: calc(100vh - 28.4rem);
     min-height: 35rem;
     position: relative;
     margin: 1.5rem;
@@ -744,7 +747,7 @@ input {
         color: #000000;
         font-size: 1rem;
         text-transform: uppercase;
-        outline: none;
+        outline-color: #000000;
       }
     }
 
@@ -829,6 +832,7 @@ input {
         font-family: "IntegralExtaBold";
         font-size: 2.2rem;
         text-transform: uppercase;
+        text-align: right;
         cursor: pointer;
         color: #000000;
         -webkit-text-fill-color: #ffffff; /* Will override color (regardless of order) */
@@ -1031,7 +1035,7 @@ input {
 
       @include breakpoint(desktop) {
         display: flex;
-        height: calc(100vh - 29rem);
+        height: calc(100vh - 28.7rem);
       }
 
 
@@ -1093,7 +1097,7 @@ input {
 
       @include breakpoint(desktop) {
         display: flex;
-        height: calc(100vh - 16rem);
+        height: calc(100vh - 15.5rem);
         margin-top: 1.5rem;
       }
 
@@ -1164,7 +1168,7 @@ input {
     .building__first {
       @include breakpoint(desktop) {
         display: flex;
-        height: calc(100vh - 16rem);
+        height: calc(100vh - 15.4rem);
       }
 
       @include breakpoint(iPadProLandscape) {
@@ -1188,7 +1192,7 @@ input {
     }
 
     @media screen and (min-width: 601px) and (max-width: 1024px) {
-      height: calc(100vh - 46rem);
+      height: calc(100vh - 47rem);
       min-height: 31rem;
     }
 
@@ -1213,7 +1217,7 @@ input {
       }
 
       @include breakpoint(tablet) {
-        height: calc(100vh - 16rem);
+        height: calc(100vh - 15rem);
       }
 
       @media screen and (min-width: 601px) and (max-width: 1024px) {
@@ -1248,7 +1252,7 @@ input {
       text-decoration: none;
     }
     .uk-slidenav {
-      @include multiple-media(mobileScreen, tabletScreen) {
+      @include multiple-media(mobileScreen, tabletScreen, tabletScreenLandscape) {
         right: 0;
         margin: 0;
       }
@@ -1257,7 +1261,7 @@ input {
       color: #ffffff;
     }
 
-    @include multiple-media(mobileScreen, tabletScreen) {
+    @include multiple-media(mobileScreen, tabletScreen, tabletScreenLandscape) {
       .uk-position-small {
 
         .next-text {
@@ -1266,7 +1270,7 @@ input {
         }
 
         svg {
-          @include multiple-media(mobileScreen, tabletScreen) {
+          @include multiple-media(mobileScreen, tabletScreen, tabletScreenLandscape) {
             display: none;
           }
         }
@@ -1552,8 +1556,8 @@ input {
 
         .flex-row {
           width: calc(100% / 5);
-          text-align: center;
-          padding: 0.75em 0.75em 0.75em 0;
+          text-align: left;
+          padding: 1.5rem;
           border-bottom: solid 1px $table-border;
           font-size: 1rem;
 
@@ -1569,6 +1573,7 @@ input {
         }
 
         .mobile-width-3 {
+          text-align: right;
           @include breakpoint(mobileScreen) {
             width: calc(100% / 3.2) !important;
             text-align: right;
@@ -1606,6 +1611,7 @@ input {
           }
         }
         .mobile-width-cell-64 {
+          text-align: right !important;
           @include breakpoint(mobileScreen) {
             width: 62% !important;
             text-align: right !important;
@@ -1645,8 +1651,8 @@ input {
 
         .flex-cell {
           width: calc(100% / 2); //1px = border right
-          padding: 0.75em 0.75em 0.75em 0;
-          text-align: center;
+          padding: 1.5rem;
+          text-align: left;
           &:last-child {
             // border-right: 0;
           }
