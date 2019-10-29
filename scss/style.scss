@@ -186,6 +186,9 @@ h1,h2,h3,h4,h5,h6 {
   line-height: 1;
 }
 
+input {
+  -webkit-appearance: none;
+}
 
 // Navigation
 .lois-navigation {
@@ -647,7 +650,7 @@ h1,h2,h3,h4,h5,h6 {
   &-dots {
     display: none;
 
-    @include breakpoint(mobileScreen) {
+    @include multiple-media(mobileScreen, tabletScreen) {
       display: flex;
       margin: .8rem 0 !important;
     }
@@ -741,6 +744,7 @@ h1,h2,h3,h4,h5,h6 {
         color: #000000;
         font-size: 1rem;
         text-transform: uppercase;
+        outline: none;
       }
     }
 
@@ -1184,8 +1188,8 @@ h1,h2,h3,h4,h5,h6 {
     }
 
     @media screen and (min-width: 601px) and (max-width: 1024px) {
-      height: calc(100vh - 47rem);
-      min-height: 30rem;
+      height: calc(100vh - 46rem);
+      min-height: 31rem;
     }
 
     .uk-position-center-right,
@@ -1244,7 +1248,7 @@ h1,h2,h3,h4,h5,h6 {
       text-decoration: none;
     }
     .uk-slidenav {
-      @include breakpoint(mobileScreen) {
+      @include multiple-media(mobileScreen, tabletScreen) {
         right: 0;
         margin: 0;
       }
@@ -1253,12 +1257,8 @@ h1,h2,h3,h4,h5,h6 {
       color: #ffffff;
     }
 
-    @include breakpoint(mobileScreen) {
+    @include multiple-media(mobileScreen, tabletScreen) {
       .uk-position-small {
-
-        @include breakpoint(mobileScreen) {
-
-        }
 
         .next-text {
           margin-right: 0;
@@ -1266,7 +1266,7 @@ h1,h2,h3,h4,h5,h6 {
         }
 
         svg {
-          @include breakpoint(mobileScreen) {
+          @include multiple-media(mobileScreen, tabletScreen) {
             display: none;
           }
         }
@@ -1560,16 +1560,18 @@ h1,h2,h3,h4,h5,h6 {
           @include breakpoint(mobileScreen) {
             width: calc(100% / 6) !important;
             padding: 0.2em;
+            text-align: left;
           }
           @include breakpoint(tabletScreen) {
             font-size: 1.15rem;
+            text-align: left;
           }
         }
 
         .mobile-width-3 {
           @include breakpoint(mobileScreen) {
             width: calc(100% / 3.2) !important;
-            text-align: center;
+            text-align: right;
           }
         }
         .mobile-width-5-5 {
@@ -1606,6 +1608,7 @@ h1,h2,h3,h4,h5,h6 {
         .mobile-width-cell-64 {
           @include breakpoint(mobileScreen) {
             width: 62% !important;
+            text-align: right !important;
           }
         }
 
@@ -1648,8 +1651,13 @@ h1,h2,h3,h4,h5,h6 {
             // border-right: 0;
           }
 
-          @include breakpoint(mobileScreen) {
-            padding: .5em;
+          @include multiple-media(mobileScreen) {
+            padding: .2em;
+            text-align: left;
+          }
+
+          @include multiple-media(tabletScreen) {
+            text-align: left;
           }
         }
 
@@ -2673,7 +2681,7 @@ h1,h2,h3,h4,h5,h6 {
     flex-grow: 1;
     min-width: 17rem;
 
-    @include breakpoint(mobileScreen) {
+    @include multiple-media(mobileScreen, tabletScreen) {
       flex-direction: column;
     }
   }
@@ -2690,6 +2698,7 @@ h1,h2,h3,h4,h5,h6 {
         font-family: "IntegralExtaBold";
         font-size: 2.2rem;
         text-transform: uppercase;
+        letter-spacing: 1px;
         margin: 0;
         color: #000000;
         -webkit-text-fill-color: #ededed;
