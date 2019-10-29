@@ -1108,11 +1108,6 @@ input {
     height: calc(100vh - 28rem);
   }
 }
-@media (min-width: 1200px) and (max-width: 1799px) {
-  .lois .slider-box .uk-position-relative {
-    height: calc(100vh - 15.5rem);
-  }
-}
 @media (min-width: 1800px) {
   .lois .slider-box .uk-position-relative {
     height: calc(100vh - 15.5rem);

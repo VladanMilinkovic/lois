@@ -1228,7 +1228,7 @@ input {
         height: calc(100vh - 28rem);
       }
 
-      @include multiple-media(mediumScreen, largeScreen) {
+      @include multiple-media(largeScreen) {
         height: calc(100vh - 15.5rem);
       }
 
