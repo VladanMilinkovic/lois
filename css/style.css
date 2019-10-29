@@ -1576,7 +1576,7 @@ input {
 @media (min-width: 0px) and (max-width: 599px) {
   .lois .lottery-second .lottery-table .flex-row {
     width: calc(100% / 6) !important;
-    padding: 0.8em 0.2em;
+    padding: 1.5rem 0.2rem;
     text-align: left;
   }
 }
@@ -1671,7 +1671,7 @@ input {
 }
 @media (min-width: 0px) and (max-width: 599px) {
   .lois .lottery-second .lottery-table .flex-cell {
-    padding: 0.2em;
+    padding: 0.8rem 0.2rem;
     text-align: left;
   }
 }

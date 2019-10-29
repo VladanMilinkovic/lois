@@ -1564,7 +1564,7 @@ input {
 
           @include breakpoint(mobileScreen) {
             width: calc(100% / 6) !important;
-            padding: 0.8em .2em;
+            padding: 1.5rem .2rem;
             text-align: left;
           }
           @include breakpoint(tabletScreen) {
@@ -1659,7 +1659,7 @@ input {
           }
 
           @include multiple-media(mobileScreen) {
-            padding: .2em;
+            padding: .8rem .2rem;
             text-align: left;
           }
 
