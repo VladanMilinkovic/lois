@@ -1138,7 +1138,6 @@ input {
 
           @include breakpoint(desktop) {
             width: 33%;
-            min-width: 30rem;
             margin-right: 1.5rem;
             margin-top: auto;
           }
@@ -1227,6 +1226,10 @@ input {
 
       @media screen and (min-width: 1024px) and (max-width: 768px) {
         height: calc(100vh - 28rem);
+      }
+
+      @include multiple-media(mediumScreen, largeScreen) {
+        height: calc(100vh - 15.5rem);
       }
 
       .uk-slideshow-items {
@@ -1566,6 +1569,7 @@ input {
             width: calc(100% / 6) !important;
             padding: 1.5rem .2rem;
             text-align: left;
+            font-size: 1rem;
           }
           @include breakpoint(tabletScreen) {
             font-size: 1.15rem;

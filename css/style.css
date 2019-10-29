@@ -1016,7 +1016,6 @@ input {
 @media (min-width: 1024px) {
   .lois .building-second .building-description .description-text {
     width: 33%;
-    min-width: 30rem;
     margin-right: 1.5rem;
     margin-top: auto;
   }
@@ -1107,6 +1106,16 @@ input {
 @media screen and (min-width: 1024px) and (max-width: 768px) {
   .lois .slider-box .uk-position-relative {
     height: calc(100vh - 28rem);
+  }
+}
+@media (min-width: 1200px) and (max-width: 1799px) {
+  .lois .slider-box .uk-position-relative {
+    height: calc(100vh - 15.5rem);
+  }
+}
+@media (min-width: 1800px) {
+  .lois .slider-box .uk-position-relative {
+    height: calc(100vh - 15.5rem);
   }
 }
 .lois .slider-box .uk-position-relative .uk-slideshow-items {
@@ -1578,6 +1587,7 @@ input {
     width: calc(100% / 6) !important;
     padding: 1.5rem 0.2rem;
     text-align: left;
+    font-size: 1rem;
   }
 }
 @media (min-width: 600px) and (max-width: 899px) {
