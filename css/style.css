@@ -1564,6 +1564,7 @@ input {
 }
 .lois .lottery-second .lottery-table .header .flex-row {
   font-family: "FoundersGroteskTextBold";
+  line-height: 1.2;
 }
 .lois .lottery-second .lottery-table .flex-row {
   width: calc(100% / 5);
@@ -1575,7 +1576,7 @@ input {
 @media (min-width: 0px) and (max-width: 599px) {
   .lois .lottery-second .lottery-table .flex-row {
     width: calc(100% / 6) !important;
-    padding: 0.2em;
+    padding: 0.8em 0.2em;
     text-align: left;
   }
 }

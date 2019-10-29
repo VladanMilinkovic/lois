@@ -1551,6 +1551,7 @@ input {
 
           .flex-row {
             font-family: "FoundersGroteskTextBold";
+            line-height: 1.2;
           }
         }
 
@@ -1563,7 +1564,7 @@ input {
 
           @include breakpoint(mobileScreen) {
             width: calc(100% / 6) !important;
-            padding: 0.2em;
+            padding: 0.8em .2em;
             text-align: left;
           }
           @include breakpoint(tabletScreen) {
