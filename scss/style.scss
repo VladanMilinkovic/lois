@@ -1583,7 +1583,7 @@ input {
         .mobile-width-5-5 {
           @include breakpoint(mobileScreen) {
             width: calc(100% / 5.5) !important;
-            text-align: center;
+            text-align: left;
           }
         }
         .mobile-width-6 {

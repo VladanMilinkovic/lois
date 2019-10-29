@@ -1598,7 +1598,7 @@ input {
 @media (min-width: 0px) and (max-width: 599px) {
   .lois .lottery-second .lottery-table .mobile-width-5-5 {
     width: calc(100% / 5.5) !important;
-    text-align: center;
+    text-align: left;
   }
 }
 @media (min-width: 0px) and (max-width: 599px) {
