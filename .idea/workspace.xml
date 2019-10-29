@@ -3,19 +3,8 @@
   <component name="ChangeListManager">
     <list default="true" id="19036ac1-fd22-45e0-aa2d-52662cc300d2" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/images/RP-280-METRO-08-PH-LIVING-RM-P5-FINAL-HR.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/images/Rectangle 11.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/images/Rectangle 5.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/images/Rectangle 6.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/images/Rectangle 7.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/images/Rectangle 9.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/images/Screen Shot 2019-10-08 at 3.23.05 PM.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/images/Screen Shot 2019-10-25 at 2.35.18 PM.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/images/Y7s7PV.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/images/thumb.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/index.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/pages/lottery.html" beforeDir="false" afterPath="$PROJECT_DIR$/pages/lottery.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/pages/slide.html" beforeDir="false" afterPath="$PROJECT_DIR$/pages/slide.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/css/style.css" beforeDir="false" afterPath="$PROJECT_DIR$/css/style.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/scss/style.scss" beforeDir="false" afterPath="$PROJECT_DIR$/scss/style.scss" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -81,7 +70,7 @@
       <workItem from="1571942995016" duration="20422000" />
       <workItem from="1572026971989" duration="8733000" />
       <workItem from="1572276727940" duration="1003000" />
-      <workItem from="1572364401382" duration="6674000" />
+      <workItem from="1572364401382" duration="6992000" />
     </task>
     <servers />
   </component>

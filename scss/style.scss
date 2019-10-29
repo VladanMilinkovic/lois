@@ -1027,7 +1027,7 @@ input {
 
     &__first {
       margin-top: 1.5rem;
-      min-height: 37rem;
+      min-height: 35rem;
 
       @include breakpoint(mobileScreen) {
         margin-top: .8rem;
@@ -1217,11 +1217,11 @@ input {
       }
 
       @include breakpoint(tablet) {
-        height: calc(100vh - 15rem);
+        height: calc(100vh - 17rem);
       }
 
       @media screen and (min-width: 601px) and (max-width: 1024px) {
-        height: calc(100vh - 50rem);
+        height: calc(100vh - 51rem);
         min-height: 27rem;
       }
 
