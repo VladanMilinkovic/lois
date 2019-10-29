@@ -695,7 +695,7 @@ input {
     line-height: 1.2rem;
 
     @include breakpoint(mobileScreen) {
-      padding: 1.5rem;
+      padding: .8rem;
     }
 
     span {
@@ -1252,7 +1252,7 @@ input {
       text-decoration: none;
     }
     .uk-slidenav {
-      @include multiple-media(mobileScreen, tabletScreen, tabletScreenLandscape) {
+      @include multiple-media(mobileScreen, tabletScreen, tabletScreenLandscape, iPadProPortrait, iPadProLandscape) {
         right: 0;
         margin: 0;
       }
@@ -1261,7 +1261,7 @@ input {
       color: #ffffff;
     }
 
-    @include multiple-media(mobileScreen, tabletScreen, tabletScreenLandscape) {
+    @include multiple-media(mobileScreen, tabletScreen, tabletScreenLandscape, iPadProPortrait, iPadProLandscape) {
       .uk-position-small {
 
         .next-text {
@@ -1270,7 +1270,7 @@ input {
         }
 
         svg {
-          @include multiple-media(mobileScreen, tabletScreen, tabletScreenLandscape) {
+          @include multiple-media(mobileScreen, tabletScreen, tabletScreenLandscape, iPadProPortrait, iPadProLandscape) {
             display: none;
           }
         }
