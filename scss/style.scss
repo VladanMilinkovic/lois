@@ -1070,11 +1070,6 @@ input {
         height: calc(100vh - 28.7rem);
       }
 
-
-      @include breakpoint(iPadProLandscape) {
-        height: calc(100vh - 30.5rem);
-      }
-
       &--bg {
         height: calc(100vh - 40rem);
         width: 67%;

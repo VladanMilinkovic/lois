@@ -988,11 +988,6 @@ input {
     height: calc(100vh - 28.7rem);
   }
 }
-@media only screen and (min-device-width: 1024px) and (max-device-width: 1366px) and (-webkit-min-device-pixel-ratio: 2) and (orientation: landscape) {
-  .lois .building__first {
-    height: calc(100vh - 30.5rem);
-  }
-}
 .lois .building__first--bg {
   height: calc(100vh - 40rem);
   width: 67%;
