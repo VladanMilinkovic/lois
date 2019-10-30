@@ -1774,6 +1774,10 @@ input {
             width: 50%
           }
 
+          @include breakpoint(mobileScreenLandscape) {
+            width: 100%;
+          }
+
           &--image {
             width: 15rem;
             margin: 0 auto 1.5rem auto;
@@ -2014,7 +2018,7 @@ input {
   z-index:1000; //Just in case :)
 
   @include multiple-media(mobileScreen, mobileScreenLandscape) {
-    padding: .8rem 0;
+    padding: .8rem 0 1.2rem 0;
     display: block;
   }
 
@@ -2635,7 +2639,7 @@ input {
 
         @include breakpoint(mobileScreen) {
           font-size: 1.15rem;
-          margin-top: .8rem;
+          margin-top: 1.5rem;
         }
         @include breakpoint(tabletScreen) {
           font-size: 1.15rem;
@@ -2675,7 +2679,7 @@ input {
 
       @include breakpoint(mobileScreen) {
         font-size: 1.15rem;
-        margin: .8rem 0;
+        margin: 2.5rem 0 .8rem 0;
       }
       @include breakpoint(tabletScreen) {
         font-size: 1.15rem;

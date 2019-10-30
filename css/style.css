@@ -1857,6 +1857,11 @@ input {
     width: 50%;
   }
 }
+@media (max-height: 599px) and (max-width: 830px) and (orientation: landscape) {
+  .lois .lottery-second .rent-smart-content {
+    width: 100%;
+  }
+}
 .lois .lottery-second .rent-smart-content--image {
   width: 15rem;
   margin: 0 auto 1.5rem auto;
@@ -2073,13 +2078,13 @@ input {
 }
 @media (min-width: 0px) and (max-width: 599px) {
   .lottery-layer {
-    padding: 0.8rem 0;
+    padding: 0.8rem 0 1.2rem 0;
     display: block;
   }
 }
 @media (max-height: 599px) and (max-width: 830px) and (orientation: landscape) {
   .lottery-layer {
-    padding: 0.8rem 0;
+    padding: 0.8rem 0 1.2rem 0;
     display: block;
   }
 }
@@ -2694,7 +2699,7 @@ input {
 @media (min-width: 0px) and (max-width: 599px) {
   .modal-contact-form__section--input {
     font-size: 1.15rem;
-    margin-top: 0.8rem;
+    margin-top: 1.5rem;
   }
 }
 @media (min-width: 600px) and (max-width: 899px) {
@@ -2731,7 +2736,7 @@ input {
 @media (min-width: 0px) and (max-width: 599px) {
   .modal-contact-form--submit {
     font-size: 1.15rem;
-    margin: 0.8rem 0;
+    margin: 2.5rem 0 0.8rem 0;
   }
 }
 @media (min-width: 600px) and (max-width: 899px) {
