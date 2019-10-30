@@ -567,7 +567,7 @@ input {
           font-size: 1.15rem;
         }
 
-        @include multiple-media(tabletScreen, tabletScreenLandscape) {
+        @include multiple-media(tabletScreen) {
           font-size: 1.15rem;
           padding: 0 .75rem !important;
         }
@@ -1075,14 +1075,6 @@ input {
         height: calc(100vh - 30.5rem);
       }
 
-      @media (min-width: 600px) and (max-width: 1024px) {
-        height: auto;
-      }
-
-      @include breakpoint(tabletScreenLandscape) {
-        min-height: 44rem;
-      }
-
       &--bg {
         height: calc(100vh - 40rem);
         width: 67%;
@@ -1113,7 +1105,6 @@ input {
           width: 67%;
         }
 
-
       }
 
       &-description--bg {
@@ -1131,6 +1122,15 @@ input {
           height: 100%;
           margin-top: auto;
           max-height: 50%;
+        }
+
+        @include breakpoint(iPadLandscape) {
+          min-height: 10rem;
+        }
+
+        @include breakpoint(tabletScreenLandscape) {
+          max-height: 45%;
+          min-height: 15rem;
         }
       }
 
@@ -1158,8 +1158,9 @@ input {
         height: calc(100vh - 27rem);
       }
 
-      @include breakpoint(iPadProPortrait) {
-        height: auto;
+
+      @include breakpoint(iPadLandscape) {
+        height: calc(100vh - 16rem);
       }
 
       .building-description {
@@ -1222,8 +1223,8 @@ input {
         height: calc(100vh - 15.4rem);
       }
 
-      @include breakpoint(iPadProLandscape) {
-        height: calc(100vh - 16.5rem);
+      @include breakpoint(iPadLandscape) {
+        height: calc(100vh - 16rem);
       }
     }
   }
@@ -1248,8 +1249,12 @@ input {
     }
 
     @include breakpoint(tabletScreenLandscape) {
-      height: calc(100vh - 28rem);
+      height: calc(100vh - 13rem);
       min-height: 31rem;
+    }
+
+    @include breakpoint(iPadLandscape) {
+      height: calc(100vh - 13rem);
     }
 
     .uk-position-center-right,
@@ -1285,11 +1290,15 @@ input {
         height: calc(100vh - 28rem);
       }
       @include multiple-media(tabletScreenLandscape) {
-        height: calc(100vh - 32rem);
+        height: calc(100vh - 17rem);
       }
 
       @include multiple-media(largeScreen) {
         height: calc(100vh - 15.5rem);
+      }
+
+      @include breakpoint(iPadLandscape) {
+        height: calc(100vh - 17rem);
       }
 
       .uk-slideshow-items {
