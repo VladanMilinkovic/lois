@@ -432,6 +432,11 @@ input {
     width: 50%;
   }
 }
+@media (min-width: 600px) and (max-width: 1366px) and (min-height: 600px) and (max-height: 1024px) and (orientation: landscape) {
+  .lois-navigation-tabs {
+    width: 40%;
+  }
+}
 .lois-navigation-tabs .lois-navbar-nav {
   list-style-type: none;
   display: flex;
@@ -473,6 +478,12 @@ input {
 @media (min-width: 1024px) {
   .lois-navigation-tabs .lois-navbar-nav__tabs {
     padding: 0;
+  }
+}
+@media (min-width: 600px) and (max-width: 1366px) and (min-height: 600px) and (max-height: 1024px) and (orientation: landscape) {
+  .lois-navigation-tabs .lois-navbar-nav__tabs {
+    font-size: 1.15rem;
+    padding: 0 0.75rem !important;
   }
 }
 .lois-navigation-tabs .lois-navbar-nav__tabs a {
@@ -1055,8 +1066,8 @@ input {
 }
 @media (min-width: 600px) and (max-width: 1366px) and (min-height: 600px) and (max-height: 1024px) and (orientation: landscape) {
   .lois .building__first-description--bg {
-    max-height: 45%;
-    min-height: 15rem;
+    max-height: 30%;
+    min-height: 11rem;
   }
 }
 .lois .building-second {
