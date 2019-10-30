@@ -302,6 +302,10 @@ input {
       width: 3rem;
     }
 
+    @include multiple-media(mobileScreenLandscape) {
+      width: 2rem;
+    }
+
     span {
       display: block;
       position: absolute;
@@ -400,6 +404,10 @@ input {
 
     @include breakpoint(tablet) {
       display: none;
+    }
+
+    @include multiple-media(mobileScreenLandscape) {
+      display: flex !important;
     }
 
     span {
@@ -522,6 +530,9 @@ input {
     flex-direction: row-reverse;
     font-size: 1.8rem;
     width: 33%;
+    @include multiple-media(mobileScreen, mobileScreenLandscape) {
+      display: none !important;
+    }
 
     @include breakpoint(tablet) {
       display: flex;
@@ -1064,7 +1075,7 @@ input {
         background-size: cover;
         background-position: 50%;
 
-        @include breakpoint(mobileScreen) {
+        @include multiple-media(mobileScreen, mobileScreenLandscape) {
           width: 100%;
           min-height: 20rem;
         }
@@ -1997,7 +2008,7 @@ input {
   bottom:0;
   z-index:1000; //Just in case :)
 
-  @include breakpoint(mobileScreen) {
+  @include multiple-media(mobileScreen, mobileScreenLandscape) {
     padding: .8rem 0;
     display: block;
   }
@@ -2026,7 +2037,7 @@ input {
       margin-left: 1.5rem;
     }
 
-    @include breakpoint(mobileScreen) {
+    @include multiple-media(mobileScreen, mobileScreenLandscape) {
       padding: 0 .8rem;
     }
 
@@ -2062,14 +2073,14 @@ input {
     h1 {
       margin: 0;
 
-      @include breakpoint(mobileScreen) {
+      @include multiple-media(mobileScreen, mobileScreenLandscape) {
         //font-size: 2.4rem;
         text-align: center;
       }
     }
 
     .click-here {
-      @include breakpoint(mobileScreen) {
+      @include multiple-media(mobileScreen, mobileScreenLandscape) {
         display: none;
       }
 
@@ -2081,7 +2092,7 @@ input {
     .learn-more {
       display: none;
       -webkit-text-fill-color: #00FFB8;
-      @include breakpoint(mobileScreen) {
+      @include multiple-media(mobileScreen, mobileScreenLandscape) {
         display: block;
         -webkit-text-fill-color: #00FFB8;
 
@@ -2100,7 +2111,7 @@ input {
     flex-direction: column;
     align-items: flex-end;
 
-    @include breakpoint(mobileScreen) {
+    @include multiple-media(mobileScreen, mobileScreenLandscape) {
       text-align: center;
       display: none;
     }
@@ -2112,7 +2123,7 @@ input {
     h1 {
       margin: 0;
 
-      @include breakpoint(mobileScreen) {
+      @include multiple-media(mobileScreen, mobileScreenLandscape) {
         //font-size: 2.4rem;
         text-align: center;
       }
@@ -2131,7 +2142,7 @@ input {
       flex-direction: row;
       justify-content: flex-end;
 
-      @include breakpoint(mobileScreen) {
+      @include multiple-media(mobileScreen, mobileScreenLandscape) {
         text-align: center;
         display: inline-flex;
         justify-content: center;
@@ -2148,7 +2159,7 @@ input {
           font-size: 1rem;
           color: #000000;
 
-          @include breakpoint(mobileScreen) {
+          @include multiple-media(mobileScreen, mobileScreenLandscape) {
             font-size: 1.15rem;
           }
           @include breakpoint(tabletScreen) {

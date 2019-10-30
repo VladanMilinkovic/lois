@@ -196,6 +196,11 @@ input {
     width: 3rem;
   }
 }
+@media (max-height: 599px) and (max-width: 830px) and (orientation: landscape) {
+  .lois-navigation #mobile-icon {
+    width: 2rem;
+  }
+}
 .lois-navigation #mobile-icon span {
   display: block;
   position: absolute;
@@ -287,6 +292,11 @@ input {
 @media (min-width: 600px) {
   .lois-navigation__mobile {
     display: none;
+  }
+}
+@media (max-height: 599px) and (max-width: 830px) and (orientation: landscape) {
+  .lois-navigation__mobile {
+    display: flex !important;
   }
 }
 .lois-navigation__mobile span {
@@ -396,6 +406,16 @@ input {
   flex-direction: row-reverse;
   font-size: 1.8rem;
   width: 33%;
+}
+@media (min-width: 0px) and (max-width: 599px) {
+  .lois-navigation-tabs {
+    display: none !important;
+  }
+}
+@media (max-height: 599px) and (max-width: 830px) and (orientation: landscape) {
+  .lois-navigation-tabs {
+    display: none !important;
+  }
 }
 @media (min-width: 600px) {
   .lois-navigation-tabs {
@@ -953,6 +973,12 @@ input {
   background-position: 50%;
 }
 @media (min-width: 0px) and (max-width: 599px) {
+  .lois .building__first--bg {
+    width: 100%;
+    min-height: 20rem;
+  }
+}
+@media (max-height: 599px) and (max-width: 830px) and (orientation: landscape) {
   .lois .building__first--bg {
     width: 100%;
     min-height: 20rem;
@@ -2046,6 +2072,12 @@ input {
     display: block;
   }
 }
+@media (max-height: 599px) and (max-width: 830px) and (orientation: landscape) {
+  .lottery-layer {
+    padding: 0.8rem 0;
+    display: block;
+  }
+}
 @media (min-width: 600px) and (max-width: 1366px) and (min-height: 600px) and (max-height: 1024px) and (orientation: landscape) {
   .lottery-layer {
     top: unset;
@@ -2072,6 +2104,11 @@ input {
   }
 }
 @media (min-width: 0px) and (max-width: 599px) {
+  .lottery-layer .lottery-open {
+    padding: 0 0.8rem;
+  }
+}
+@media (max-height: 599px) and (max-width: 830px) and (orientation: landscape) {
   .lottery-layer .lottery-open {
     padding: 0 0.8rem;
   }
@@ -2109,7 +2146,17 @@ input {
     text-align: center;
   }
 }
+@media (max-height: 599px) and (max-width: 830px) and (orientation: landscape) {
+  .lottery-layer .lottery-open h1 {
+    text-align: center;
+  }
+}
 @media (min-width: 0px) and (max-width: 599px) {
+  .lottery-layer .lottery-open .click-here {
+    display: none;
+  }
+}
+@media (max-height: 599px) and (max-width: 830px) and (orientation: landscape) {
   .lottery-layer .lottery-open .click-here {
     display: none;
   }
@@ -2132,12 +2179,29 @@ input {
     -webkit-text-stroke-color: #000000;
   }
 }
+@media (max-height: 599px) and (max-width: 830px) and (orientation: landscape) {
+  .lottery-layer .lottery-open .learn-more {
+    display: block;
+    -webkit-text-fill-color: #00FFB8;
+  }
+  .lottery-layer .lottery-open .learn-more:hover {
+    -webkit-text-fill-color: #00FFB8;
+    -webkit-text-stroke-width: 1px;
+    -webkit-text-stroke-color: #000000;
+  }
+}
 .lottery-layer .lottery-ending {
   display: flex;
   flex-direction: column;
   align-items: flex-end;
 }
 @media (min-width: 0px) and (max-width: 599px) {
+  .lottery-layer .lottery-ending {
+    text-align: center;
+    display: none;
+  }
+}
+@media (max-height: 599px) and (max-width: 830px) and (orientation: landscape) {
   .lottery-layer .lottery-ending {
     text-align: center;
     display: none;
@@ -2152,6 +2216,11 @@ input {
   margin: 0;
 }
 @media (min-width: 0px) and (max-width: 599px) {
+  .lottery-layer .lottery-ending h1 {
+    text-align: center;
+  }
+}
+@media (max-height: 599px) and (max-width: 830px) and (orientation: landscape) {
   .lottery-layer .lottery-ending h1 {
     text-align: center;
   }
@@ -2175,6 +2244,13 @@ input {
     justify-content: center;
   }
 }
+@media (max-height: 599px) and (max-width: 830px) and (orientation: landscape) {
+  .lottery-layer .lottery-ending__time {
+    text-align: center;
+    display: inline-flex;
+    justify-content: center;
+  }
+}
 .lottery-layer .lottery-ending__time__value {
   display: flex;
   flex-direction: column;
@@ -2186,6 +2262,11 @@ input {
   color: #000000;
 }
 @media (min-width: 0px) and (max-width: 599px) {
+  .lottery-layer .lottery-ending__time__value--text {
+    font-size: 1.15rem;
+  }
+}
+@media (max-height: 599px) and (max-width: 830px) and (orientation: landscape) {
   .lottery-layer .lottery-ending__time__value--text {
     font-size: 1.15rem;
   }
