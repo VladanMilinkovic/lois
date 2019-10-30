@@ -1067,7 +1067,7 @@ input {
 
       @include breakpoint(desktop) {
         display: flex;
-        height: calc(100vh - 29rem);
+        height: calc(100vh - 28.5rem);
       }
 
       &--bg {
@@ -1297,7 +1297,7 @@ input {
       }
 
       .uk-slideshow-items {
-        min-height: 100%;
+        min-height: 100% !important;
         height: 100%;
 
         @include multiple-media(tabletScreenLandscape) {

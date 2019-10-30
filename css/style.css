@@ -985,7 +985,7 @@ input {
 @media (min-width: 1024px) {
   .lois .building__first {
     display: flex;
-    height: calc(100vh - 29rem);
+    height: calc(100vh - 28.5rem);
   }
 }
 .lois .building__first--bg {
@@ -1273,7 +1273,7 @@ input {
   }
 }
 .lois .slider-box .uk-position-relative .uk-slideshow-items {
-  min-height: 100%;
+  min-height: 100% !important;
   height: 100%;
 }
 @media (min-width: 600px) and (max-width: 1366px) and (min-height: 600px) and (max-height: 1024px) and (orientation: landscape) {
