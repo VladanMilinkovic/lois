@@ -93,8 +93,7 @@
     <!-- Building Apartments -->
     <div class="building neighborhood-apartments">
         <div class="building__first">
-            <div class="building-image--bg building__first--bg" style="background-image: url('../images/eIM8es@2x.png'); opacity: 1;"></div>
-            <img class="building-image" src="../images/eIM8es@2x.png" alt="Build">
+            <div class="building__first--bg" style="background-image: url('../images/eIM8es@2x.png'); opacity: 1;"></div>
 
             <div class="building-first-description" uk-scrollspy="cls: uk-animation-fade; target: .description-text; delay: 500; repeat: true">
                 <div class="description-text">
@@ -108,8 +107,7 @@
                         laoreet dolore magna aliquam erat volutpat. Ut wisi enim ad minim veniam, quis
                     </p>
                 </div>
-                <div class="building-image--bg building__first-description--bg" style="background-image: url('../images/MGTjWW@2x.png')"></div>
-                <img class="building-image" src="../images/MGTjWW@2x.png" alt="Build">
+                <div class="building__first-description--bg" style="background-image: url('../images/MGTjWW@2x.png')"></div>
             </div>
         </div>
 
@@ -207,6 +205,11 @@
 
     if (screenWidth < 601) {
         zoomMap = 12
+    }
+
+    let allowInteractive = true;
+    if ("ontouchstart" in document.documentElement) {
+        allowInteractive = false;
     }
     let currentMarkers=[];
     let markersDescriptions=[];
@@ -497,7 +500,8 @@
             "draft": false
         },
         center: [-73.948341, 40.655170],
-        zoom: zoomMap
+        zoom: zoomMap,
+        interactive: allowInteractive
     });
 
     // disable map zoom when using scroll

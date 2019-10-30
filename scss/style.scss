@@ -391,7 +391,7 @@ input {
     padding-right: 1.5rem;
     margin-left: 1.5rem;
 
-    @include breakpoint(mobileScreen) {
+    @include multiple-media(mobileScreen, mobileScreenLandscape) {
       display: flex;
       align-items: center;
       padding-right: .8rem;
@@ -422,6 +422,15 @@ input {
     }
     &-email {
       width: 2rem;
+      visibility: visible;
+      opacity: 1;
+      transition: opacity .2s linear;
+    }
+
+    .fadeOut {
+      visibility: hidden;
+      opacity: 0;
+      transition: visibility 0s .2s, opacity .2s linear;
     }
 
     &__tabs {
@@ -813,8 +822,8 @@ input {
     &-logo {
       width: 20rem;
 
-      @include breakpoint(mobileScreen) {
-        width: 17rem;
+      @include multiple-media(mobileScreen, mobileScreenLandscape) {
+        width: 19rem;
       }
     }
 
@@ -926,6 +935,7 @@ input {
     &-image {
       display: block;
       width: 100%;
+      min-height: 20rem;
 
       @include breakpoint(tablet) {
         display: none;
@@ -1054,6 +1064,11 @@ input {
         background-size: cover;
         background-position: 50%;
 
+        @include breakpoint(mobileScreen) {
+          width: 100%;
+          min-height: 20rem;
+        }
+
         @include breakpoint(iPad) {
           height: calc(100vh - 49rem);
           width: 100%;
@@ -1072,11 +1087,14 @@ input {
       }
 
       &-description--bg {
-        height: auto;
+        min-height: 20rem;
         width: 50%;
         background-size: cover;
         background-position: 50%;
 
+        @include breakpoint(mobileScreen) {
+          width: 100%;
+        }
 
         @include breakpoint(desktop) {
           width: 100%;
@@ -1147,12 +1165,13 @@ input {
       }
 
       &-description--bg {
+        min-height: 20rem;
+        width: 100%;
+        background-size: cover;
+        background-position: 50%;
 
         @include breakpoint(tablet) {
           min-height: 40rem;
-          width: 100%;
-          background-size: cover;
-          background-position: 50%;
         }
 
         @include breakpoint(desktop) {
@@ -1295,7 +1314,7 @@ input {
       display: flex;
 
       @include breakpoint(mobileScreen) {
-        height: 100%;
+        height: 100vh;
         min-height: calc(100vh - 15rem);
       }
 
@@ -1976,7 +1995,7 @@ input {
   align-items: flex-start;
   position:fixed;
   bottom:0;
-  z-index:50000; //Just in case :)
+  z-index:1000; //Just in case :)
 
   @include breakpoint(mobileScreen) {
     padding: .8rem 0;

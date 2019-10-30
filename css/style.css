@@ -73,6 +73,7 @@ h1, h2, h3, h4, h5, h6 {
 
 input {
   -webkit-appearance: none;
+  -webkit-border-radius: 0;
 }
 
 .lois-navigation {
@@ -275,6 +276,14 @@ input {
     margin-left: 0.8rem;
   }
 }
+@media (max-height: 599px) and (max-width: 830px) and (orientation: landscape) {
+  .lois-navigation__mobile {
+    display: flex;
+    align-items: center;
+    padding-right: 0.8rem;
+    margin-left: 0.8rem;
+  }
+}
 @media (min-width: 600px) {
   .lois-navigation__mobile {
     display: none;
@@ -299,6 +308,14 @@ input {
 }
 .lois-navigation__mobile-email {
   width: 2rem;
+  visibility: visible;
+  opacity: 1;
+  transition: opacity 0.2s linear;
+}
+.lois-navigation__mobile .fadeOut {
+  visibility: hidden;
+  opacity: 0;
+  transition: visibility 0s 0.2s, opacity 0.2s linear;
 }
 .lois-navigation__mobile__tabs {
   display: none;
@@ -690,7 +707,12 @@ input {
 }
 @media (min-width: 0px) and (max-width: 599px) {
   .lois-header-logo {
-    width: 17rem;
+    width: 19rem;
+  }
+}
+@media (max-height: 599px) and (max-width: 830px) and (orientation: landscape) {
+  .lois-header-logo {
+    width: 19rem;
   }
 }
 .lois-header__neigh {
@@ -795,6 +817,7 @@ input {
 .lois .building-image {
   display: block;
   width: 100%;
+  min-height: 20rem;
 }
 @media (min-width: 600px) {
   .lois .building-image {
@@ -929,6 +952,12 @@ input {
   background-size: cover;
   background-position: 50%;
 }
+@media (min-width: 0px) and (max-width: 599px) {
+  .lois .building__first--bg {
+    width: 100%;
+    min-height: 20rem;
+  }
+}
 @media only screen and (min-device-width: 768px) and (max-device-width: 1024px) and (-webkit-min-device-pixel-ratio: 2) {
   .lois .building__first--bg {
     height: calc(100vh - 49rem);
@@ -947,10 +976,15 @@ input {
   }
 }
 .lois .building__first-description--bg {
-  height: auto;
+  min-height: 20rem;
   width: 50%;
   background-size: cover;
   background-position: 50%;
+}
+@media (min-width: 0px) and (max-width: 599px) {
+  .lois .building__first-description--bg {
+    width: 100%;
+  }
 }
 @media (min-width: 1024px) {
   .lois .building__first-description--bg {
@@ -1020,12 +1054,15 @@ input {
     margin-top: auto;
   }
 }
+.lois .building-second-description--bg {
+  min-height: 20rem;
+  width: 100%;
+  background-size: cover;
+  background-position: 50%;
+}
 @media (min-width: 600px) {
   .lois .building-second-description--bg {
     min-height: 40rem;
-    width: 100%;
-    background-size: cover;
-    background-position: 50%;
   }
 }
 @media (min-width: 1024px) {
@@ -1363,7 +1400,7 @@ input {
 }
 @media (min-width: 0px) and (max-width: 599px) {
   .lois .lottery-first {
-    height: 100%;
+    height: 100vh;
     min-height: calc(100vh - 15rem);
   }
 }
@@ -2001,7 +2038,7 @@ input {
   align-items: flex-start;
   position: fixed;
   bottom: 0;
-  z-index: 50000;
+  z-index: 1000;
 }
 @media (min-width: 0px) and (max-width: 599px) {
   .lottery-layer {

@@ -34,7 +34,7 @@
         </span>
 
         <div class="lois-navigation__mobile">
-            <img src="./images/form.svg" alt="email" class="lois-navigation__mobile-email" href="#modal-center" uk-toggle>
+            <img src="./images/form.svg" alt="email" id="emailIcon" class="lois-navigation__mobile-email uk-animation-fade" href="#modal-center" uk-toggle>
             <div uk-toggle="target: #mobile; cls: show-mobile" id="mobile-icon" onclick="toggleNavIcon()">
                 <span></span>
                 <span></span>
@@ -79,8 +79,7 @@
         <!-- Building Apartments -->
         <div class="building">
             <div class="building__first">
-                <div class="building-image--bg building__first--bg" style="background-image: url('./images/Rectangle 3@2x.png'); opacity: 1;"></div>
-                <img class="building-image" src="./images/Rectangle%203@2x.png" alt="Build">
+                <div class="building__first--bg" style="background-image: url('./images/Rectangle 3@2x.png'); opacity: 1;"></div>
 
                 <div class="building-first-description" uk-scrollspy="cls: uk-animation-fade; target: .description-text; delay: 500; repeat: true">
                     <div class="description-text">
@@ -94,8 +93,8 @@
                             laoreet dolore magna aliquam erat volutpat. Ut wisi enim ad minim veniam, quis
                         </p>
                     </div>
-                    <div class="building-image--bg building__first-description--bg" style="background-image: url('./images/Rectangle 4@2x.png')"></div>
-                    <img class="building-image" src="./images/Rectangle 4@2x.png" alt="Build">
+                    <div class="building__first-description--bg" style="background-image: url('./images/Rectangle 4@2x.png')"></div>
+
                 </div>
             </div>
 
@@ -114,8 +113,7 @@
                             nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam erat volutpat. Ut wisi enim ad minim veniam, quis nostrud exerci
                         </p>
                     </div>
-                    <div class="building-image--bg building-second-description--bg" style="background-image: url('./images/Rectangle 5@2x.png')"></div>
-                    <img class="building-image" src="./images/Rectangle%205@2x.png" alt="Build">
+                    <div class=" building-second-description--bg" style="background-image: url('./images/Rectangle 5@2x.png')"></div>
                 </div>
             </div>
 
@@ -210,14 +208,19 @@
         function toggleNavIcon() {
             let child = document.getElementById('mobile-icon');
 
+            let email = document.getElementById("emailIcon");
+
             if(child.classList.contains("open")) {
                 child.classList.add("close");
                 child.classList.remove("open");
+                email.classList.remove("fadeOut");
             } else {
                 child.classList.add("open");
                 if(child.classList.contains("close")){
                     child.classList.remove("close");
+                    email.classList.add("fadeOut");
                 }
+                email.classList.add("fadeOut");
             }
         }
     </script>
