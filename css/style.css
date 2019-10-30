@@ -1128,7 +1128,7 @@ input {
 @media screen and (min-width: 601px) and (max-width: 1024px) {
   .lois .slider-box {
     height: calc(100vh - 47rem);
-    min-height: 31rem;
+    min-height: 28rem;
   }
 }
 .lois .slider-box .uk-position-center-right,
@@ -1428,6 +1428,11 @@ input {
   .lois .lottery-first {
     height: 100vh;
     min-height: calc(100vh - 15rem);
+  }
+}
+@media (max-height: 599px) and (max-width: 830px) and (orientation: landscape) {
+  .lois .lottery-first {
+    height: 100%;
   }
 }
 .lois .lottery-first-wrapper {
