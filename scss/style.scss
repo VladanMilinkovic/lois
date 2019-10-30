@@ -233,7 +233,7 @@ input {
       font-size: 1.15rem;
       padding-left: .8rem;
     }
-    @include breakpoint(tabletScreen) {
+    @include multiple-media(tabletScreen, tabletScreenLandscape) {
       font-size: 1.15rem;
     }
 
@@ -567,8 +567,9 @@ input {
           font-size: 1.15rem;
         }
 
-        @include breakpoint(tabletScreen) {
+        @include multiple-media(tabletScreen, tabletScreenLandscape) {
           font-size: 1.15rem;
+          padding: 0 .75rem !important;
         }
 
         @media (max-height: 600px) and (max-width: 900px) {
@@ -733,7 +734,7 @@ input {
         padding-left: 0;
         border: none;
       }
-      @include breakpoint(tabletScreen) {
+      @include multiple-media(tabletScreen, tabletScreenLandscape) {
         font-size: 1.15rem;
       }
 
@@ -799,6 +800,11 @@ input {
           @include breakpoint(mobileScreen) {
             font-size: 1.15rem;
           }
+
+          @include multiple-media(tabletScreenLandscape) {
+            font-size: 1.15rem;
+          }
+
           @media (max-height: 600px) and (max-width: 900px) {
             font-size: 1.15rem;
           }
@@ -904,7 +910,7 @@ input {
           font-size: 1.15rem;
           margin-bottom: .8rem;
         }
-        @include breakpoint(tabletScreen) {
+        @include multiple-media(tabletScreen, tabletScreenLandscape) {
           font-size: 1.15rem;
         }
         @media (max-height: 600px) and (max-width: 900px) {
@@ -1030,7 +1036,7 @@ input {
           line-height: 1.2;
           margin: .8rem 0 0 0;
         }
-        @include breakpoint(tabletScreen) {
+        @include multiple-media(tabletScreen, tabletScreenLandscape) {
           font-size: 1.15rem;
           line-height: 1.2;
         }
@@ -1078,6 +1084,11 @@ input {
         @include multiple-media(mobileScreen, mobileScreenLandscape) {
           width: 100%;
           min-height: 20rem;
+        }
+
+        @include multiple-media(mobileScreenLandscape) {
+          width: 100%;
+          min-height: 15rem;
         }
 
         @include breakpoint(iPad) {
@@ -1226,6 +1237,11 @@ input {
       min-height: 28rem;
     }
 
+    @include breakpoint(tabletScreenLandscape) {
+      height: calc(100vh - 47rem);
+      min-height: 31rem;
+    }
+
     .uk-position-center-right,
     .uk-position-center-left {
       top: 88% !important;
@@ -1351,6 +1367,10 @@ input {
           width: 50%;
           margin: auto;
         }
+
+        @include multiple-media(tabletScreenLandscape) {
+          font-size: 1.15rem;
+        }
         @media (max-height: 600px) and (max-width: 900px) {
           font-size: 1.15rem;
         }
@@ -1394,7 +1414,7 @@ input {
             margin-top: .8rem;
           }
 
-          @include breakpoint(tabletScreen) {
+          @include multiple-media(tabletScreen, tabletScreenLandscape) {
             font-size: 1.15rem;
           }
         }
@@ -1607,7 +1627,7 @@ input {
             text-align: left;
             font-size: 1rem;
           }
-          @include breakpoint(tabletScreen) {
+          @include multiple-media(tabletScreen, tabletScreenLandscape) {
             font-size: 1.15rem;
             text-align: left;
           }
@@ -1958,7 +1978,7 @@ input {
             @include breakpoint(mobileScreen) {
               font-size: 1.15rem;
             }
-            @include breakpoint(tabletScreen) {
+            @include multiple-media(tabletScreen, tabletScreenLandscape) {
               font-size: 1.15rem;
             }
 
@@ -1977,7 +1997,7 @@ input {
               margin: .8rem 0;
               font-size: 1.15rem;
             }
-            @include breakpoint(tabletScreen) {
+            @include multiple-media(tabletScreen, tabletScreenLandscape) {
               font-size: 1.15rem;
             }
           }
@@ -2171,7 +2191,7 @@ input {
           @include multiple-media(mobileScreen, mobileScreenLandscape) {
             font-size: 1.15rem;
           }
-          @include breakpoint(tabletScreen) {
+          @include multiple-media(tabletScreen, tabletScreenLandscape) {
             font-size: 1.15rem;
           }
         }
@@ -2284,7 +2304,7 @@ input {
       font-size: 1.15rem;
       margin: .8rem 0;
     }
-    @include breakpoint(tabletScreen) {
+    @include multiple-media(tabletScreen, tabletScreenLandscape) {
       font-size: 1.15rem;
     }
   }
@@ -2401,7 +2421,7 @@ input {
     font-size: 1.15rem;
     margin: 0 .8rem;
   }
-  @include breakpoint(tabletScreen) {
+  @include multiple-media(tabletScreen, tabletScreenLandscape) {
     font-size: 1.15rem;
   }
 
@@ -2436,7 +2456,7 @@ input {
         @include breakpoint(mobileScreen) {
           font-size: 1.15rem;
         }
-        @include breakpoint(tabletScreen) {
+        @include multiple-media(tabletScreen, tabletScreenLandscape) {
           font-size: 1.15rem;
         }
       }
@@ -2641,7 +2661,7 @@ input {
           font-size: 1.15rem;
           margin-top: 1.5rem;
         }
-        @include breakpoint(tabletScreen) {
+        @include multiple-media(tabletScreen, tabletScreenLandscape) {
           font-size: 1.15rem;
         }
 
@@ -2681,7 +2701,7 @@ input {
         font-size: 1.15rem;
         margin: 2.5rem 0 .8rem 0;
       }
-      @include breakpoint(tabletScreen) {
+      @include multiple-media(tabletScreen, tabletScreenLandscape) {
         font-size: 1.15rem;
       }
     }
@@ -2719,6 +2739,10 @@ input {
   .uk-margin-auto-vertical {
     height: 100%;
     width: 100%;
+
+    @include multiple-media(mobileScreenLandscape) {
+      height: auto;
+    }
   }
 
   .modal-layout {
@@ -2773,6 +2797,13 @@ input {
     @include breakpoint(mobileScreen) {
       margin: .8rem;
     }
+
+    @include multiple-media(mobileScreenLandscape) {
+      margin-left: auto;
+      max-width: 50%;
+    }
+
+
 
     .building-image {
       display: block;
