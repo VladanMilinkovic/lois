@@ -39,7 +39,7 @@
         </span>
 
     <div class="lois-navigation__mobile">
-        <img src="../images/form.svg" alt="email" class="lois-navigation__mobile-email" href="#modal-center" uk-toggle>
+        <img src="../images/form.svg" alt="email" id="emailIcon" class="lois-navigation__mobile-email uk-animation-fade" href="#modal-center" uk-toggle>
         <div uk-toggle="target: #mobile; cls: show-mobile" id="mobile-icon" onclick="toggleNavIcon()">
             <span></span>
             <span></span>
@@ -805,14 +805,19 @@
     function toggleNavIcon() {
         let child = document.getElementById('mobile-icon');
 
+        let email = document.getElementById("emailIcon");
+
         if(child.classList.contains("open")) {
             child.classList.add("close");
             child.classList.remove("open");
+            email.classList.remove("fadeOut");
         } else {
             child.classList.add("open");
             if(child.classList.contains("close")){
                 child.classList.remove("close");
+                email.classList.add("fadeOut");
             }
+            email.classList.add("fadeOut");
         }
     }
 
