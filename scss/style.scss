@@ -664,9 +664,13 @@ input {
     right: .8rem;
   }
 
-  @media screen and (min-width: 601px) and (max-width: 1024px) {
-    right: 1.5rem;
+  @media screen and (min-width: 601px) and (max-width: 1112px) {
+    right: 1.5rem !important;
   }
+
+  //@include breakpoint(tabletScreenLandscape) {
+  //  right: 1.5rem;
+  //}
 }
 
 // Lois
@@ -850,6 +854,10 @@ input {
 
       @include multiple-media(mobileScreen, mobileScreenLandscape) {
         width: 19rem;
+      }
+
+      @include breakpoint(tabletScreenLandscape) {
+        width: 22rem;
       }
     }
 
@@ -1076,7 +1084,10 @@ input {
 
       @include breakpoint(desktop) {
         display: flex;
-        height: calc(100vh - 28.5rem);
+        // height: calc(100vh - 28.5rem);
+      }
+      @include multiple-media( tabletScreenLandscape) {
+        height: calc(100vh - 20rem);
       }
 
       &--bg {
@@ -1133,8 +1144,8 @@ input {
         }
 
         @include breakpoint(tabletScreenLandscape) {
-          max-height: 30%;
           min-height: 11rem;
+          max-height: 45%;
         }
       }
 
@@ -1400,6 +1411,7 @@ input {
 
         @include multiple-media(tabletScreenLandscape) {
           font-size: 1.15rem;
+          width: 65%;
         }
         @media (max-height: 600px) and (max-width: 900px) {
           font-size: 1.15rem;
