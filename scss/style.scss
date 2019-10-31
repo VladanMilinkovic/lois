@@ -1084,10 +1084,13 @@ input {
 
       @include breakpoint(desktop) {
         display: flex;
-        // height: calc(100vh - 28.5rem);
       }
       @include multiple-media( tabletScreenLandscape) {
         height: calc(100vh - 20rem);
+      }
+
+      @include multiple-media(mediaScreen, largeScreen) {
+        height: calc(100vh - 28.5rem);
       }
 
       &--bg {

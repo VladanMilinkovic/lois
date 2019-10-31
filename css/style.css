@@ -1008,6 +1008,11 @@ input {
     height: calc(100vh - 20rem);
   }
 }
+@media (min-width: 1800px) {
+  .lois .building__first {
+    height: calc(100vh - 28.5rem);
+  }
+}
 .lois .building__first--bg {
   height: calc(100vh - 40rem);
   width: 67%;
